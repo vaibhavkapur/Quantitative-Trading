@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")/.."
+scripts/setup
+PYTHONPATH=src python3 -m unittest discover -v
+scripts/demo

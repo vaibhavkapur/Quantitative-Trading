@@ -1,0 +1,18 @@
+{
+  "python": "3.9.6",
+  "system": "Darwin",
+  "architecture": "arm64",
+  "sqlite": "3.51.0",
+  "runs": 5,
+  "training_bars_per_run": 260,
+  "online_calls": 975,
+  "fit_ms_each": [
+    75.117416,
+    74.660709,
+    74.84775,
+    75.562458,
+    74.674709
+  ],
+  "online_us_p50": 109.958,
+  "online_us_p95": 154.333
+}

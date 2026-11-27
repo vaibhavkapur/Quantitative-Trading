@@ -1,0 +1,16 @@
+name: Validate prototype
+on: [push, pull_request]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: scripts/validate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evaluation
+          path: .local/evaluation.json
+          include-hidden-files: true

@@ -1,0 +1,14 @@
+{
+  "version": "daily.v1",
+  "series": "SYNTH-USD",
+  "train_through": "2023-12-29T23:59:59Z",
+  "window": 15,
+  "max_gap_days": 4,
+  "stress_vol": 0.22,
+  "stress_spread_bps": 12.0,
+  "confidence_floor": 0.63,
+  "confirm_bars": 3,
+  "ood_rms": 4.0,
+  "em_iterations": 20,
+  "cost_bps": 6.0
+}

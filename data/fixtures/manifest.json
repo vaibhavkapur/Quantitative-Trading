@@ -1,0 +1,10 @@
+{
+  "schema": "bars.v1",
+  "series": "SYNTH-USD",
+  "rows": 455,
+  "seed": 80717,
+  "source": "Locally generated synthetic USD daily closes and quoted spread",
+  "generator": "scripts/fixture.py",
+  "entitlements": "Synthetic project fixture; no vendor inputs",
+  "sha256": "7490cda860ed250dabb0d6b0bcd0ae32ef76a98686843f81e20710a07bdca7cc"
+}

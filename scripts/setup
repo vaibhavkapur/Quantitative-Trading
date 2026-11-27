@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")/.."
+python3 -c 'import sqlite3, sys; assert sys.version_info >= (3, 9), "Python 3.9+ required"; print(sys.version.split()[0], "SQLite", sqlite3.sqlite_version)'
+python3 scripts/fixture.py --check
