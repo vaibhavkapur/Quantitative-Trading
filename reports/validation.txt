@@ -1,0 +1,32 @@
+Clean local checkout of 0a9d117 on Darwin arm64
+Command: scripts/validate
+Exit code: 0
+
+3.9.6 SQLite 3.51.0
+test_concurrent_replay_is_idempotent (tests.integration.test_service.Integration) ... ok
+test_fail_closed (tests.integration.test_service.Integration) ... ok
+test_http_transport (tests.integration.test_service.Integration) ... 127.0.0.1 - - [27/Nov/2026 15:44:09] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 15:44:09] "GET /v1/runs HTTP/1.1" 200 -
+ok
+test_interrupted_publish_rolls_back (tests.integration.test_service.Integration) ... ok
+test_point_in_time_pagination_and_feature_api (tests.integration.test_service.Integration) ... ok
+test_truncated_dataset_preserves_model_and_decision_prefix (tests.integration.test_service.Integration) ... ok
+test_cold_start (tests.scenarios.test_replay.Scenarios) ... ok
+test_future_smoothing_leak (tests.scenarios.test_replay.Scenarios) ... ok
+test_missing_prices_reset_and_recovery (tests.scenarios.test_replay.Scenarios) ... ok
+test_noisy_threshold_oscillation (tests.scenarios.test_replay.Scenarios) ... ok
+test_online_probabilities_and_state_names (tests.scenarios.test_replay.Scenarios) ... ok
+test_scaler_fit_leakage (tests.scenarios.test_replay.Scenarios) ... ok
+test_structural_shift_abstains_and_flags_drift (tests.scenarios.test_replay.Scenarios) ... ok
+test_order_and_series_fail_before_advancing_state (tests.unit.test_core.Contracts) ... ok
+test_rejects_invalid_values_and_timestamps (tests.unit.test_core.Contracts) ... ok
+test_baseline_and_immediate_uncertainty (tests.unit.test_core.Features) ... ok
+test_flat_and_gapped_inputs (tests.unit.test_core.Features) ... ok
+test_trailing_formula_and_units (tests.unit.test_core.Features) ... ok
+test_delayed_signal_costs_and_missing_mark (tests.unit.test_core.Valuation) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.671s
+
+OK
+{"holdout_bars":195,"run_id":"0644573f6b816dcb4e82d133c0a1fec162ffbea3af78f5125cfbdf59ef164918","stability":{"hmm":{"changes_including_unknown":10,"changes_per_100_intervals":5.154639175257732,"coverage":0.7846153846153846,"direct_known_changes":3,"label_counts":{"falling":41,"rising":32,"stressed":80,"unknown":42},"median_run_bars_including_unknown":18,"reason_counts":{"accepted":147,"confirming":14,"low_confidence":1,"missing_input":1,"outside_training_support":17,"warmup":15}},"rule":{"changes_including_unknown":11,"changes_per_100_intervals":5.670103092783505,"coverage":0.7128205128205128,"direct_known_changes":0,"label_counts":{"falling":30,"rising":17,"stressed":92,"unknown":56},"median_run_bars_including_unknown":12.0,"reason_counts":{"accepted":138,"confirming":21,"low_confidence":20,"missing_input":1,"warmup":15}}},"training_bars":260}

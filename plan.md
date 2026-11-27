@@ -8,7 +8,7 @@
 | Proposed owner | CTO / trading engineering (reviewers to be assigned) |
 | Suggested stack | Python, NumPy, Polars, scikit-learn, optional HMM library, FastAPI |
 | Initial deployment | Local reproducible prototype, then approved paper/sandbox environment |
-| Status | Proposed; not an assertion of SAAT's existing capability |
+| Status | Local synthetic-data MVP implemented and validated. See [acceptance evidence](reports/acceptance.md). |
 
 ## 1. Objective and scope
 
@@ -69,27 +69,27 @@ Milestones are ordered by dependency, not promised calendar dates. Each mileston
 
 ### M1 — Foundation and design
 
-- [ ] Define regime taxonomy, evaluation horizon and benchmark features; build causal feature pipeline.
-- [ ] Document interfaces, assumptions and design decisions introduced in this milestone.
-- [ ] Add automated tests and store a reproducible demonstration or validation report.
+- [x] Define regime taxonomy, evaluation horizon and benchmark features; build causal feature pipeline.
+- [x] Document interfaces, assumptions and design decisions introduced in this milestone.
+- [x] Add automated tests and store a reproducible demonstration or validation report.
 
 ### M2 — Core implementation
 
-- [ ] Implement threshold baseline and statistical model such as HMM; fit on training windows only.
-- [ ] Document interfaces, assumptions and design decisions introduced in this milestone.
-- [ ] Add automated tests and store a reproducible demonstration or validation report.
+- [x] Implement threshold baseline and statistical model such as HMM; fit on training windows only.
+- [x] Document interfaces, assumptions and design decisions introduced in this milestone.
+- [x] Add automated tests and store a reproducible demonstration or validation report.
 
 ### M3 — Integration and validation
 
-- [ ] Add online inference, confidence, hysteresis and unknown-state fallback.
-- [ ] Document interfaces, assumptions and design decisions introduced in this milestone.
-- [ ] Add automated tests and store a reproducible demonstration or validation report.
+- [x] Add online inference, confidence, hysteresis and unknown-state fallback.
+- [x] Document interfaces, assumptions and design decisions introduced in this milestone.
+- [x] Add automated tests and store a reproducible demonstration or validation report.
 
 ### M4 — Hardening and delivery
 
-- [ ] Evaluate regime stability and downstream strategy behavior on held-out periods; publish feature API and report.
-- [ ] Document interfaces, assumptions and design decisions introduced in this milestone.
-- [ ] Add automated tests and store a reproducible demonstration or validation report.
+- [x] Evaluate regime stability and downstream strategy behavior on held-out periods; publish feature API and report.
+- [x] Document interfaces, assumptions and design decisions introduced in this milestone.
+- [x] Add automated tests and store a reproducible demonstration or validation report.
 
 ## 5. Testing and validation
 
@@ -108,15 +108,15 @@ For quantitative work, use chronological splits, point-in-time inputs, realistic
 
 ## 6. Acceptance criteria / definition of done
 
-- [ ] Online inference never uses future observations.
-- [ ] Low-confidence predictions can return unknown.
-- [ ] Regime changes are reproducible for the same feature stream.
-- [ ] Evaluation compares simple baseline and reports transition frequency.
-- [ ] Downstream tests include costs.
-- [ ] A clean checkout can run the documented setup, tests and demo with permitted fixtures.
-- [ ] Architecture, dependency assumptions, known limitations and runbook are committed.
-- [ ] Relevant CI checks pass and raw evaluation or test evidence is retained.
-- [ ] Security, data licensing, IP and any deployment approval requirements are reviewed.
+- [x] Online inference never uses future observations.
+- [x] Low-confidence predictions can return unknown.
+- [x] Regime changes are reproducible for the same feature stream.
+- [x] Evaluation compares simple baseline and reports transition frequency.
+- [x] Downstream tests include costs.
+- [x] A clean checkout can run the documented setup, tests and demo with permitted fixtures.
+- [x] Architecture, dependency assumptions, known limitations and runbook are committed.
+- [x] The CI validation command passes from a clean local checkout and raw evaluation and test evidence is retained. Hosted CI is pending repository connection.
+- [x] Local security, synthetic data provenance, IP assumptions and deployment approval requirements are documented in the [runbook](docs/runbook.md). Organizational sign-off for external data or deployment remains pending.
 
 ## 7. Operational controls and rollout
 
