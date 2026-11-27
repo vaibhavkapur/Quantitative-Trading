@@ -1,0 +1,5506 @@
+{
+  "provenance": {
+    "entitlement": "synthetic_internal",
+    "generator_version": "1.0.0",
+    "notes": "Synthetic 5-strategy daily returns with correlated drawdown regime (days 90-110). Not real market data; for deterministic testing only.",
+    "seed": 20260409,
+    "source": "dcae.fixtures.generate_walkforward_strategies"
+  },
+  "strategies": [
+    {
+      "eligible": true,
+      "exposure": {
+        "adv_usd": 45000000.0,
+        "asset_class": "equities",
+        "gross_exposure": 1.0,
+        "liquidity_days_to_exit": 1.0,
+        "market_beta": 0.1,
+        "max_capacity_usd": 15000000.0,
+        "net_exposure": 0.05,
+        "strategy_group": "equity_statarb",
+        "transaction_cost_bps": 8.0
+      },
+      "name": "US Equity StatArb",
+      "returns": [
+        {
+          "available_at_utc": "2025-01-02T22:00:00Z",
+          "event_at_utc": "2025-01-02T21:00:00Z",
+          "nav_usd": 99.186533,
+          "period_return": -0.00813467
+        },
+        {
+          "available_at_utc": "2025-01-03T22:00:00Z",
+          "event_at_utc": "2025-01-03T21:00:00Z",
+          "nav_usd": 99.679381,
+          "period_return": 0.0049689
+        },
+        {
+          "available_at_utc": "2025-01-06T22:00:00Z",
+          "event_at_utc": "2025-01-06T21:00:00Z",
+          "nav_usd": 99.648082,
+          "period_return": -0.00031399
+        },
+        {
+          "available_at_utc": "2025-01-07T22:00:00Z",
+          "event_at_utc": "2025-01-07T21:00:00Z",
+          "nav_usd": 100.237878,
+          "period_return": 0.00591878
+        },
+        {
+          "available_at_utc": "2025-01-08T22:00:00Z",
+          "event_at_utc": "2025-01-08T21:00:00Z",
+          "nav_usd": 100.818613,
+          "period_return": 0.00579358
+        },
+        {
+          "available_at_utc": "2025-01-09T22:00:00Z",
+          "event_at_utc": "2025-01-09T21:00:00Z",
+          "nav_usd": 100.923623,
+          "period_return": 0.00104157
+        },
+        {
+          "available_at_utc": "2025-01-10T22:00:00Z",
+          "event_at_utc": "2025-01-10T21:00:00Z",
+          "nav_usd": 100.50116,
+          "period_return": -0.00418596
+        },
+        {
+          "available_at_utc": "2025-01-13T22:00:00Z",
+          "event_at_utc": "2025-01-13T21:00:00Z",
+          "nav_usd": 100.56392,
+          "period_return": 0.00062446
+        },
+        {
+          "available_at_utc": "2025-01-14T22:00:00Z",
+          "event_at_utc": "2025-01-14T21:00:00Z",
+          "nav_usd": 101.176808,
+          "period_return": 0.00609451
+        },
+        {
+          "available_at_utc": "2025-01-15T22:00:00Z",
+          "event_at_utc": "2025-01-15T21:00:00Z",
+          "nav_usd": 100.223899,
+          "period_return": -0.00941825
+        },
+        {
+          "available_at_utc": "2025-01-16T22:00:00Z",
+          "event_at_utc": "2025-01-16T21:00:00Z",
+          "nav_usd": 99.231685,
+          "period_return": -0.00989998
+        },
+        {
+          "available_at_utc": "2025-01-17T22:00:00Z",
+          "event_at_utc": "2025-01-17T21:00:00Z",
+          "nav_usd": 99.109138,
+          "period_return": -0.00123496
+        },
+        {
+          "available_at_utc": "2025-01-20T22:00:00Z",
+          "event_at_utc": "2025-01-20T21:00:00Z",
+          "nav_usd": 99.003038,
+          "period_return": -0.00107053
+        },
+        {
+          "available_at_utc": "2025-01-21T22:00:00Z",
+          "event_at_utc": "2025-01-21T21:00:00Z",
+          "nav_usd": 99.400002,
+          "period_return": 0.00400962
+        },
+        {
+          "available_at_utc": "2025-01-22T22:00:00Z",
+          "event_at_utc": "2025-01-22T21:00:00Z",
+          "nav_usd": 99.217841,
+          "period_return": -0.00183261
+        },
+        {
+          "available_at_utc": "2025-01-23T22:00:00Z",
+          "event_at_utc": "2025-01-23T21:00:00Z",
+          "nav_usd": 100.082491,
+          "period_return": 0.00871466
+        },
+        {
+          "available_at_utc": "2025-01-24T22:00:00Z",
+          "event_at_utc": "2025-01-24T21:00:00Z",
+          "nav_usd": 100.97447,
+          "period_return": 0.00891244
+        },
+        {
+          "available_at_utc": "2025-01-27T22:00:00Z",
+          "event_at_utc": "2025-01-27T21:00:00Z",
+          "nav_usd": 101.864487,
+          "period_return": 0.00881428
+        },
+        {
+          "available_at_utc": "2025-01-28T22:00:00Z",
+          "event_at_utc": "2025-01-28T21:00:00Z",
+          "nav_usd": 100.851462,
+          "period_return": -0.00994483
+        },
+        {
+          "available_at_utc": "2025-01-29T22:00:00Z",
+          "event_at_utc": "2025-01-29T21:00:00Z",
+          "nav_usd": 100.261762,
+          "period_return": -0.00584721
+        },
+        {
+          "available_at_utc": "2025-01-30T22:00:00Z",
+          "event_at_utc": "2025-01-30T21:00:00Z",
+          "nav_usd": 100.231369,
+          "period_return": -0.00030314
+        },
+        {
+          "available_at_utc": "2025-01-31T22:00:00Z",
+          "event_at_utc": "2025-01-31T21:00:00Z",
+          "nav_usd": 100.81174,
+          "period_return": 0.00579031
+        },
+        {
+          "available_at_utc": "2025-02-03T22:00:00Z",
+          "event_at_utc": "2025-02-03T21:00:00Z",
+          "nav_usd": 101.920175,
+          "period_return": 0.0109951
+        },
+        {
+          "available_at_utc": "2025-02-04T22:00:00Z",
+          "event_at_utc": "2025-02-04T21:00:00Z",
+          "nav_usd": 101.44534,
+          "period_return": -0.00465889
+        },
+        {
+          "available_at_utc": "2025-02-05T22:00:00Z",
+          "event_at_utc": "2025-02-05T21:00:00Z",
+          "nav_usd": 101.409615,
+          "period_return": -0.00035216
+        },
+        {
+          "available_at_utc": "2025-02-06T22:00:00Z",
+          "event_at_utc": "2025-02-06T21:00:00Z",
+          "nav_usd": 101.917129,
+          "period_return": 0.00500459
+        },
+        {
+          "available_at_utc": "2025-02-07T22:00:00Z",
+          "event_at_utc": "2025-02-07T21:00:00Z",
+          "nav_usd": 102.614654,
+          "period_return": 0.00684404
+        },
+        {
+          "available_at_utc": "2025-02-10T22:00:00Z",
+          "event_at_utc": "2025-02-10T21:00:00Z",
+          "nav_usd": 103.037446,
+          "period_return": 0.00412019
+        },
+        {
+          "available_at_utc": "2025-02-11T22:00:00Z",
+          "event_at_utc": "2025-02-11T21:00:00Z",
+          "nav_usd": 103.456479,
+          "period_return": 0.0040668
+        },
+        {
+          "available_at_utc": "2025-02-12T22:00:00Z",
+          "event_at_utc": "2025-02-12T21:00:00Z",
+          "nav_usd": 103.147419,
+          "period_return": -0.00298734
+        },
+        {
+          "available_at_utc": "2025-02-13T22:00:00Z",
+          "event_at_utc": "2025-02-13T21:00:00Z",
+          "nav_usd": 103.123287,
+          "period_return": -0.00023395
+        },
+        {
+          "available_at_utc": "2025-02-14T22:00:00Z",
+          "event_at_utc": "2025-02-14T21:00:00Z",
+          "nav_usd": 103.448988,
+          "period_return": 0.00315837
+        },
+        {
+          "available_at_utc": "2025-02-17T22:00:00Z",
+          "event_at_utc": "2025-02-17T21:00:00Z",
+          "nav_usd": 104.390011,
+          "period_return": 0.00909649
+        },
+        {
+          "available_at_utc": "2025-02-18T22:00:00Z",
+          "event_at_utc": "2025-02-18T21:00:00Z",
+          "nav_usd": 103.72742,
+          "period_return": -0.00634726
+        },
+        {
+          "available_at_utc": "2025-02-19T22:00:00Z",
+          "event_at_utc": "2025-02-19T21:00:00Z",
+          "nav_usd": 104.8441,
+          "period_return": 0.01076552
+        },
+        {
+          "available_at_utc": "2025-02-20T22:00:00Z",
+          "event_at_utc": "2025-02-20T21:00:00Z",
+          "nav_usd": 105.858008,
+          "period_return": 0.00967062
+        },
+        {
+          "available_at_utc": "2025-02-21T22:00:00Z",
+          "event_at_utc": "2025-02-21T21:00:00Z",
+          "nav_usd": 105.451172,
+          "period_return": -0.00384322
+        },
+        {
+          "available_at_utc": "2025-02-24T22:00:00Z",
+          "event_at_utc": "2025-02-24T21:00:00Z",
+          "nav_usd": 105.404111,
+          "period_return": -0.00044628
+        },
+        {
+          "available_at_utc": "2025-02-25T22:00:00Z",
+          "event_at_utc": "2025-02-25T21:00:00Z",
+          "nav_usd": 105.067544,
+          "period_return": -0.00319311
+        },
+        {
+          "available_at_utc": "2025-02-26T22:00:00Z",
+          "event_at_utc": "2025-02-26T21:00:00Z",
+          "nav_usd": 105.194719,
+          "period_return": 0.00121041
+        },
+        {
+          "available_at_utc": "2025-02-27T22:00:00Z",
+          "event_at_utc": "2025-02-27T21:00:00Z",
+          "nav_usd": 104.16346,
+          "period_return": -0.00980334
+        },
+        {
+          "available_at_utc": "2025-02-28T22:00:00Z",
+          "event_at_utc": "2025-02-28T21:00:00Z",
+          "nav_usd": 103.951552,
+          "period_return": -0.00203437
+        },
+        {
+          "available_at_utc": "2025-03-03T22:00:00Z",
+          "event_at_utc": "2025-03-03T21:00:00Z",
+          "nav_usd": 103.83014,
+          "period_return": -0.00116797
+        },
+        {
+          "available_at_utc": "2025-03-04T22:00:00Z",
+          "event_at_utc": "2025-03-04T21:00:00Z",
+          "nav_usd": 104.126042,
+          "period_return": 0.00284987
+        },
+        {
+          "available_at_utc": "2025-03-05T22:00:00Z",
+          "event_at_utc": "2025-03-05T21:00:00Z",
+          "nav_usd": 104.000653,
+          "period_return": -0.0012042
+        },
+        {
+          "available_at_utc": "2025-03-06T22:00:00Z",
+          "event_at_utc": "2025-03-06T21:00:00Z",
+          "nav_usd": 103.644656,
+          "period_return": -0.00342303
+        },
+        {
+          "available_at_utc": "2025-03-07T22:00:00Z",
+          "event_at_utc": "2025-03-07T21:00:00Z",
+          "nav_usd": 103.152683,
+          "period_return": -0.00474672
+        },
+        {
+          "available_at_utc": "2025-03-10T22:00:00Z",
+          "event_at_utc": "2025-03-10T21:00:00Z",
+          "nav_usd": 102.089997,
+          "period_return": -0.01030207
+        },
+        {
+          "available_at_utc": "2025-03-11T22:00:00Z",
+          "event_at_utc": "2025-03-11T21:00:00Z",
+          "nav_usd": 102.166996,
+          "period_return": 0.00075422
+        },
+        {
+          "available_at_utc": "2025-03-12T22:00:00Z",
+          "event_at_utc": "2025-03-12T21:00:00Z",
+          "nav_usd": 103.021458,
+          "period_return": 0.00836339
+        },
+        {
+          "available_at_utc": "2025-03-13T22:00:00Z",
+          "event_at_utc": "2025-03-13T21:00:00Z",
+          "nav_usd": 103.277156,
+          "period_return": 0.00248199
+        },
+        {
+          "available_at_utc": "2025-03-14T22:00:00Z",
+          "event_at_utc": "2025-03-14T21:00:00Z",
+          "nav_usd": 103.491095,
+          "period_return": 0.0020715
+        },
+        {
+          "available_at_utc": "2025-03-17T22:00:00Z",
+          "event_at_utc": "2025-03-17T21:00:00Z",
+          "nav_usd": 103.37927,
+          "period_return": -0.00108053
+        },
+        {
+          "available_at_utc": "2025-03-18T22:00:00Z",
+          "event_at_utc": "2025-03-18T21:00:00Z",
+          "nav_usd": 102.566844,
+          "period_return": -0.00785869
+        },
+        {
+          "available_at_utc": "2025-03-19T22:00:00Z",
+          "event_at_utc": "2025-03-19T21:00:00Z",
+          "nav_usd": 101.870362,
+          "period_return": -0.00679052
+        },
+        {
+          "available_at_utc": "2025-03-20T22:00:00Z",
+          "event_at_utc": "2025-03-20T21:00:00Z",
+          "nav_usd": 101.162468,
+          "period_return": -0.00694896
+        },
+        {
+          "available_at_utc": "2025-03-21T22:00:00Z",
+          "event_at_utc": "2025-03-21T21:00:00Z",
+          "nav_usd": 101.50455,
+          "period_return": 0.00338151
+        },
+        {
+          "available_at_utc": "2025-03-24T22:00:00Z",
+          "event_at_utc": "2025-03-24T21:00:00Z",
+          "nav_usd": 102.641853,
+          "period_return": 0.01120445
+        },
+        {
+          "available_at_utc": "2025-03-25T22:00:00Z",
+          "event_at_utc": "2025-03-25T21:00:00Z",
+          "nav_usd": 101.635095,
+          "period_return": -0.00980845
+        },
+        {
+          "available_at_utc": "2025-03-26T22:00:00Z",
+          "event_at_utc": "2025-03-26T21:00:00Z",
+          "nav_usd": 101.251663,
+          "period_return": -0.00377264
+        },
+        {
+          "available_at_utc": "2025-03-27T22:00:00Z",
+          "event_at_utc": "2025-03-27T21:00:00Z",
+          "nav_usd": 100.687845,
+          "period_return": -0.00556849
+        },
+        {
+          "available_at_utc": "2025-03-28T22:00:00Z",
+          "event_at_utc": "2025-03-28T21:00:00Z",
+          "nav_usd": 100.741166,
+          "period_return": 0.00052957
+        },
+        {
+          "available_at_utc": "2025-03-31T22:00:00Z",
+          "event_at_utc": "2025-03-31T21:00:00Z",
+          "nav_usd": 101.572389,
+          "period_return": 0.00825108
+        },
+        {
+          "available_at_utc": "2025-04-01T22:00:00Z",
+          "event_at_utc": "2025-04-01T21:00:00Z",
+          "nav_usd": 101.297795,
+          "period_return": -0.00270343
+        },
+        {
+          "available_at_utc": "2025-04-02T22:00:00Z",
+          "event_at_utc": "2025-04-02T21:00:00Z",
+          "nav_usd": 100.509502,
+          "period_return": -0.00778193
+        },
+        {
+          "available_at_utc": "2025-04-03T22:00:00Z",
+          "event_at_utc": "2025-04-03T21:00:00Z",
+          "nav_usd": 99.670767,
+          "period_return": -0.00834483
+        },
+        {
+          "available_at_utc": "2025-04-04T22:00:00Z",
+          "event_at_utc": "2025-04-04T21:00:00Z",
+          "nav_usd": 98.888883,
+          "period_return": -0.00784467
+        },
+        {
+          "available_at_utc": "2025-04-07T22:00:00Z",
+          "event_at_utc": "2025-04-07T21:00:00Z",
+          "nav_usd": 98.810782,
+          "period_return": -0.00078978
+        },
+        {
+          "available_at_utc": "2025-04-08T22:00:00Z",
+          "event_at_utc": "2025-04-08T21:00:00Z",
+          "nav_usd": 99.531065,
+          "period_return": 0.00728951
+        },
+        {
+          "available_at_utc": "2025-04-09T22:00:00Z",
+          "event_at_utc": "2025-04-09T21:00:00Z",
+          "nav_usd": 98.886581,
+          "period_return": -0.0064752
+        },
+        {
+          "available_at_utc": "2025-04-10T22:00:00Z",
+          "event_at_utc": "2025-04-10T21:00:00Z",
+          "nav_usd": 98.218414,
+          "period_return": -0.0067569
+        },
+        {
+          "available_at_utc": "2025-04-11T22:00:00Z",
+          "event_at_utc": "2025-04-11T21:00:00Z",
+          "nav_usd": 98.196134,
+          "period_return": -0.00022684
+        },
+        {
+          "available_at_utc": "2025-04-14T22:00:00Z",
+          "event_at_utc": "2025-04-14T21:00:00Z",
+          "nav_usd": 97.764766,
+          "period_return": -0.00439292
+        },
+        {
+          "available_at_utc": "2025-04-15T22:00:00Z",
+          "event_at_utc": "2025-04-15T21:00:00Z",
+          "nav_usd": 97.5976,
+          "period_return": -0.00170988
+        },
+        {
+          "available_at_utc": "2025-04-16T22:00:00Z",
+          "event_at_utc": "2025-04-16T21:00:00Z",
+          "nav_usd": 97.85755,
+          "period_return": 0.00266349
+        },
+        {
+          "available_at_utc": "2025-04-17T22:00:00Z",
+          "event_at_utc": "2025-04-17T21:00:00Z",
+          "nav_usd": 97.415665,
+          "period_return": -0.00451559
+        },
+        {
+          "available_at_utc": "2025-04-18T22:00:00Z",
+          "event_at_utc": "2025-04-18T21:00:00Z",
+          "nav_usd": 96.599176,
+          "period_return": -0.00838149
+        },
+        {
+          "available_at_utc": "2025-04-21T22:00:00Z",
+          "event_at_utc": "2025-04-21T21:00:00Z",
+          "nav_usd": 96.276932,
+          "period_return": -0.00333589
+        },
+        {
+          "available_at_utc": "2025-04-22T22:00:00Z",
+          "event_at_utc": "2025-04-22T21:00:00Z",
+          "nav_usd": 97.441394,
+          "period_return": 0.01209492
+        },
+        {
+          "available_at_utc": "2025-04-23T22:00:00Z",
+          "event_at_utc": "2025-04-23T21:00:00Z",
+          "nav_usd": 97.86202,
+          "period_return": 0.00431671
+        },
+        {
+          "available_at_utc": "2025-04-24T22:00:00Z",
+          "event_at_utc": "2025-04-24T21:00:00Z",
+          "nav_usd": 98.156803,
+          "period_return": 0.00301223
+        },
+        {
+          "available_at_utc": "2025-04-25T22:00:00Z",
+          "event_at_utc": "2025-04-25T21:00:00Z",
+          "nav_usd": 98.756214,
+          "period_return": 0.00610667
+        },
+        {
+          "available_at_utc": "2025-04-28T22:00:00Z",
+          "event_at_utc": "2025-04-28T21:00:00Z",
+          "nav_usd": 98.000648,
+          "period_return": -0.00765082
+        },
+        {
+          "available_at_utc": "2025-04-29T22:00:00Z",
+          "event_at_utc": "2025-04-29T21:00:00Z",
+          "nav_usd": 98.51373,
+          "period_return": 0.00523549
+        },
+        {
+          "available_at_utc": "2025-04-30T22:00:00Z",
+          "event_at_utc": "2025-04-30T21:00:00Z",
+          "nav_usd": 99.360613,
+          "period_return": 0.0085966
+        },
+        {
+          "available_at_utc": "2025-05-01T22:00:00Z",
+          "event_at_utc": "2025-05-01T21:00:00Z",
+          "nav_usd": 99.019943,
+          "period_return": -0.00342862
+        },
+        {
+          "available_at_utc": "2025-05-02T22:00:00Z",
+          "event_at_utc": "2025-05-02T21:00:00Z",
+          "nav_usd": 98.984787,
+          "period_return": -0.00035504
+        },
+        {
+          "available_at_utc": "2025-05-05T22:00:00Z",
+          "event_at_utc": "2025-05-05T21:00:00Z",
+          "nav_usd": 98.590237,
+          "period_return": -0.00398597
+        },
+        {
+          "available_at_utc": "2025-05-06T22:00:00Z",
+          "event_at_utc": "2025-05-06T21:00:00Z",
+          "nav_usd": 98.978844,
+          "period_return": 0.00394163
+        },
+        {
+          "available_at_utc": "2025-05-07T22:00:00Z",
+          "event_at_utc": "2025-05-07T21:00:00Z",
+          "nav_usd": 98.801669,
+          "period_return": -0.00179003
+        },
+        {
+          "available_at_utc": "2025-05-08T22:00:00Z",
+          "event_at_utc": "2025-05-08T21:00:00Z",
+          "nav_usd": 96.996356,
+          "period_return": -0.01827209
+        },
+        {
+          "available_at_utc": "2025-05-09T22:00:00Z",
+          "event_at_utc": "2025-05-09T21:00:00Z",
+          "nav_usd": 95.839506,
+          "period_return": -0.01192673
+        },
+        {
+          "available_at_utc": "2025-05-12T22:00:00Z",
+          "event_at_utc": "2025-05-12T21:00:00Z",
+          "nav_usd": 94.214792,
+          "period_return": -0.01695245
+        },
+        {
+          "available_at_utc": "2025-05-13T22:00:00Z",
+          "event_at_utc": "2025-05-13T21:00:00Z",
+          "nav_usd": 91.519573,
+          "period_return": -0.02860717
+        },
+        {
+          "available_at_utc": "2025-05-14T22:00:00Z",
+          "event_at_utc": "2025-05-14T21:00:00Z",
+          "nav_usd": 89.873315,
+          "period_return": -0.01798804
+        },
+        {
+          "available_at_utc": "2025-05-15T22:00:00Z",
+          "event_at_utc": "2025-05-15T21:00:00Z",
+          "nav_usd": 90.326428,
+          "period_return": 0.00504168
+        },
+        {
+          "available_at_utc": "2025-05-16T22:00:00Z",
+          "event_at_utc": "2025-05-16T21:00:00Z",
+          "nav_usd": 90.422271,
+          "period_return": 0.00106108
+        },
+        {
+          "available_at_utc": "2025-05-19T22:00:00Z",
+          "event_at_utc": "2025-05-19T21:00:00Z",
+          "nav_usd": 89.444808,
+          "period_return": -0.01080999
+        },
+        {
+          "available_at_utc": "2025-05-20T22:00:00Z",
+          "event_at_utc": "2025-05-20T21:00:00Z",
+          "nav_usd": 89.122694,
+          "period_return": -0.00360126
+        },
+        {
+          "available_at_utc": "2025-05-21T22:00:00Z",
+          "event_at_utc": "2025-05-21T21:00:00Z",
+          "nav_usd": 88.373602,
+          "period_return": -0.00840517
+        },
+        {
+          "available_at_utc": "2025-05-22T22:00:00Z",
+          "event_at_utc": "2025-05-22T21:00:00Z",
+          "nav_usd": 87.559619,
+          "period_return": -0.0092107
+        },
+        {
+          "available_at_utc": "2025-05-23T22:00:00Z",
+          "event_at_utc": "2025-05-23T21:00:00Z",
+          "nav_usd": 86.720177,
+          "period_return": -0.00958709
+        },
+        {
+          "available_at_utc": "2025-05-26T22:00:00Z",
+          "event_at_utc": "2025-05-26T21:00:00Z",
+          "nav_usd": 86.568256,
+          "period_return": -0.00175185
+        },
+        {
+          "available_at_utc": "2025-05-27T22:00:00Z",
+          "event_at_utc": "2025-05-27T21:00:00Z",
+          "nav_usd": 85.884042,
+          "period_return": -0.00790376
+        },
+        {
+          "available_at_utc": "2025-05-28T22:00:00Z",
+          "event_at_utc": "2025-05-28T21:00:00Z",
+          "nav_usd": 86.008696,
+          "period_return": 0.00145143
+        },
+        {
+          "available_at_utc": "2025-05-29T22:00:00Z",
+          "event_at_utc": "2025-05-29T21:00:00Z",
+          "nav_usd": 84.964406,
+          "period_return": -0.01214168
+        },
+        {
+          "available_at_utc": "2025-05-30T22:00:00Z",
+          "event_at_utc": "2025-05-30T21:00:00Z",
+          "nav_usd": 83.942971,
+          "period_return": -0.01202192
+        },
+        {
+          "available_at_utc": "2025-06-02T22:00:00Z",
+          "event_at_utc": "2025-06-02T21:00:00Z",
+          "nav_usd": 80.80566,
+          "period_return": -0.03737431
+        },
+        {
+          "available_at_utc": "2025-06-03T22:00:00Z",
+          "event_at_utc": "2025-06-03T21:00:00Z",
+          "nav_usd": 78.438095,
+          "period_return": -0.02929949
+        },
+        {
+          "available_at_utc": "2025-06-04T22:00:00Z",
+          "event_at_utc": "2025-06-04T21:00:00Z",
+          "nav_usd": 78.897673,
+          "period_return": 0.00585911
+        },
+        {
+          "available_at_utc": "2025-06-05T22:00:00Z",
+          "event_at_utc": "2025-06-05T21:00:00Z",
+          "nav_usd": 76.700739,
+          "period_return": -0.02784535
+        },
+        {
+          "available_at_utc": "2025-06-06T22:00:00Z",
+          "event_at_utc": "2025-06-06T21:00:00Z",
+          "nav_usd": 76.697856,
+          "period_return": -3.76e-05
+        },
+        {
+          "available_at_utc": "2025-06-09T22:00:00Z",
+          "event_at_utc": "2025-06-09T21:00:00Z",
+          "nav_usd": 76.762092,
+          "period_return": 0.00083752
+        },
+        {
+          "available_at_utc": "2025-06-10T22:00:00Z",
+          "event_at_utc": "2025-06-10T21:00:00Z",
+          "nav_usd": 76.602101,
+          "period_return": -0.00208424
+        },
+        {
+          "available_at_utc": "2025-06-11T22:00:00Z",
+          "event_at_utc": "2025-06-11T21:00:00Z",
+          "nav_usd": 76.645598,
+          "period_return": 0.00056784
+        },
+        {
+          "available_at_utc": "2025-06-12T22:00:00Z",
+          "event_at_utc": "2025-06-12T21:00:00Z",
+          "nav_usd": 76.295545,
+          "period_return": -0.00456717
+        },
+        {
+          "available_at_utc": "2025-06-13T22:00:00Z",
+          "event_at_utc": "2025-06-13T21:00:00Z",
+          "nav_usd": 76.328182,
+          "period_return": 0.00042777
+        },
+        {
+          "available_at_utc": "2025-06-16T22:00:00Z",
+          "event_at_utc": "2025-06-16T21:00:00Z",
+          "nav_usd": 76.293638,
+          "period_return": -0.00045257
+        },
+        {
+          "available_at_utc": "2025-06-17T22:00:00Z",
+          "event_at_utc": "2025-06-17T21:00:00Z",
+          "nav_usd": 76.627468,
+          "period_return": 0.00437559
+        },
+        {
+          "available_at_utc": "2025-06-18T22:00:00Z",
+          "event_at_utc": "2025-06-18T21:00:00Z",
+          "nav_usd": 76.54098,
+          "period_return": -0.00112868
+        },
+        {
+          "available_at_utc": "2025-06-19T22:00:00Z",
+          "event_at_utc": "2025-06-19T21:00:00Z",
+          "nav_usd": 76.194576,
+          "period_return": -0.00452573
+        },
+        {
+          "available_at_utc": "2025-06-20T22:00:00Z",
+          "event_at_utc": "2025-06-20T21:00:00Z",
+          "nav_usd": 76.89662,
+          "period_return": 0.00921383
+        },
+        {
+          "available_at_utc": "2025-06-23T22:00:00Z",
+          "event_at_utc": "2025-06-23T21:00:00Z",
+          "nav_usd": 77.219683,
+          "period_return": 0.00420127
+        },
+        {
+          "available_at_utc": "2025-06-24T22:00:00Z",
+          "event_at_utc": "2025-06-24T21:00:00Z",
+          "nav_usd": 77.325531,
+          "period_return": 0.00137074
+        },
+        {
+          "available_at_utc": "2025-06-25T22:00:00Z",
+          "event_at_utc": "2025-06-25T21:00:00Z",
+          "nav_usd": 76.990067,
+          "period_return": -0.00433833
+        },
+        {
+          "available_at_utc": "2025-06-26T22:00:00Z",
+          "event_at_utc": "2025-06-26T21:00:00Z",
+          "nav_usd": 77.236189,
+          "period_return": 0.00319681
+        },
+        {
+          "available_at_utc": "2025-06-27T22:00:00Z",
+          "event_at_utc": "2025-06-27T21:00:00Z",
+          "nav_usd": 77.971959,
+          "period_return": 0.00952623
+        },
+        {
+          "available_at_utc": "2025-06-30T22:00:00Z",
+          "event_at_utc": "2025-06-30T21:00:00Z",
+          "nav_usd": 78.278262,
+          "period_return": 0.00392838
+        },
+        {
+          "available_at_utc": "2025-07-01T22:00:00Z",
+          "event_at_utc": "2025-07-01T21:00:00Z",
+          "nav_usd": 77.450478,
+          "period_return": -0.0105749
+        },
+        {
+          "available_at_utc": "2025-07-02T22:00:00Z",
+          "event_at_utc": "2025-07-02T21:00:00Z",
+          "nav_usd": 77.881981,
+          "period_return": 0.00557135
+        },
+        {
+          "available_at_utc": "2025-07-03T22:00:00Z",
+          "event_at_utc": "2025-07-03T21:00:00Z",
+          "nav_usd": 77.919071,
+          "period_return": 0.00047623
+        },
+        {
+          "available_at_utc": "2025-07-04T22:00:00Z",
+          "event_at_utc": "2025-07-04T21:00:00Z",
+          "nav_usd": 78.67882,
+          "period_return": 0.00975048
+        },
+        {
+          "available_at_utc": "2025-07-07T22:00:00Z",
+          "event_at_utc": "2025-07-07T21:00:00Z",
+          "nav_usd": 79.337012,
+          "period_return": 0.00836556
+        },
+        {
+          "available_at_utc": "2025-07-08T22:00:00Z",
+          "event_at_utc": "2025-07-08T21:00:00Z",
+          "nav_usd": 79.506847,
+          "period_return": 0.00214069
+        },
+        {
+          "available_at_utc": "2025-07-09T22:00:00Z",
+          "event_at_utc": "2025-07-09T21:00:00Z",
+          "nav_usd": 79.689258,
+          "period_return": 0.00229428
+        },
+        {
+          "available_at_utc": "2025-07-10T22:00:00Z",
+          "event_at_utc": "2025-07-10T21:00:00Z",
+          "nav_usd": 79.890064,
+          "period_return": 0.00251986
+        },
+        {
+          "available_at_utc": "2025-07-11T22:00:00Z",
+          "event_at_utc": "2025-07-11T21:00:00Z",
+          "nav_usd": 80.20033,
+          "period_return": 0.00388367
+        },
+        {
+          "available_at_utc": "2025-07-14T22:00:00Z",
+          "event_at_utc": "2025-07-14T21:00:00Z",
+          "nav_usd": 79.48007,
+          "period_return": -0.00898077
+        },
+        {
+          "available_at_utc": "2025-07-15T22:00:00Z",
+          "event_at_utc": "2025-07-15T21:00:00Z",
+          "nav_usd": 79.401746,
+          "period_return": -0.00098545
+        },
+        {
+          "available_at_utc": "2025-07-16T22:00:00Z",
+          "event_at_utc": "2025-07-16T21:00:00Z",
+          "nav_usd": 80.055001,
+          "period_return": 0.00822721
+        },
+        {
+          "available_at_utc": "2025-07-17T22:00:00Z",
+          "event_at_utc": "2025-07-17T21:00:00Z",
+          "nav_usd": 79.988466,
+          "period_return": -0.00083112
+        },
+        {
+          "available_at_utc": "2025-07-18T22:00:00Z",
+          "event_at_utc": "2025-07-18T21:00:00Z",
+          "nav_usd": 79.80698,
+          "period_return": -0.0022689
+        },
+        {
+          "available_at_utc": "2025-07-21T22:00:00Z",
+          "event_at_utc": "2025-07-21T21:00:00Z",
+          "nav_usd": 79.602443,
+          "period_return": -0.0025629
+        },
+        {
+          "available_at_utc": "2025-07-22T22:00:00Z",
+          "event_at_utc": "2025-07-22T21:00:00Z",
+          "nav_usd": 79.148561,
+          "period_return": -0.00570186
+        },
+        {
+          "available_at_utc": "2025-07-23T22:00:00Z",
+          "event_at_utc": "2025-07-23T21:00:00Z",
+          "nav_usd": 79.053548,
+          "period_return": -0.00120044
+        },
+        {
+          "available_at_utc": "2025-07-24T22:00:00Z",
+          "event_at_utc": "2025-07-24T21:00:00Z",
+          "nav_usd": 78.323326,
+          "period_return": -0.00923706
+        },
+        {
+          "available_at_utc": "2025-07-25T22:00:00Z",
+          "event_at_utc": "2025-07-25T21:00:00Z",
+          "nav_usd": 78.089165,
+          "period_return": -0.00298968
+        },
+        {
+          "available_at_utc": "2025-07-28T22:00:00Z",
+          "event_at_utc": "2025-07-28T21:00:00Z",
+          "nav_usd": 78.035806,
+          "period_return": -0.00068331
+        },
+        {
+          "available_at_utc": "2025-07-29T22:00:00Z",
+          "event_at_utc": "2025-07-29T21:00:00Z",
+          "nav_usd": 77.307912,
+          "period_return": -0.00932769
+        },
+        {
+          "available_at_utc": "2025-07-30T22:00:00Z",
+          "event_at_utc": "2025-07-30T21:00:00Z",
+          "nav_usd": 77.040791,
+          "period_return": -0.00345529
+        },
+        {
+          "available_at_utc": "2025-07-31T22:00:00Z",
+          "event_at_utc": "2025-07-31T21:00:00Z",
+          "nav_usd": 77.978023,
+          "period_return": 0.01216541
+        },
+        {
+          "available_at_utc": "2025-08-01T22:00:00Z",
+          "event_at_utc": "2025-08-01T21:00:00Z",
+          "nav_usd": 78.463166,
+          "period_return": 0.00622153
+        },
+        {
+          "available_at_utc": "2025-08-04T22:00:00Z",
+          "event_at_utc": "2025-08-04T21:00:00Z",
+          "nav_usd": 78.797064,
+          "period_return": 0.00425548
+        },
+        {
+          "available_at_utc": "2025-08-05T22:00:00Z",
+          "event_at_utc": "2025-08-05T21:00:00Z",
+          "nav_usd": 77.864023,
+          "period_return": -0.01184106
+        },
+        {
+          "available_at_utc": "2025-08-06T22:00:00Z",
+          "event_at_utc": "2025-08-06T21:00:00Z",
+          "nav_usd": 77.622858,
+          "period_return": -0.00309726
+        },
+        {
+          "available_at_utc": "2025-08-07T22:00:00Z",
+          "event_at_utc": "2025-08-07T21:00:00Z",
+          "nav_usd": 77.164133,
+          "period_return": -0.00590966
+        },
+        {
+          "available_at_utc": "2025-08-08T22:00:00Z",
+          "event_at_utc": "2025-08-08T21:00:00Z",
+          "nav_usd": 76.707196,
+          "period_return": -0.00592163
+        },
+        {
+          "available_at_utc": "2025-08-11T22:00:00Z",
+          "event_at_utc": "2025-08-11T21:00:00Z",
+          "nav_usd": 76.740687,
+          "period_return": 0.00043662
+        },
+        {
+          "available_at_utc": "2025-08-12T22:00:00Z",
+          "event_at_utc": "2025-08-12T21:00:00Z",
+          "nav_usd": 76.960482,
+          "period_return": 0.00286413
+        },
+        {
+          "available_at_utc": "2025-08-13T22:00:00Z",
+          "event_at_utc": "2025-08-13T21:00:00Z",
+          "nav_usd": 76.667618,
+          "period_return": -0.00380539
+        },
+        {
+          "available_at_utc": "2025-08-14T22:00:00Z",
+          "event_at_utc": "2025-08-14T21:00:00Z",
+          "nav_usd": 76.97322,
+          "period_return": 0.00398606
+        },
+        {
+          "available_at_utc": "2025-08-15T22:00:00Z",
+          "event_at_utc": "2025-08-15T21:00:00Z",
+          "nav_usd": 77.244336,
+          "period_return": 0.00352221
+        },
+        {
+          "available_at_utc": "2025-08-18T22:00:00Z",
+          "event_at_utc": "2025-08-18T21:00:00Z",
+          "nav_usd": 77.752379,
+          "period_return": 0.00657709
+        },
+        {
+          "available_at_utc": "2025-08-19T22:00:00Z",
+          "event_at_utc": "2025-08-19T21:00:00Z",
+          "nav_usd": 78.51637,
+          "period_return": 0.00982595
+        },
+        {
+          "available_at_utc": "2025-08-20T22:00:00Z",
+          "event_at_utc": "2025-08-20T21:00:00Z",
+          "nav_usd": 78.974208,
+          "period_return": 0.00583111
+        },
+        {
+          "available_at_utc": "2025-08-21T22:00:00Z",
+          "event_at_utc": "2025-08-21T21:00:00Z",
+          "nav_usd": 79.329153,
+          "period_return": 0.00449444
+        },
+        {
+          "available_at_utc": "2025-08-22T22:00:00Z",
+          "event_at_utc": "2025-08-22T21:00:00Z",
+          "nav_usd": 79.369863,
+          "period_return": 0.00051317
+        },
+        {
+          "available_at_utc": "2025-08-25T22:00:00Z",
+          "event_at_utc": "2025-08-25T21:00:00Z",
+          "nav_usd": 79.508912,
+          "period_return": 0.00175191
+        },
+        {
+          "available_at_utc": "2025-08-26T22:00:00Z",
+          "event_at_utc": "2025-08-26T21:00:00Z",
+          "nav_usd": 79.304677,
+          "period_return": -0.0025687
+        },
+        {
+          "available_at_utc": "2025-08-27T22:00:00Z",
+          "event_at_utc": "2025-08-27T21:00:00Z",
+          "nav_usd": 79.02284,
+          "period_return": -0.00355386
+        },
+        {
+          "available_at_utc": "2025-08-28T22:00:00Z",
+          "event_at_utc": "2025-08-28T21:00:00Z",
+          "nav_usd": 78.573759,
+          "period_return": -0.00568293
+        },
+        {
+          "available_at_utc": "2025-08-29T22:00:00Z",
+          "event_at_utc": "2025-08-29T21:00:00Z",
+          "nav_usd": 78.537206,
+          "period_return": -0.0004652
+        },
+        {
+          "available_at_utc": "2025-09-01T22:00:00Z",
+          "event_at_utc": "2025-09-01T21:00:00Z",
+          "nav_usd": 78.404106,
+          "period_return": -0.00169475
+        },
+        {
+          "available_at_utc": "2025-09-02T22:00:00Z",
+          "event_at_utc": "2025-09-02T21:00:00Z",
+          "nav_usd": 78.509423,
+          "period_return": 0.00134326
+        },
+        {
+          "available_at_utc": "2025-09-03T22:00:00Z",
+          "event_at_utc": "2025-09-03T21:00:00Z",
+          "nav_usd": 78.862471,
+          "period_return": 0.00449689
+        },
+        {
+          "available_at_utc": "2025-09-04T22:00:00Z",
+          "event_at_utc": "2025-09-04T21:00:00Z",
+          "nav_usd": 78.541465,
+          "period_return": -0.00407046
+        },
+        {
+          "available_at_utc": "2025-09-05T22:00:00Z",
+          "event_at_utc": "2025-09-05T21:00:00Z",
+          "nav_usd": 78.968719,
+          "period_return": 0.00543986
+        },
+        {
+          "available_at_utc": "2025-09-08T22:00:00Z",
+          "event_at_utc": "2025-09-08T21:00:00Z",
+          "nav_usd": 78.583075,
+          "period_return": -0.00488351
+        },
+        {
+          "available_at_utc": "2025-09-09T22:00:00Z",
+          "event_at_utc": "2025-09-09T21:00:00Z",
+          "nav_usd": 79.055017,
+          "period_return": 0.00600565
+        },
+        {
+          "available_at_utc": "2025-09-10T22:00:00Z",
+          "event_at_utc": "2025-09-10T21:00:00Z",
+          "nav_usd": 79.467697,
+          "period_return": 0.00522015
+        }
+      ],
+      "risk_budget": 0.25,
+      "strategy_id": "strat_eq_statarb_us"
+    },
+    {
+      "eligible": true,
+      "exposure": {
+        "adv_usd": 60000000.0,
+        "asset_class": "equities",
+        "gross_exposure": 1.0,
+        "liquidity_days_to_exit": 1.0,
+        "market_beta": 0.35,
+        "max_capacity_usd": 18000000.0,
+        "net_exposure": 0.25,
+        "strategy_group": "equity_statarb",
+        "transaction_cost_bps": 10.0
+      },
+      "name": "Global Equity Cross-Sectional Momentum",
+      "returns": [
+        {
+          "available_at_utc": "2025-01-02T22:00:00Z",
+          "event_at_utc": "2025-01-02T21:00:00Z",
+          "nav_usd": 99.941812,
+          "period_return": -0.00058188
+        },
+        {
+          "available_at_utc": "2025-01-03T22:00:00Z",
+          "event_at_utc": "2025-01-03T21:00:00Z",
+          "nav_usd": 100.636468,
+          "period_return": 0.0069506
+        },
+        {
+          "available_at_utc": "2025-01-06T22:00:00Z",
+          "event_at_utc": "2025-01-06T21:00:00Z",
+          "nav_usd": 99.638697,
+          "period_return": -0.0099146
+        },
+        {
+          "available_at_utc": "2025-01-07T22:00:00Z",
+          "event_at_utc": "2025-01-07T21:00:00Z",
+          "nav_usd": 100.078024,
+          "period_return": 0.0044092
+        },
+        {
+          "available_at_utc": "2025-01-08T22:00:00Z",
+          "event_at_utc": "2025-01-08T21:00:00Z",
+          "nav_usd": 100.615892,
+          "period_return": 0.00537449
+        },
+        {
+          "available_at_utc": "2025-01-09T22:00:00Z",
+          "event_at_utc": "2025-01-09T21:00:00Z",
+          "nav_usd": 100.611535,
+          "period_return": -4.331e-05
+        },
+        {
+          "available_at_utc": "2025-01-10T22:00:00Z",
+          "event_at_utc": "2025-01-10T21:00:00Z",
+          "nav_usd": 99.592236,
+          "period_return": -0.01013103
+        },
+        {
+          "available_at_utc": "2025-01-13T22:00:00Z",
+          "event_at_utc": "2025-01-13T21:00:00Z",
+          "nav_usd": 98.977318,
+          "period_return": -0.00617436
+        },
+        {
+          "available_at_utc": "2025-01-14T22:00:00Z",
+          "event_at_utc": "2025-01-14T21:00:00Z",
+          "nav_usd": 100.36314,
+          "period_return": 0.01400141
+        },
+        {
+          "available_at_utc": "2025-01-15T22:00:00Z",
+          "event_at_utc": "2025-01-15T21:00:00Z",
+          "nav_usd": 101.576494,
+          "period_return": 0.01208964
+        },
+        {
+          "available_at_utc": "2025-01-16T22:00:00Z",
+          "event_at_utc": "2025-01-16T21:00:00Z",
+          "nav_usd": 101.473704,
+          "period_return": -0.00101195
+        },
+        {
+          "available_at_utc": "2025-01-17T22:00:00Z",
+          "event_at_utc": "2025-01-17T21:00:00Z",
+          "nav_usd": 101.370176,
+          "period_return": -0.00102024
+        },
+        {
+          "available_at_utc": "2025-01-20T22:00:00Z",
+          "event_at_utc": "2025-01-20T21:00:00Z",
+          "nav_usd": 101.126406,
+          "period_return": -0.00240475
+        },
+        {
+          "available_at_utc": "2025-01-21T22:00:00Z",
+          "event_at_utc": "2025-01-21T21:00:00Z",
+          "nav_usd": 101.724593,
+          "period_return": 0.00591524
+        },
+        {
+          "available_at_utc": "2025-01-22T22:00:00Z",
+          "event_at_utc": "2025-01-22T21:00:00Z",
+          "nav_usd": 101.46733,
+          "period_return": -0.00252901
+        },
+        {
+          "available_at_utc": "2025-01-23T22:00:00Z",
+          "event_at_utc": "2025-01-23T21:00:00Z",
+          "nav_usd": 101.211993,
+          "period_return": -0.00251645
+        },
+        {
+          "available_at_utc": "2025-01-24T22:00:00Z",
+          "event_at_utc": "2025-01-24T21:00:00Z",
+          "nav_usd": 102.549844,
+          "period_return": 0.0132183
+        },
+        {
+          "available_at_utc": "2025-01-27T22:00:00Z",
+          "event_at_utc": "2025-01-27T21:00:00Z",
+          "nav_usd": 102.952925,
+          "period_return": 0.00393059
+        },
+        {
+          "available_at_utc": "2025-01-28T22:00:00Z",
+          "event_at_utc": "2025-01-28T21:00:00Z",
+          "nav_usd": 102.946272,
+          "period_return": -6.463e-05
+        },
+        {
+          "available_at_utc": "2025-01-29T22:00:00Z",
+          "event_at_utc": "2025-01-29T21:00:00Z",
+          "nav_usd": 103.451188,
+          "period_return": 0.00490466
+        },
+        {
+          "available_at_utc": "2025-01-30T22:00:00Z",
+          "event_at_utc": "2025-01-30T21:00:00Z",
+          "nav_usd": 103.050281,
+          "period_return": -0.00387533
+        },
+        {
+          "available_at_utc": "2025-01-31T22:00:00Z",
+          "event_at_utc": "2025-01-31T21:00:00Z",
+          "nav_usd": 102.361813,
+          "period_return": -0.0066809
+        },
+        {
+          "available_at_utc": "2025-02-03T22:00:00Z",
+          "event_at_utc": "2025-02-03T21:00:00Z",
+          "nav_usd": 102.765507,
+          "period_return": 0.00394379
+        },
+        {
+          "available_at_utc": "2025-02-04T22:00:00Z",
+          "event_at_utc": "2025-02-04T21:00:00Z",
+          "nav_usd": 103.598591,
+          "period_return": 0.00810665
+        },
+        {
+          "available_at_utc": "2025-02-05T22:00:00Z",
+          "event_at_utc": "2025-02-05T21:00:00Z",
+          "nav_usd": 101.17193,
+          "period_return": -0.02342369
+        },
+        {
+          "available_at_utc": "2025-02-06T22:00:00Z",
+          "event_at_utc": "2025-02-06T21:00:00Z",
+          "nav_usd": 102.130505,
+          "period_return": 0.00947471
+        },
+        {
+          "available_at_utc": "2025-02-07T22:00:00Z",
+          "event_at_utc": "2025-02-07T21:00:00Z",
+          "nav_usd": 101.862827,
+          "period_return": -0.00262094
+        },
+        {
+          "available_at_utc": "2025-02-10T22:00:00Z",
+          "event_at_utc": "2025-02-10T21:00:00Z",
+          "nav_usd": 101.317904,
+          "period_return": -0.00534958
+        },
+        {
+          "available_at_utc": "2025-02-11T22:00:00Z",
+          "event_at_utc": "2025-02-11T21:00:00Z",
+          "nav_usd": 100.786099,
+          "period_return": -0.00524887
+        },
+        {
+          "available_at_utc": "2025-02-12T22:00:00Z",
+          "event_at_utc": "2025-02-12T21:00:00Z",
+          "nav_usd": 100.084858,
+          "period_return": -0.00695772
+        },
+        {
+          "available_at_utc": "2025-02-13T22:00:00Z",
+          "event_at_utc": "2025-02-13T21:00:00Z",
+          "nav_usd": 99.725501,
+          "period_return": -0.00359052
+        },
+        {
+          "available_at_utc": "2025-02-14T22:00:00Z",
+          "event_at_utc": "2025-02-14T21:00:00Z",
+          "nav_usd": 99.552864,
+          "period_return": -0.00173113
+        },
+        {
+          "available_at_utc": "2025-02-17T22:00:00Z",
+          "event_at_utc": "2025-02-17T21:00:00Z",
+          "nav_usd": 101.855553,
+          "period_return": 0.02313032
+        },
+        {
+          "available_at_utc": "2025-02-18T22:00:00Z",
+          "event_at_utc": "2025-02-18T21:00:00Z",
+          "nav_usd": 101.30978,
+          "period_return": -0.0053583
+        },
+        {
+          "available_at_utc": "2025-02-19T22:00:00Z",
+          "event_at_utc": "2025-02-19T21:00:00Z",
+          "nav_usd": 101.949854,
+          "period_return": 0.00631799
+        },
+        {
+          "available_at_utc": "2025-02-20T22:00:00Z",
+          "event_at_utc": "2025-02-20T21:00:00Z",
+          "nav_usd": 102.247189,
+          "period_return": 0.00291649
+        },
+        {
+          "available_at_utc": "2025-02-21T22:00:00Z",
+          "event_at_utc": "2025-02-21T21:00:00Z",
+          "nav_usd": 102.866618,
+          "period_return": 0.00605814
+        },
+        {
+          "available_at_utc": "2025-02-24T22:00:00Z",
+          "event_at_utc": "2025-02-24T21:00:00Z",
+          "nav_usd": 104.487598,
+          "period_return": 0.01575808
+        },
+        {
+          "available_at_utc": "2025-02-25T22:00:00Z",
+          "event_at_utc": "2025-02-25T21:00:00Z",
+          "nav_usd": 104.982926,
+          "period_return": 0.00474054
+        },
+        {
+          "available_at_utc": "2025-02-26T22:00:00Z",
+          "event_at_utc": "2025-02-26T21:00:00Z",
+          "nav_usd": 105.366785,
+          "period_return": 0.00365639
+        },
+        {
+          "available_at_utc": "2025-02-27T22:00:00Z",
+          "event_at_utc": "2025-02-27T21:00:00Z",
+          "nav_usd": 104.82019,
+          "period_return": -0.00518754
+        },
+        {
+          "available_at_utc": "2025-02-28T22:00:00Z",
+          "event_at_utc": "2025-02-28T21:00:00Z",
+          "nav_usd": 105.123237,
+          "period_return": 0.00289111
+        },
+        {
+          "available_at_utc": "2025-03-03T22:00:00Z",
+          "event_at_utc": "2025-03-03T21:00:00Z",
+          "nav_usd": 104.86289,
+          "period_return": -0.00247659
+        },
+        {
+          "available_at_utc": "2025-03-04T22:00:00Z",
+          "event_at_utc": "2025-03-04T21:00:00Z",
+          "nav_usd": 105.370431,
+          "period_return": 0.00484004
+        },
+        {
+          "available_at_utc": "2025-03-05T22:00:00Z",
+          "event_at_utc": "2025-03-05T21:00:00Z",
+          "nav_usd": 103.32345,
+          "period_return": -0.01942652
+        },
+        {
+          "available_at_utc": "2025-03-06T22:00:00Z",
+          "event_at_utc": "2025-03-06T21:00:00Z",
+          "nav_usd": 104.231998,
+          "period_return": 0.00879324
+        },
+        {
+          "available_at_utc": "2025-03-07T22:00:00Z",
+          "event_at_utc": "2025-03-07T21:00:00Z",
+          "nav_usd": 103.477673,
+          "period_return": -0.00723699
+        },
+        {
+          "available_at_utc": "2025-03-10T22:00:00Z",
+          "event_at_utc": "2025-03-10T21:00:00Z",
+          "nav_usd": 102.103185,
+          "period_return": -0.01328294
+        },
+        {
+          "available_at_utc": "2025-03-11T22:00:00Z",
+          "event_at_utc": "2025-03-11T21:00:00Z",
+          "nav_usd": 101.468114,
+          "period_return": -0.00621989
+        },
+        {
+          "available_at_utc": "2025-03-12T22:00:00Z",
+          "event_at_utc": "2025-03-12T21:00:00Z",
+          "nav_usd": 101.616881,
+          "period_return": 0.00146615
+        },
+        {
+          "available_at_utc": "2025-03-13T22:00:00Z",
+          "event_at_utc": "2025-03-13T21:00:00Z",
+          "nav_usd": 103.446701,
+          "period_return": 0.01800704
+        },
+        {
+          "available_at_utc": "2025-03-14T22:00:00Z",
+          "event_at_utc": "2025-03-14T21:00:00Z",
+          "nav_usd": 102.96611,
+          "period_return": -0.00464578
+        },
+        {
+          "available_at_utc": "2025-03-17T22:00:00Z",
+          "event_at_utc": "2025-03-17T21:00:00Z",
+          "nav_usd": 101.916879,
+          "period_return": -0.01019006
+        },
+        {
+          "available_at_utc": "2025-03-18T22:00:00Z",
+          "event_at_utc": "2025-03-18T21:00:00Z",
+          "nav_usd": 102.227534,
+          "period_return": 0.00304812
+        },
+        {
+          "available_at_utc": "2025-03-19T22:00:00Z",
+          "event_at_utc": "2025-03-19T21:00:00Z",
+          "nav_usd": 100.895336,
+          "period_return": -0.01303169
+        },
+        {
+          "available_at_utc": "2025-03-20T22:00:00Z",
+          "event_at_utc": "2025-03-20T21:00:00Z",
+          "nav_usd": 99.416509,
+          "period_return": -0.01465704
+        },
+        {
+          "available_at_utc": "2025-03-21T22:00:00Z",
+          "event_at_utc": "2025-03-21T21:00:00Z",
+          "nav_usd": 102.158858,
+          "period_return": 0.02758444
+        },
+        {
+          "available_at_utc": "2025-03-24T22:00:00Z",
+          "event_at_utc": "2025-03-24T21:00:00Z",
+          "nav_usd": 103.10791,
+          "period_return": 0.00928997
+        },
+        {
+          "available_at_utc": "2025-03-25T22:00:00Z",
+          "event_at_utc": "2025-03-25T21:00:00Z",
+          "nav_usd": 102.778205,
+          "period_return": -0.00319767
+        },
+        {
+          "available_at_utc": "2025-03-26T22:00:00Z",
+          "event_at_utc": "2025-03-26T21:00:00Z",
+          "nav_usd": 103.679511,
+          "period_return": 0.00876943
+        },
+        {
+          "available_at_utc": "2025-03-27T22:00:00Z",
+          "event_at_utc": "2025-03-27T21:00:00Z",
+          "nav_usd": 102.476831,
+          "period_return": -0.01159998
+        },
+        {
+          "available_at_utc": "2025-03-28T22:00:00Z",
+          "event_at_utc": "2025-03-28T21:00:00Z",
+          "nav_usd": 102.979054,
+          "period_return": 0.00490085
+        },
+        {
+          "available_at_utc": "2025-03-31T22:00:00Z",
+          "event_at_utc": "2025-03-31T21:00:00Z",
+          "nav_usd": 102.069375,
+          "period_return": -0.00883363
+        },
+        {
+          "available_at_utc": "2025-04-01T22:00:00Z",
+          "event_at_utc": "2025-04-01T21:00:00Z",
+          "nav_usd": 102.248471,
+          "period_return": 0.00175465
+        },
+        {
+          "available_at_utc": "2025-04-02T22:00:00Z",
+          "event_at_utc": "2025-04-02T21:00:00Z",
+          "nav_usd": 101.587339,
+          "period_return": -0.00646594
+        },
+        {
+          "available_at_utc": "2025-04-03T22:00:00Z",
+          "event_at_utc": "2025-04-03T21:00:00Z",
+          "nav_usd": 100.24107,
+          "period_return": -0.01325232
+        },
+        {
+          "available_at_utc": "2025-04-04T22:00:00Z",
+          "event_at_utc": "2025-04-04T21:00:00Z",
+          "nav_usd": 99.42982,
+          "period_return": -0.008093
+        },
+        {
+          "available_at_utc": "2025-04-07T22:00:00Z",
+          "event_at_utc": "2025-04-07T21:00:00Z",
+          "nav_usd": 100.187947,
+          "period_return": 0.00762475
+        },
+        {
+          "available_at_utc": "2025-04-08T22:00:00Z",
+          "event_at_utc": "2025-04-08T21:00:00Z",
+          "nav_usd": 100.232239,
+          "period_return": 0.00044209
+        },
+        {
+          "available_at_utc": "2025-04-09T22:00:00Z",
+          "event_at_utc": "2025-04-09T21:00:00Z",
+          "nav_usd": 100.957499,
+          "period_return": 0.00723579
+        },
+        {
+          "available_at_utc": "2025-04-10T22:00:00Z",
+          "event_at_utc": "2025-04-10T21:00:00Z",
+          "nav_usd": 99.223677,
+          "period_return": -0.01717377
+        },
+        {
+          "available_at_utc": "2025-04-11T22:00:00Z",
+          "event_at_utc": "2025-04-11T21:00:00Z",
+          "nav_usd": 98.188276,
+          "period_return": -0.01043502
+        },
+        {
+          "available_at_utc": "2025-04-14T22:00:00Z",
+          "event_at_utc": "2025-04-14T21:00:00Z",
+          "nav_usd": 99.473125,
+          "period_return": 0.01308557
+        },
+        {
+          "available_at_utc": "2025-04-15T22:00:00Z",
+          "event_at_utc": "2025-04-15T21:00:00Z",
+          "nav_usd": 99.506464,
+          "period_return": 0.00033515
+        },
+        {
+          "available_at_utc": "2025-04-16T22:00:00Z",
+          "event_at_utc": "2025-04-16T21:00:00Z",
+          "nav_usd": 99.457024,
+          "period_return": -0.00049685
+        },
+        {
+          "available_at_utc": "2025-04-17T22:00:00Z",
+          "event_at_utc": "2025-04-17T21:00:00Z",
+          "nav_usd": 99.576533,
+          "period_return": 0.00120161
+        },
+        {
+          "available_at_utc": "2025-04-18T22:00:00Z",
+          "event_at_utc": "2025-04-18T21:00:00Z",
+          "nav_usd": 96.885533,
+          "period_return": -0.02702444
+        },
+        {
+          "available_at_utc": "2025-04-21T22:00:00Z",
+          "event_at_utc": "2025-04-21T21:00:00Z",
+          "nav_usd": 95.209158,
+          "period_return": -0.01730263
+        },
+        {
+          "available_at_utc": "2025-04-22T22:00:00Z",
+          "event_at_utc": "2025-04-22T21:00:00Z",
+          "nav_usd": 95.5373,
+          "period_return": 0.00344654
+        },
+        {
+          "available_at_utc": "2025-04-23T22:00:00Z",
+          "event_at_utc": "2025-04-23T21:00:00Z",
+          "nav_usd": 96.195309,
+          "period_return": 0.00688745
+        },
+        {
+          "available_at_utc": "2025-04-24T22:00:00Z",
+          "event_at_utc": "2025-04-24T21:00:00Z",
+          "nav_usd": 97.85163,
+          "period_return": 0.01721832
+        },
+        {
+          "available_at_utc": "2025-04-25T22:00:00Z",
+          "event_at_utc": "2025-04-25T21:00:00Z",
+          "nav_usd": 98.343684,
+          "period_return": 0.00502857
+        },
+        {
+          "available_at_utc": "2025-04-28T22:00:00Z",
+          "event_at_utc": "2025-04-28T21:00:00Z",
+          "nav_usd": 97.176112,
+          "period_return": -0.01187236
+        },
+        {
+          "available_at_utc": "2025-04-29T22:00:00Z",
+          "event_at_utc": "2025-04-29T21:00:00Z",
+          "nav_usd": 96.871805,
+          "period_return": -0.0031315
+        },
+        {
+          "available_at_utc": "2025-04-30T22:00:00Z",
+          "event_at_utc": "2025-04-30T21:00:00Z",
+          "nav_usd": 96.995722,
+          "period_return": 0.00127919
+        },
+        {
+          "available_at_utc": "2025-05-01T22:00:00Z",
+          "event_at_utc": "2025-05-01T21:00:00Z",
+          "nav_usd": 97.892946,
+          "period_return": 0.00925014
+        },
+        {
+          "available_at_utc": "2025-05-02T22:00:00Z",
+          "event_at_utc": "2025-05-02T21:00:00Z",
+          "nav_usd": 98.513251,
+          "period_return": 0.00633657
+        },
+        {
+          "available_at_utc": "2025-05-05T22:00:00Z",
+          "event_at_utc": "2025-05-05T21:00:00Z",
+          "nav_usd": 98.460528,
+          "period_return": -0.00053518
+        },
+        {
+          "available_at_utc": "2025-05-06T22:00:00Z",
+          "event_at_utc": "2025-05-06T21:00:00Z",
+          "nav_usd": 99.034007,
+          "period_return": 0.00582445
+        },
+        {
+          "available_at_utc": "2025-05-07T22:00:00Z",
+          "event_at_utc": "2025-05-07T21:00:00Z",
+          "nav_usd": 98.981853,
+          "period_return": -0.00052662
+        },
+        {
+          "available_at_utc": "2025-05-08T22:00:00Z",
+          "event_at_utc": "2025-05-08T21:00:00Z",
+          "nav_usd": 97.239864,
+          "period_return": -0.01759908
+        },
+        {
+          "available_at_utc": "2025-05-09T22:00:00Z",
+          "event_at_utc": "2025-05-09T21:00:00Z",
+          "nav_usd": 96.094383,
+          "period_return": -0.01177995
+        },
+        {
+          "available_at_utc": "2025-05-12T22:00:00Z",
+          "event_at_utc": "2025-05-12T21:00:00Z",
+          "nav_usd": 93.539991,
+          "period_return": -0.02658212
+        },
+        {
+          "available_at_utc": "2025-05-13T22:00:00Z",
+          "event_at_utc": "2025-05-13T21:00:00Z",
+          "nav_usd": 89.713238,
+          "period_return": -0.04091035
+        },
+        {
+          "available_at_utc": "2025-05-14T22:00:00Z",
+          "event_at_utc": "2025-05-14T21:00:00Z",
+          "nav_usd": 88.275495,
+          "period_return": -0.01602598
+        },
+        {
+          "available_at_utc": "2025-05-15T22:00:00Z",
+          "event_at_utc": "2025-05-15T21:00:00Z",
+          "nav_usd": 91.264743,
+          "period_return": 0.03386272
+        },
+        {
+          "available_at_utc": "2025-05-16T22:00:00Z",
+          "event_at_utc": "2025-05-16T21:00:00Z",
+          "nav_usd": 90.852896,
+          "period_return": -0.00451266
+        },
+        {
+          "available_at_utc": "2025-05-19T22:00:00Z",
+          "event_at_utc": "2025-05-19T21:00:00Z",
+          "nav_usd": 90.036927,
+          "period_return": -0.00898121
+        },
+        {
+          "available_at_utc": "2025-05-20T22:00:00Z",
+          "event_at_utc": "2025-05-20T21:00:00Z",
+          "nav_usd": 88.78571,
+          "period_return": -0.01389672
+        },
+        {
+          "available_at_utc": "2025-05-21T22:00:00Z",
+          "event_at_utc": "2025-05-21T21:00:00Z",
+          "nav_usd": 88.213066,
+          "period_return": -0.00644973
+        },
+        {
+          "available_at_utc": "2025-05-22T22:00:00Z",
+          "event_at_utc": "2025-05-22T21:00:00Z",
+          "nav_usd": 87.443778,
+          "period_return": -0.00872079
+        },
+        {
+          "available_at_utc": "2025-05-23T22:00:00Z",
+          "event_at_utc": "2025-05-23T21:00:00Z",
+          "nav_usd": 87.06237,
+          "period_return": -0.00436176
+        },
+        {
+          "available_at_utc": "2025-05-26T22:00:00Z",
+          "event_at_utc": "2025-05-26T21:00:00Z",
+          "nav_usd": 88.908933,
+          "period_return": 0.02120966
+        },
+        {
+          "available_at_utc": "2025-05-27T22:00:00Z",
+          "event_at_utc": "2025-05-27T21:00:00Z",
+          "nav_usd": 90.343106,
+          "period_return": 0.01613081
+        },
+        {
+          "available_at_utc": "2025-05-28T22:00:00Z",
+          "event_at_utc": "2025-05-28T21:00:00Z",
+          "nav_usd": 89.72009,
+          "period_return": -0.00689611
+        },
+        {
+          "available_at_utc": "2025-05-29T22:00:00Z",
+          "event_at_utc": "2025-05-29T21:00:00Z",
+          "nav_usd": 85.731411,
+          "period_return": -0.04445692
+        },
+        {
+          "available_at_utc": "2025-05-30T22:00:00Z",
+          "event_at_utc": "2025-05-30T21:00:00Z",
+          "nav_usd": 84.048421,
+          "period_return": -0.01963096
+        },
+        {
+          "available_at_utc": "2025-06-02T22:00:00Z",
+          "event_at_utc": "2025-06-02T21:00:00Z",
+          "nav_usd": 79.415486,
+          "period_return": -0.05512221
+        },
+        {
+          "available_at_utc": "2025-06-03T22:00:00Z",
+          "event_at_utc": "2025-06-03T21:00:00Z",
+          "nav_usd": 75.611452,
+          "period_return": -0.04790041
+        },
+        {
+          "available_at_utc": "2025-06-04T22:00:00Z",
+          "event_at_utc": "2025-06-04T21:00:00Z",
+          "nav_usd": 75.655653,
+          "period_return": 0.00058458
+        },
+        {
+          "available_at_utc": "2025-06-05T22:00:00Z",
+          "event_at_utc": "2025-06-05T21:00:00Z",
+          "nav_usd": 73.845519,
+          "period_return": -0.02392596
+        },
+        {
+          "available_at_utc": "2025-06-06T22:00:00Z",
+          "event_at_utc": "2025-06-06T21:00:00Z",
+          "nav_usd": 74.306888,
+          "period_return": 0.00624777
+        },
+        {
+          "available_at_utc": "2025-06-09T22:00:00Z",
+          "event_at_utc": "2025-06-09T21:00:00Z",
+          "nav_usd": 75.408487,
+          "period_return": 0.01482499
+        },
+        {
+          "available_at_utc": "2025-06-10T22:00:00Z",
+          "event_at_utc": "2025-06-10T21:00:00Z",
+          "nav_usd": 75.450789,
+          "period_return": 0.00056097
+        },
+        {
+          "available_at_utc": "2025-06-11T22:00:00Z",
+          "event_at_utc": "2025-06-11T21:00:00Z",
+          "nav_usd": 74.267156,
+          "period_return": -0.01568749
+        },
+        {
+          "available_at_utc": "2025-06-12T22:00:00Z",
+          "event_at_utc": "2025-06-12T21:00:00Z",
+          "nav_usd": 74.235282,
+          "period_return": -0.00042918
+        },
+        {
+          "available_at_utc": "2025-06-13T22:00:00Z",
+          "event_at_utc": "2025-06-13T21:00:00Z",
+          "nav_usd": 74.346151,
+          "period_return": 0.00149348
+        },
+        {
+          "available_at_utc": "2025-06-16T22:00:00Z",
+          "event_at_utc": "2025-06-16T21:00:00Z",
+          "nav_usd": 74.183495,
+          "period_return": -0.00218781
+        },
+        {
+          "available_at_utc": "2025-06-17T22:00:00Z",
+          "event_at_utc": "2025-06-17T21:00:00Z",
+          "nav_usd": 74.333685,
+          "period_return": 0.00202457
+        },
+        {
+          "available_at_utc": "2025-06-18T22:00:00Z",
+          "event_at_utc": "2025-06-18T21:00:00Z",
+          "nav_usd": 74.94521,
+          "period_return": 0.00822675
+        },
+        {
+          "available_at_utc": "2025-06-19T22:00:00Z",
+          "event_at_utc": "2025-06-19T21:00:00Z",
+          "nav_usd": 73.87711,
+          "period_return": -0.01425173
+        },
+        {
+          "available_at_utc": "2025-06-20T22:00:00Z",
+          "event_at_utc": "2025-06-20T21:00:00Z",
+          "nav_usd": 74.677472,
+          "period_return": 0.01083368
+        },
+        {
+          "available_at_utc": "2025-06-23T22:00:00Z",
+          "event_at_utc": "2025-06-23T21:00:00Z",
+          "nav_usd": 74.985219,
+          "period_return": 0.00412102
+        },
+        {
+          "available_at_utc": "2025-06-24T22:00:00Z",
+          "event_at_utc": "2025-06-24T21:00:00Z",
+          "nav_usd": 75.280615,
+          "period_return": 0.00393939
+        },
+        {
+          "available_at_utc": "2025-06-25T22:00:00Z",
+          "event_at_utc": "2025-06-25T21:00:00Z",
+          "nav_usd": 75.521395,
+          "period_return": 0.00319843
+        },
+        {
+          "available_at_utc": "2025-06-26T22:00:00Z",
+          "event_at_utc": "2025-06-26T21:00:00Z",
+          "nav_usd": 76.293575,
+          "period_return": 0.01022464
+        },
+        {
+          "available_at_utc": "2025-06-27T22:00:00Z",
+          "event_at_utc": "2025-06-27T21:00:00Z",
+          "nav_usd": 76.476975,
+          "period_return": 0.00240388
+        },
+        {
+          "available_at_utc": "2025-06-30T22:00:00Z",
+          "event_at_utc": "2025-06-30T21:00:00Z",
+          "nav_usd": 76.062295,
+          "period_return": -0.00542229
+        },
+        {
+          "available_at_utc": "2025-07-01T22:00:00Z",
+          "event_at_utc": "2025-07-01T21:00:00Z",
+          "nav_usd": 74.960089,
+          "period_return": -0.01449083
+        },
+        {
+          "available_at_utc": "2025-07-02T22:00:00Z",
+          "event_at_utc": "2025-07-02T21:00:00Z",
+          "nav_usd": 75.942197,
+          "period_return": 0.01310175
+        },
+        {
+          "available_at_utc": "2025-07-03T22:00:00Z",
+          "event_at_utc": "2025-07-03T21:00:00Z",
+          "nav_usd": 74.832153,
+          "period_return": -0.01461696
+        },
+        {
+          "available_at_utc": "2025-07-04T22:00:00Z",
+          "event_at_utc": "2025-07-04T21:00:00Z",
+          "nav_usd": 75.074685,
+          "period_return": 0.00324101
+        },
+        {
+          "available_at_utc": "2025-07-07T22:00:00Z",
+          "event_at_utc": "2025-07-07T21:00:00Z",
+          "nav_usd": 74.634896,
+          "period_return": -0.00585801
+        },
+        {
+          "available_at_utc": "2025-07-08T22:00:00Z",
+          "event_at_utc": "2025-07-08T21:00:00Z",
+          "nav_usd": 75.060753,
+          "period_return": 0.00570587
+        },
+        {
+          "available_at_utc": "2025-07-09T22:00:00Z",
+          "event_at_utc": "2025-07-09T21:00:00Z",
+          "nav_usd": 74.917927,
+          "period_return": -0.00190281
+        },
+        {
+          "available_at_utc": "2025-07-10T22:00:00Z",
+          "event_at_utc": "2025-07-10T21:00:00Z",
+          "nav_usd": 75.444193,
+          "period_return": 0.00702456
+        },
+        {
+          "available_at_utc": "2025-07-11T22:00:00Z",
+          "event_at_utc": "2025-07-11T21:00:00Z",
+          "nav_usd": 75.394128,
+          "period_return": -0.0006636
+        },
+        {
+          "available_at_utc": "2025-07-14T22:00:00Z",
+          "event_at_utc": "2025-07-14T21:00:00Z",
+          "nav_usd": 74.637619,
+          "period_return": -0.01003406
+        },
+        {
+          "available_at_utc": "2025-07-15T22:00:00Z",
+          "event_at_utc": "2025-07-15T21:00:00Z",
+          "nav_usd": 75.312001,
+          "period_return": 0.00903542
+        },
+        {
+          "available_at_utc": "2025-07-16T22:00:00Z",
+          "event_at_utc": "2025-07-16T21:00:00Z",
+          "nav_usd": 75.516603,
+          "period_return": 0.00271672
+        },
+        {
+          "available_at_utc": "2025-07-17T22:00:00Z",
+          "event_at_utc": "2025-07-17T21:00:00Z",
+          "nav_usd": 76.426803,
+          "period_return": 0.01205298
+        },
+        {
+          "available_at_utc": "2025-07-18T22:00:00Z",
+          "event_at_utc": "2025-07-18T21:00:00Z",
+          "nav_usd": 77.381641,
+          "period_return": 0.0124935
+        },
+        {
+          "available_at_utc": "2025-07-21T22:00:00Z",
+          "event_at_utc": "2025-07-21T21:00:00Z",
+          "nav_usd": 77.414388,
+          "period_return": 0.00042318
+        },
+        {
+          "available_at_utc": "2025-07-22T22:00:00Z",
+          "event_at_utc": "2025-07-22T21:00:00Z",
+          "nav_usd": 78.013258,
+          "period_return": 0.0077359
+        },
+        {
+          "available_at_utc": "2025-07-23T22:00:00Z",
+          "event_at_utc": "2025-07-23T21:00:00Z",
+          "nav_usd": 78.28989,
+          "period_return": 0.00354596
+        },
+        {
+          "available_at_utc": "2025-07-24T22:00:00Z",
+          "event_at_utc": "2025-07-24T21:00:00Z",
+          "nav_usd": 77.787618,
+          "period_return": -0.00641553
+        },
+        {
+          "available_at_utc": "2025-07-25T22:00:00Z",
+          "event_at_utc": "2025-07-25T21:00:00Z",
+          "nav_usd": 78.753058,
+          "period_return": 0.01241123
+        },
+        {
+          "available_at_utc": "2025-07-28T22:00:00Z",
+          "event_at_utc": "2025-07-28T21:00:00Z",
+          "nav_usd": 79.121789,
+          "period_return": 0.00468212
+        },
+        {
+          "available_at_utc": "2025-07-29T22:00:00Z",
+          "event_at_utc": "2025-07-29T21:00:00Z",
+          "nav_usd": 79.859526,
+          "period_return": 0.00932406
+        },
+        {
+          "available_at_utc": "2025-07-30T22:00:00Z",
+          "event_at_utc": "2025-07-30T21:00:00Z",
+          "nav_usd": 78.78408,
+          "period_return": -0.01346672
+        },
+        {
+          "available_at_utc": "2025-07-31T22:00:00Z",
+          "event_at_utc": "2025-07-31T21:00:00Z",
+          "nav_usd": 79.521557,
+          "period_return": 0.00936074
+        },
+        {
+          "available_at_utc": "2025-08-01T22:00:00Z",
+          "event_at_utc": "2025-08-01T21:00:00Z",
+          "nav_usd": 79.461278,
+          "period_return": -0.00075802
+        },
+        {
+          "available_at_utc": "2025-08-04T22:00:00Z",
+          "event_at_utc": "2025-08-04T21:00:00Z",
+          "nav_usd": 80.114189,
+          "period_return": 0.00821673
+        },
+        {
+          "available_at_utc": "2025-08-05T22:00:00Z",
+          "event_at_utc": "2025-08-05T21:00:00Z",
+          "nav_usd": 80.072103,
+          "period_return": -0.00052533
+        },
+        {
+          "available_at_utc": "2025-08-06T22:00:00Z",
+          "event_at_utc": "2025-08-06T21:00:00Z",
+          "nav_usd": 80.375114,
+          "period_return": 0.00378422
+        },
+        {
+          "available_at_utc": "2025-08-07T22:00:00Z",
+          "event_at_utc": "2025-08-07T21:00:00Z",
+          "nav_usd": 80.174446,
+          "period_return": -0.00249664
+        },
+        {
+          "available_at_utc": "2025-08-08T22:00:00Z",
+          "event_at_utc": "2025-08-08T21:00:00Z",
+          "nav_usd": 79.642789,
+          "period_return": -0.00663125
+        },
+        {
+          "available_at_utc": "2025-08-11T22:00:00Z",
+          "event_at_utc": "2025-08-11T21:00:00Z",
+          "nav_usd": 78.205423,
+          "period_return": -0.01804766
+        },
+        {
+          "available_at_utc": "2025-08-12T22:00:00Z",
+          "event_at_utc": "2025-08-12T21:00:00Z",
+          "nav_usd": 76.559483,
+          "period_return": -0.02104637
+        },
+        {
+          "available_at_utc": "2025-08-13T22:00:00Z",
+          "event_at_utc": "2025-08-13T21:00:00Z",
+          "nav_usd": 76.076646,
+          "period_return": -0.00630669
+        },
+        {
+          "available_at_utc": "2025-08-14T22:00:00Z",
+          "event_at_utc": "2025-08-14T21:00:00Z",
+          "nav_usd": 76.033725,
+          "period_return": -0.00056418
+        },
+        {
+          "available_at_utc": "2025-08-15T22:00:00Z",
+          "event_at_utc": "2025-08-15T21:00:00Z",
+          "nav_usd": 77.423539,
+          "period_return": 0.01827891
+        },
+        {
+          "available_at_utc": "2025-08-18T22:00:00Z",
+          "event_at_utc": "2025-08-18T21:00:00Z",
+          "nav_usd": 78.539902,
+          "period_return": 0.01441892
+        },
+        {
+          "available_at_utc": "2025-08-19T22:00:00Z",
+          "event_at_utc": "2025-08-19T21:00:00Z",
+          "nav_usd": 79.034139,
+          "period_return": 0.00629281
+        },
+        {
+          "available_at_utc": "2025-08-20T22:00:00Z",
+          "event_at_utc": "2025-08-20T21:00:00Z",
+          "nav_usd": 80.2407,
+          "period_return": 0.01526633
+        },
+        {
+          "available_at_utc": "2025-08-21T22:00:00Z",
+          "event_at_utc": "2025-08-21T21:00:00Z",
+          "nav_usd": 80.126346,
+          "period_return": -0.00142514
+        },
+        {
+          "available_at_utc": "2025-08-22T22:00:00Z",
+          "event_at_utc": "2025-08-22T21:00:00Z",
+          "nav_usd": 81.868947,
+          "period_return": 0.02174816
+        },
+        {
+          "available_at_utc": "2025-08-25T22:00:00Z",
+          "event_at_utc": "2025-08-25T21:00:00Z",
+          "nav_usd": 82.829754,
+          "period_return": 0.01173592
+        },
+        {
+          "available_at_utc": "2025-08-26T22:00:00Z",
+          "event_at_utc": "2025-08-26T21:00:00Z",
+          "nav_usd": 83.884393,
+          "period_return": 0.01273261
+        },
+        {
+          "available_at_utc": "2025-08-27T22:00:00Z",
+          "event_at_utc": "2025-08-27T21:00:00Z",
+          "nav_usd": 83.491871,
+          "period_return": -0.00467932
+        },
+        {
+          "available_at_utc": "2025-08-28T22:00:00Z",
+          "event_at_utc": "2025-08-28T21:00:00Z",
+          "nav_usd": 84.404749,
+          "period_return": 0.01093373
+        },
+        {
+          "available_at_utc": "2025-08-29T22:00:00Z",
+          "event_at_utc": "2025-08-29T21:00:00Z",
+          "nav_usd": 86.24469,
+          "period_return": 0.02179903
+        },
+        {
+          "available_at_utc": "2025-09-01T22:00:00Z",
+          "event_at_utc": "2025-09-01T21:00:00Z",
+          "nav_usd": 87.585654,
+          "period_return": 0.01554836
+        },
+        {
+          "available_at_utc": "2025-09-02T22:00:00Z",
+          "event_at_utc": "2025-09-02T21:00:00Z",
+          "nav_usd": 87.629978,
+          "period_return": 0.00050607
+        },
+        {
+          "available_at_utc": "2025-09-03T22:00:00Z",
+          "event_at_utc": "2025-09-03T21:00:00Z",
+          "nav_usd": 87.616659,
+          "period_return": -0.000152
+        },
+        {
+          "available_at_utc": "2025-09-04T22:00:00Z",
+          "event_at_utc": "2025-09-04T21:00:00Z",
+          "nav_usd": 87.720486,
+          "period_return": 0.00118502
+        },
+        {
+          "available_at_utc": "2025-09-05T22:00:00Z",
+          "event_at_utc": "2025-09-05T21:00:00Z",
+          "nav_usd": 87.506657,
+          "period_return": -0.00243761
+        },
+        {
+          "available_at_utc": "2025-09-08T22:00:00Z",
+          "event_at_utc": "2025-09-08T21:00:00Z",
+          "nav_usd": 87.760631,
+          "period_return": 0.00290233
+        },
+        {
+          "available_at_utc": "2025-09-09T22:00:00Z",
+          "event_at_utc": "2025-09-09T21:00:00Z",
+          "nav_usd": 88.689413,
+          "period_return": 0.01058313
+        },
+        {
+          "available_at_utc": "2025-09-10T22:00:00Z",
+          "event_at_utc": "2025-09-10T21:00:00Z",
+          "nav_usd": 89.323893,
+          "period_return": 0.00715396
+        }
+      ],
+      "risk_budget": 0.2,
+      "strategy_id": "strat_eq_momentum"
+    },
+    {
+      "eligible": true,
+      "exposure": {
+        "adv_usd": 120000000.0,
+        "asset_class": "futures_macro",
+        "gross_exposure": 1.0,
+        "liquidity_days_to_exit": 0.5,
+        "market_beta": -0.05,
+        "max_capacity_usd": 25000000.0,
+        "net_exposure": 0.15,
+        "strategy_group": "macro_trend",
+        "transaction_cost_bps": 5.0
+      },
+      "name": "Systematic Macro Trend CTA",
+      "returns": [
+        {
+          "available_at_utc": "2025-01-02T22:00:00Z",
+          "event_at_utc": "2025-01-02T21:00:00Z",
+          "nav_usd": 100.907189,
+          "period_return": 0.00907189
+        },
+        {
+          "available_at_utc": "2025-01-03T22:00:00Z",
+          "event_at_utc": "2025-01-03T21:00:00Z",
+          "nav_usd": 100.17477,
+          "period_return": -0.00725834
+        },
+        {
+          "available_at_utc": "2025-01-06T22:00:00Z",
+          "event_at_utc": "2025-01-06T21:00:00Z",
+          "nav_usd": 99.630333,
+          "period_return": -0.00543487
+        },
+        {
+          "available_at_utc": "2025-01-07T22:00:00Z",
+          "event_at_utc": "2025-01-07T21:00:00Z",
+          "nav_usd": 101.262192,
+          "period_return": 0.01637913
+        },
+        {
+          "available_at_utc": "2025-01-08T22:00:00Z",
+          "event_at_utc": "2025-01-08T21:00:00Z",
+          "nav_usd": 100.711689,
+          "period_return": -0.00543641
+        },
+        {
+          "available_at_utc": "2025-01-09T22:00:00Z",
+          "event_at_utc": "2025-01-09T21:00:00Z",
+          "nav_usd": 101.110388,
+          "period_return": 0.00395882
+        },
+        {
+          "available_at_utc": "2025-01-10T22:00:00Z",
+          "event_at_utc": "2025-01-10T21:00:00Z",
+          "nav_usd": 101.837562,
+          "period_return": 0.00719188
+        },
+        {
+          "available_at_utc": "2025-01-13T22:00:00Z",
+          "event_at_utc": "2025-01-13T21:00:00Z",
+          "nav_usd": 102.252056,
+          "period_return": 0.00407015
+        },
+        {
+          "available_at_utc": "2025-01-14T22:00:00Z",
+          "event_at_utc": "2025-01-14T21:00:00Z",
+          "nav_usd": 100.854999,
+          "period_return": -0.01366287
+        },
+        {
+          "available_at_utc": "2025-01-15T22:00:00Z",
+          "event_at_utc": "2025-01-15T21:00:00Z",
+          "nav_usd": 101.174354,
+          "period_return": 0.00316648
+        },
+        {
+          "available_at_utc": "2025-01-16T22:00:00Z",
+          "event_at_utc": "2025-01-16T21:00:00Z",
+          "nav_usd": 101.940292,
+          "period_return": 0.00757047
+        },
+        {
+          "available_at_utc": "2025-01-17T22:00:00Z",
+          "event_at_utc": "2025-01-17T21:00:00Z",
+          "nav_usd": 101.872268,
+          "period_return": -0.00066729
+        },
+        {
+          "available_at_utc": "2025-01-20T22:00:00Z",
+          "event_at_utc": "2025-01-20T21:00:00Z",
+          "nav_usd": 102.437925,
+          "period_return": 0.00555261
+        },
+        {
+          "available_at_utc": "2025-01-21T22:00:00Z",
+          "event_at_utc": "2025-01-21T21:00:00Z",
+          "nav_usd": 102.731869,
+          "period_return": 0.00286949
+        },
+        {
+          "available_at_utc": "2025-01-22T22:00:00Z",
+          "event_at_utc": "2025-01-22T21:00:00Z",
+          "nav_usd": 103.186808,
+          "period_return": 0.00442841
+        },
+        {
+          "available_at_utc": "2025-01-23T22:00:00Z",
+          "event_at_utc": "2025-01-23T21:00:00Z",
+          "nav_usd": 104.053663,
+          "period_return": 0.00840083
+        },
+        {
+          "available_at_utc": "2025-01-24T22:00:00Z",
+          "event_at_utc": "2025-01-24T21:00:00Z",
+          "nav_usd": 104.004432,
+          "period_return": -0.00047313
+        },
+        {
+          "available_at_utc": "2025-01-27T22:00:00Z",
+          "event_at_utc": "2025-01-27T21:00:00Z",
+          "nav_usd": 103.783891,
+          "period_return": -0.0021205
+        },
+        {
+          "available_at_utc": "2025-01-28T22:00:00Z",
+          "event_at_utc": "2025-01-28T21:00:00Z",
+          "nav_usd": 103.672028,
+          "period_return": -0.00107785
+        },
+        {
+          "available_at_utc": "2025-01-29T22:00:00Z",
+          "event_at_utc": "2025-01-29T21:00:00Z",
+          "nav_usd": 103.19614,
+          "period_return": -0.00459032
+        },
+        {
+          "available_at_utc": "2025-01-30T22:00:00Z",
+          "event_at_utc": "2025-01-30T21:00:00Z",
+          "nav_usd": 103.019522,
+          "period_return": -0.00171148
+        },
+        {
+          "available_at_utc": "2025-01-31T22:00:00Z",
+          "event_at_utc": "2025-01-31T21:00:00Z",
+          "nav_usd": 102.410163,
+          "period_return": -0.00591498
+        },
+        {
+          "available_at_utc": "2025-02-03T22:00:00Z",
+          "event_at_utc": "2025-02-03T21:00:00Z",
+          "nav_usd": 102.47019,
+          "period_return": 0.00058614
+        },
+        {
+          "available_at_utc": "2025-02-04T22:00:00Z",
+          "event_at_utc": "2025-02-04T21:00:00Z",
+          "nav_usd": 102.253151,
+          "period_return": -0.00211807
+        },
+        {
+          "available_at_utc": "2025-02-05T22:00:00Z",
+          "event_at_utc": "2025-02-05T21:00:00Z",
+          "nav_usd": 103.247873,
+          "period_return": 0.00972803
+        },
+        {
+          "available_at_utc": "2025-02-06T22:00:00Z",
+          "event_at_utc": "2025-02-06T21:00:00Z",
+          "nav_usd": 104.218913,
+          "period_return": 0.00940495
+        },
+        {
+          "available_at_utc": "2025-02-07T22:00:00Z",
+          "event_at_utc": "2025-02-07T21:00:00Z",
+          "nav_usd": 104.890138,
+          "period_return": 0.00644052
+        },
+        {
+          "available_at_utc": "2025-02-10T22:00:00Z",
+          "event_at_utc": "2025-02-10T21:00:00Z",
+          "nav_usd": 105.361327,
+          "period_return": 0.00449222
+        },
+        {
+          "available_at_utc": "2025-02-11T22:00:00Z",
+          "event_at_utc": "2025-02-11T21:00:00Z",
+          "nav_usd": 105.458176,
+          "period_return": 0.0009192
+        },
+        {
+          "available_at_utc": "2025-02-12T22:00:00Z",
+          "event_at_utc": "2025-02-12T21:00:00Z",
+          "nav_usd": 105.443395,
+          "period_return": -0.00014016
+        },
+        {
+          "available_at_utc": "2025-02-13T22:00:00Z",
+          "event_at_utc": "2025-02-13T21:00:00Z",
+          "nav_usd": 105.117124,
+          "period_return": -0.00309427
+        },
+        {
+          "available_at_utc": "2025-02-14T22:00:00Z",
+          "event_at_utc": "2025-02-14T21:00:00Z",
+          "nav_usd": 106.100156,
+          "period_return": 0.00935178
+        },
+        {
+          "available_at_utc": "2025-02-17T22:00:00Z",
+          "event_at_utc": "2025-02-17T21:00:00Z",
+          "nav_usd": 106.484776,
+          "period_return": 0.00362506
+        },
+        {
+          "available_at_utc": "2025-02-18T22:00:00Z",
+          "event_at_utc": "2025-02-18T21:00:00Z",
+          "nav_usd": 106.633203,
+          "period_return": 0.00139389
+        },
+        {
+          "available_at_utc": "2025-02-19T22:00:00Z",
+          "event_at_utc": "2025-02-19T21:00:00Z",
+          "nav_usd": 105.00128,
+          "period_return": -0.01530408
+        },
+        {
+          "available_at_utc": "2025-02-20T22:00:00Z",
+          "event_at_utc": "2025-02-20T21:00:00Z",
+          "nav_usd": 104.719883,
+          "period_return": -0.00267994
+        },
+        {
+          "available_at_utc": "2025-02-21T22:00:00Z",
+          "event_at_utc": "2025-02-21T21:00:00Z",
+          "nav_usd": 103.945411,
+          "period_return": -0.00739565
+        },
+        {
+          "available_at_utc": "2025-02-24T22:00:00Z",
+          "event_at_utc": "2025-02-24T21:00:00Z",
+          "nav_usd": 104.088706,
+          "period_return": 0.00137856
+        },
+        {
+          "available_at_utc": "2025-02-25T22:00:00Z",
+          "event_at_utc": "2025-02-25T21:00:00Z",
+          "nav_usd": 104.651678,
+          "period_return": 0.00540858
+        },
+        {
+          "available_at_utc": "2025-02-26T22:00:00Z",
+          "event_at_utc": "2025-02-26T21:00:00Z",
+          "nav_usd": 102.575959,
+          "period_return": -0.01983455
+        },
+        {
+          "available_at_utc": "2025-02-27T22:00:00Z",
+          "event_at_utc": "2025-02-27T21:00:00Z",
+          "nav_usd": 102.137137,
+          "period_return": -0.00427801
+        },
+        {
+          "available_at_utc": "2025-02-28T22:00:00Z",
+          "event_at_utc": "2025-02-28T21:00:00Z",
+          "nav_usd": 101.612529,
+          "period_return": -0.00513631
+        },
+        {
+          "available_at_utc": "2025-03-03T22:00:00Z",
+          "event_at_utc": "2025-03-03T21:00:00Z",
+          "nav_usd": 103.322983,
+          "period_return": 0.0168331
+        },
+        {
+          "available_at_utc": "2025-03-04T22:00:00Z",
+          "event_at_utc": "2025-03-04T21:00:00Z",
+          "nav_usd": 102.826043,
+          "period_return": -0.00480958
+        },
+        {
+          "available_at_utc": "2025-03-05T22:00:00Z",
+          "event_at_utc": "2025-03-05T21:00:00Z",
+          "nav_usd": 103.425475,
+          "period_return": 0.00582958
+        },
+        {
+          "available_at_utc": "2025-03-06T22:00:00Z",
+          "event_at_utc": "2025-03-06T21:00:00Z",
+          "nav_usd": 102.133297,
+          "period_return": -0.01249381
+        },
+        {
+          "available_at_utc": "2025-03-07T22:00:00Z",
+          "event_at_utc": "2025-03-07T21:00:00Z",
+          "nav_usd": 101.989398,
+          "period_return": -0.00140894
+        },
+        {
+          "available_at_utc": "2025-03-10T22:00:00Z",
+          "event_at_utc": "2025-03-10T21:00:00Z",
+          "nav_usd": 102.225183,
+          "period_return": 0.00231186
+        },
+        {
+          "available_at_utc": "2025-03-11T22:00:00Z",
+          "event_at_utc": "2025-03-11T21:00:00Z",
+          "nav_usd": 101.843673,
+          "period_return": -0.00373205
+        },
+        {
+          "available_at_utc": "2025-03-12T22:00:00Z",
+          "event_at_utc": "2025-03-12T21:00:00Z",
+          "nav_usd": 101.335565,
+          "period_return": -0.0049891
+        },
+        {
+          "available_at_utc": "2025-03-13T22:00:00Z",
+          "event_at_utc": "2025-03-13T21:00:00Z",
+          "nav_usd": 100.794216,
+          "period_return": -0.00534214
+        },
+        {
+          "available_at_utc": "2025-03-14T22:00:00Z",
+          "event_at_utc": "2025-03-14T21:00:00Z",
+          "nav_usd": 100.82751,
+          "period_return": 0.00033031
+        },
+        {
+          "available_at_utc": "2025-03-17T22:00:00Z",
+          "event_at_utc": "2025-03-17T21:00:00Z",
+          "nav_usd": 101.657775,
+          "period_return": 0.00823452
+        },
+        {
+          "available_at_utc": "2025-03-18T22:00:00Z",
+          "event_at_utc": "2025-03-18T21:00:00Z",
+          "nav_usd": 101.126111,
+          "period_return": -0.00522994
+        },
+        {
+          "available_at_utc": "2025-03-19T22:00:00Z",
+          "event_at_utc": "2025-03-19T21:00:00Z",
+          "nav_usd": 100.904945,
+          "period_return": -0.00218703
+        },
+        {
+          "available_at_utc": "2025-03-20T22:00:00Z",
+          "event_at_utc": "2025-03-20T21:00:00Z",
+          "nav_usd": 98.625365,
+          "period_return": -0.02259137
+        },
+        {
+          "available_at_utc": "2025-03-21T22:00:00Z",
+          "event_at_utc": "2025-03-21T21:00:00Z",
+          "nav_usd": 99.054027,
+          "period_return": 0.00434637
+        },
+        {
+          "available_at_utc": "2025-03-24T22:00:00Z",
+          "event_at_utc": "2025-03-24T21:00:00Z",
+          "nav_usd": 98.168223,
+          "period_return": -0.00894264
+        },
+        {
+          "available_at_utc": "2025-03-25T22:00:00Z",
+          "event_at_utc": "2025-03-25T21:00:00Z",
+          "nav_usd": 98.493504,
+          "period_return": 0.0033135
+        },
+        {
+          "available_at_utc": "2025-03-26T22:00:00Z",
+          "event_at_utc": "2025-03-26T21:00:00Z",
+          "nav_usd": 98.568305,
+          "period_return": 0.00075946
+        },
+        {
+          "available_at_utc": "2025-03-27T22:00:00Z",
+          "event_at_utc": "2025-03-27T21:00:00Z",
+          "nav_usd": 99.628917,
+          "period_return": 0.01076017
+        },
+        {
+          "available_at_utc": "2025-03-28T22:00:00Z",
+          "event_at_utc": "2025-03-28T21:00:00Z",
+          "nav_usd": 99.29035,
+          "period_return": -0.00339828
+        },
+        {
+          "available_at_utc": "2025-03-31T22:00:00Z",
+          "event_at_utc": "2025-03-31T21:00:00Z",
+          "nav_usd": 98.96886,
+          "period_return": -0.00323787
+        },
+        {
+          "available_at_utc": "2025-04-01T22:00:00Z",
+          "event_at_utc": "2025-04-01T21:00:00Z",
+          "nav_usd": 99.826173,
+          "period_return": 0.00866245
+        },
+        {
+          "available_at_utc": "2025-04-02T22:00:00Z",
+          "event_at_utc": "2025-04-02T21:00:00Z",
+          "nav_usd": 100.480696,
+          "period_return": 0.00655663
+        },
+        {
+          "available_at_utc": "2025-04-03T22:00:00Z",
+          "event_at_utc": "2025-04-03T21:00:00Z",
+          "nav_usd": 99.555736,
+          "period_return": -0.00920536
+        },
+        {
+          "available_at_utc": "2025-04-04T22:00:00Z",
+          "event_at_utc": "2025-04-04T21:00:00Z",
+          "nav_usd": 98.83502,
+          "period_return": -0.00723931
+        },
+        {
+          "available_at_utc": "2025-04-07T22:00:00Z",
+          "event_at_utc": "2025-04-07T21:00:00Z",
+          "nav_usd": 101.366893,
+          "period_return": 0.02561717
+        },
+        {
+          "available_at_utc": "2025-04-08T22:00:00Z",
+          "event_at_utc": "2025-04-08T21:00:00Z",
+          "nav_usd": 101.436613,
+          "period_return": 0.00068779
+        },
+        {
+          "available_at_utc": "2025-04-09T22:00:00Z",
+          "event_at_utc": "2025-04-09T21:00:00Z",
+          "nav_usd": 102.235933,
+          "period_return": 0.00787999
+        },
+        {
+          "available_at_utc": "2025-04-10T22:00:00Z",
+          "event_at_utc": "2025-04-10T21:00:00Z",
+          "nav_usd": 102.92323,
+          "period_return": 0.00672266
+        },
+        {
+          "available_at_utc": "2025-04-11T22:00:00Z",
+          "event_at_utc": "2025-04-11T21:00:00Z",
+          "nav_usd": 104.349007,
+          "period_return": 0.01385281
+        },
+        {
+          "available_at_utc": "2025-04-14T22:00:00Z",
+          "event_at_utc": "2025-04-14T21:00:00Z",
+          "nav_usd": 105.266582,
+          "period_return": 0.00879333
+        },
+        {
+          "available_at_utc": "2025-04-15T22:00:00Z",
+          "event_at_utc": "2025-04-15T21:00:00Z",
+          "nav_usd": 105.609639,
+          "period_return": 0.00325894
+        },
+        {
+          "available_at_utc": "2025-04-16T22:00:00Z",
+          "event_at_utc": "2025-04-16T21:00:00Z",
+          "nav_usd": 106.196443,
+          "period_return": 0.00555634
+        },
+        {
+          "available_at_utc": "2025-04-17T22:00:00Z",
+          "event_at_utc": "2025-04-17T21:00:00Z",
+          "nav_usd": 104.418689,
+          "period_return": -0.01674023
+        },
+        {
+          "available_at_utc": "2025-04-18T22:00:00Z",
+          "event_at_utc": "2025-04-18T21:00:00Z",
+          "nav_usd": 106.21778,
+          "period_return": 0.01722958
+        },
+        {
+          "available_at_utc": "2025-04-21T22:00:00Z",
+          "event_at_utc": "2025-04-21T21:00:00Z",
+          "nav_usd": 105.61855,
+          "period_return": -0.00564152
+        },
+        {
+          "available_at_utc": "2025-04-22T22:00:00Z",
+          "event_at_utc": "2025-04-22T21:00:00Z",
+          "nav_usd": 105.723458,
+          "period_return": 0.00099326
+        },
+        {
+          "available_at_utc": "2025-04-23T22:00:00Z",
+          "event_at_utc": "2025-04-23T21:00:00Z",
+          "nav_usd": 103.793149,
+          "period_return": -0.01825809
+        },
+        {
+          "available_at_utc": "2025-04-24T22:00:00Z",
+          "event_at_utc": "2025-04-24T21:00:00Z",
+          "nav_usd": 105.518257,
+          "period_return": 0.01662063
+        },
+        {
+          "available_at_utc": "2025-04-25T22:00:00Z",
+          "event_at_utc": "2025-04-25T21:00:00Z",
+          "nav_usd": 106.063534,
+          "period_return": 0.00516762
+        },
+        {
+          "available_at_utc": "2025-04-28T22:00:00Z",
+          "event_at_utc": "2025-04-28T21:00:00Z",
+          "nav_usd": 105.320307,
+          "period_return": -0.00700738
+        },
+        {
+          "available_at_utc": "2025-04-29T22:00:00Z",
+          "event_at_utc": "2025-04-29T21:00:00Z",
+          "nav_usd": 105.835668,
+          "period_return": 0.00489328
+        },
+        {
+          "available_at_utc": "2025-04-30T22:00:00Z",
+          "event_at_utc": "2025-04-30T21:00:00Z",
+          "nav_usd": 107.947723,
+          "period_return": 0.01995599
+        },
+        {
+          "available_at_utc": "2025-05-01T22:00:00Z",
+          "event_at_utc": "2025-05-01T21:00:00Z",
+          "nav_usd": 109.501727,
+          "period_return": 0.01439589
+        },
+        {
+          "available_at_utc": "2025-05-02T22:00:00Z",
+          "event_at_utc": "2025-05-02T21:00:00Z",
+          "nav_usd": 109.145269,
+          "period_return": -0.00325527
+        },
+        {
+          "available_at_utc": "2025-05-05T22:00:00Z",
+          "event_at_utc": "2025-05-05T21:00:00Z",
+          "nav_usd": 109.085367,
+          "period_return": -0.00054883
+        },
+        {
+          "available_at_utc": "2025-05-06T22:00:00Z",
+          "event_at_utc": "2025-05-06T21:00:00Z",
+          "nav_usd": 107.986249,
+          "period_return": -0.01007576
+        },
+        {
+          "available_at_utc": "2025-05-07T22:00:00Z",
+          "event_at_utc": "2025-05-07T21:00:00Z",
+          "nav_usd": 109.32321,
+          "period_return": 0.01238084
+        },
+        {
+          "available_at_utc": "2025-05-08T22:00:00Z",
+          "event_at_utc": "2025-05-08T21:00:00Z",
+          "nav_usd": 108.27628,
+          "period_return": -0.00957646
+        },
+        {
+          "available_at_utc": "2025-05-09T22:00:00Z",
+          "event_at_utc": "2025-05-09T21:00:00Z",
+          "nav_usd": 109.140217,
+          "period_return": 0.00797901
+        },
+        {
+          "available_at_utc": "2025-05-12T22:00:00Z",
+          "event_at_utc": "2025-05-12T21:00:00Z",
+          "nav_usd": 109.472521,
+          "period_return": 0.00304474
+        },
+        {
+          "available_at_utc": "2025-05-13T22:00:00Z",
+          "event_at_utc": "2025-05-13T21:00:00Z",
+          "nav_usd": 108.136701,
+          "period_return": -0.01220234
+        },
+        {
+          "available_at_utc": "2025-05-14T22:00:00Z",
+          "event_at_utc": "2025-05-14T21:00:00Z",
+          "nav_usd": 106.75111,
+          "period_return": -0.01281332
+        },
+        {
+          "available_at_utc": "2025-05-15T22:00:00Z",
+          "event_at_utc": "2025-05-15T21:00:00Z",
+          "nav_usd": 107.31928,
+          "period_return": 0.00532238
+        },
+        {
+          "available_at_utc": "2025-05-16T22:00:00Z",
+          "event_at_utc": "2025-05-16T21:00:00Z",
+          "nav_usd": 107.995169,
+          "period_return": 0.00629792
+        },
+        {
+          "available_at_utc": "2025-05-19T22:00:00Z",
+          "event_at_utc": "2025-05-19T21:00:00Z",
+          "nav_usd": 105.851855,
+          "period_return": -0.01984638
+        },
+        {
+          "available_at_utc": "2025-05-20T22:00:00Z",
+          "event_at_utc": "2025-05-20T21:00:00Z",
+          "nav_usd": 103.217933,
+          "period_return": -0.02488309
+        },
+        {
+          "available_at_utc": "2025-05-21T22:00:00Z",
+          "event_at_utc": "2025-05-21T21:00:00Z",
+          "nav_usd": 104.611204,
+          "period_return": 0.01349834
+        },
+        {
+          "available_at_utc": "2025-05-22T22:00:00Z",
+          "event_at_utc": "2025-05-22T21:00:00Z",
+          "nav_usd": 102.11367,
+          "period_return": -0.02387444
+        },
+        {
+          "available_at_utc": "2025-05-23T22:00:00Z",
+          "event_at_utc": "2025-05-23T21:00:00Z",
+          "nav_usd": 101.543481,
+          "period_return": -0.00558386
+        },
+        {
+          "available_at_utc": "2025-05-26T22:00:00Z",
+          "event_at_utc": "2025-05-26T21:00:00Z",
+          "nav_usd": 102.504961,
+          "period_return": 0.00946865
+        },
+        {
+          "available_at_utc": "2025-05-27T22:00:00Z",
+          "event_at_utc": "2025-05-27T21:00:00Z",
+          "nav_usd": 104.491186,
+          "period_return": 0.01937686
+        },
+        {
+          "available_at_utc": "2025-05-28T22:00:00Z",
+          "event_at_utc": "2025-05-28T21:00:00Z",
+          "nav_usd": 102.234289,
+          "period_return": -0.02159892
+        },
+        {
+          "available_at_utc": "2025-05-29T22:00:00Z",
+          "event_at_utc": "2025-05-29T21:00:00Z",
+          "nav_usd": 101.48481,
+          "period_return": -0.007331
+        },
+        {
+          "available_at_utc": "2025-05-30T22:00:00Z",
+          "event_at_utc": "2025-05-30T21:00:00Z",
+          "nav_usd": 98.306605,
+          "period_return": -0.03131705
+        },
+        {
+          "available_at_utc": "2025-06-02T22:00:00Z",
+          "event_at_utc": "2025-06-02T21:00:00Z",
+          "nav_usd": 97.630561,
+          "period_return": -0.00687689
+        },
+        {
+          "available_at_utc": "2025-06-03T22:00:00Z",
+          "event_at_utc": "2025-06-03T21:00:00Z",
+          "nav_usd": 95.656752,
+          "period_return": -0.02021713
+        },
+        {
+          "available_at_utc": "2025-06-04T22:00:00Z",
+          "event_at_utc": "2025-06-04T21:00:00Z",
+          "nav_usd": 94.679314,
+          "period_return": -0.01021818
+        },
+        {
+          "available_at_utc": "2025-06-05T22:00:00Z",
+          "event_at_utc": "2025-06-05T21:00:00Z",
+          "nav_usd": 94.623509,
+          "period_return": -0.00058941
+        },
+        {
+          "available_at_utc": "2025-06-06T22:00:00Z",
+          "event_at_utc": "2025-06-06T21:00:00Z",
+          "nav_usd": 94.952499,
+          "period_return": 0.00347683
+        },
+        {
+          "available_at_utc": "2025-06-09T22:00:00Z",
+          "event_at_utc": "2025-06-09T21:00:00Z",
+          "nav_usd": 94.109185,
+          "period_return": -0.00888143
+        },
+        {
+          "available_at_utc": "2025-06-10T22:00:00Z",
+          "event_at_utc": "2025-06-10T21:00:00Z",
+          "nav_usd": 94.89084,
+          "period_return": 0.00830584
+        },
+        {
+          "available_at_utc": "2025-06-11T22:00:00Z",
+          "event_at_utc": "2025-06-11T21:00:00Z",
+          "nav_usd": 95.114646,
+          "period_return": 0.00235856
+        },
+        {
+          "available_at_utc": "2025-06-12T22:00:00Z",
+          "event_at_utc": "2025-06-12T21:00:00Z",
+          "nav_usd": 95.463333,
+          "period_return": 0.00366596
+        },
+        {
+          "available_at_utc": "2025-06-13T22:00:00Z",
+          "event_at_utc": "2025-06-13T21:00:00Z",
+          "nav_usd": 96.580102,
+          "period_return": 0.01169841
+        },
+        {
+          "available_at_utc": "2025-06-16T22:00:00Z",
+          "event_at_utc": "2025-06-16T21:00:00Z",
+          "nav_usd": 98.122011,
+          "period_return": 0.01596508
+        },
+        {
+          "available_at_utc": "2025-06-17T22:00:00Z",
+          "event_at_utc": "2025-06-17T21:00:00Z",
+          "nav_usd": 98.171409,
+          "period_return": 0.00050343
+        },
+        {
+          "available_at_utc": "2025-06-18T22:00:00Z",
+          "event_at_utc": "2025-06-18T21:00:00Z",
+          "nav_usd": 97.602899,
+          "period_return": -0.00579099
+        },
+        {
+          "available_at_utc": "2025-06-19T22:00:00Z",
+          "event_at_utc": "2025-06-19T21:00:00Z",
+          "nav_usd": 97.797222,
+          "period_return": 0.00199096
+        },
+        {
+          "available_at_utc": "2025-06-20T22:00:00Z",
+          "event_at_utc": "2025-06-20T21:00:00Z",
+          "nav_usd": 96.977124,
+          "period_return": -0.0083857
+        },
+        {
+          "available_at_utc": "2025-06-23T22:00:00Z",
+          "event_at_utc": "2025-06-23T21:00:00Z",
+          "nav_usd": 96.484969,
+          "period_return": -0.00507496
+        },
+        {
+          "available_at_utc": "2025-06-24T22:00:00Z",
+          "event_at_utc": "2025-06-24T21:00:00Z",
+          "nav_usd": 95.706862,
+          "period_return": -0.00806453
+        },
+        {
+          "available_at_utc": "2025-06-25T22:00:00Z",
+          "event_at_utc": "2025-06-25T21:00:00Z",
+          "nav_usd": 95.713653,
+          "period_return": 7.095e-05
+        },
+        {
+          "available_at_utc": "2025-06-26T22:00:00Z",
+          "event_at_utc": "2025-06-26T21:00:00Z",
+          "nav_usd": 95.995176,
+          "period_return": 0.00294131
+        },
+        {
+          "available_at_utc": "2025-06-27T22:00:00Z",
+          "event_at_utc": "2025-06-27T21:00:00Z",
+          "nav_usd": 96.273477,
+          "period_return": 0.00289911
+        },
+        {
+          "available_at_utc": "2025-06-30T22:00:00Z",
+          "event_at_utc": "2025-06-30T21:00:00Z",
+          "nav_usd": 96.393029,
+          "period_return": 0.00124179
+        },
+        {
+          "available_at_utc": "2025-07-01T22:00:00Z",
+          "event_at_utc": "2025-07-01T21:00:00Z",
+          "nav_usd": 96.185753,
+          "period_return": -0.00215032
+        },
+        {
+          "available_at_utc": "2025-07-02T22:00:00Z",
+          "event_at_utc": "2025-07-02T21:00:00Z",
+          "nav_usd": 95.383162,
+          "period_return": -0.00834418
+        },
+        {
+          "available_at_utc": "2025-07-03T22:00:00Z",
+          "event_at_utc": "2025-07-03T21:00:00Z",
+          "nav_usd": 95.467256,
+          "period_return": 0.00088165
+        },
+        {
+          "available_at_utc": "2025-07-04T22:00:00Z",
+          "event_at_utc": "2025-07-04T21:00:00Z",
+          "nav_usd": 95.37073,
+          "period_return": -0.00101109
+        },
+        {
+          "available_at_utc": "2025-07-07T22:00:00Z",
+          "event_at_utc": "2025-07-07T21:00:00Z",
+          "nav_usd": 96.160211,
+          "period_return": 0.00827802
+        },
+        {
+          "available_at_utc": "2025-07-08T22:00:00Z",
+          "event_at_utc": "2025-07-08T21:00:00Z",
+          "nav_usd": 95.983043,
+          "period_return": -0.00184243
+        },
+        {
+          "available_at_utc": "2025-07-09T22:00:00Z",
+          "event_at_utc": "2025-07-09T21:00:00Z",
+          "nav_usd": 96.441155,
+          "period_return": 0.00477284
+        },
+        {
+          "available_at_utc": "2025-07-10T22:00:00Z",
+          "event_at_utc": "2025-07-10T21:00:00Z",
+          "nav_usd": 96.557747,
+          "period_return": 0.00120894
+        },
+        {
+          "available_at_utc": "2025-07-11T22:00:00Z",
+          "event_at_utc": "2025-07-11T21:00:00Z",
+          "nav_usd": 96.54679,
+          "period_return": -0.00011347
+        },
+        {
+          "available_at_utc": "2025-07-14T22:00:00Z",
+          "event_at_utc": "2025-07-14T21:00:00Z",
+          "nav_usd": 96.379185,
+          "period_return": -0.00173599
+        },
+        {
+          "available_at_utc": "2025-07-15T22:00:00Z",
+          "event_at_utc": "2025-07-15T21:00:00Z",
+          "nav_usd": 95.764737,
+          "period_return": -0.00637532
+        },
+        {
+          "available_at_utc": "2025-07-16T22:00:00Z",
+          "event_at_utc": "2025-07-16T21:00:00Z",
+          "nav_usd": 95.557472,
+          "period_return": -0.00216431
+        },
+        {
+          "available_at_utc": "2025-07-17T22:00:00Z",
+          "event_at_utc": "2025-07-17T21:00:00Z",
+          "nav_usd": 95.320494,
+          "period_return": -0.00247995
+        },
+        {
+          "available_at_utc": "2025-07-18T22:00:00Z",
+          "event_at_utc": "2025-07-18T21:00:00Z",
+          "nav_usd": 95.0447,
+          "period_return": -0.00289334
+        },
+        {
+          "available_at_utc": "2025-07-21T22:00:00Z",
+          "event_at_utc": "2025-07-21T21:00:00Z",
+          "nav_usd": 94.95851,
+          "period_return": -0.00090683
+        },
+        {
+          "available_at_utc": "2025-07-22T22:00:00Z",
+          "event_at_utc": "2025-07-22T21:00:00Z",
+          "nav_usd": 95.315434,
+          "period_return": 0.00375873
+        },
+        {
+          "available_at_utc": "2025-07-23T22:00:00Z",
+          "event_at_utc": "2025-07-23T21:00:00Z",
+          "nav_usd": 94.896272,
+          "period_return": -0.00439763
+        },
+        {
+          "available_at_utc": "2025-07-24T22:00:00Z",
+          "event_at_utc": "2025-07-24T21:00:00Z",
+          "nav_usd": 95.408839,
+          "period_return": 0.00540134
+        },
+        {
+          "available_at_utc": "2025-07-25T22:00:00Z",
+          "event_at_utc": "2025-07-25T21:00:00Z",
+          "nav_usd": 94.67584,
+          "period_return": -0.00768271
+        },
+        {
+          "available_at_utc": "2025-07-28T22:00:00Z",
+          "event_at_utc": "2025-07-28T21:00:00Z",
+          "nav_usd": 95.053273,
+          "period_return": 0.00398657
+        },
+        {
+          "available_at_utc": "2025-07-29T22:00:00Z",
+          "event_at_utc": "2025-07-29T21:00:00Z",
+          "nav_usd": 94.085849,
+          "period_return": -0.0101777
+        },
+        {
+          "available_at_utc": "2025-07-30T22:00:00Z",
+          "event_at_utc": "2025-07-30T21:00:00Z",
+          "nav_usd": 93.96776,
+          "period_return": -0.00125511
+        },
+        {
+          "available_at_utc": "2025-07-31T22:00:00Z",
+          "event_at_utc": "2025-07-31T21:00:00Z",
+          "nav_usd": 93.081791,
+          "period_return": -0.00942844
+        },
+        {
+          "available_at_utc": "2025-08-01T22:00:00Z",
+          "event_at_utc": "2025-08-01T21:00:00Z",
+          "nav_usd": 94.104002,
+          "period_return": 0.01098185
+        },
+        {
+          "available_at_utc": "2025-08-04T22:00:00Z",
+          "event_at_utc": "2025-08-04T21:00:00Z",
+          "nav_usd": 93.150616,
+          "period_return": -0.01013119
+        },
+        {
+          "available_at_utc": "2025-08-05T22:00:00Z",
+          "event_at_utc": "2025-08-05T21:00:00Z",
+          "nav_usd": 91.933831,
+          "period_return": -0.01306255
+        },
+        {
+          "available_at_utc": "2025-08-06T22:00:00Z",
+          "event_at_utc": "2025-08-06T21:00:00Z",
+          "nav_usd": 91.429354,
+          "period_return": -0.00548739
+        },
+        {
+          "available_at_utc": "2025-08-07T22:00:00Z",
+          "event_at_utc": "2025-08-07T21:00:00Z",
+          "nav_usd": 92.077791,
+          "period_return": 0.00709221
+        },
+        {
+          "available_at_utc": "2025-08-08T22:00:00Z",
+          "event_at_utc": "2025-08-08T21:00:00Z",
+          "nav_usd": 91.660255,
+          "period_return": -0.0045346
+        },
+        {
+          "available_at_utc": "2025-08-11T22:00:00Z",
+          "event_at_utc": "2025-08-11T21:00:00Z",
+          "nav_usd": 91.26686,
+          "period_return": -0.00429188
+        },
+        {
+          "available_at_utc": "2025-08-12T22:00:00Z",
+          "event_at_utc": "2025-08-12T21:00:00Z",
+          "nav_usd": 91.453536,
+          "period_return": 0.00204539
+        },
+        {
+          "available_at_utc": "2025-08-13T22:00:00Z",
+          "event_at_utc": "2025-08-13T21:00:00Z",
+          "nav_usd": 90.670695,
+          "period_return": -0.00855998
+        },
+        {
+          "available_at_utc": "2025-08-14T22:00:00Z",
+          "event_at_utc": "2025-08-14T21:00:00Z",
+          "nav_usd": 90.454934,
+          "period_return": -0.00237962
+        },
+        {
+          "available_at_utc": "2025-08-15T22:00:00Z",
+          "event_at_utc": "2025-08-15T21:00:00Z",
+          "nav_usd": 90.553963,
+          "period_return": 0.00109479
+        },
+        {
+          "available_at_utc": "2025-08-18T22:00:00Z",
+          "event_at_utc": "2025-08-18T21:00:00Z",
+          "nav_usd": 91.137469,
+          "period_return": 0.00644374
+        },
+        {
+          "available_at_utc": "2025-08-19T22:00:00Z",
+          "event_at_utc": "2025-08-19T21:00:00Z",
+          "nav_usd": 91.524031,
+          "period_return": 0.00424153
+        },
+        {
+          "available_at_utc": "2025-08-20T22:00:00Z",
+          "event_at_utc": "2025-08-20T21:00:00Z",
+          "nav_usd": 89.579192,
+          "period_return": -0.02124949
+        },
+        {
+          "available_at_utc": "2025-08-21T22:00:00Z",
+          "event_at_utc": "2025-08-21T21:00:00Z",
+          "nav_usd": 88.927388,
+          "period_return": -0.00727628
+        },
+        {
+          "available_at_utc": "2025-08-22T22:00:00Z",
+          "event_at_utc": "2025-08-22T21:00:00Z",
+          "nav_usd": 88.220369,
+          "period_return": -0.00795053
+        },
+        {
+          "available_at_utc": "2025-08-25T22:00:00Z",
+          "event_at_utc": "2025-08-25T21:00:00Z",
+          "nav_usd": 87.473547,
+          "period_return": -0.00846541
+        },
+        {
+          "available_at_utc": "2025-08-26T22:00:00Z",
+          "event_at_utc": "2025-08-26T21:00:00Z",
+          "nav_usd": 88.32681,
+          "period_return": 0.00975453
+        },
+        {
+          "available_at_utc": "2025-08-27T22:00:00Z",
+          "event_at_utc": "2025-08-27T21:00:00Z",
+          "nav_usd": 88.880715,
+          "period_return": 0.00627108
+        },
+        {
+          "available_at_utc": "2025-08-28T22:00:00Z",
+          "event_at_utc": "2025-08-28T21:00:00Z",
+          "nav_usd": 88.64486,
+          "period_return": -0.00265361
+        },
+        {
+          "available_at_utc": "2025-08-29T22:00:00Z",
+          "event_at_utc": "2025-08-29T21:00:00Z",
+          "nav_usd": 87.423619,
+          "period_return": -0.01377679
+        },
+        {
+          "available_at_utc": "2025-09-01T22:00:00Z",
+          "event_at_utc": "2025-09-01T21:00:00Z",
+          "nav_usd": 87.587764,
+          "period_return": 0.00187758
+        },
+        {
+          "available_at_utc": "2025-09-02T22:00:00Z",
+          "event_at_utc": "2025-09-02T21:00:00Z",
+          "nav_usd": 88.065593,
+          "period_return": 0.00545543
+        },
+        {
+          "available_at_utc": "2025-09-03T22:00:00Z",
+          "event_at_utc": "2025-09-03T21:00:00Z",
+          "nav_usd": 88.205944,
+          "period_return": 0.00159371
+        },
+        {
+          "available_at_utc": "2025-09-04T22:00:00Z",
+          "event_at_utc": "2025-09-04T21:00:00Z",
+          "nav_usd": 88.731631,
+          "period_return": 0.00595977
+        },
+        {
+          "available_at_utc": "2025-09-05T22:00:00Z",
+          "event_at_utc": "2025-09-05T21:00:00Z",
+          "nav_usd": 88.022367,
+          "period_return": -0.00799335
+        },
+        {
+          "available_at_utc": "2025-09-08T22:00:00Z",
+          "event_at_utc": "2025-09-08T21:00:00Z",
+          "nav_usd": 87.857614,
+          "period_return": -0.00187172
+        },
+        {
+          "available_at_utc": "2025-09-09T22:00:00Z",
+          "event_at_utc": "2025-09-09T21:00:00Z",
+          "nav_usd": 87.160401,
+          "period_return": -0.00793572
+        },
+        {
+          "available_at_utc": "2025-09-10T22:00:00Z",
+          "event_at_utc": "2025-09-10T21:00:00Z",
+          "nav_usd": 85.827916,
+          "period_return": -0.01528774
+        }
+      ],
+      "risk_budget": 0.25,
+      "strategy_id": "strat_macro_cta"
+    },
+    {
+      "eligible": true,
+      "exposure": {
+        "adv_usd": 35000000.0,
+        "asset_class": "volatility",
+        "gross_exposure": 1.0,
+        "liquidity_days_to_exit": 2.0,
+        "market_beta": 0.45,
+        "max_capacity_usd": 8000000.0,
+        "net_exposure": 0.4,
+        "strategy_group": "vol_carry",
+        "transaction_cost_bps": 15.0
+      },
+      "name": "Index Volatility Carry",
+      "returns": [
+        {
+          "available_at_utc": "2025-01-02T22:00:00Z",
+          "event_at_utc": "2025-01-02T21:00:00Z",
+          "nav_usd": 98.039641,
+          "period_return": -0.01960359
+        },
+        {
+          "available_at_utc": "2025-01-03T22:00:00Z",
+          "event_at_utc": "2025-01-03T21:00:00Z",
+          "nav_usd": 99.084257,
+          "period_return": 0.01065504
+        },
+        {
+          "available_at_utc": "2025-01-06T22:00:00Z",
+          "event_at_utc": "2025-01-06T21:00:00Z",
+          "nav_usd": 97.910544,
+          "period_return": -0.0118456
+        },
+        {
+          "available_at_utc": "2025-01-07T22:00:00Z",
+          "event_at_utc": "2025-01-07T21:00:00Z",
+          "nav_usd": 98.006838,
+          "period_return": 0.00098349
+        },
+        {
+          "available_at_utc": "2025-01-08T22:00:00Z",
+          "event_at_utc": "2025-01-08T21:00:00Z",
+          "nav_usd": 97.557226,
+          "period_return": -0.00458756
+        },
+        {
+          "available_at_utc": "2025-01-09T22:00:00Z",
+          "event_at_utc": "2025-01-09T21:00:00Z",
+          "nav_usd": 96.554707,
+          "period_return": -0.01027621
+        },
+        {
+          "available_at_utc": "2025-01-10T22:00:00Z",
+          "event_at_utc": "2025-01-10T21:00:00Z",
+          "nav_usd": 96.54625,
+          "period_return": -8.759e-05
+        },
+        {
+          "available_at_utc": "2025-01-13T22:00:00Z",
+          "event_at_utc": "2025-01-13T21:00:00Z",
+          "nav_usd": 96.823812,
+          "period_return": 0.00287491
+        },
+        {
+          "available_at_utc": "2025-01-14T22:00:00Z",
+          "event_at_utc": "2025-01-14T21:00:00Z",
+          "nav_usd": 98.751775,
+          "period_return": 0.01991208
+        },
+        {
+          "available_at_utc": "2025-01-15T22:00:00Z",
+          "event_at_utc": "2025-01-15T21:00:00Z",
+          "nav_usd": 98.224473,
+          "period_return": -0.00533967
+        },
+        {
+          "available_at_utc": "2025-01-16T22:00:00Z",
+          "event_at_utc": "2025-01-16T21:00:00Z",
+          "nav_usd": 96.730942,
+          "period_return": -0.01520529
+        },
+        {
+          "available_at_utc": "2025-01-17T22:00:00Z",
+          "event_at_utc": "2025-01-17T21:00:00Z",
+          "nav_usd": 98.069522,
+          "period_return": 0.01383818
+        },
+        {
+          "available_at_utc": "2025-01-20T22:00:00Z",
+          "event_at_utc": "2025-01-20T21:00:00Z",
+          "nav_usd": 98.643196,
+          "period_return": 0.00584967
+        },
+        {
+          "available_at_utc": "2025-01-21T22:00:00Z",
+          "event_at_utc": "2025-01-21T21:00:00Z",
+          "nav_usd": 99.127078,
+          "period_return": 0.00490538
+        },
+        {
+          "available_at_utc": "2025-01-22T22:00:00Z",
+          "event_at_utc": "2025-01-22T21:00:00Z",
+          "nav_usd": 97.48851,
+          "period_return": -0.01652997
+        },
+        {
+          "available_at_utc": "2025-01-23T22:00:00Z",
+          "event_at_utc": "2025-01-23T21:00:00Z",
+          "nav_usd": 96.676769,
+          "period_return": -0.00832654
+        },
+        {
+          "available_at_utc": "2025-01-24T22:00:00Z",
+          "event_at_utc": "2025-01-24T21:00:00Z",
+          "nav_usd": 97.482961,
+          "period_return": 0.00833904
+        },
+        {
+          "available_at_utc": "2025-01-27T22:00:00Z",
+          "event_at_utc": "2025-01-27T21:00:00Z",
+          "nav_usd": 96.136162,
+          "period_return": -0.01381574
+        },
+        {
+          "available_at_utc": "2025-01-28T22:00:00Z",
+          "event_at_utc": "2025-01-28T21:00:00Z",
+          "nav_usd": 95.928812,
+          "period_return": -0.00215684
+        },
+        {
+          "available_at_utc": "2025-01-29T22:00:00Z",
+          "event_at_utc": "2025-01-29T21:00:00Z",
+          "nav_usd": 94.275719,
+          "period_return": -0.01723249
+        },
+        {
+          "available_at_utc": "2025-01-30T22:00:00Z",
+          "event_at_utc": "2025-01-30T21:00:00Z",
+          "nav_usd": 93.790887,
+          "period_return": -0.00514271
+        },
+        {
+          "available_at_utc": "2025-01-31T22:00:00Z",
+          "event_at_utc": "2025-01-31T21:00:00Z",
+          "nav_usd": 94.124206,
+          "period_return": 0.00355385
+        },
+        {
+          "available_at_utc": "2025-02-03T22:00:00Z",
+          "event_at_utc": "2025-02-03T21:00:00Z",
+          "nav_usd": 93.525405,
+          "period_return": -0.00636181
+        },
+        {
+          "available_at_utc": "2025-02-04T22:00:00Z",
+          "event_at_utc": "2025-02-04T21:00:00Z",
+          "nav_usd": 94.073339,
+          "period_return": 0.00585866
+        },
+        {
+          "available_at_utc": "2025-02-05T22:00:00Z",
+          "event_at_utc": "2025-02-05T21:00:00Z",
+          "nav_usd": 92.908143,
+          "period_return": -0.01238603
+        },
+        {
+          "available_at_utc": "2025-02-06T22:00:00Z",
+          "event_at_utc": "2025-02-06T21:00:00Z",
+          "nav_usd": 93.412171,
+          "period_return": 0.005425
+        },
+        {
+          "available_at_utc": "2025-02-07T22:00:00Z",
+          "event_at_utc": "2025-02-07T21:00:00Z",
+          "nav_usd": 94.915357,
+          "period_return": 0.01609198
+        },
+        {
+          "available_at_utc": "2025-02-10T22:00:00Z",
+          "event_at_utc": "2025-02-10T21:00:00Z",
+          "nav_usd": 95.126704,
+          "period_return": 0.00222668
+        },
+        {
+          "available_at_utc": "2025-02-11T22:00:00Z",
+          "event_at_utc": "2025-02-11T21:00:00Z",
+          "nav_usd": 95.895688,
+          "period_return": 0.00808379
+        },
+        {
+          "available_at_utc": "2025-02-12T22:00:00Z",
+          "event_at_utc": "2025-02-12T21:00:00Z",
+          "nav_usd": 95.704816,
+          "period_return": -0.00199041
+        },
+        {
+          "available_at_utc": "2025-02-13T22:00:00Z",
+          "event_at_utc": "2025-02-13T21:00:00Z",
+          "nav_usd": 95.861048,
+          "period_return": 0.00163243
+        },
+        {
+          "available_at_utc": "2025-02-14T22:00:00Z",
+          "event_at_utc": "2025-02-14T21:00:00Z",
+          "nav_usd": 96.793848,
+          "period_return": 0.00973075
+        },
+        {
+          "available_at_utc": "2025-02-17T22:00:00Z",
+          "event_at_utc": "2025-02-17T21:00:00Z",
+          "nav_usd": 98.51682,
+          "period_return": 0.01780043
+        },
+        {
+          "available_at_utc": "2025-02-18T22:00:00Z",
+          "event_at_utc": "2025-02-18T21:00:00Z",
+          "nav_usd": 98.8064,
+          "period_return": 0.00293939
+        },
+        {
+          "available_at_utc": "2025-02-19T22:00:00Z",
+          "event_at_utc": "2025-02-19T21:00:00Z",
+          "nav_usd": 99.508053,
+          "period_return": 0.00710129
+        },
+        {
+          "available_at_utc": "2025-02-20T22:00:00Z",
+          "event_at_utc": "2025-02-20T21:00:00Z",
+          "nav_usd": 101.411298,
+          "period_return": 0.01912654
+        },
+        {
+          "available_at_utc": "2025-02-21T22:00:00Z",
+          "event_at_utc": "2025-02-21T21:00:00Z",
+          "nav_usd": 102.501657,
+          "period_return": 0.01075186
+        },
+        {
+          "available_at_utc": "2025-02-24T22:00:00Z",
+          "event_at_utc": "2025-02-24T21:00:00Z",
+          "nav_usd": 104.947434,
+          "period_return": 0.02386085
+        },
+        {
+          "available_at_utc": "2025-02-25T22:00:00Z",
+          "event_at_utc": "2025-02-25T21:00:00Z",
+          "nav_usd": 105.538213,
+          "period_return": 0.00562929
+        },
+        {
+          "available_at_utc": "2025-02-26T22:00:00Z",
+          "event_at_utc": "2025-02-26T21:00:00Z",
+          "nav_usd": 106.490476,
+          "period_return": 0.00902291
+        },
+        {
+          "available_at_utc": "2025-02-27T22:00:00Z",
+          "event_at_utc": "2025-02-27T21:00:00Z",
+          "nav_usd": 105.909645,
+          "period_return": -0.00545429
+        },
+        {
+          "available_at_utc": "2025-02-28T22:00:00Z",
+          "event_at_utc": "2025-02-28T21:00:00Z",
+          "nav_usd": 104.658438,
+          "period_return": -0.01181392
+        },
+        {
+          "available_at_utc": "2025-03-03T22:00:00Z",
+          "event_at_utc": "2025-03-03T21:00:00Z",
+          "nav_usd": 104.266799,
+          "period_return": -0.00374206
+        },
+        {
+          "available_at_utc": "2025-03-04T22:00:00Z",
+          "event_at_utc": "2025-03-04T21:00:00Z",
+          "nav_usd": 104.908221,
+          "period_return": 0.00615173
+        },
+        {
+          "available_at_utc": "2025-03-05T22:00:00Z",
+          "event_at_utc": "2025-03-05T21:00:00Z",
+          "nav_usd": 103.28541,
+          "period_return": -0.01546886
+        },
+        {
+          "available_at_utc": "2025-03-06T22:00:00Z",
+          "event_at_utc": "2025-03-06T21:00:00Z",
+          "nav_usd": 103.714863,
+          "period_return": 0.00415792
+        },
+        {
+          "available_at_utc": "2025-03-07T22:00:00Z",
+          "event_at_utc": "2025-03-07T21:00:00Z",
+          "nav_usd": 103.869729,
+          "period_return": 0.00149319
+        },
+        {
+          "available_at_utc": "2025-03-10T22:00:00Z",
+          "event_at_utc": "2025-03-10T21:00:00Z",
+          "nav_usd": 103.96437,
+          "period_return": 0.00091116
+        },
+        {
+          "available_at_utc": "2025-03-11T22:00:00Z",
+          "event_at_utc": "2025-03-11T21:00:00Z",
+          "nav_usd": 103.258232,
+          "period_return": -0.00679212
+        },
+        {
+          "available_at_utc": "2025-03-12T22:00:00Z",
+          "event_at_utc": "2025-03-12T21:00:00Z",
+          "nav_usd": 102.584087,
+          "period_return": -0.00652873
+        },
+        {
+          "available_at_utc": "2025-03-13T22:00:00Z",
+          "event_at_utc": "2025-03-13T21:00:00Z",
+          "nav_usd": 104.267287,
+          "period_return": 0.01640801
+        },
+        {
+          "available_at_utc": "2025-03-14T22:00:00Z",
+          "event_at_utc": "2025-03-14T21:00:00Z",
+          "nav_usd": 102.952404,
+          "period_return": -0.0126107
+        },
+        {
+          "available_at_utc": "2025-03-17T22:00:00Z",
+          "event_at_utc": "2025-03-17T21:00:00Z",
+          "nav_usd": 103.19808,
+          "period_return": 0.0023863
+        },
+        {
+          "available_at_utc": "2025-03-18T22:00:00Z",
+          "event_at_utc": "2025-03-18T21:00:00Z",
+          "nav_usd": 102.588825,
+          "period_return": -0.00590374
+        },
+        {
+          "available_at_utc": "2025-03-19T22:00:00Z",
+          "event_at_utc": "2025-03-19T21:00:00Z",
+          "nav_usd": 101.80598,
+          "period_return": -0.0076309
+        },
+        {
+          "available_at_utc": "2025-03-20T22:00:00Z",
+          "event_at_utc": "2025-03-20T21:00:00Z",
+          "nav_usd": 100.891579,
+          "period_return": -0.00898181
+        },
+        {
+          "available_at_utc": "2025-03-21T22:00:00Z",
+          "event_at_utc": "2025-03-21T21:00:00Z",
+          "nav_usd": 102.263225,
+          "period_return": 0.01359525
+        },
+        {
+          "available_at_utc": "2025-03-24T22:00:00Z",
+          "event_at_utc": "2025-03-24T21:00:00Z",
+          "nav_usd": 103.58573,
+          "period_return": 0.01293236
+        },
+        {
+          "available_at_utc": "2025-03-25T22:00:00Z",
+          "event_at_utc": "2025-03-25T21:00:00Z",
+          "nav_usd": 104.178553,
+          "period_return": 0.00572301
+        },
+        {
+          "available_at_utc": "2025-03-26T22:00:00Z",
+          "event_at_utc": "2025-03-26T21:00:00Z",
+          "nav_usd": 104.435139,
+          "period_return": 0.00246295
+        },
+        {
+          "available_at_utc": "2025-03-27T22:00:00Z",
+          "event_at_utc": "2025-03-27T21:00:00Z",
+          "nav_usd": 102.364357,
+          "period_return": -0.0198284
+        },
+        {
+          "available_at_utc": "2025-03-28T22:00:00Z",
+          "event_at_utc": "2025-03-28T21:00:00Z",
+          "nav_usd": 103.358457,
+          "period_return": 0.00971139
+        },
+        {
+          "available_at_utc": "2025-03-31T22:00:00Z",
+          "event_at_utc": "2025-03-31T21:00:00Z",
+          "nav_usd": 103.141839,
+          "period_return": -0.00209579
+        },
+        {
+          "available_at_utc": "2025-04-01T22:00:00Z",
+          "event_at_utc": "2025-04-01T21:00:00Z",
+          "nav_usd": 103.641474,
+          "period_return": 0.00484416
+        },
+        {
+          "available_at_utc": "2025-04-02T22:00:00Z",
+          "event_at_utc": "2025-04-02T21:00:00Z",
+          "nav_usd": 101.938192,
+          "period_return": -0.01643437
+        },
+        {
+          "available_at_utc": "2025-04-03T22:00:00Z",
+          "event_at_utc": "2025-04-03T21:00:00Z",
+          "nav_usd": 100.992716,
+          "period_return": -0.00927499
+        },
+        {
+          "available_at_utc": "2025-04-04T22:00:00Z",
+          "event_at_utc": "2025-04-04T21:00:00Z",
+          "nav_usd": 101.598967,
+          "period_return": 0.00600292
+        },
+        {
+          "available_at_utc": "2025-04-07T22:00:00Z",
+          "event_at_utc": "2025-04-07T21:00:00Z",
+          "nav_usd": 102.624671,
+          "period_return": 0.01009561
+        },
+        {
+          "available_at_utc": "2025-04-08T22:00:00Z",
+          "event_at_utc": "2025-04-08T21:00:00Z",
+          "nav_usd": 102.373187,
+          "period_return": -0.00245052
+        },
+        {
+          "available_at_utc": "2025-04-09T22:00:00Z",
+          "event_at_utc": "2025-04-09T21:00:00Z",
+          "nav_usd": 103.800404,
+          "period_return": 0.01394131
+        },
+        {
+          "available_at_utc": "2025-04-10T22:00:00Z",
+          "event_at_utc": "2025-04-10T21:00:00Z",
+          "nav_usd": 102.458389,
+          "period_return": -0.0129288
+        },
+        {
+          "available_at_utc": "2025-04-11T22:00:00Z",
+          "event_at_utc": "2025-04-11T21:00:00Z",
+          "nav_usd": 101.828806,
+          "period_return": -0.00614477
+        },
+        {
+          "available_at_utc": "2025-04-14T22:00:00Z",
+          "event_at_utc": "2025-04-14T21:00:00Z",
+          "nav_usd": 102.154113,
+          "period_return": 0.00319464
+        },
+        {
+          "available_at_utc": "2025-04-15T22:00:00Z",
+          "event_at_utc": "2025-04-15T21:00:00Z",
+          "nav_usd": 102.562334,
+          "period_return": 0.00399613
+        },
+        {
+          "available_at_utc": "2025-04-16T22:00:00Z",
+          "event_at_utc": "2025-04-16T21:00:00Z",
+          "nav_usd": 102.274975,
+          "period_return": -0.00280179
+        },
+        {
+          "available_at_utc": "2025-04-17T22:00:00Z",
+          "event_at_utc": "2025-04-17T21:00:00Z",
+          "nav_usd": 103.321566,
+          "period_return": 0.01023311
+        },
+        {
+          "available_at_utc": "2025-04-18T22:00:00Z",
+          "event_at_utc": "2025-04-18T21:00:00Z",
+          "nav_usd": 101.761433,
+          "period_return": -0.01509978
+        },
+        {
+          "available_at_utc": "2025-04-21T22:00:00Z",
+          "event_at_utc": "2025-04-21T21:00:00Z",
+          "nav_usd": 100.995571,
+          "period_return": -0.00752605
+        },
+        {
+          "available_at_utc": "2025-04-22T22:00:00Z",
+          "event_at_utc": "2025-04-22T21:00:00Z",
+          "nav_usd": 100.986742,
+          "period_return": -8.742e-05
+        },
+        {
+          "available_at_utc": "2025-04-23T22:00:00Z",
+          "event_at_utc": "2025-04-23T21:00:00Z",
+          "nav_usd": 102.463491,
+          "period_return": 0.0146232
+        },
+        {
+          "available_at_utc": "2025-04-24T22:00:00Z",
+          "event_at_utc": "2025-04-24T21:00:00Z",
+          "nav_usd": 103.380956,
+          "period_return": 0.00895407
+        },
+        {
+          "available_at_utc": "2025-04-25T22:00:00Z",
+          "event_at_utc": "2025-04-25T21:00:00Z",
+          "nav_usd": 104.590139,
+          "period_return": 0.01169638
+        },
+        {
+          "available_at_utc": "2025-04-28T22:00:00Z",
+          "event_at_utc": "2025-04-28T21:00:00Z",
+          "nav_usd": 105.336794,
+          "period_return": 0.00713886
+        },
+        {
+          "available_at_utc": "2025-04-29T22:00:00Z",
+          "event_at_utc": "2025-04-29T21:00:00Z",
+          "nav_usd": 106.187775,
+          "period_return": 0.00807867
+        },
+        {
+          "available_at_utc": "2025-04-30T22:00:00Z",
+          "event_at_utc": "2025-04-30T21:00:00Z",
+          "nav_usd": 106.568123,
+          "period_return": 0.00358184
+        },
+        {
+          "available_at_utc": "2025-05-01T22:00:00Z",
+          "event_at_utc": "2025-05-01T21:00:00Z",
+          "nav_usd": 106.195923,
+          "period_return": -0.0034926
+        },
+        {
+          "available_at_utc": "2025-05-02T22:00:00Z",
+          "event_at_utc": "2025-05-02T21:00:00Z",
+          "nav_usd": 107.201416,
+          "period_return": 0.00946829
+        },
+        {
+          "available_at_utc": "2025-05-05T22:00:00Z",
+          "event_at_utc": "2025-05-05T21:00:00Z",
+          "nav_usd": 107.461919,
+          "period_return": 0.00243003
+        },
+        {
+          "available_at_utc": "2025-05-06T22:00:00Z",
+          "event_at_utc": "2025-05-06T21:00:00Z",
+          "nav_usd": 108.479986,
+          "period_return": 0.00947375
+        },
+        {
+          "available_at_utc": "2025-05-07T22:00:00Z",
+          "event_at_utc": "2025-05-07T21:00:00Z",
+          "nav_usd": 108.423602,
+          "period_return": -0.00051977
+        },
+        {
+          "available_at_utc": "2025-05-08T22:00:00Z",
+          "event_at_utc": "2025-05-08T21:00:00Z",
+          "nav_usd": 103.9407,
+          "period_return": -0.04134618
+        },
+        {
+          "available_at_utc": "2025-05-09T22:00:00Z",
+          "event_at_utc": "2025-05-09T21:00:00Z",
+          "nav_usd": 103.963285,
+          "period_return": 0.00021729
+        },
+        {
+          "available_at_utc": "2025-05-12T22:00:00Z",
+          "event_at_utc": "2025-05-12T21:00:00Z",
+          "nav_usd": 101.995995,
+          "period_return": -0.01892294
+        },
+        {
+          "available_at_utc": "2025-05-13T22:00:00Z",
+          "event_at_utc": "2025-05-13T21:00:00Z",
+          "nav_usd": 99.076181,
+          "period_return": -0.02862675
+        },
+        {
+          "available_at_utc": "2025-05-14T22:00:00Z",
+          "event_at_utc": "2025-05-14T21:00:00Z",
+          "nav_usd": 96.94639,
+          "period_return": -0.0214965
+        },
+        {
+          "available_at_utc": "2025-05-15T22:00:00Z",
+          "event_at_utc": "2025-05-15T21:00:00Z",
+          "nav_usd": 97.26265,
+          "period_return": 0.00326222
+        },
+        {
+          "available_at_utc": "2025-05-16T22:00:00Z",
+          "event_at_utc": "2025-05-16T21:00:00Z",
+          "nav_usd": 95.949172,
+          "period_return": -0.01350445
+        },
+        {
+          "available_at_utc": "2025-05-19T22:00:00Z",
+          "event_at_utc": "2025-05-19T21:00:00Z",
+          "nav_usd": 95.519409,
+          "period_return": -0.00447906
+        },
+        {
+          "available_at_utc": "2025-05-20T22:00:00Z",
+          "event_at_utc": "2025-05-20T21:00:00Z",
+          "nav_usd": 94.335817,
+          "period_return": -0.01239112
+        },
+        {
+          "available_at_utc": "2025-05-21T22:00:00Z",
+          "event_at_utc": "2025-05-21T21:00:00Z",
+          "nav_usd": 95.689881,
+          "period_return": 0.01435366
+        },
+        {
+          "available_at_utc": "2025-05-22T22:00:00Z",
+          "event_at_utc": "2025-05-22T21:00:00Z",
+          "nav_usd": 92.314359,
+          "period_return": -0.03527565
+        },
+        {
+          "available_at_utc": "2025-05-23T22:00:00Z",
+          "event_at_utc": "2025-05-23T21:00:00Z",
+          "nav_usd": 90.460928,
+          "period_return": -0.02007738
+        },
+        {
+          "available_at_utc": "2025-05-26T22:00:00Z",
+          "event_at_utc": "2025-05-26T21:00:00Z",
+          "nav_usd": 90.820457,
+          "period_return": 0.00397441
+        },
+        {
+          "available_at_utc": "2025-05-27T22:00:00Z",
+          "event_at_utc": "2025-05-27T21:00:00Z",
+          "nav_usd": 90.360617,
+          "period_return": -0.00506318
+        },
+        {
+          "available_at_utc": "2025-05-28T22:00:00Z",
+          "event_at_utc": "2025-05-28T21:00:00Z",
+          "nav_usd": 91.07925,
+          "period_return": 0.00795294
+        },
+        {
+          "available_at_utc": "2025-05-29T22:00:00Z",
+          "event_at_utc": "2025-05-29T21:00:00Z",
+          "nav_usd": 88.419933,
+          "period_return": -0.02919783
+        },
+        {
+          "available_at_utc": "2025-05-30T22:00:00Z",
+          "event_at_utc": "2025-05-30T21:00:00Z",
+          "nav_usd": 87.58606,
+          "period_return": -0.00943083
+        },
+        {
+          "available_at_utc": "2025-06-02T22:00:00Z",
+          "event_at_utc": "2025-06-02T21:00:00Z",
+          "nav_usd": 81.193487,
+          "period_return": -0.0729862
+        },
+        {
+          "available_at_utc": "2025-06-03T22:00:00Z",
+          "event_at_utc": "2025-06-03T21:00:00Z",
+          "nav_usd": 78.134246,
+          "period_return": -0.0376784
+        },
+        {
+          "available_at_utc": "2025-06-04T22:00:00Z",
+          "event_at_utc": "2025-06-04T21:00:00Z",
+          "nav_usd": 78.809201,
+          "period_return": 0.00863839
+        },
+        {
+          "available_at_utc": "2025-06-05T22:00:00Z",
+          "event_at_utc": "2025-06-05T21:00:00Z",
+          "nav_usd": 76.161611,
+          "period_return": -0.03359493
+        },
+        {
+          "available_at_utc": "2025-06-06T22:00:00Z",
+          "event_at_utc": "2025-06-06T21:00:00Z",
+          "nav_usd": 76.404791,
+          "period_return": 0.00319295
+        },
+        {
+          "available_at_utc": "2025-06-09T22:00:00Z",
+          "event_at_utc": "2025-06-09T21:00:00Z",
+          "nav_usd": 76.608957,
+          "period_return": 0.00267216
+        },
+        {
+          "available_at_utc": "2025-06-10T22:00:00Z",
+          "event_at_utc": "2025-06-10T21:00:00Z",
+          "nav_usd": 77.049351,
+          "period_return": 0.00574861
+        },
+        {
+          "available_at_utc": "2025-06-11T22:00:00Z",
+          "event_at_utc": "2025-06-11T21:00:00Z",
+          "nav_usd": 76.590319,
+          "period_return": -0.00595765
+        },
+        {
+          "available_at_utc": "2025-06-12T22:00:00Z",
+          "event_at_utc": "2025-06-12T21:00:00Z",
+          "nav_usd": 76.551229,
+          "period_return": -0.00051038
+        },
+        {
+          "available_at_utc": "2025-06-13T22:00:00Z",
+          "event_at_utc": "2025-06-13T21:00:00Z",
+          "nav_usd": 76.64427,
+          "period_return": 0.00121541
+        },
+        {
+          "available_at_utc": "2025-06-16T22:00:00Z",
+          "event_at_utc": "2025-06-16T21:00:00Z",
+          "nav_usd": 76.455835,
+          "period_return": -0.00245857
+        },
+        {
+          "available_at_utc": "2025-06-17T22:00:00Z",
+          "event_at_utc": "2025-06-17T21:00:00Z",
+          "nav_usd": 76.360541,
+          "period_return": -0.00124639
+        },
+        {
+          "available_at_utc": "2025-06-18T22:00:00Z",
+          "event_at_utc": "2025-06-18T21:00:00Z",
+          "nav_usd": 76.381876,
+          "period_return": 0.00027939
+        },
+        {
+          "available_at_utc": "2025-06-19T22:00:00Z",
+          "event_at_utc": "2025-06-19T21:00:00Z",
+          "nav_usd": 75.080449,
+          "period_return": -0.01703843
+        },
+        {
+          "available_at_utc": "2025-06-20T22:00:00Z",
+          "event_at_utc": "2025-06-20T21:00:00Z",
+          "nav_usd": 75.692741,
+          "period_return": 0.00815515
+        },
+        {
+          "available_at_utc": "2025-06-23T22:00:00Z",
+          "event_at_utc": "2025-06-23T21:00:00Z",
+          "nav_usd": 76.31034,
+          "period_return": 0.00815928
+        },
+        {
+          "available_at_utc": "2025-06-24T22:00:00Z",
+          "event_at_utc": "2025-06-24T21:00:00Z",
+          "nav_usd": 75.559278,
+          "period_return": -0.0098422
+        },
+        {
+          "available_at_utc": "2025-06-25T22:00:00Z",
+          "event_at_utc": "2025-06-25T21:00:00Z",
+          "nav_usd": 75.837482,
+          "period_return": 0.00368193
+        },
+        {
+          "available_at_utc": "2025-06-26T22:00:00Z",
+          "event_at_utc": "2025-06-26T21:00:00Z",
+          "nav_usd": 76.00654,
+          "period_return": 0.00222921
+        },
+        {
+          "available_at_utc": "2025-06-27T22:00:00Z",
+          "event_at_utc": "2025-06-27T21:00:00Z",
+          "nav_usd": 76.094982,
+          "period_return": 0.00116361
+        },
+        {
+          "available_at_utc": "2025-06-30T22:00:00Z",
+          "event_at_utc": "2025-06-30T21:00:00Z",
+          "nav_usd": 74.977624,
+          "period_return": -0.01468373
+        },
+        {
+          "available_at_utc": "2025-07-01T22:00:00Z",
+          "event_at_utc": "2025-07-01T21:00:00Z",
+          "nav_usd": 75.334396,
+          "period_return": 0.00475838
+        },
+        {
+          "available_at_utc": "2025-07-02T22:00:00Z",
+          "event_at_utc": "2025-07-02T21:00:00Z",
+          "nav_usd": 76.335844,
+          "period_return": 0.01329337
+        },
+        {
+          "available_at_utc": "2025-07-03T22:00:00Z",
+          "event_at_utc": "2025-07-03T21:00:00Z",
+          "nav_usd": 75.802121,
+          "period_return": -0.00699178
+        },
+        {
+          "available_at_utc": "2025-07-04T22:00:00Z",
+          "event_at_utc": "2025-07-04T21:00:00Z",
+          "nav_usd": 76.260298,
+          "period_return": 0.00604438
+        },
+        {
+          "available_at_utc": "2025-07-07T22:00:00Z",
+          "event_at_utc": "2025-07-07T21:00:00Z",
+          "nav_usd": 75.759463,
+          "period_return": -0.00656744
+        },
+        {
+          "available_at_utc": "2025-07-08T22:00:00Z",
+          "event_at_utc": "2025-07-08T21:00:00Z",
+          "nav_usd": 76.466,
+          "period_return": 0.00932606
+        },
+        {
+          "available_at_utc": "2025-07-09T22:00:00Z",
+          "event_at_utc": "2025-07-09T21:00:00Z",
+          "nav_usd": 75.705883,
+          "period_return": -0.00994059
+        },
+        {
+          "available_at_utc": "2025-07-10T22:00:00Z",
+          "event_at_utc": "2025-07-10T21:00:00Z",
+          "nav_usd": 75.907148,
+          "period_return": 0.00265851
+        },
+        {
+          "available_at_utc": "2025-07-11T22:00:00Z",
+          "event_at_utc": "2025-07-11T21:00:00Z",
+          "nav_usd": 76.253513,
+          "period_return": 0.00456301
+        },
+        {
+          "available_at_utc": "2025-07-14T22:00:00Z",
+          "event_at_utc": "2025-07-14T21:00:00Z",
+          "nav_usd": 75.585568,
+          "period_return": -0.00875953
+        },
+        {
+          "available_at_utc": "2025-07-15T22:00:00Z",
+          "event_at_utc": "2025-07-15T21:00:00Z",
+          "nav_usd": 76.593103,
+          "period_return": 0.01332972
+        },
+        {
+          "available_at_utc": "2025-07-16T22:00:00Z",
+          "event_at_utc": "2025-07-16T21:00:00Z",
+          "nav_usd": 76.583822,
+          "period_return": -0.00012116
+        },
+        {
+          "available_at_utc": "2025-07-17T22:00:00Z",
+          "event_at_utc": "2025-07-17T21:00:00Z",
+          "nav_usd": 77.641348,
+          "period_return": 0.01380873
+        },
+        {
+          "available_at_utc": "2025-07-18T22:00:00Z",
+          "event_at_utc": "2025-07-18T21:00:00Z",
+          "nav_usd": 78.060542,
+          "period_return": 0.00539912
+        },
+        {
+          "available_at_utc": "2025-07-21T22:00:00Z",
+          "event_at_utc": "2025-07-21T21:00:00Z",
+          "nav_usd": 78.948082,
+          "period_return": 0.01136989
+        },
+        {
+          "available_at_utc": "2025-07-22T22:00:00Z",
+          "event_at_utc": "2025-07-22T21:00:00Z",
+          "nav_usd": 78.606817,
+          "period_return": -0.00432264
+        },
+        {
+          "available_at_utc": "2025-07-23T22:00:00Z",
+          "event_at_utc": "2025-07-23T21:00:00Z",
+          "nav_usd": 78.615415,
+          "period_return": 0.00010938
+        },
+        {
+          "available_at_utc": "2025-07-24T22:00:00Z",
+          "event_at_utc": "2025-07-24T21:00:00Z",
+          "nav_usd": 79.223099,
+          "period_return": 0.00772983
+        },
+        {
+          "available_at_utc": "2025-07-25T22:00:00Z",
+          "event_at_utc": "2025-07-25T21:00:00Z",
+          "nav_usd": 80.492554,
+          "period_return": 0.0160238
+        },
+        {
+          "available_at_utc": "2025-07-28T22:00:00Z",
+          "event_at_utc": "2025-07-28T21:00:00Z",
+          "nav_usd": 80.617163,
+          "period_return": 0.00154808
+        },
+        {
+          "available_at_utc": "2025-07-29T22:00:00Z",
+          "event_at_utc": "2025-07-29T21:00:00Z",
+          "nav_usd": 81.699527,
+          "period_return": 0.01342597
+        },
+        {
+          "available_at_utc": "2025-07-30T22:00:00Z",
+          "event_at_utc": "2025-07-30T21:00:00Z",
+          "nav_usd": 80.999783,
+          "period_return": -0.00856484
+        },
+        {
+          "available_at_utc": "2025-07-31T22:00:00Z",
+          "event_at_utc": "2025-07-31T21:00:00Z",
+          "nav_usd": 81.063423,
+          "period_return": 0.00078568
+        },
+        {
+          "available_at_utc": "2025-08-01T22:00:00Z",
+          "event_at_utc": "2025-08-01T21:00:00Z",
+          "nav_usd": 82.185821,
+          "period_return": 0.01384592
+        },
+        {
+          "available_at_utc": "2025-08-04T22:00:00Z",
+          "event_at_utc": "2025-08-04T21:00:00Z",
+          "nav_usd": 82.537703,
+          "period_return": 0.00428154
+        },
+        {
+          "available_at_utc": "2025-08-05T22:00:00Z",
+          "event_at_utc": "2025-08-05T21:00:00Z",
+          "nav_usd": 83.201268,
+          "period_return": 0.00803953
+        },
+        {
+          "available_at_utc": "2025-08-06T22:00:00Z",
+          "event_at_utc": "2025-08-06T21:00:00Z",
+          "nav_usd": 84.614437,
+          "period_return": 0.01698494
+        },
+        {
+          "available_at_utc": "2025-08-07T22:00:00Z",
+          "event_at_utc": "2025-08-07T21:00:00Z",
+          "nav_usd": 83.525643,
+          "period_return": -0.01286771
+        },
+        {
+          "available_at_utc": "2025-08-08T22:00:00Z",
+          "event_at_utc": "2025-08-08T21:00:00Z",
+          "nav_usd": 82.045831,
+          "period_return": -0.01771686
+        },
+        {
+          "available_at_utc": "2025-08-11T22:00:00Z",
+          "event_at_utc": "2025-08-11T21:00:00Z",
+          "nav_usd": 81.385072,
+          "period_return": -0.00805354
+        },
+        {
+          "available_at_utc": "2025-08-12T22:00:00Z",
+          "event_at_utc": "2025-08-12T21:00:00Z",
+          "nav_usd": 81.008849,
+          "period_return": -0.00462274
+        },
+        {
+          "available_at_utc": "2025-08-13T22:00:00Z",
+          "event_at_utc": "2025-08-13T21:00:00Z",
+          "nav_usd": 81.31065,
+          "period_return": 0.00372552
+        },
+        {
+          "available_at_utc": "2025-08-14T22:00:00Z",
+          "event_at_utc": "2025-08-14T21:00:00Z",
+          "nav_usd": 81.366068,
+          "period_return": 0.00068157
+        },
+        {
+          "available_at_utc": "2025-08-15T22:00:00Z",
+          "event_at_utc": "2025-08-15T21:00:00Z",
+          "nav_usd": 81.535521,
+          "period_return": 0.0020826
+        },
+        {
+          "available_at_utc": "2025-08-18T22:00:00Z",
+          "event_at_utc": "2025-08-18T21:00:00Z",
+          "nav_usd": 81.853308,
+          "period_return": 0.00389753
+        },
+        {
+          "available_at_utc": "2025-08-19T22:00:00Z",
+          "event_at_utc": "2025-08-19T21:00:00Z",
+          "nav_usd": 82.347788,
+          "period_return": 0.00604105
+        },
+        {
+          "available_at_utc": "2025-08-20T22:00:00Z",
+          "event_at_utc": "2025-08-20T21:00:00Z",
+          "nav_usd": 83.898018,
+          "period_return": 0.0188254
+        },
+        {
+          "available_at_utc": "2025-08-21T22:00:00Z",
+          "event_at_utc": "2025-08-21T21:00:00Z",
+          "nav_usd": 84.128815,
+          "period_return": 0.00275093
+        },
+        {
+          "available_at_utc": "2025-08-22T22:00:00Z",
+          "event_at_utc": "2025-08-22T21:00:00Z",
+          "nav_usd": 85.603884,
+          "period_return": 0.01753345
+        },
+        {
+          "available_at_utc": "2025-08-25T22:00:00Z",
+          "event_at_utc": "2025-08-25T21:00:00Z",
+          "nav_usd": 86.768528,
+          "period_return": 0.01360504
+        },
+        {
+          "available_at_utc": "2025-08-26T22:00:00Z",
+          "event_at_utc": "2025-08-26T21:00:00Z",
+          "nav_usd": 86.789667,
+          "period_return": 0.00024363
+        },
+        {
+          "available_at_utc": "2025-08-27T22:00:00Z",
+          "event_at_utc": "2025-08-27T21:00:00Z",
+          "nav_usd": 85.438277,
+          "period_return": -0.01557086
+        },
+        {
+          "available_at_utc": "2025-08-28T22:00:00Z",
+          "event_at_utc": "2025-08-28T21:00:00Z",
+          "nav_usd": 85.820074,
+          "period_return": 0.00446868
+        },
+        {
+          "available_at_utc": "2025-08-29T22:00:00Z",
+          "event_at_utc": "2025-08-29T21:00:00Z",
+          "nav_usd": 87.407708,
+          "period_return": 0.01849957
+        },
+        {
+          "available_at_utc": "2025-09-01T22:00:00Z",
+          "event_at_utc": "2025-09-01T21:00:00Z",
+          "nav_usd": 87.914844,
+          "period_return": 0.00580195
+        },
+        {
+          "available_at_utc": "2025-09-02T22:00:00Z",
+          "event_at_utc": "2025-09-02T21:00:00Z",
+          "nav_usd": 89.104964,
+          "period_return": 0.01353719
+        },
+        {
+          "available_at_utc": "2025-09-03T22:00:00Z",
+          "event_at_utc": "2025-09-03T21:00:00Z",
+          "nav_usd": 87.649448,
+          "period_return": -0.01633484
+        },
+        {
+          "available_at_utc": "2025-09-04T22:00:00Z",
+          "event_at_utc": "2025-09-04T21:00:00Z",
+          "nav_usd": 87.925963,
+          "period_return": 0.00315479
+        },
+        {
+          "available_at_utc": "2025-09-05T22:00:00Z",
+          "event_at_utc": "2025-09-05T21:00:00Z",
+          "nav_usd": 88.568165,
+          "period_return": 0.00730389
+        },
+        {
+          "available_at_utc": "2025-09-08T22:00:00Z",
+          "event_at_utc": "2025-09-08T21:00:00Z",
+          "nav_usd": 88.00375,
+          "period_return": -0.00637266
+        },
+        {
+          "available_at_utc": "2025-09-09T22:00:00Z",
+          "event_at_utc": "2025-09-09T21:00:00Z",
+          "nav_usd": 87.867503,
+          "period_return": -0.00154819
+        },
+        {
+          "available_at_utc": "2025-09-10T22:00:00Z",
+          "event_at_utc": "2025-09-10T21:00:00Z",
+          "nav_usd": 87.672951,
+          "period_return": -0.00221415
+        }
+      ],
+      "risk_budget": 0.12,
+      "strategy_id": "strat_vol_carry"
+    },
+    {
+      "eligible": true,
+      "exposure": {
+        "adv_usd": 90000000.0,
+        "asset_class": "fixed_income",
+        "gross_exposure": 1.0,
+        "liquidity_days_to_exit": 1.0,
+        "market_beta": 0.05,
+        "max_capacity_usd": 20000000.0,
+        "net_exposure": 0.05,
+        "strategy_group": "fixed_income_rv",
+        "transaction_cost_bps": 6.0
+      },
+      "name": "Rates Relative Value",
+      "returns": [
+        {
+          "available_at_utc": "2025-01-02T22:00:00Z",
+          "event_at_utc": "2025-01-02T21:00:00Z",
+          "nav_usd": 100.411671,
+          "period_return": 0.00411671
+        },
+        {
+          "available_at_utc": "2025-01-03T22:00:00Z",
+          "event_at_utc": "2025-01-03T21:00:00Z",
+          "nav_usd": 100.782044,
+          "period_return": 0.00368854
+        },
+        {
+          "available_at_utc": "2025-01-06T22:00:00Z",
+          "event_at_utc": "2025-01-06T21:00:00Z",
+          "nav_usd": 100.917445,
+          "period_return": 0.00134351
+        },
+        {
+          "available_at_utc": "2025-01-07T22:00:00Z",
+          "event_at_utc": "2025-01-07T21:00:00Z",
+          "nav_usd": 101.138098,
+          "period_return": 0.00218647
+        },
+        {
+          "available_at_utc": "2025-01-08T22:00:00Z",
+          "event_at_utc": "2025-01-08T21:00:00Z",
+          "nav_usd": 101.240539,
+          "period_return": 0.00101288
+        },
+        {
+          "available_at_utc": "2025-01-09T22:00:00Z",
+          "event_at_utc": "2025-01-09T21:00:00Z",
+          "nav_usd": 100.932301,
+          "period_return": -0.00304461
+        },
+        {
+          "available_at_utc": "2025-01-10T22:00:00Z",
+          "event_at_utc": "2025-01-10T21:00:00Z",
+          "nav_usd": 101.066356,
+          "period_return": 0.00132816
+        },
+        {
+          "available_at_utc": "2025-01-13T22:00:00Z",
+          "event_at_utc": "2025-01-13T21:00:00Z",
+          "nav_usd": 101.824712,
+          "period_return": 0.00750355
+        },
+        {
+          "available_at_utc": "2025-01-14T22:00:00Z",
+          "event_at_utc": "2025-01-14T21:00:00Z",
+          "nav_usd": 101.982743,
+          "period_return": 0.001552
+        },
+        {
+          "available_at_utc": "2025-01-15T22:00:00Z",
+          "event_at_utc": "2025-01-15T21:00:00Z",
+          "nav_usd": 101.183279,
+          "period_return": -0.00783921
+        },
+        {
+          "available_at_utc": "2025-01-16T22:00:00Z",
+          "event_at_utc": "2025-01-16T21:00:00Z",
+          "nav_usd": 101.12016,
+          "period_return": -0.0006238
+        },
+        {
+          "available_at_utc": "2025-01-17T22:00:00Z",
+          "event_at_utc": "2025-01-17T21:00:00Z",
+          "nav_usd": 101.225296,
+          "period_return": 0.00103971
+        },
+        {
+          "available_at_utc": "2025-01-20T22:00:00Z",
+          "event_at_utc": "2025-01-20T21:00:00Z",
+          "nav_usd": 100.746024,
+          "period_return": -0.0047347
+        },
+        {
+          "available_at_utc": "2025-01-21T22:00:00Z",
+          "event_at_utc": "2025-01-21T21:00:00Z",
+          "nav_usd": 100.478988,
+          "period_return": -0.00265058
+        },
+        {
+          "available_at_utc": "2025-01-22T22:00:00Z",
+          "event_at_utc": "2025-01-22T21:00:00Z",
+          "nav_usd": 100.923937,
+          "period_return": 0.00442828
+        },
+        {
+          "available_at_utc": "2025-01-23T22:00:00Z",
+          "event_at_utc": "2025-01-23T21:00:00Z",
+          "nav_usd": 100.975835,
+          "period_return": 0.00051423
+        },
+        {
+          "available_at_utc": "2025-01-24T22:00:00Z",
+          "event_at_utc": "2025-01-24T21:00:00Z",
+          "nav_usd": 100.650214,
+          "period_return": -0.00322475
+        },
+        {
+          "available_at_utc": "2025-01-27T22:00:00Z",
+          "event_at_utc": "2025-01-27T21:00:00Z",
+          "nav_usd": 100.984703,
+          "period_return": 0.00332328
+        },
+        {
+          "available_at_utc": "2025-01-28T22:00:00Z",
+          "event_at_utc": "2025-01-28T21:00:00Z",
+          "nav_usd": 100.748408,
+          "period_return": -0.00233991
+        },
+        {
+          "available_at_utc": "2025-01-29T22:00:00Z",
+          "event_at_utc": "2025-01-29T21:00:00Z",
+          "nav_usd": 100.840596,
+          "period_return": 0.00091504
+        },
+        {
+          "available_at_utc": "2025-01-30T22:00:00Z",
+          "event_at_utc": "2025-01-30T21:00:00Z",
+          "nav_usd": 100.559589,
+          "period_return": -0.00278665
+        },
+        {
+          "available_at_utc": "2025-01-31T22:00:00Z",
+          "event_at_utc": "2025-01-31T21:00:00Z",
+          "nav_usd": 100.078065,
+          "period_return": -0.00478844
+        },
+        {
+          "available_at_utc": "2025-02-03T22:00:00Z",
+          "event_at_utc": "2025-02-03T21:00:00Z",
+          "nav_usd": 100.310543,
+          "period_return": 0.00232297
+        },
+        {
+          "available_at_utc": "2025-02-04T22:00:00Z",
+          "event_at_utc": "2025-02-04T21:00:00Z",
+          "nav_usd": 100.422369,
+          "period_return": 0.00111479
+        },
+        {
+          "available_at_utc": "2025-02-05T22:00:00Z",
+          "event_at_utc": "2025-02-05T21:00:00Z",
+          "nav_usd": 100.029916,
+          "period_return": -0.00390802
+        },
+        {
+          "available_at_utc": "2025-02-06T22:00:00Z",
+          "event_at_utc": "2025-02-06T21:00:00Z",
+          "nav_usd": 100.05463,
+          "period_return": 0.00024706
+        },
+        {
+          "available_at_utc": "2025-02-07T22:00:00Z",
+          "event_at_utc": "2025-02-07T21:00:00Z",
+          "nav_usd": 99.903135,
+          "period_return": -0.00151412
+        },
+        {
+          "available_at_utc": "2025-02-10T22:00:00Z",
+          "event_at_utc": "2025-02-10T21:00:00Z",
+          "nav_usd": 99.685197,
+          "period_return": -0.0021815
+        },
+        {
+          "available_at_utc": "2025-02-11T22:00:00Z",
+          "event_at_utc": "2025-02-11T21:00:00Z",
+          "nav_usd": 99.559488,
+          "period_return": -0.00126105
+        },
+        {
+          "available_at_utc": "2025-02-12T22:00:00Z",
+          "event_at_utc": "2025-02-12T21:00:00Z",
+          "nav_usd": 99.730386,
+          "period_return": 0.00171653
+        },
+        {
+          "available_at_utc": "2025-02-13T22:00:00Z",
+          "event_at_utc": "2025-02-13T21:00:00Z",
+          "nav_usd": 99.762265,
+          "period_return": 0.00031966
+        },
+        {
+          "available_at_utc": "2025-02-14T22:00:00Z",
+          "event_at_utc": "2025-02-14T21:00:00Z",
+          "nav_usd": 99.909011,
+          "period_return": 0.00147095
+        },
+        {
+          "available_at_utc": "2025-02-17T22:00:00Z",
+          "event_at_utc": "2025-02-17T21:00:00Z",
+          "nav_usd": 100.537671,
+          "period_return": 0.00629233
+        },
+        {
+          "available_at_utc": "2025-02-18T22:00:00Z",
+          "event_at_utc": "2025-02-18T21:00:00Z",
+          "nav_usd": 100.597108,
+          "period_return": 0.00059119
+        },
+        {
+          "available_at_utc": "2025-02-19T22:00:00Z",
+          "event_at_utc": "2025-02-19T21:00:00Z",
+          "nav_usd": 101.136383,
+          "period_return": 0.00536074
+        },
+        {
+          "available_at_utc": "2025-02-20T22:00:00Z",
+          "event_at_utc": "2025-02-20T21:00:00Z",
+          "nav_usd": 101.571307,
+          "period_return": 0.00430037
+        },
+        {
+          "available_at_utc": "2025-02-21T22:00:00Z",
+          "event_at_utc": "2025-02-21T21:00:00Z",
+          "nav_usd": 101.650343,
+          "period_return": 0.00077814
+        },
+        {
+          "available_at_utc": "2025-02-24T22:00:00Z",
+          "event_at_utc": "2025-02-24T21:00:00Z",
+          "nav_usd": 101.710896,
+          "period_return": 0.0005957
+        },
+        {
+          "available_at_utc": "2025-02-25T22:00:00Z",
+          "event_at_utc": "2025-02-25T21:00:00Z",
+          "nav_usd": 101.72727,
+          "period_return": 0.00016098
+        },
+        {
+          "available_at_utc": "2025-02-26T22:00:00Z",
+          "event_at_utc": "2025-02-26T21:00:00Z",
+          "nav_usd": 101.681686,
+          "period_return": -0.0004481
+        },
+        {
+          "available_at_utc": "2025-02-27T22:00:00Z",
+          "event_at_utc": "2025-02-27T21:00:00Z",
+          "nav_usd": 101.224873,
+          "period_return": -0.00449258
+        },
+        {
+          "available_at_utc": "2025-02-28T22:00:00Z",
+          "event_at_utc": "2025-02-28T21:00:00Z",
+          "nav_usd": 101.424827,
+          "period_return": 0.00197535
+        },
+        {
+          "available_at_utc": "2025-03-03T22:00:00Z",
+          "event_at_utc": "2025-03-03T21:00:00Z",
+          "nav_usd": 101.565804,
+          "period_return": 0.00138996
+        },
+        {
+          "available_at_utc": "2025-03-04T22:00:00Z",
+          "event_at_utc": "2025-03-04T21:00:00Z",
+          "nav_usd": 101.331634,
+          "period_return": -0.0023056
+        },
+        {
+          "available_at_utc": "2025-03-05T22:00:00Z",
+          "event_at_utc": "2025-03-05T21:00:00Z",
+          "nav_usd": 100.946424,
+          "period_return": -0.00380148
+        },
+        {
+          "available_at_utc": "2025-03-06T22:00:00Z",
+          "event_at_utc": "2025-03-06T21:00:00Z",
+          "nav_usd": 101.282386,
+          "period_return": 0.00332812
+        },
+        {
+          "available_at_utc": "2025-03-07T22:00:00Z",
+          "event_at_utc": "2025-03-07T21:00:00Z",
+          "nav_usd": 101.853914,
+          "period_return": 0.00564292
+        },
+        {
+          "available_at_utc": "2025-03-10T22:00:00Z",
+          "event_at_utc": "2025-03-10T21:00:00Z",
+          "nav_usd": 101.264325,
+          "period_return": -0.00578858
+        },
+        {
+          "available_at_utc": "2025-03-11T22:00:00Z",
+          "event_at_utc": "2025-03-11T21:00:00Z",
+          "nav_usd": 100.939182,
+          "period_return": -0.00321083
+        },
+        {
+          "available_at_utc": "2025-03-12T22:00:00Z",
+          "event_at_utc": "2025-03-12T21:00:00Z",
+          "nav_usd": 100.789793,
+          "period_return": -0.00148
+        },
+        {
+          "available_at_utc": "2025-03-13T22:00:00Z",
+          "event_at_utc": "2025-03-13T21:00:00Z",
+          "nav_usd": 100.742266,
+          "period_return": -0.00047154
+        },
+        {
+          "available_at_utc": "2025-03-14T22:00:00Z",
+          "event_at_utc": "2025-03-14T21:00:00Z",
+          "nav_usd": 100.905298,
+          "period_return": 0.00161832
+        },
+        {
+          "available_at_utc": "2025-03-17T22:00:00Z",
+          "event_at_utc": "2025-03-17T21:00:00Z",
+          "nav_usd": 101.039329,
+          "period_return": 0.00132828
+        },
+        {
+          "available_at_utc": "2025-03-18T22:00:00Z",
+          "event_at_utc": "2025-03-18T21:00:00Z",
+          "nav_usd": 101.182281,
+          "period_return": 0.00141482
+        },
+        {
+          "available_at_utc": "2025-03-19T22:00:00Z",
+          "event_at_utc": "2025-03-19T21:00:00Z",
+          "nav_usd": 101.969779,
+          "period_return": 0.00778296
+        },
+        {
+          "available_at_utc": "2025-03-20T22:00:00Z",
+          "event_at_utc": "2025-03-20T21:00:00Z",
+          "nav_usd": 101.69332,
+          "period_return": -0.00271119
+        },
+        {
+          "available_at_utc": "2025-03-21T22:00:00Z",
+          "event_at_utc": "2025-03-21T21:00:00Z",
+          "nav_usd": 101.240382,
+          "period_return": -0.00445396
+        },
+        {
+          "available_at_utc": "2025-03-24T22:00:00Z",
+          "event_at_utc": "2025-03-24T21:00:00Z",
+          "nav_usd": 101.395045,
+          "period_return": 0.00152768
+        },
+        {
+          "available_at_utc": "2025-03-25T22:00:00Z",
+          "event_at_utc": "2025-03-25T21:00:00Z",
+          "nav_usd": 101.540651,
+          "period_return": 0.00143603
+        },
+        {
+          "available_at_utc": "2025-03-26T22:00:00Z",
+          "event_at_utc": "2025-03-26T21:00:00Z",
+          "nav_usd": 101.931703,
+          "period_return": 0.00385119
+        },
+        {
+          "available_at_utc": "2025-03-27T22:00:00Z",
+          "event_at_utc": "2025-03-27T21:00:00Z",
+          "nav_usd": 102.23389,
+          "period_return": 0.0029646
+        },
+        {
+          "available_at_utc": "2025-03-28T22:00:00Z",
+          "event_at_utc": "2025-03-28T21:00:00Z",
+          "nav_usd": 102.394167,
+          "period_return": 0.00156775
+        },
+        {
+          "available_at_utc": "2025-03-31T22:00:00Z",
+          "event_at_utc": "2025-03-31T21:00:00Z",
+          "nav_usd": 102.682248,
+          "period_return": 0.00281346
+        },
+        {
+          "available_at_utc": "2025-04-01T22:00:00Z",
+          "event_at_utc": "2025-04-01T21:00:00Z",
+          "nav_usd": 103.063324,
+          "period_return": 0.00371122
+        },
+        {
+          "available_at_utc": "2025-04-02T22:00:00Z",
+          "event_at_utc": "2025-04-02T21:00:00Z",
+          "nav_usd": 103.353333,
+          "period_return": 0.00281389
+        },
+        {
+          "available_at_utc": "2025-04-03T22:00:00Z",
+          "event_at_utc": "2025-04-03T21:00:00Z",
+          "nav_usd": 103.431708,
+          "period_return": 0.00075832
+        },
+        {
+          "available_at_utc": "2025-04-04T22:00:00Z",
+          "event_at_utc": "2025-04-04T21:00:00Z",
+          "nav_usd": 103.665426,
+          "period_return": 0.00225963
+        },
+        {
+          "available_at_utc": "2025-04-07T22:00:00Z",
+          "event_at_utc": "2025-04-07T21:00:00Z",
+          "nav_usd": 103.532129,
+          "period_return": -0.00128583
+        },
+        {
+          "available_at_utc": "2025-04-08T22:00:00Z",
+          "event_at_utc": "2025-04-08T21:00:00Z",
+          "nav_usd": 103.777858,
+          "period_return": 0.00237345
+        },
+        {
+          "available_at_utc": "2025-04-09T22:00:00Z",
+          "event_at_utc": "2025-04-09T21:00:00Z",
+          "nav_usd": 103.896456,
+          "period_return": 0.00114281
+        },
+        {
+          "available_at_utc": "2025-04-10T22:00:00Z",
+          "event_at_utc": "2025-04-10T21:00:00Z",
+          "nav_usd": 104.194077,
+          "period_return": 0.00286459
+        },
+        {
+          "available_at_utc": "2025-04-11T22:00:00Z",
+          "event_at_utc": "2025-04-11T21:00:00Z",
+          "nav_usd": 104.490967,
+          "period_return": 0.00284939
+        },
+        {
+          "available_at_utc": "2025-04-14T22:00:00Z",
+          "event_at_utc": "2025-04-14T21:00:00Z",
+          "nav_usd": 104.860007,
+          "period_return": 0.0035318
+        },
+        {
+          "available_at_utc": "2025-04-15T22:00:00Z",
+          "event_at_utc": "2025-04-15T21:00:00Z",
+          "nav_usd": 104.56649,
+          "period_return": -0.00279913
+        },
+        {
+          "available_at_utc": "2025-04-16T22:00:00Z",
+          "event_at_utc": "2025-04-16T21:00:00Z",
+          "nav_usd": 104.306236,
+          "period_return": -0.00248889
+        },
+        {
+          "available_at_utc": "2025-04-17T22:00:00Z",
+          "event_at_utc": "2025-04-17T21:00:00Z",
+          "nav_usd": 104.170713,
+          "period_return": -0.00129928
+        },
+        {
+          "available_at_utc": "2025-04-18T22:00:00Z",
+          "event_at_utc": "2025-04-18T21:00:00Z",
+          "nav_usd": 103.931122,
+          "period_return": -0.00229999
+        },
+        {
+          "available_at_utc": "2025-04-21T22:00:00Z",
+          "event_at_utc": "2025-04-21T21:00:00Z",
+          "nav_usd": 104.492792,
+          "period_return": 0.00540425
+        },
+        {
+          "available_at_utc": "2025-04-22T22:00:00Z",
+          "event_at_utc": "2025-04-22T21:00:00Z",
+          "nav_usd": 105.319807,
+          "period_return": 0.00791457
+        },
+        {
+          "available_at_utc": "2025-04-23T22:00:00Z",
+          "event_at_utc": "2025-04-23T21:00:00Z",
+          "nav_usd": 104.924806,
+          "period_return": -0.00375049
+        },
+        {
+          "available_at_utc": "2025-04-24T22:00:00Z",
+          "event_at_utc": "2025-04-24T21:00:00Z",
+          "nav_usd": 105.082616,
+          "period_return": 0.00150403
+        },
+        {
+          "available_at_utc": "2025-04-25T22:00:00Z",
+          "event_at_utc": "2025-04-25T21:00:00Z",
+          "nav_usd": 104.904048,
+          "period_return": -0.00169931
+        },
+        {
+          "available_at_utc": "2025-04-28T22:00:00Z",
+          "event_at_utc": "2025-04-28T21:00:00Z",
+          "nav_usd": 105.299704,
+          "period_return": 0.00377161
+        },
+        {
+          "available_at_utc": "2025-04-29T22:00:00Z",
+          "event_at_utc": "2025-04-29T21:00:00Z",
+          "nav_usd": 105.110466,
+          "period_return": -0.00179714
+        },
+        {
+          "available_at_utc": "2025-04-30T22:00:00Z",
+          "event_at_utc": "2025-04-30T21:00:00Z",
+          "nav_usd": 104.465959,
+          "period_return": -0.00613171
+        },
+        {
+          "available_at_utc": "2025-05-01T22:00:00Z",
+          "event_at_utc": "2025-05-01T21:00:00Z",
+          "nav_usd": 105.027243,
+          "period_return": 0.00537289
+        },
+        {
+          "available_at_utc": "2025-05-02T22:00:00Z",
+          "event_at_utc": "2025-05-02T21:00:00Z",
+          "nav_usd": 105.154498,
+          "period_return": 0.00121164
+        },
+        {
+          "available_at_utc": "2025-05-05T22:00:00Z",
+          "event_at_utc": "2025-05-05T21:00:00Z",
+          "nav_usd": 105.4217,
+          "period_return": 0.00254104
+        },
+        {
+          "available_at_utc": "2025-05-06T22:00:00Z",
+          "event_at_utc": "2025-05-06T21:00:00Z",
+          "nav_usd": 105.38288,
+          "period_return": -0.00036824
+        },
+        {
+          "available_at_utc": "2025-05-07T22:00:00Z",
+          "event_at_utc": "2025-05-07T21:00:00Z",
+          "nav_usd": 105.316315,
+          "period_return": -0.00063165
+        },
+        {
+          "available_at_utc": "2025-05-08T22:00:00Z",
+          "event_at_utc": "2025-05-08T21:00:00Z",
+          "nav_usd": 103.479643,
+          "period_return": -0.01743958
+        },
+        {
+          "available_at_utc": "2025-05-09T22:00:00Z",
+          "event_at_utc": "2025-05-09T21:00:00Z",
+          "nav_usd": 102.518583,
+          "period_return": -0.00928743
+        },
+        {
+          "available_at_utc": "2025-05-12T22:00:00Z",
+          "event_at_utc": "2025-05-12T21:00:00Z",
+          "nav_usd": 100.948998,
+          "period_return": -0.01531025
+        },
+        {
+          "available_at_utc": "2025-05-13T22:00:00Z",
+          "event_at_utc": "2025-05-13T21:00:00Z",
+          "nav_usd": 98.972947,
+          "period_return": -0.01957474
+        },
+        {
+          "available_at_utc": "2025-05-14T22:00:00Z",
+          "event_at_utc": "2025-05-14T21:00:00Z",
+          "nav_usd": 98.183881,
+          "period_return": -0.00797255
+        },
+        {
+          "available_at_utc": "2025-05-15T22:00:00Z",
+          "event_at_utc": "2025-05-15T21:00:00Z",
+          "nav_usd": 98.458988,
+          "period_return": 0.00280197
+        },
+        {
+          "available_at_utc": "2025-05-16T22:00:00Z",
+          "event_at_utc": "2025-05-16T21:00:00Z",
+          "nav_usd": 97.993328,
+          "period_return": -0.00472948
+        },
+        {
+          "available_at_utc": "2025-05-19T22:00:00Z",
+          "event_at_utc": "2025-05-19T21:00:00Z",
+          "nav_usd": 97.705951,
+          "period_return": -0.00293262
+        },
+        {
+          "available_at_utc": "2025-05-20T22:00:00Z",
+          "event_at_utc": "2025-05-20T21:00:00Z",
+          "nav_usd": 96.710774,
+          "period_return": -0.01018543
+        },
+        {
+          "available_at_utc": "2025-05-21T22:00:00Z",
+          "event_at_utc": "2025-05-21T21:00:00Z",
+          "nav_usd": 96.672057,
+          "period_return": -0.00040034
+        },
+        {
+          "available_at_utc": "2025-05-22T22:00:00Z",
+          "event_at_utc": "2025-05-22T21:00:00Z",
+          "nav_usd": 95.708556,
+          "period_return": -0.0099667
+        },
+        {
+          "available_at_utc": "2025-05-23T22:00:00Z",
+          "event_at_utc": "2025-05-23T21:00:00Z",
+          "nav_usd": 94.543808,
+          "period_return": -0.01216973
+        },
+        {
+          "available_at_utc": "2025-05-26T22:00:00Z",
+          "event_at_utc": "2025-05-26T21:00:00Z",
+          "nav_usd": 94.95004,
+          "period_return": 0.00429676
+        },
+        {
+          "available_at_utc": "2025-05-27T22:00:00Z",
+          "event_at_utc": "2025-05-27T21:00:00Z",
+          "nav_usd": 94.861124,
+          "period_return": -0.00093645
+        },
+        {
+          "available_at_utc": "2025-05-28T22:00:00Z",
+          "event_at_utc": "2025-05-28T21:00:00Z",
+          "nav_usd": 93.949594,
+          "period_return": -0.0096091
+        },
+        {
+          "available_at_utc": "2025-05-29T22:00:00Z",
+          "event_at_utc": "2025-05-29T21:00:00Z",
+          "nav_usd": 92.186342,
+          "period_return": -0.01876806
+        },
+        {
+          "available_at_utc": "2025-05-30T22:00:00Z",
+          "event_at_utc": "2025-05-30T21:00:00Z",
+          "nav_usd": 90.997496,
+          "period_return": -0.01289612
+        },
+        {
+          "available_at_utc": "2025-06-02T22:00:00Z",
+          "event_at_utc": "2025-06-02T21:00:00Z",
+          "nav_usd": 88.269324,
+          "period_return": -0.02998074
+        },
+        {
+          "available_at_utc": "2025-06-03T22:00:00Z",
+          "event_at_utc": "2025-06-03T21:00:00Z",
+          "nav_usd": 86.383717,
+          "period_return": -0.02136198
+        },
+        {
+          "available_at_utc": "2025-06-04T22:00:00Z",
+          "event_at_utc": "2025-06-04T21:00:00Z",
+          "nav_usd": 86.55643,
+          "period_return": 0.00199936
+        },
+        {
+          "available_at_utc": "2025-06-05T22:00:00Z",
+          "event_at_utc": "2025-06-05T21:00:00Z",
+          "nav_usd": 85.585707,
+          "period_return": -0.01121491
+        },
+        {
+          "available_at_utc": "2025-06-06T22:00:00Z",
+          "event_at_utc": "2025-06-06T21:00:00Z",
+          "nav_usd": 85.818595,
+          "period_return": 0.00272111
+        },
+        {
+          "available_at_utc": "2025-06-09T22:00:00Z",
+          "event_at_utc": "2025-06-09T21:00:00Z",
+          "nav_usd": 85.645983,
+          "period_return": -0.00201135
+        },
+        {
+          "available_at_utc": "2025-06-10T22:00:00Z",
+          "event_at_utc": "2025-06-10T21:00:00Z",
+          "nav_usd": 85.828386,
+          "period_return": 0.00212973
+        },
+        {
+          "available_at_utc": "2025-06-11T22:00:00Z",
+          "event_at_utc": "2025-06-11T21:00:00Z",
+          "nav_usd": 86.027861,
+          "period_return": 0.00232411
+        },
+        {
+          "available_at_utc": "2025-06-12T22:00:00Z",
+          "event_at_utc": "2025-06-12T21:00:00Z",
+          "nav_usd": 86.181145,
+          "period_return": 0.00178181
+        },
+        {
+          "available_at_utc": "2025-06-13T22:00:00Z",
+          "event_at_utc": "2025-06-13T21:00:00Z",
+          "nav_usd": 85.684036,
+          "period_return": -0.00576819
+        },
+        {
+          "available_at_utc": "2025-06-16T22:00:00Z",
+          "event_at_utc": "2025-06-16T21:00:00Z",
+          "nav_usd": 85.594921,
+          "period_return": -0.00104004
+        },
+        {
+          "available_at_utc": "2025-06-17T22:00:00Z",
+          "event_at_utc": "2025-06-17T21:00:00Z",
+          "nav_usd": 85.626388,
+          "period_return": 0.00036763
+        },
+        {
+          "available_at_utc": "2025-06-18T22:00:00Z",
+          "event_at_utc": "2025-06-18T21:00:00Z",
+          "nav_usd": 85.908536,
+          "period_return": 0.0032951
+        },
+        {
+          "available_at_utc": "2025-06-19T22:00:00Z",
+          "event_at_utc": "2025-06-19T21:00:00Z",
+          "nav_usd": 86.245469,
+          "period_return": 0.003922
+        },
+        {
+          "available_at_utc": "2025-06-20T22:00:00Z",
+          "event_at_utc": "2025-06-20T21:00:00Z",
+          "nav_usd": 85.574444,
+          "period_return": -0.00778041
+        },
+        {
+          "available_at_utc": "2025-06-23T22:00:00Z",
+          "event_at_utc": "2025-06-23T21:00:00Z",
+          "nav_usd": 86.111092,
+          "period_return": 0.00627113
+        },
+        {
+          "available_at_utc": "2025-06-24T22:00:00Z",
+          "event_at_utc": "2025-06-24T21:00:00Z",
+          "nav_usd": 85.749333,
+          "period_return": -0.00420107
+        },
+        {
+          "available_at_utc": "2025-06-25T22:00:00Z",
+          "event_at_utc": "2025-06-25T21:00:00Z",
+          "nav_usd": 85.72542,
+          "period_return": -0.00027888
+        },
+        {
+          "available_at_utc": "2025-06-26T22:00:00Z",
+          "event_at_utc": "2025-06-26T21:00:00Z",
+          "nav_usd": 85.870861,
+          "period_return": 0.00169659
+        },
+        {
+          "available_at_utc": "2025-06-27T22:00:00Z",
+          "event_at_utc": "2025-06-27T21:00:00Z",
+          "nav_usd": 85.985146,
+          "period_return": 0.0013309
+        },
+        {
+          "available_at_utc": "2025-06-30T22:00:00Z",
+          "event_at_utc": "2025-06-30T21:00:00Z",
+          "nav_usd": 86.039547,
+          "period_return": 0.00063268
+        },
+        {
+          "available_at_utc": "2025-07-01T22:00:00Z",
+          "event_at_utc": "2025-07-01T21:00:00Z",
+          "nav_usd": 85.821434,
+          "period_return": -0.00253504
+        },
+        {
+          "available_at_utc": "2025-07-02T22:00:00Z",
+          "event_at_utc": "2025-07-02T21:00:00Z",
+          "nav_usd": 86.272233,
+          "period_return": 0.00525276
+        },
+        {
+          "available_at_utc": "2025-07-03T22:00:00Z",
+          "event_at_utc": "2025-07-03T21:00:00Z",
+          "nav_usd": 86.31246,
+          "period_return": 0.00046628
+        },
+        {
+          "available_at_utc": "2025-07-04T22:00:00Z",
+          "event_at_utc": "2025-07-04T21:00:00Z",
+          "nav_usd": 86.615546,
+          "period_return": 0.00351149
+        },
+        {
+          "available_at_utc": "2025-07-07T22:00:00Z",
+          "event_at_utc": "2025-07-07T21:00:00Z",
+          "nav_usd": 87.41896,
+          "period_return": 0.00927564
+        },
+        {
+          "available_at_utc": "2025-07-08T22:00:00Z",
+          "event_at_utc": "2025-07-08T21:00:00Z",
+          "nav_usd": 87.850628,
+          "period_return": 0.00493792
+        },
+        {
+          "available_at_utc": "2025-07-09T22:00:00Z",
+          "event_at_utc": "2025-07-09T21:00:00Z",
+          "nav_usd": 88.212294,
+          "period_return": 0.00411683
+        },
+        {
+          "available_at_utc": "2025-07-10T22:00:00Z",
+          "event_at_utc": "2025-07-10T21:00:00Z",
+          "nav_usd": 88.155744,
+          "period_return": -0.00064108
+        },
+        {
+          "available_at_utc": "2025-07-11T22:00:00Z",
+          "event_at_utc": "2025-07-11T21:00:00Z",
+          "nav_usd": 87.395751,
+          "period_return": -0.00862102
+        },
+        {
+          "available_at_utc": "2025-07-14T22:00:00Z",
+          "event_at_utc": "2025-07-14T21:00:00Z",
+          "nav_usd": 87.329179,
+          "period_return": -0.00076173
+        },
+        {
+          "available_at_utc": "2025-07-15T22:00:00Z",
+          "event_at_utc": "2025-07-15T21:00:00Z",
+          "nav_usd": 87.642247,
+          "period_return": 0.00358492
+        },
+        {
+          "available_at_utc": "2025-07-16T22:00:00Z",
+          "event_at_utc": "2025-07-16T21:00:00Z",
+          "nav_usd": 88.045223,
+          "period_return": 0.00459796
+        },
+        {
+          "available_at_utc": "2025-07-17T22:00:00Z",
+          "event_at_utc": "2025-07-17T21:00:00Z",
+          "nav_usd": 88.374483,
+          "period_return": 0.00373968
+        },
+        {
+          "available_at_utc": "2025-07-18T22:00:00Z",
+          "event_at_utc": "2025-07-18T21:00:00Z",
+          "nav_usd": 88.782235,
+          "period_return": 0.00461391
+        },
+        {
+          "available_at_utc": "2025-07-21T22:00:00Z",
+          "event_at_utc": "2025-07-21T21:00:00Z",
+          "nav_usd": 88.872965,
+          "period_return": 0.00102194
+        },
+        {
+          "available_at_utc": "2025-07-22T22:00:00Z",
+          "event_at_utc": "2025-07-22T21:00:00Z",
+          "nav_usd": 89.593363,
+          "period_return": 0.00810592
+        },
+        {
+          "available_at_utc": "2025-07-23T22:00:00Z",
+          "event_at_utc": "2025-07-23T21:00:00Z",
+          "nav_usd": 89.171686,
+          "period_return": -0.00470657
+        },
+        {
+          "available_at_utc": "2025-07-24T22:00:00Z",
+          "event_at_utc": "2025-07-24T21:00:00Z",
+          "nav_usd": 89.574493,
+          "period_return": 0.00451721
+        },
+        {
+          "available_at_utc": "2025-07-25T22:00:00Z",
+          "event_at_utc": "2025-07-25T21:00:00Z",
+          "nav_usd": 89.609293,
+          "period_return": 0.00038851
+        },
+        {
+          "available_at_utc": "2025-07-28T22:00:00Z",
+          "event_at_utc": "2025-07-28T21:00:00Z",
+          "nav_usd": 89.748474,
+          "period_return": 0.0015532
+        },
+        {
+          "available_at_utc": "2025-07-29T22:00:00Z",
+          "event_at_utc": "2025-07-29T21:00:00Z",
+          "nav_usd": 90.020223,
+          "period_return": 0.0030279
+        },
+        {
+          "available_at_utc": "2025-07-30T22:00:00Z",
+          "event_at_utc": "2025-07-30T21:00:00Z",
+          "nav_usd": 90.159721,
+          "period_return": 0.00154962
+        },
+        {
+          "available_at_utc": "2025-07-31T22:00:00Z",
+          "event_at_utc": "2025-07-31T21:00:00Z",
+          "nav_usd": 90.038116,
+          "period_return": -0.00134877
+        },
+        {
+          "available_at_utc": "2025-08-01T22:00:00Z",
+          "event_at_utc": "2025-08-01T21:00:00Z",
+          "nav_usd": 90.805755,
+          "period_return": 0.00852572
+        },
+        {
+          "available_at_utc": "2025-08-04T22:00:00Z",
+          "event_at_utc": "2025-08-04T21:00:00Z",
+          "nav_usd": 90.667537,
+          "period_return": -0.00152212
+        },
+        {
+          "available_at_utc": "2025-08-05T22:00:00Z",
+          "event_at_utc": "2025-08-05T21:00:00Z",
+          "nav_usd": 90.201495,
+          "period_return": -0.00514013
+        },
+        {
+          "available_at_utc": "2025-08-06T22:00:00Z",
+          "event_at_utc": "2025-08-06T21:00:00Z",
+          "nav_usd": 90.56889,
+          "period_return": 0.00407305
+        },
+        {
+          "available_at_utc": "2025-08-07T22:00:00Z",
+          "event_at_utc": "2025-08-07T21:00:00Z",
+          "nav_usd": 91.048847,
+          "period_return": 0.00529935
+        },
+        {
+          "available_at_utc": "2025-08-08T22:00:00Z",
+          "event_at_utc": "2025-08-08T21:00:00Z",
+          "nav_usd": 91.554084,
+          "period_return": 0.00554908
+        },
+        {
+          "available_at_utc": "2025-08-11T22:00:00Z",
+          "event_at_utc": "2025-08-11T21:00:00Z",
+          "nav_usd": 91.446817,
+          "period_return": -0.00117162
+        },
+        {
+          "available_at_utc": "2025-08-12T22:00:00Z",
+          "event_at_utc": "2025-08-12T21:00:00Z",
+          "nav_usd": 91.136583,
+          "period_return": -0.0033925
+        },
+        {
+          "available_at_utc": "2025-08-13T22:00:00Z",
+          "event_at_utc": "2025-08-13T21:00:00Z",
+          "nav_usd": 91.299268,
+          "period_return": 0.00178506
+        },
+        {
+          "available_at_utc": "2025-08-14T22:00:00Z",
+          "event_at_utc": "2025-08-14T21:00:00Z",
+          "nav_usd": 91.383377,
+          "period_return": 0.00092125
+        },
+        {
+          "available_at_utc": "2025-08-15T22:00:00Z",
+          "event_at_utc": "2025-08-15T21:00:00Z",
+          "nav_usd": 91.770155,
+          "period_return": 0.00423248
+        },
+        {
+          "available_at_utc": "2025-08-18T22:00:00Z",
+          "event_at_utc": "2025-08-18T21:00:00Z",
+          "nav_usd": 91.924108,
+          "period_return": 0.00167759
+        },
+        {
+          "available_at_utc": "2025-08-19T22:00:00Z",
+          "event_at_utc": "2025-08-19T21:00:00Z",
+          "nav_usd": 92.086101,
+          "period_return": 0.00176225
+        },
+        {
+          "available_at_utc": "2025-08-20T22:00:00Z",
+          "event_at_utc": "2025-08-20T21:00:00Z",
+          "nav_usd": 91.954679,
+          "period_return": -0.00142717
+        },
+        {
+          "available_at_utc": "2025-08-21T22:00:00Z",
+          "event_at_utc": "2025-08-21T21:00:00Z",
+          "nav_usd": 92.191858,
+          "period_return": 0.00257931
+        },
+        {
+          "available_at_utc": "2025-08-22T22:00:00Z",
+          "event_at_utc": "2025-08-22T21:00:00Z",
+          "nav_usd": 92.544921,
+          "period_return": 0.00382966
+        },
+        {
+          "available_at_utc": "2025-08-25T22:00:00Z",
+          "event_at_utc": "2025-08-25T21:00:00Z",
+          "nav_usd": 92.678849,
+          "period_return": 0.00144717
+        },
+        {
+          "available_at_utc": "2025-08-26T22:00:00Z",
+          "event_at_utc": "2025-08-26T21:00:00Z",
+          "nav_usd": 92.087873,
+          "period_return": -0.0063766
+        },
+        {
+          "available_at_utc": "2025-08-27T22:00:00Z",
+          "event_at_utc": "2025-08-27T21:00:00Z",
+          "nav_usd": 92.106251,
+          "period_return": 0.00019957
+        },
+        {
+          "available_at_utc": "2025-08-28T22:00:00Z",
+          "event_at_utc": "2025-08-28T21:00:00Z",
+          "nav_usd": 92.540749,
+          "period_return": 0.00471736
+        },
+        {
+          "available_at_utc": "2025-08-29T22:00:00Z",
+          "event_at_utc": "2025-08-29T21:00:00Z",
+          "nav_usd": 92.479868,
+          "period_return": -0.00065789
+        },
+        {
+          "available_at_utc": "2025-09-01T22:00:00Z",
+          "event_at_utc": "2025-09-01T21:00:00Z",
+          "nav_usd": 91.884235,
+          "period_return": -0.00644067
+        },
+        {
+          "available_at_utc": "2025-09-02T22:00:00Z",
+          "event_at_utc": "2025-09-02T21:00:00Z",
+          "nav_usd": 92.395623,
+          "period_return": 0.00556556
+        },
+        {
+          "available_at_utc": "2025-09-03T22:00:00Z",
+          "event_at_utc": "2025-09-03T21:00:00Z",
+          "nav_usd": 92.360307,
+          "period_return": -0.00038222
+        },
+        {
+          "available_at_utc": "2025-09-04T22:00:00Z",
+          "event_at_utc": "2025-09-04T21:00:00Z",
+          "nav_usd": 92.065071,
+          "period_return": -0.00319657
+        },
+        {
+          "available_at_utc": "2025-09-05T22:00:00Z",
+          "event_at_utc": "2025-09-05T21:00:00Z",
+          "nav_usd": 92.259169,
+          "period_return": 0.00210827
+        },
+        {
+          "available_at_utc": "2025-09-08T22:00:00Z",
+          "event_at_utc": "2025-09-08T21:00:00Z",
+          "nav_usd": 92.312788,
+          "period_return": 0.00058118
+        },
+        {
+          "available_at_utc": "2025-09-09T22:00:00Z",
+          "event_at_utc": "2025-09-09T21:00:00Z",
+          "nav_usd": 92.24257,
+          "period_return": -0.00076065
+        },
+        {
+          "available_at_utc": "2025-09-10T22:00:00Z",
+          "event_at_utc": "2025-09-10T21:00:00Z",
+          "nav_usd": 92.090411,
+          "period_return": -0.00164956
+        }
+      ],
+      "risk_budget": 0.18,
+      "strategy_id": "strat_fi_rv"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "demo": {
+    "audit_chain_valid": true,
+    "audit_entry_count": 7,
+    "baseline_benchmark": {
+      "environment": {
+        "machine": "arm64",
+        "platform": "macOS-26.5.1-arm64-arm-64bit",
+        "python_version": "3.9.6"
+      },
+      "max_ms": 5.457,
+      "mean_ms": 5.263,
+      "median_ms": 5.244,
+      "min_ms": 5.143,
+      "sample_size": 25,
+      "stdev_ms": 0.088,
+      "workload": "10 trading days, 4 multi-currency instruments, 3 strategies, 4 trades, Brinson + 4-factor OLS + TCA"
+    },
+    "hand_worked": {
+      "cumulative_gross_return": 0.13424000000000014,
+      "cumulative_net_return": 0.13164500000000023,
+      "exports": {
+        "csv": "/Users/vaibhavkapur/Desktop/existing/performance-attribution-engine/reports/demo_exports/RPT-PORT_HAND_WORKED-20260105-20260106-v1-a136798a.csv",
+        "html": "/Users/vaibhavkapur/Desktop/existing/performance-attribution-engine/reports/demo_exports/RPT-PORT_HAND_WORKED-20260105-20260106-v1-a136798a.html",
+        "json": "/Users/vaibhavkapur/Desktop/existing/performance-attribution-engine/reports/demo_exports/RPT-PORT_HAND_WORKED-20260105-20260106-v1-a136798a.json",
+        "md": "/Users/vaibhavkapur/Desktop/existing/performance-attribution-engine/reports/demo_exports/RPT-PORT_HAND_WORKED-20260105-20260106-v1-a136798a.md"
+      },
+      "linked_net_residual": -4.204504147263694e-17,
+      "reconciliation_status": "RECONCILED",
+      "version_id": "RPT-PORT_HAND_WORKED-20260105-20260106-v1-a136798a"
+    },
+    "health": {
+      "audit_chain_valid": true,
+      "audit_entry_count": 7,
+      "audit_error": null,
+      "config_hash": "a9799be6c63ce1a741a4a8428732c070d04ffa2219792a5402d9b32636e4b041",
+      "config_version": "1.0.0",
+      "environment_mode": "SIMULATED_PROTOTYPE",
+      "methodology_version": "pae-v1.0.0",
+      "metrics": {
+        "approvals_total": 2,
+        "last_run_latency_ms": 2.494,
+        "reviews_total": 2,
+        "revisions_total": 1,
+        "runs_failed": 0,
+        "runs_total": 3
+      },
+      "order_execution_enabled": false,
+      "status": "OK"
+    },
+    "v1": {
+      "brinson_status": "AVAILABLE",
+      "cumulative_gross_return": 0.044131923289651764,
+      "cumulative_net_return": 0.043274278162048985,
+      "exports": {
+        "csv": "/Users/vaibhavkapur/Desktop/existing/performance-attribution-engine/reports/demo_exports/RPT-PORT_SAAT_MULTI-20260105-20260116-v1-e9884ff5.csv",
+        "html": "/Users/vaibhavkapur/Desktop/existing/performance-attribution-engine/reports/demo_exports/RPT-PORT_SAAT_MULTI-20260105-20260116-v1-e9884ff5.html",
+        "json": "/Users/vaibhavkapur/Desktop/existing/performance-attribution-engine/reports/demo_exports/RPT-PORT_SAAT_MULTI-20260105-20260116-v1-e9884ff5.json",
+        "md": "/Users/vaibhavkapur/Desktop/existing/performance-attribution-engine/reports/demo_exports/RPT-PORT_SAAT_MULTI-20260105-20260116-v1-e9884ff5.md"
+      },
+      "factor_status": "AVAILABLE",
+      "linked_net_residual": 1.9369109289830588e-16,
+      "reconciliation_status": "RECONCILED",
+      "tca_total_is_bps": 28.821046012276764,
+      "version_id": "RPT-PORT_SAAT_MULTI-20260105-20260116-v1-e9884ff5",
+      "workflow_status": "APPROVED"
+    },
+    "v2": {
+      "cumulative_gross_return": 0.04412459444104622,
+      "cumulative_net_return": 0.04365036009762546,
+      "exports": {
+        "csv": "/Users/vaibhavkapur/Desktop/existing/performance-attribution-engine/reports/demo_exports/RPT-PORT_SAAT_MULTI-20260105-20260116-v2-56c9bae2.csv",
+        "html": "/Users/vaibhavkapur/Desktop/existing/performance-attribution-engine/reports/demo_exports/RPT-PORT_SAAT_MULTI-20260105-20260116-v2-56c9bae2.html",
+        "json": "/Users/vaibhavkapur/Desktop/existing/performance-attribution-engine/reports/demo_exports/RPT-PORT_SAAT_MULTI-20260105-20260116-v2-56c9bae2.json",
+        "md": "/Users/vaibhavkapur/Desktop/existing/performance-attribution-engine/reports/demo_exports/RPT-PORT_SAAT_MULTI-20260105-20260116-v2-56c9bae2.md"
+      },
+      "linked_net_residual": 1.0078943929054892e-16,
+      "reconciliation_status": "RECONCILED",
+      "revision_diff": {
+        "correction_reason": "Retroactive prime-broker commission rebate and fee restatement on 2026-01-09",
+        "delta_cumulative_gross_return": -7.328848605547833e-06,
+        "delta_cumulative_net_return": 0.00037608193557647773,
+        "delta_linked_net_residual": -9.290165360775695e-17,
+        "delta_total_fees_base": -449.8661,
+        "prior_version_id": "RPT-PORT_SAAT_MULTI-20260105-20260116-v1-e9884ff5"
+      },
+      "supersedes_version_id": "RPT-PORT_SAAT_MULTI-20260105-20260116-v1-e9884ff5",
+      "version_id": "RPT-PORT_SAAT_MULTI-20260105-20260116-v2-56c9bae2",
+      "workflow_status": "APPROVED"
+    }
+  },
+  "generated_at_utc": "2026-11-27T10:17:29Z",
+  "methodology_version": "pae-v1.0.0",
+  "tests": {
+    "elapsed_seconds": 0.087,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests_run": 25,
+    "was_successful": true
+  }
+}

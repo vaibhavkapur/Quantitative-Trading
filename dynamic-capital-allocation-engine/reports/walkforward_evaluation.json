@@ -1,0 +1,392 @@
+{
+  "disclaimer": "Synthetic/historical walk-forward diagnostic only; never infer live performance or target Sharpe ratio from simulated evaluation.",
+  "evaluation_window": {
+    "end_utc": "2025-09-10T21:00:00Z",
+    "evaluated_periods": 149,
+    "initial_nav_usd": 10000000.0,
+    "lookback_window": 60,
+    "rebalance_count": 30,
+    "rebalance_every": 5,
+    "start_utc": "2025-02-13T21:00:00Z",
+    "total_observations": 180,
+    "warmup_periods": 30
+  },
+  "final_nav_by_allocator": {
+    "constrained_mv": 8909597.04,
+    "constrained_mv_stressed": 8881181.41,
+    "equal_weight": 8711281.47,
+    "inverse_volatility": 8633504.83,
+    "risk_budget": 8513752.09
+  },
+  "provenance": {
+    "entitlement": "synthetic_internal",
+    "generator_version": "1.0.0",
+    "notes": "Synthetic 5-strategy daily returns with correlated drawdown regime (days 90-110). Not real market data; for deterministic testing only.",
+    "seed": 20260409,
+    "source": "dcae.fixtures.generate_walkforward_strategies"
+  },
+  "step_diagnostics_sample": {
+    "constrained_mv": [
+      {
+        "as_of_utc": "2025-02-13T22:00:00Z",
+        "cash_weight": 0.5,
+        "cost_usd": 2950.0,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 30,
+        "turnover": 0.25
+      },
+      {
+        "as_of_utc": "2025-02-20T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 4009.39,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 35,
+        "turnover": 0.22434
+      },
+      {
+        "as_of_utc": "2025-02-27T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 3819.19,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 40,
+        "turnover": 0.19479
+      },
+      {
+        "as_of_utc": "2025-03-06T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 703.58,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 45,
+        "turnover": 0.03715
+      },
+      {
+        "as_of_utc": "2025-03-13T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 1285.28,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 50,
+        "turnover": 0.06578
+      }
+    ],
+    "constrained_mv_stressed": [
+      {
+        "as_of_utc": "2025-02-13T22:00:00Z",
+        "cash_weight": 0.5,
+        "cost_usd": 2950.0,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": true,
+        "t": 30,
+        "turnover": 0.25
+      },
+      {
+        "as_of_utc": "2025-02-20T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 3923.85,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": true,
+        "t": 35,
+        "turnover": 0.22434
+      },
+      {
+        "as_of_utc": "2025-02-27T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 3927.78,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": true,
+        "t": 40,
+        "turnover": 0.19999
+      },
+      {
+        "as_of_utc": "2025-03-06T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 730.21,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": true,
+        "t": 45,
+        "turnover": 0.03814
+      },
+      {
+        "as_of_utc": "2025-03-13T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 1468.24,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": true,
+        "t": 50,
+        "turnover": 0.07538
+      }
+    ],
+    "equal_weight": [
+      {
+        "as_of_utc": "2025-02-13T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 8360.0,
+        "feasible": false,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 30,
+        "turnover": 0.475
+      },
+      {
+        "as_of_utc": "2025-02-20T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 137.64,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 35,
+        "turnover": 0.00666
+      },
+      {
+        "as_of_utc": "2025-02-27T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 225.37,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 40,
+        "turnover": 0.0112
+      },
+      {
+        "as_of_utc": "2025-03-06T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 58.57,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 45,
+        "turnover": 0.0027
+      },
+      {
+        "as_of_utc": "2025-03-13T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 45.35,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 50,
+        "turnover": 0.00221
+      }
+    ],
+    "inverse_volatility": [
+      {
+        "as_of_utc": "2025-02-13T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 7419.91,
+        "feasible": false,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 30,
+        "turnover": 0.475
+      },
+      {
+        "as_of_utc": "2025-02-20T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 118.06,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 35,
+        "turnover": 0.00609
+      },
+      {
+        "as_of_utc": "2025-02-27T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 295.38,
+        "feasible": false,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 40,
+        "turnover": 0.01859
+      },
+      {
+        "as_of_utc": "2025-03-06T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 208.21,
+        "feasible": false,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 45,
+        "turnover": 0.01348
+      },
+      {
+        "as_of_utc": "2025-03-13T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 149.11,
+        "feasible": false,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 50,
+        "turnover": 0.01038
+      }
+    ],
+    "risk_budget": [
+      {
+        "as_of_utc": "2025-02-13T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 7021.54,
+        "feasible": false,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 30,
+        "turnover": 0.475
+      },
+      {
+        "as_of_utc": "2025-02-20T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 546.45,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 35,
+        "turnover": 0.03507
+      },
+      {
+        "as_of_utc": "2025-02-27T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 223.74,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 40,
+        "turnover": 0.01799
+      },
+      {
+        "as_of_utc": "2025-03-06T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 155.79,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 45,
+        "turnover": 0.01172
+      },
+      {
+        "as_of_utc": "2025-03-13T22:00:00Z",
+        "cash_weight": 0.05,
+        "cost_usd": 204.15,
+        "feasible": true,
+        "status": "OPTIMAL",
+        "stress_active": false,
+        "t": 50,
+        "turnover": 0.01418
+      }
+    ]
+  },
+  "summaries": {
+    "constrained_mv": {
+      "allocator_name": "constrained_mv",
+      "annualized_return": -0.177386,
+      "annualized_volatility": 0.075495,
+      "avg_cash_weight": 0.302132,
+      "avg_one_way_turnover": 0.083208,
+      "calmar_diagnostic": -1.28,
+      "cumulative_return": -0.10904,
+      "failed_step_count": 0,
+      "fallback_count": 0,
+      "final_nav_usd": 8909597.04,
+      "initial_nav_usd": 10000000.0,
+      "max_drawdown": -0.138577,
+      "periods_evaluated": 149,
+      "rebalance_steps": 30,
+      "sharpe_diagnostic": -2.3496,
+      "stress_active_steps": 19,
+      "total_transaction_cost_usd": 39572.27,
+      "verifier_violation_count": 0
+    },
+    "constrained_mv_stressed": {
+      "allocator_name": "constrained_mv_stressed",
+      "annualized_return": -0.181818,
+      "annualized_volatility": 0.075109,
+      "avg_cash_weight": 0.307198,
+      "avg_one_way_turnover": 0.083257,
+      "calmar_diagnostic": -1.2865,
+      "cumulative_return": -0.111882,
+      "failed_step_count": 0,
+      "fallback_count": 0,
+      "final_nav_usd": 8881181.41,
+      "initial_nav_usd": 10000000.0,
+      "max_drawdown": -0.141325,
+      "periods_evaluated": 149,
+      "rebalance_steps": 30,
+      "sharpe_diagnostic": -2.4207,
+      "stress_active_steps": 30,
+      "total_transaction_cost_usd": 39502.2,
+      "verifier_violation_count": 0
+    },
+    "equal_weight": {
+      "allocator_name": "equal_weight",
+      "annualized_return": -0.208115,
+      "annualized_volatility": 0.113337,
+      "avg_cash_weight": 0.05,
+      "avg_one_way_turnover": 0.021618,
+      "calmar_diagnostic": -0.9807,
+      "cumulative_return": -0.128872,
+      "failed_step_count": 0,
+      "fallback_count": 0,
+      "final_nav_usd": 8711281.47,
+      "initial_nav_usd": 10000000.0,
+      "max_drawdown": -0.212214,
+      "periods_evaluated": 149,
+      "rebalance_steps": 30,
+      "sharpe_diagnostic": -1.8362,
+      "stress_active_steps": 19,
+      "total_transaction_cost_usd": 11210.13,
+      "verifier_violation_count": 10
+    },
+    "inverse_volatility": {
+      "allocator_name": "inverse_volatility",
+      "annualized_return": -0.220035,
+      "annualized_volatility": 0.101604,
+      "avg_cash_weight": 0.05,
+      "avg_one_way_turnover": 0.032531,
+      "calmar_diagnostic": -1.078,
+      "cumulative_return": -0.13665,
+      "failed_step_count": 0,
+      "fallback_count": 0,
+      "final_nav_usd": 8633504.83,
+      "initial_nav_usd": 10000000.0,
+      "max_drawdown": -0.204116,
+      "periods_evaluated": 149,
+      "rebalance_steps": 30,
+      "sharpe_diagnostic": -2.1656,
+      "stress_active_steps": 19,
+      "total_transaction_cost_usd": 14375.53,
+      "verifier_violation_count": 11
+    },
+    "risk_budget": {
+      "allocator_name": "risk_budget",
+      "annualized_return": -0.238245,
+      "annualized_volatility": 0.096961,
+      "avg_cash_weight": 0.05,
+      "avg_one_way_turnover": 0.041885,
+      "calmar_diagnostic": -1.2149,
+      "cumulative_return": -0.148625,
+      "failed_step_count": 0,
+      "fallback_count": 0,
+      "final_nav_usd": 8513752.09,
+      "initial_nav_usd": 10000000.0,
+      "max_drawdown": -0.196101,
+      "periods_evaluated": 149,
+      "rebalance_steps": 30,
+      "sharpe_diagnostic": -2.4571,
+      "stress_active_steps": 19,
+      "total_transaction_cost_usd": 17312.38,
+      "verifier_violation_count": 5
+    }
+  }
+}

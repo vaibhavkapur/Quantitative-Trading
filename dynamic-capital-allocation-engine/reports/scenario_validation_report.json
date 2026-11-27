@@ -1,0 +1,67 @@
+{
+  "all_passed": true,
+  "generated_at_utc": "2026-11-27T09:50:48.358315Z",
+  "scenarios": {
+    "correlated_drawdowns": {
+      "cash_weight": 0.5,
+      "correlation_stress_active": true,
+      "feasible": true,
+      "passed": true,
+      "portfolio_vol_annual": 0.07367422617943693,
+      "stressed_vol_annual": 0.07731269800532009
+    },
+    "infeasible_caps": {
+      "cash_only_fallback_status": "FALLBACK_CASH",
+      "default_fallback_status": "FALLBACK_NO_CHANGE",
+      "infeasibility_reasons": [
+        "infeasible_caps:sum_upper=0.250000<min_invested=0.500000",
+        "infeasible_group_caps_total:max_deployable=0.250000<min_invested=0.500000"
+      ],
+      "passed": true
+    },
+    "insufficient_history": {
+      "constrained_feasible": true,
+      "excluded_reasons": {
+        "strat_eq_momentum": "insufficient_history:5<20"
+      },
+      "observation_counts": {
+        "strat_eq_momentum": 5,
+        "strat_eq_statarb_us": 60,
+        "strat_fi_rv": 60,
+        "strat_macro_cta": 60,
+        "strat_vol_carry": 60
+      },
+      "passed": true,
+      "reject_mode_error_code": "INSUFFICIENT_HISTORY"
+    },
+    "non_psd_covariance": {
+      "original_min_eigenvalue": -0.014051785054163267,
+      "passed": true,
+      "post_repair_feasible": true,
+      "reject_mode_error_code": "NON_PSD_COVARIANCE",
+      "repair_frobenius_delta": 0.014051885054163266,
+      "repair_mode_min_eigenvalue": 1e-07
+    },
+    "stale_positions": {
+      "error_code": "STALE_DATA",
+      "max_allowed_hours": 24.0,
+      "passed": true,
+      "position_age_hours": 72.0
+    },
+    "turnover_limit": {
+      "achieved_one_way_turnover": 0.05,
+      "feasible": true,
+      "limit": 0.05,
+      "passed": true
+    },
+    "zero_volatility": {
+      "constrained_feasible": true,
+      "excluded_reasons": {
+        "strat_vol_carry": "zero_volatility:0.000e+00"
+      },
+      "inverse_vol_zero_vol_weight": 0.0,
+      "passed": true,
+      "reject_mode_error_code": "ZERO_VOLATILITY"
+    }
+  }
+}

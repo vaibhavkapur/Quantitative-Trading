@@ -1,0 +1,75 @@
+{
+  "snapshot_id": "SNAP-COD-20260115",
+  "as_of_time": "2026-01-15T21:00:00Z",
+  "availability_time": "2026-01-15T21:05:00Z",
+  "base_currency": "USD",
+  "source": "SYNTHETIC_COMPOSITE_CLOSING",
+  "prices": [
+    {
+      "instrument_id": "EQ-AAPL-US",
+      "price": "98.00",
+      "currency": "USD",
+      "price_timestamp": "2026-01-15T21:00:00Z",
+      "availability_timestamp": "2026-01-15T21:01:00Z",
+      "source": "SYNTHETIC_NASDAQ_CLOSE"
+    },
+    {
+      "instrument_id": "EQ-MSFT-US",
+      "price": "405.00",
+      "currency": "USD",
+      "price_timestamp": "2026-01-15T21:00:00Z",
+      "availability_timestamp": "2026-01-15T21:01:00Z",
+      "source": "SYNTHETIC_NASDAQ_CLOSE"
+    },
+    {
+      "instrument_id": "EQ-SAP-DE",
+      "price": "206.00",
+      "currency": "EUR",
+      "price_timestamp": "2026-01-15T16:35:00Z",
+      "availability_timestamp": "2026-01-15T16:40:00Z",
+      "source": "SYNTHETIC_XETRA_CLOSE"
+    },
+    {
+      "instrument_id": "EQ-AZN-UK",
+      "price": "124.00",
+      "currency": "GBP",
+      "price_timestamp": "2026-01-15T16:35:00Z",
+      "availability_timestamp": "2026-01-15T16:40:00Z",
+      "source": "SYNTHETIC_LSE_CLOSE"
+    },
+    {
+      "instrument_id": "FUT-ES-202606",
+      "price": "5950.00",
+      "currency": "USD",
+      "price_timestamp": "2026-01-15T21:00:00Z",
+      "availability_timestamp": "2026-01-15T21:01:00Z",
+      "source": "SYNTHETIC_CME_SETTLE"
+    }
+  ],
+  "fx_rates": [
+    {
+      "from_currency": "USD",
+      "to_currency": "USD",
+      "rate": "1.0000",
+      "rate_timestamp": "2026-01-15T21:00:00Z",
+      "availability_timestamp": "2026-01-15T21:01:00Z",
+      "source": "IDENTITY"
+    },
+    {
+      "from_currency": "EUR",
+      "to_currency": "USD",
+      "rate": "1.1200",
+      "rate_timestamp": "2026-01-15T21:00:00Z",
+      "availability_timestamp": "2026-01-15T21:02:00Z",
+      "source": "SYNTHETIC_WM_CLOSE"
+    },
+    {
+      "from_currency": "GBP",
+      "to_currency": "USD",
+      "rate": "1.2700",
+      "rate_timestamp": "2026-01-15T21:00:00Z",
+      "availability_timestamp": "2026-01-15T21:02:00Z",
+      "source": "SYNTHETIC_WM_CLOSE"
+    }
+  ]
+}

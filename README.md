@@ -1,48 +1,26 @@
-# Market Regime Detection Engine
+# Quantitative Trading
 
-This local prototype labels an instrument's daily market conditions as rising, falling, stressed or unknown. It computes trailing features from prices, benchmark prices and spreads, compares a threshold rule with a fitted Gaussian hidden Markov model (HMM), and serves the decisions available at a given UTC time.
+Five independent Python projects use synthetic market and portfolio data to identify market regimes, evaluate trading signals, allocate capital, reconcile positions, and explain portfolio returns.
 
-## Run locally
+## Getting started
 
-From this directory, with Python 3.9+ including SQLite, run
+Start with the Market Regime Detection Engine. Its offline demo requires Python 3.9 or later with SQLite. It compares a threshold rule and a hidden Markov model on the same sequence of daily bars.
 
-```sh
-scripts/setup
-scripts/demo
-scripts/validate
+```bash
+git clone https://github.com/vaibhavkapur/Quantitative-Trading.git
+cd Quantitative-Trading/market-regime-detection-engine
+./scripts/setup
+./scripts/demo
 ```
 
-Setup verifies the bundled synthetic fixture. The demo prints the run ID and transition counts, then writes the full evaluation to `.local/evaluation.json` and history to `.local/history.sqlite3`. Validation runs setup, all tests including a temporary loopback HTTP server, and the demo. All commands work offline.
+The demo prints a run ID and transition counts. Open `.local/evaluation.json` for the full results, or read the [checked-in evaluation summary](market-regime-detection-engine/reports/acceptance.md). Each project has its own dependencies, demo, and validation commands. Run them from that project's directory.
 
-For another compatible series or a different cutoff, pass a CSV and a versioned settings file. Each run records both inputs' fingerprints.
+## Projects
 
-```sh
-scripts/regime run --bars data/fixtures/daily.csv --settings config/daily.v1.json \
-  --db .local/history.sqlite3 --report .local/evaluation.json
-```
+- [Market Regime Detection Engine](market-regime-detection-engine/) — Labels daily conditions as rising, falling, stressed, or unknown and lets you query the labels available at a given time.
+- [Advanced Alpha Generation Engine](advanced-alpha-generation-engine/) — Tests signals on later time windows, measures the effect of trading costs, and records which signals qualify for paper evaluation.
+- [Dynamic Capital Allocation Engine](dynamic-capital-allocation-engine/) — Compares allocation methods under liquidity, turnover, and risk limits. A second reviewer approves proposed changes before they reach the paper ledger.
+- [Multi-Strategy Portfolio Management System](multi-strategy-portfolio-management-system/) — Replays fills, fees, and corporate actions to reconcile positions, cash, and P&L across strategy accounts and the fund.
+- [Performance Attribution Engine](performance-attribution-engine/) — Breaks portfolio returns down by strategy, instrument, sector, and currency, then reconciles contributions and reports execution costs.
 
-## Query the history
-
-Start the local read service in the same shell that holds the token. This example uses an ephemeral token and stops the server when finished.
-
-```sh
-export REGIME_READ_TOKEN="$(python3 -c 'import secrets; print(secrets.token_urlsafe(32))')"
-scripts/regime serve --port 8765 &
-service_pid=$!
-run_id=$(python3 -c 'import json; print(json.load(open(".local/evaluation.json"))["run_id"])')
-curl --retry 5 --retry-connrefused -fsS http://127.0.0.1:8765/health
-curl -fsS -H "Authorization: Bearer $REGIME_READ_TOKEN" \
-  "http://127.0.0.1:8765/v1/runs/$run_id/history?as_of=2024-01-05T16:05:00Z&limit=2"
-kill "$service_pid"
-unset REGIME_READ_TOKEN
-```
-
-## Evidence and handoff
-
-The supplied run trains on 260 synthetic daily bars and scores 195 later arrivals. The HMM produced 10 label changes, including transitions through unknown, compared with 11 for the rule. The HMM gave a known label on 153 bars. The rule gave one on 139. These measurements describe the fixture and configured horizon.
-
-- [Design, assumptions and unsupported features](docs/architecture.md)
-- [Input, feature, model and HTTP contracts](docs/contracts.md)
-- [Operator and recovery runbook](docs/runbook.md)
-- [Acceptance evidence and limitations](reports/acceptance.md)
-- [Raw holdout evaluation](reports/evaluation.json), [test output](reports/validation.txt), [local timing measurements](reports/benchmark.json)
+Each project README links to its architecture, data contracts or API reference, operator runbook, and validation evidence.

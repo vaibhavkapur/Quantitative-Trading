@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "effective_at": "2026-01-01T00:00:00Z",
+  "fund": {
+    "fund_id": "FUND-SAAT-MAIN",
+    "name": "SAAT Multi-Strategy Master Fund",
+    "base_currency": "USD"
+  },
+  "accounts": [
+    {
+      "account_id": "ACCT-FUND-UNALLOC",
+      "name": "Master Fund Unallocated Cash Treasury",
+      "account_type": "FUND_UNALLOCATED",
+      "fund_id": "FUND-SAAT-MAIN",
+      "strategy_id": null,
+      "base_currency": "USD",
+      "lot_method": "FIFO",
+      "broker_account_ref": "PB-PRIME-000"
+    },
+    {
+      "account_id": "ACCT-STRAT-MOM",
+      "name": "US Equity Momentum Strategy",
+      "account_type": "STRATEGY",
+      "fund_id": "FUND-SAAT-MAIN",
+      "strategy_id": "STRAT-MOMENTUM",
+      "base_currency": "USD",
+      "lot_method": "FIFO",
+      "broker_account_ref": "PB-PRIME-101"
+    },
+    {
+      "account_id": "ACCT-STRAT-STATARB",
+      "name": "Global Equity StatArb Strategy",
+      "account_type": "STRATEGY",
+      "fund_id": "FUND-SAAT-MAIN",
+      "strategy_id": "STRAT-STATARB",
+      "base_currency": "USD",
+      "lot_method": "FIFO",
+      "broker_account_ref": "PB-PRIME-102"
+    },
+    {
+      "account_id": "ACCT-STRAT-MACRO",
+      "name": "Multi-Currency Macro & Rates Strategy",
+      "account_type": "STRATEGY",
+      "fund_id": "FUND-SAAT-MAIN",
+      "strategy_id": "STRAT-MACRO",
+      "base_currency": "USD",
+      "lot_method": "FIFO",
+      "broker_account_ref": "PB-PRIME-103"
+    }
+  ],
+  "instruments": [
+    {
+      "instrument_id": "EQ-AAPL-US",
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "asset_class": "EQUITY",
+      "currency": "USD",
+      "exchange": "NASDAQ",
+      "multiplier": "1",
+      "tick_size": "0.01",
+      "status": "ACTIVE"
+    },
+    {
+      "instrument_id": "EQ-MSFT-US",
+      "symbol": "MSFT",
+      "name": "Microsoft Corporation",
+      "asset_class": "EQUITY",
+      "currency": "USD",
+      "exchange": "NASDAQ",
+      "multiplier": "1",
+      "tick_size": "0.01",
+      "status": "ACTIVE"
+    },
+    {
+      "instrument_id": "EQ-SAP-DE",
+      "symbol": "SAP",
+      "name": "SAP SE",
+      "asset_class": "EQUITY",
+      "currency": "EUR",
+      "exchange": "XETRA",
+      "multiplier": "1",
+      "tick_size": "0.01",
+      "status": "ACTIVE"
+    },
+    {
+      "instrument_id": "EQ-AZN-UK",
+      "symbol": "AZN",
+      "name": "AstraZeneca PLC",
+      "asset_class": "EQUITY",
+      "currency": "GBP",
+      "exchange": "LSE",
+      "multiplier": "1",
+      "tick_size": "0.01",
+      "status": "ACTIVE"
+    },
+    {
+      "instrument_id": "EQ-UNPRICED-US",
+      "symbol": "ILLIQ",
+      "name": "Synthetic Illiquid Security",
+      "asset_class": "EQUITY",
+      "currency": "USD",
+      "exchange": "OTC",
+      "multiplier": "1",
+      "tick_size": "0.01",
+      "status": "ACTIVE"
+    },
+    {
+      "instrument_id": "FUT-ES-202606",
+      "symbol": "ESM6",
+      "name": "E-mini S&P 500 June 2026 Future",
+      "asset_class": "FUTURE",
+      "currency": "USD",
+      "exchange": "CME",
+      "multiplier": "50",
+      "tick_size": "0.25",
+      "status": "ACTIVE"
+    }
+  ]
+}

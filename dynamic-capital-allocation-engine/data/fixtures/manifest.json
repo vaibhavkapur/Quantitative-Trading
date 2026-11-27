@@ -1,0 +1,69 @@
+{
+  "files": [
+    {
+      "entitlement": "synthetic_internal",
+      "file": "data/fixtures/baseline_snapshot.json",
+      "kind": "baseline_snapshot",
+      "seed": 20260409,
+      "sha256": "05391606de269bd9af85e56b6cced10918d1113afbc1cacce590ed81c2496118"
+    },
+    {
+      "entitlement": "synthetic_internal",
+      "file": "data/fixtures/walkforward_dataset.json",
+      "kind": "walkforward_dataset",
+      "seed": 20260409,
+      "sha256": "82a477e30d4823edff61e446b8370dfcdd242c70e9261de2564d5605a5feedd5"
+    },
+    {
+      "entitlement": "synthetic_internal",
+      "file": "data/fixtures/scenarios/correlated_drawdowns.json",
+      "kind": "scenario:correlated_drawdowns",
+      "seed": 20260409,
+      "sha256": "62757c921850f988b93a0aa91814f5be823dfd028830e647d7de4ab4e7d9086d"
+    },
+    {
+      "entitlement": "synthetic_internal",
+      "file": "data/fixtures/scenarios/infeasible_caps.json",
+      "kind": "scenario:infeasible_caps",
+      "seed": 20260409,
+      "sha256": "e5369e7c07bcc1083cdebb501e41d55fb16f6c1bff5d79a39863236da698d15c"
+    },
+    {
+      "entitlement": "synthetic_internal",
+      "file": "data/fixtures/scenarios/insufficient_history.json",
+      "kind": "scenario:insufficient_history",
+      "seed": 20260409,
+      "sha256": "f44c41ee95322fd8fac484c2e752ee5c11ace99dc107e6b997fb679b152f80cd"
+    },
+    {
+      "entitlement": "synthetic_internal",
+      "file": "data/fixtures/scenarios/non_psd_covariance.json",
+      "kind": "scenario:non_psd_covariance",
+      "seed": 20260409,
+      "sha256": "b54f51f9d13b1d3a7b164cfad1b23fef300b80b900e76213bf2167c26969f337"
+    },
+    {
+      "entitlement": "synthetic_internal",
+      "file": "data/fixtures/scenarios/stale_positions.json",
+      "kind": "scenario:stale_positions",
+      "seed": 20260409,
+      "sha256": "1381847e14b20d3e067dcce59cc04f8872c46f19597ac7344ac6dd61e16c3b10"
+    },
+    {
+      "entitlement": "synthetic_internal",
+      "file": "data/fixtures/scenarios/turnover_limit.json",
+      "kind": "scenario:turnover_limit",
+      "seed": 20260409,
+      "sha256": "692342fffdd6081ec57768661324cd1a72b8d10220faed7c430547a95f55c8ee"
+    },
+    {
+      "entitlement": "synthetic_internal",
+      "file": "data/fixtures/scenarios/zero_volatility.json",
+      "kind": "scenario:zero_volatility",
+      "seed": 20260409,
+      "sha256": "e6f655cfb84b672d1473b76592ffe505222f0de3dd715226035da7d999e5905f"
+    }
+  ],
+  "license_and_ip_notice": "All fixture datasets in this directory are synthetically generated for local reproducible testing. No proprietary or unlicensed market data is included.",
+  "manifest_version": "1.0.0"
+}

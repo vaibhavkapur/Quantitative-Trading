@@ -1,0 +1,33 @@
+test_http_api_end_to_end (tests.integration.test_workflow_paper_and_api.TestHTTPAPIIntegration) ... ok
+test_audit_tamper_detection_and_ledger_state_recovery (tests.integration.test_workflow_paper_and_api.TestProposalPaperAndAuditIntegration) ... ok
+test_expired_proposal_cannot_be_approved (tests.integration.test_workflow_paper_and_api.TestProposalPaperAndAuditIntegration) ... ok
+test_full_approval_gated_paper_execution_and_idempotency (tests.integration.test_workflow_paper_and_api.TestProposalPaperAndAuditIntegration) ... ok
+test_walkforward_evaluates_all_allocators_over_identical_periods_and_costs (tests.integration.test_workflow_paper_and_api.TestWalkForwardIntegration) ... ok
+test_scenario_1_non_psd_covariance (tests.scenarios.test_failure_scenarios.TestRequiredFailureScenarios) ... ok
+test_scenario_2_zero_volatility (tests.scenarios.test_failure_scenarios.TestRequiredFailureScenarios) ... ok
+test_scenario_3_insufficient_history (tests.scenarios.test_failure_scenarios.TestRequiredFailureScenarios) ... ok
+test_scenario_4_infeasible_caps_safe_fallback (tests.scenarios.test_failure_scenarios.TestRequiredFailureScenarios) ... ok
+test_scenario_5_stale_positions (tests.scenarios.test_failure_scenarios.TestRequiredFailureScenarios) ... ok
+test_scenario_6_turnover_limit (tests.scenarios.test_failure_scenarios.TestRequiredFailureScenarios) ... ok
+test_scenario_7_correlated_drawdowns (tests.scenarios.test_failure_scenarios.TestRequiredFailureScenarios) ... ok
+test_constrained_allocator_passes_all_independent_verifier_checks (tests.unit.test_allocators_and_verifier.TestAllocatorsAndVerifier) ... ok
+test_equal_weight_reconciles_and_respects_cash_min (tests.unit.test_allocators_and_verifier.TestAllocatorsAndVerifier) ... ok
+test_high_transaction_costs_create_no_trade_band (tests.unit.test_allocators_and_verifier.TestAllocatorsAndVerifier) ... ok
+test_independent_verifier_detects_tampered_allocations (tests.unit.test_allocators_and_verifier.TestAllocatorsAndVerifier) ... ok
+test_inverse_volatility_overweights_lower_vol_strategy (tests.unit.test_allocators_and_verifier.TestAllocatorsAndVerifier) ... ok
+test_risk_budget_matches_target_risk_contributions (tests.unit.test_allocators_and_verifier.TestAllocatorsAndVerifier) ... ok
+test_baseline_snapshot_validates_and_hashes_deterministically (tests.unit.test_domain_and_math.TestDomainContracts) ... ok
+test_future_position_timestamp_raises_pit_violation (tests.unit.test_domain_and_math.TestDomainContracts) ... ok
+test_live_execution_cannot_be_enabled_in_config (tests.unit.test_domain_and_math.TestDomainContracts) ... ok
+test_non_utc_or_inverted_availability_timestamp_rejected (tests.unit.test_domain_and_math.TestDomainContracts) ... ok
+test_point_in_time_filter_drops_future_unavailable_returns (tests.unit.test_domain_and_math.TestDomainContracts) ... ok
+test_position_reconciliation_enforced (tests.unit.test_domain_and_math.TestDomainContracts) ... ok
+test_correlation_stress_increases_portfolio_variance (tests.unit.test_domain_and_math.TestNumericalMathAndProjections) ... ok
+test_dykstra_projects_simultaneously_onto_box_sum_group_turnover_vol (tests.unit.test_domain_and_math.TestNumericalMathAndProjections) ... ok
+test_jacobi_eigen_and_psd_repair (tests.unit.test_domain_and_math.TestNumericalMathAndProjections) ... ok
+test_l1_ball_projection_exact (tests.unit.test_domain_and_math.TestNumericalMathAndProjections) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.802s
+
+OK

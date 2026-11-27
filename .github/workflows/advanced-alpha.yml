@@ -1,0 +1,26 @@
+name: CI — Advanced Alpha Generation Engine
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: advanced-alpha-generation-engine
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - name: Install dependencies from uv.lock
+        run: uv sync --frozen --python 3.12 --extra dev --extra boosting
+      - name: Generate synthetic PIT fixtures
+        run: .venv/bin/python data/fixtures/generate_fixtures.py
+      - name: Run full validation suite (lint, tests, 7 scenarios, demo)
+        run: .venv/bin/python scripts/validate.py
+      - name: Upload validation evidence artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: alpha-engine-validation-evidence
+          path: advanced-alpha-generation-engine/reports/

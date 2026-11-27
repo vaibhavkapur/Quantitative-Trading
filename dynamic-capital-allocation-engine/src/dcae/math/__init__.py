@@ -1,0 +1,63 @@
+"""Pure-Python numerical math package for DCAE."""
+
+from __future__ import annotations
+
+from dcae.math.linalg import (
+    Matrix,
+    Vector,
+    apply_correlation_stress,
+    check_psd,
+    cov_to_vol_and_corr,
+    dot,
+    frobenius_norm,
+    jacobi_eigen_symmetric,
+    mat_mul,
+    mat_vec,
+    max_asymmetry,
+    nearest_psd_spectral,
+    quad_form,
+    symmetrize,
+    vec_l1_dist,
+    vec_norm2,
+)
+from dcae.math.projections import (
+    ConvexConstraintSet,
+    LinearCap,
+    dykstra_project,
+    eigen_cache,
+    project_box,
+    project_ellipsoid,
+    project_halfspace,
+    project_l1_ball,
+    project_sum_band,
+    project_turnover_ball,
+)
+
+__all__ = [
+    "ConvexConstraintSet",
+    "LinearCap",
+    "Matrix",
+    "Vector",
+    "apply_correlation_stress",
+    "check_psd",
+    "cov_to_vol_and_corr",
+    "dot",
+    "dykstra_project",
+    "eigen_cache",
+    "frobenius_norm",
+    "jacobi_eigen_symmetric",
+    "mat_mul",
+    "mat_vec",
+    "max_asymmetry",
+    "nearest_psd_spectral",
+    "project_box",
+    "project_ellipsoid",
+    "project_halfspace",
+    "project_l1_ball",
+    "project_sum_band",
+    "project_turnover_ball",
+    "quad_form",
+    "symmetrize",
+    "vec_l1_dist",
+    "vec_norm2",
+]

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>PAE Report — RPT-PORT_HAND_WORKED-20260105-20260106-v1-a136798a</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 24px; background: #f8fafc; color: #0f172a; }
+  .banner { background: #fef3c7; border: 1px solid #f59e0b; padding: 10px 14px; border-radius: 8px; margin-bottom: 18px; font-size: 13px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 20px; }
+  .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; }
+  .card .label { font-size: 12px; color: #64748b; text-transform: uppercase; }
+  .card .value { font-size: 22px; font-weight: 700; margin-top: 4px; }
+  .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 16px; margin-bottom: 22px; }
+  table { width: 100%; border-collapse: collapse; background: #ffffff; border: 1px solid #e2e8f0; margin-bottom: 20px; font-size: 13px; }
+  th, td { padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: left; }
+  th { background: #f1f5f9; }
+  .muted { color: #64748b; font-style: italic; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; color: #ffffff; font-weight: 600; font-size: 12px; background: #15803d; }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <strong>SIMULATED_PROTOTYPE</strong> — Order execution is disabled. Gross and Net returns are strictly separated.
+    Factor correlation does not prove causation. Methodology: <code>pae-v1.0.0</code>.
+  </div>
+  <h1>Performance Attribution Report <span class="badge">RECONCILED</span></h1>
+  <p>Version: <code>RPT-PORT_HAND_WORKED-20260105-20260106-v1-a136798a</code> | Portfolio: <code>PORT_HAND_WORKED</code> |
+     Period: 2026-01-05 to 2026-01-06 | Currency: USD</p>
+
+  <div class="grid">
+    <div class="card"><div class="label">Cumulative Gross Return</div><div class="value">+13.4240%</div></div>
+    <div class="card"><div class="label">Cumulative Net Return</div><div class="value">+13.1645%</div></div>
+    <div class="card"><div class="label">Total Explicit Fee Drag</div><div class="value">+25.95 bps</div></div>
+    <div class="card"><div class="label">Implementation Shortfall</div><div class="value">+285.71 bps</div></div>
+    <div class="card"><div class="label">Linked Net Residual</div><div class="value">-0.0000 bps</div></div>
+  </div>
+
+  <div class="charts">
+    <div><svg viewBox='0 0 640 254' width='100%' style='max-width:640px;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;'><text x='10' y='22' font-size='13' font-weight='600' fill='#0f172a'>Gross-to-Net &amp; Execution Cost Waterfall</text><line x1='340' y1='32' x2='340' y2='246' stroke='#94a3b8' stroke-dasharray='3,3'/><text x='10' y='53' font-size='12' fill='#334155'>Paper Pre-IS</text><rect x='340.0' y='41' width='200.0' height='16' rx='3' fill='#0d9488'/><text x='555' y='53' font-size='11' fill='#0f172a'>+14.215%</text><text x='10' y='83' font-size='12' fill='#334155'>Implicit TCA Drag</text><rect x='328.9' y='71' width='11.1' height='16' rx='3' fill='#dc2626'/><text x='555' y='83' font-size='11' fill='#0f172a'>-0.791%</text><text x='10' y='113' font-size='12' fill='#334155'>Gross Return</text><rect x='340.0' y='101' width='188.9' height='16' rx='3' fill='#0d9488'/><text x='555' y='113' font-size='11' fill='#0f172a'>+13.424%</text><text x='10' y='143' font-size='12' fill='#334155'>Explicit Trade Fees</text><rect x='339.3' y='131' width='1.5' height='16' rx='3' fill='#dc2626'/><text x='555' y='143' font-size='11' fill='#0f172a'>-0.053%</text><text x='10' y='173' font-size='12' fill='#334155'>Other Fees &amp; Comp.</text><rect x='337.1' y='161' width='2.9' height='16' rx='3' fill='#dc2626'/><text x='555' y='173' font-size='11' fill='#0f172a'>-0.207%</text><text x='10' y='203' font-size='12' fill='#334155'>Net Return</text><rect x='340.0' y='191' width='185.2' height='16' rx='3' fill='#0d9488'/><text x='555' y='203' font-size='11' fill='#0f172a'>+13.165%</text><text x='10' y='233' font-size='12' fill='#334155'>Explicit Residual</text><rect x='340.0' y='221' width='1.5' height='16' rx='3' fill='#dc2626'/><text x='555' y='233' font-size='11' fill='#0f172a'>-0.000%</text></svg></div>
+    <div><svg viewBox='0 0 640 104' width='100%' style='max-width:640px;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;'><text x='10' y='22' font-size='13' font-weight='600' fill='#0f172a'>Strategy Net Contribution (Carino-Linked)</text><line x1='340' y1='32' x2='340' y2='96' stroke='#94a3b8' stroke-dasharray='3,3'/><text x='10' y='53' font-size='12' fill='#334155'>STRAT_EU</text><rect x='340.0' y='41' width='176.2' height='16' rx='3' fill='#0d9488'/><text x='555' y='53' font-size='11' fill='#0f172a'>+6.261%</text><text x='10' y='83' font-size='12' fill='#334155'>STRAT_US</text><rect x='340.0' y='71' width='200.0' height='16' rx='3' fill='#0d9488'/><text x='555' y='83' font-size='11' fill='#0f172a'>+7.105%</text></svg></div>
+    <div><svg viewBox='0 0 640 104' width='100%' style='max-width:640px;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;'><text x='10' y='22' font-size='13' font-weight='600' fill='#0f172a'>Instrument Net Contribution (Carino-Linked)</text><line x1='340' y1='32' x2='340' y2='96' stroke='#94a3b8' stroke-dasharray='3,3'/><text x='10' y='53' font-size='12' fill='#334155'>EU_FIN</text><rect x='340.0' y='41' width='176.2' height='16' rx='3' fill='#0d9488'/><text x='555' y='53' font-size='11' fill='#0f172a'>+6.261%</text><text x='10' y='83' font-size='12' fill='#334155'>US_TECH</text><rect x='340.0' y='71' width='200.0' height='16' rx='3' fill='#0d9488'/><text x='555' y='83' font-size='11' fill='#0f172a'>+7.105%</text></svg></div>
+  </div>
+
+  <h2>Brinson Sector Attribution (BRINSON_FACHLER — AVAILABLE)</h2>
+  <table>
+    <thead><tr><th>Sector</th><th>Port Wt</th><th>Bench Wt</th><th>Allocation</th><th>Selection</th><th>Interaction</th><th>Total</th></tr></thead>
+    <tbody><tr><td>CASH</td><td>29.70%</td><td>0.00%</td><td>-170.46 bps</td><td>+0.00 bps</td><td>+0.00 bps</td><td><strong>-170.46 bps</strong></td></tr><tr><td>FINANCIALS</td><td>31.55%</td><td>40.00%</td><td>+33.22 bps</td><td>+387.22 bps</td><td>+0.00 bps</td><td><strong>+420.44 bps</strong></td></tr><tr><td>TECH</td><td>38.75%</td><td>60.00%</td><td>-50.74 bps</td><td>+402.20 bps</td><td>-172.00 bps</td><td><strong>+179.46 bps</strong></td></tr></tbody>
+  </table>
+
+  <h2>Statistical Risk-Factor Attribution (INSUFFICIENT_DATA)</h2>
+  <p class="muted">Factor attribution measures statistical co-movement and exposure decomposition only; factor correlation does not prove causation.</p>
+  <table>
+    <thead><tr><th>Factor</th><th>Beta</th><th>t-stat</th><th>Linked Contribution</th></tr></thead>
+    <tbody><tr><td colspan='4' class='muted'>Factor regression unavailable or insufficient observations.</td></tr></tbody>
+  </table>
+
+  <h2>Data-Quality &amp; Reconciliation Exceptions</h2>
+  <table>
+    <thead><tr><th>Severity</th><th>Code</th><th>Date</th><th>Message</th></tr></thead>
+    <tbody><tr><td colspan='4' class='muted'>No data-quality exceptions.</td></tr></tbody>
+  </table>
+</body>
+</html>

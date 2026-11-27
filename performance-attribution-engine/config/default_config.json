@@ -1,0 +1,45 @@
+{
+  "config_version": "1.0.0",
+  "methodology_version": "pae-v1.0.0",
+  "reporting_currency": "USD",
+  "return_convention": {
+    "daily_method": "TWR_SUBPERIOD",
+    "multi_period_linking": "CARINO",
+    "default_cash_flow_timing": "START_OF_DAY",
+    "compute_modified_dietz_crosscheck": true,
+    "gross_vs_net_strict_separation": true
+  },
+  "brinson": {
+    "model": "BRINSON_FACHLER",
+    "require_aligned_benchmark_dates": true,
+    "require_aligned_benchmark_currency": true
+  },
+  "factor_model": {
+    "enabled": true,
+    "min_observations": 5,
+    "ridge_regularization": 1e-10,
+    "non_causation_disclaimer": "Factor attribution measures statistical co-movement and exposure decomposition only; factor correlation does not prove causation."
+  },
+  "tca": {
+    "default_benchmark": "ARRIVAL_PRICE",
+    "include_opportunity_cost": true,
+    "include_explicit_fees": true
+  },
+  "reconciliation": {
+    "return_tolerance": 1e-6,
+    "return_tolerance_bps": 0.01,
+    "nav_bridge_tolerance_abs": 1e-4,
+    "fx_max_staleness_hours": 48,
+    "fail_on_zero_nav": false,
+    "emit_exception_on_residual_breach": true
+  },
+  "operational_controls": {
+    "environment_mode": "SIMULATED_PROTOTYPE",
+    "order_execution_enabled": false,
+    "require_dual_control_approval": true,
+    "audit_hash_chain_enabled": true
+  },
+  "storage": {
+    "sqlite_path": "reports/pae_state.sqlite3"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "config_version": "1.0.0",
+  "environment": "local_research_prototype",
+  "seed": 42,
+  "currency": "USD",
+  "execution_mode": "paper_only",
+  "execution_enabled": false,
+  "walk_forward": {
+    "n_splits": 4,
+    "min_train_days": 120,
+    "test_days": 60,
+    "embargo_days": 5,
+    "forward_horizon_days": 5,
+    "expanding_window": true
+  },
+  "neutralization": {
+    "winsorize_lower_quantile": 0.02,
+    "winsorize_upper_quantile": 0.98,
+    "sector_neutral": true,
+    "beta_neutral": true,
+    "vol_neutral": true,
+    "zscore_standardize": true
+  },
+  "cost_model": {
+    "base_spread_bps": 5.0,
+    "impact_coeff_bps": 10.0,
+    "cost_grid_bps": [0.0, 5.0, 10.0, 25.0, 50.0],
+    "max_single_weight": 0.15,
+    "turnover_smoothing_alpha": 0.65,
+    "no_trade_buffer": 0.005,
+    "annualization_days": 252
+  },
+  "observability": {
+    "metrics_output_path": "reports/engine_metrics.json"
+  }
+}

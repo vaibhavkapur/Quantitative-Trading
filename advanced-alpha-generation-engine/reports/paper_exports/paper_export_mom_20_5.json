@@ -1,0 +1,206 @@
+{
+  "as_of_utc": "2024-09-09T21:05:00Z",
+  "definition_hash": "aa1b7b7eec6afeec",
+  "execution_enabled": false,
+  "export_id": "paper-mom_20_5-44617497",
+  "exported_at_utc": "2026-11-27T09:51:56.608483Z",
+  "gross_exposure": 0.999999,
+  "mode": "paper_only",
+  "net_exposure": -1e-06,
+  "provenance": {
+    "causal_guarantee": "strict_point_in_time_available_at_utc",
+    "dataset_manifest_digest": "377efd2d7ac0ba90b29a613f55453e35583ce987d3b61e8b2ac6ed5f6cb1f225",
+    "disclaimer": "PAPER_RESEARCH_ONLY_NO_LIVE_EXECUTION_OR_EDGE_PROMISE",
+    "latest_trial_id": "trial-mom_20_5-b760946b",
+    "promoted_at_utc": "2026-11-27T09:51:56.579946+00:00",
+    "promoted_by": "saat-research-committee (PAPER-APPROVAL-2026-001)"
+  },
+  "records_count": 26,
+  "sha256_digest": "a45603c48cea224ba76812462b3fa0a7e547ae4f5f775688004c8e910dda3b13",
+  "signal_id": "mom_20_5",
+  "signal_version": "1.0.0",
+  "weights": [
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "TECH",
+      "symbol": "SYN001",
+      "target_weight": 0.013874
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "FIN",
+      "symbol": "SYN002",
+      "target_weight": 0.012836
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "HEALTH",
+      "symbol": "SYN003",
+      "target_weight": -0.028563
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "IND",
+      "symbol": "SYN004",
+      "target_weight": -0.006366
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "CONS",
+      "symbol": "SYN005",
+      "target_weight": 0.04145
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "TECH",
+      "symbol": "SYN006",
+      "target_weight": -0.034623
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "FIN",
+      "symbol": "SYN007",
+      "target_weight": -0.068169
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "HEALTH",
+      "symbol": "SYN008",
+      "target_weight": -0.048843
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "IND",
+      "symbol": "SYN009",
+      "target_weight": 0.080549
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "CONS",
+      "symbol": "SYN010",
+      "target_weight": -0.074303
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "TECH",
+      "symbol": "SYN011",
+      "target_weight": 0.032216
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "FIN",
+      "symbol": "SYN012",
+      "target_weight": 0.000357
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "HEALTH",
+      "symbol": "SYN013",
+      "target_weight": 0.062294
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "IND",
+      "symbol": "SYN014",
+      "target_weight": 0.027614
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "CONS",
+      "symbol": "SYN015",
+      "target_weight": -0.005777
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "TECH",
+      "symbol": "SYN016",
+      "target_weight": -0.100854
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "FIN",
+      "symbol": "SYN017",
+      "target_weight": 0.029607
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "HEALTH",
+      "symbol": "SYN018",
+      "target_weight": -0.029621
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "IND",
+      "symbol": "SYN019",
+      "target_weight": -0.026009
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "CONS",
+      "symbol": "SYN020",
+      "target_weight": 0.036382
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "TECH",
+      "symbol": "SYN021",
+      "target_weight": 0.027079
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "FIN",
+      "symbol": "SYN022",
+      "target_weight": 0.022455
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "HEALTH",
+      "symbol": "SYN023",
+      "target_weight": 0.045611
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "IND",
+      "symbol": "SYN024",
+      "target_weight": -0.076872
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "CONS",
+      "symbol": "SYN025",
+      "target_weight": 0.00392
+    },
+    {
+      "available_at_utc": "2024-05-27T21:05:00+00:00",
+      "event_ts_utc": "2024-05-27T21:00:00+00:00",
+      "sector": "TECH",
+      "symbol": "SYN026",
+      "target_weight": 0.063755
+    }
+  ]
+}

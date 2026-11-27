@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "system_name": "SAAT Multi-Strategy Portfolio Management System",
+  "environment": "local_prototype",
+  "base_currency": "USD",
+  "default_lot_method": "FIFO",
+  "mark_staleness_seconds": 86400,
+  "reconciliation_tolerances": {
+    "quantity": "0.000001",
+    "cash": "0.01",
+    "price_pct": "0.005"
+  },
+  "controls": {
+    "live_order_execution_enabled": false,
+    "paper_oms_enabled": true,
+    "require_approver_for_adjustments": true,
+    "allow_history_mutation": false
+  },
+  "storage": {
+    "backend": "sqlite",
+    "sqlite_path": "reports/evidence/pms_demo.sqlite3"
+  }
+}

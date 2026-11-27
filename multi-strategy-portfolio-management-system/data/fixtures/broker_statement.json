@@ -1,0 +1,74 @@
+{
+  "statement_id": "PB-STMT-20260115-EOD",
+  "broker_name": "SYNTHETIC_PRIME_BROKER_ALPHA",
+  "as_of_time": "2026-01-15T22:00:00Z",
+  "positions": [
+    {
+      "account_id": "ACCT-STRAT-MOM",
+      "instrument_id": "EQ-AAPL-US",
+      "quantity": "2000",
+      "currency": "USD",
+      "broker_mark_price": "98.00"
+    },
+    {
+      "account_id": "ACCT-STRAT-MOM",
+      "instrument_id": "EQ-MSFT-US",
+      "quantity": "-100",
+      "currency": "USD",
+      "broker_mark_price": "405.00"
+    },
+    {
+      "account_id": "ACCT-STRAT-STATARB",
+      "instrument_id": "EQ-SAP-DE",
+      "quantity": "395",
+      "currency": "EUR",
+      "broker_mark_price": "206.00"
+    },
+    {
+      "account_id": "ACCT-STRAT-MACRO",
+      "instrument_id": "EQ-AZN-UK",
+      "quantity": "250",
+      "currency": "GBP",
+      "broker_mark_price": "124.00"
+    },
+    {
+      "account_id": "ACCT-STRAT-MACRO",
+      "instrument_id": "EQ-UNPRICED-US",
+      "quantity": "100",
+      "currency": "USD",
+      "broker_mark_price": null
+    }
+  ],
+  "cash_balances": [
+    {
+      "account_id": "ACCT-FUND-UNALLOC",
+      "currency": "USD",
+      "balance": "99880.00"
+    },
+    {
+      "account_id": "ACCT-STRAT-MOM",
+      "currency": "USD",
+      "balance": "252444.50"
+    },
+    {
+      "account_id": "ACCT-STRAT-STATARB",
+      "currency": "USD",
+      "balance": "189990.00"
+    },
+    {
+      "account_id": "ACCT-STRAT-STATARB",
+      "currency": "EUR",
+      "balance": "19960.00"
+    },
+    {
+      "account_id": "ACCT-STRAT-MACRO",
+      "currency": "USD",
+      "balance": "132494.00"
+    },
+    {
+      "account_id": "ACCT-STRAT-MACRO",
+      "currency": "GBP",
+      "balance": "19988.00"
+    }
+  ]
+}

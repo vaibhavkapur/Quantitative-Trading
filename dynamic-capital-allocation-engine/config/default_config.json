@@ -1,0 +1,63 @@
+{
+  "config_version": "1.0.0",
+  "environment": "local_prototype",
+  "base_currency": "USD",
+  "execution_policy": {
+    "live_execution_enabled": false,
+    "paper_execution_enabled": true,
+    "require_explicit_approval": true,
+    "enforce_dual_control": true,
+    "proposal_ttl_minutes": 120
+  },
+  "data_quality": {
+    "min_history_observations": 20,
+    "max_position_staleness_hours": 24.0,
+    "max_return_staleness_hours": 72.0,
+    "zero_volatility_eps": 1e-8,
+    "zero_volatility_policy": "exclude",
+    "insufficient_history_policy": "exclude"
+  },
+  "estimator": {
+    "annualization_factor": 252,
+    "return_shrinkage": 0.25,
+    "covariance_shrinkage": 0.15,
+    "non_psd_policy": "repair",
+    "psd_min_eigenvalue": 1e-7,
+    "correlation_stress_enabled": false,
+    "correlation_stress_blend": 0.35,
+    "correlation_stress_floor": 0.65,
+    "drawdown_stress_trigger": -0.05
+  },
+  "constraints": {
+    "cash_reserve_min": 0.05,
+    "cash_reserve_max": 0.50,
+    "default_min_weight": 0.0,
+    "default_max_weight": 0.35,
+    "max_one_way_turnover": 0.25,
+    "max_annualized_volatility": 0.14,
+    "max_stressed_annualized_volatility": 0.20,
+    "max_adv_participation": 0.10,
+    "max_gross_leverage": 1.0,
+    "group_caps": {
+      "equity_statarb": 0.50,
+      "macro_trend": 0.45,
+      "vol_carry": 0.30,
+      "fixed_income_rv": 0.40
+    },
+    "constraint_tolerance": 1e-6
+  },
+  "optimizer": {
+    "risk_aversion": 6.0,
+    "turnover_l2_penalty": 0.5,
+    "default_transaction_cost_bps": 10.0,
+    "max_iterations": 600,
+    "convergence_tol": 1e-8,
+    "fallback_policy": "no_change_then_cash",
+    "solver_backend": "builtin"
+  },
+  "audit": {
+    "storage_backend": "sqlite",
+    "sqlite_path": "reports/dcae_audit.sqlite3",
+    "jsonl_export_path": "reports/dcae_audit.jsonl"
+  }
+}

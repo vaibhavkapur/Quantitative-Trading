@@ -1,0 +1,22 @@
+{
+  "manifest_version": "1.0.0",
+  "generated_at": "2026-01-15T22:00:00Z",
+  "data_classification": "SYNTHETIC_PERMITTED",
+  "provenance": "Deterministically authored synthetic multi-strategy trading fixtures for local prototype validation. Contains zero proprietary, personal, or licensed vendor data.",
+  "fixed_seed": 20260115,
+  "fixtures": [
+    {
+      "name": "baseline_events.json",
+      "description": "Multi-strategy trading day covering capital funding, strategy allocations, partial fills, position flip, FX conversion, EUR/GBP trades, split, dividend, late fee, and unpriced position.",
+      "event_count": 17
+    },
+    {
+      "name": "market_marks.json",
+      "description": "Point-in-time T0 and T1 market marks and FX rates with explicit UTC pricing and availability timestamps; intentionally omits EQ-UNPRICED-US to verify unpriced asset flagging."
+    },
+    {
+      "name": "broker_statement.json",
+      "description": "Synthetic prime-broker close-of-day statement containing both matched positions and deliberate quantity/cash breaks for reconciliation testing."
+    }
+  ]
+}

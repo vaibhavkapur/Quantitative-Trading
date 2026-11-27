@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAAT Multi-Strategy Portfolio Management System</title>
+  <style>
+    :root {
+      --bg: #0b101b;
+      --panel: #121a2b;
+      --panel-2: #172238;
+      --border: #253452;
+      --text: #e6edf7;
+      --muted: #8ea1c0;
+      --accent: #4ea1ff;
+      --green: #2bd576;
+      --amber: #f5b942;
+      --red: #ff5c72;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand h1 { margin: 0; font-size: 18px; letter-spacing: 0.2px; }
+    .brand small { color: var(--muted); font-family: var(--mono); }
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--mono);
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+    }
+    .pill.ok { color: var(--green); border-color: rgba(43,213,118,0.4); }
+    .pill.warn { color: var(--amber); border-color: rgba(245,185,66,0.4); }
+    .pill.err { color: var(--red); border-color: rgba(255,92,114,0.4); }
+    .container { max-width: 1360px; margin: 0 auto; padding: 20px 24px 48px; }
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .kpi {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .kpi label { display: block; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .kpi .val { font-size: 22px; font-weight: 700; font-family: var(--mono); margin-top: 4px; }
+    .kpi .sub { font-size: 12px; color: var(--muted); margin-top: 2px; font-family: var(--mono); }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .tab {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      padding: 10px 14px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      border-bottom: 2px solid transparent;
+    }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .panel h2 { margin: 0 0 12px; font-size: 15px; display: flex; justify-content: space-between; align-items: center; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 16px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; }
+    td.num, th.num { text-align: right; font-family: var(--mono); }
+    td.mono { font-family: var(--mono); font-size: 12px; }
+    .pos { color: var(--green); }
+    .neg { color: var(--red); }
+    .alert {
+      background: rgba(245, 185, 66, 0.12);
+      border: 1px solid rgba(245, 185, 66, 0.45);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      color: #ffd98a;
+    }
+    .controls-bar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    select, input, button {
+      background: var(--panel-2);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 13px;
+    }
+    button.primary {
+      background: #1d4ed8;
+      border-color: #3b82f6;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button.secondary { cursor: pointer; }
+    pre {
+      background: #080c15;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      overflow-x: auto;
+      font-family: var(--mono);
+      font-size: 12px;
+      white-space: pre-wrap;
+    }
+    .hidden { display: none; }
+    .toast {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-family: var(--mono);
+      font-size: 12px;
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>SAAT Multi-Strategy Portfolio Management System</h1>
+      <small id="subtitle">Loading authoritative subledger...</small>
+    </div>
+    <div class="badges" id="header-badges"></div>
+  </header>
+
+  <div class="container">
+    <div id="exceptions-banner" class="alert hidden"></div>
+    <div class="kpis" id="kpi-grid"></div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="overview">Overview &amp; Consolidation</button>
+      <button class="tab" data-tab="positions">Positions &amp; Tax Lots</button>
+      <button class="tab" data-tab="subledger">Immutable Subledger</button>
+      <button class="tab" data-tab="recon">Reconciliation &amp; Breaks</button>
+      <button class="tab" data-tab="cod">COD Report &amp; Recovery</button>
+    </div>
+
+    <section id="tab-overview">
+      <div class="grid-2">
+        <div class="panel">
+          <h2>Strategy &amp; Unallocated Consolidation</h2>
+          <table id="tbl-accounts">
+            <thead>
+              <tr>
+                <th>Account</th>
+                <th>Strategy</th>
+                <th class="num">Cash (USD)</th>
+                <th class="num">NAV (USD)</th>
+                <th class="num">Total P&amp;L</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="panel">
+          <h2>P&amp;L Explainability Bridge (Base USD)</h2>
+          <table id="tbl-pnl">
+            <thead>
+              <tr><th>Component</th><th class="num">Amount (USD)</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Consolidated Multi-Currency Cash Balances</h2>
+        <table id="tbl-cash">
+          <thead><tr><th>Currency</th><th class="num">Consolidated Local Balance</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tab-positions" class="hidden">
+      <div class="panel">
+        <h2>Mark-to-Market Positions</h2>
+        <table id="tbl-positions">
+          <thead>
+            <tr>
+              <th>Account</th>
+              <th>Symbol</th>
+              <th>CCY</th>
+              <th class="num">Qty</th>
+              <th class="num">Avg Cost</th>
+              <th class="num">Mark</th>
+              <th class="num">Carrying (USD)</th>
+              <th class="num">Unrealized P&amp;L</th>
+              <th>Pricing</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <h2>Open Accounting Lots (FIFO)</h2>
+        <table id="tbl-lots">
+          <thead>
+            <tr>
+              <th>Lot ID</th>
+              <th>Account</th>
+              <th>Instrument</th>
+              <th class="num">Qty</th>
+              <th class="num">Unit Cost</th>
+              <th class="num">Cost Basis</th>
+              <th>Source Event</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tab-subledger" class="hidden">
+      <div class="panel">
+        <h2>Double-Entry Trial Balance (Debits == Credits per Currency)</h2>
+        <table id="tbl-trial">
+          <thead><tr><th>Currency</th><th class="num">Total Debits</th><th class="num">Total Credits</th><th>Balanced</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <h2>Immutable Append-Only Event Log</h2>
+        <table id="tbl-events">
+          <thead>
+            <tr>
+              <th>Seq</th>
+              <th>Event ID</th>
+              <th>Type</th>
+              <th>Event Time (UTC)</th>
+              <th>Idempotency Key</th>
+              <th>Event Hash (prefix)</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tab-recon" class="hidden">
+      <div class="panel">
+        <h2>
+          <span>Broker Reconciliation &amp; Approver Workflow</span>
+          <button class="primary" id="btn-run-recon">Re-Run Read-Only Reconciliation</button>
+        </h2>
+        <div class="controls-bar">
+          <label>Actor: <input id="inp-actor" value="chief_risk_officer" /></label>
+          <label>Role:
+            <select id="sel-role">
+              <option value="VIEWER">VIEWER (Read-Only)</option>
+              <option value="OPERATOR">OPERATOR (Run Recon)</option>
+              <option value="APPROVER" selected>APPROVER (Authorize Adjustments)</option>
+            </select>
+          </label>
+          <label>Resolution Note: <input id="inp-reason" value="Confirmed with prime broker T+0 ops ticket" style="width: 280px" /></label>
+        </div>
+        <div id="recon-toast" class="toast hidden"></div>
+        <table id="tbl-breaks">
+          <thead>
+            <tr>
+              <th>Break ID</th>
+              <th>Type</th>
+              <th>Account</th>
+              <th>Target</th>
+              <th class="num">Internal</th>
+              <th class="num">Broker</th>
+              <th class="num">Diff</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tab-cod" class="hidden">
+      <div class="panel">
+        <h2>
+          <span>Close-of-Day Report &amp; Deterministic Replay Recovery</span>
+          <button class="primary" id="btn-verify-recovery">Clear Cache &amp; Verify Replay Recovery</button>
+        </h2>
+        <div id="recovery-toast" class="toast hidden"></div>
+        <pre id="cod-markdown">Loading COD report...</pre>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const fmt = (v) => {
+      const n = Number(v);
+      if (Number.isNaN(n)) return v;
+      return n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    };
+
+    const pnlClass = (v) => (Number(v) >= 0 ? "pos" : "neg");
+
+    document.querySelectorAll(".tab").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const target = btn.dataset.tab;
+        ["overview", "positions", "subledger", "recon", "cod"].forEach((id) => {
+          document.getElementById("tab-" + id).classList.toggle("hidden", id !== target);
+        });
+      });
+    });
+
+    async function loadAll() {
+      const [health, val, lots, events, journals, recon, codMd] = await Promise.all([
+        fetch("/api/v1/health").then((r) => r.json()),
+        fetch("/api/v1/portfolio/valuation").then((r) => r.json()),
+        fetch("/api/v1/portfolio/lots").then((r) => r.json()),
+        fetch("/api/v1/events").then((r) => r.json()),
+        fetch("/api/v1/journals").then((r) => r.json()),
+        fetch("/api/v1/reconciliation/runs").then((r) => r.json()),
+        fetch("/api/v1/reports/cod?format=markdown").then((r) => r.text()),
+      ]);
+
+      document.getElementById("subtitle").textContent =
+        `${val.fund_name} (${val.fund_id}) | Snapshot ${val.snapshot_id} | State Hash ${val.ledger_state_hash.slice(0, 12)}...`;
+
+      const badges = [
+        `<span class="pill ${health.hash_chain_valid ? "ok" : "err"}">HASH CHAIN: ${health.hash_chain_valid ? "VALID" : "INVALID"}</span>`,
+        `<span class="pill ${val.consolidation_check.passed ? "ok" : "err"}">CONSOLIDATION: ${val.consolidation_check.passed ? "PASS" : "FAIL"}</span>`,
+        `<span class="pill ${val.unpriced_instruments.length === 0 ? "ok" : "warn"}">UNPRICED: ${val.unpriced_instruments.length}</span>`,
+        `<span class="pill ok">LIVE EXEC: ${health.controls.live_order_execution_enabled ? "ENABLED" : "DISABLED"}</span>`,
+      ];
+      document.getElementById("header-badges").innerHTML = badges.join("");
+
+      const banner = document.getElementById("exceptions-banner");
+      if (val.exceptions.length > 0) {
+        banner.classList.remove("hidden");
+        banner.innerHTML = `<strong>Valuation Exceptions (${val.exceptions.length}):</strong> ` +
+          val.exceptions.map((e) => `[${e.code}] ${e.message}`).join(" | ");
+      } else {
+        banner.classList.add("hidden");
+      }
+
+      document.getElementById("kpi-grid").innerHTML = `
+        <div class="kpi"><label>Fund NAV (USD)</label><div class="val">$${fmt(val.fund_nav_base)}</div><div class="sub">Net Capital: $${fmt(val.net_capital_flows_base)}</div></div>
+        <div class="kpi"><label>Explained Total P&amp;L</label><div class="val ${pnlClass(val.pnl.explained_total_pnl_base)}">$${fmt(val.pnl.explained_total_pnl_base)}</div><div class="sub">Unexplained Residual: $${fmt(val.pnl.unexplained_residual_base)}</div></div>
+        <div class="kpi"><label>Total Cash (Base USD)</label><div class="val">$${fmt(val.total_cash_base)}</div><div class="sub">Unalloc: $${fmt(val.unallocated_cash_base)}</div></div>
+        <div class="kpi"><label>Gross / Net Exposure</label><div class="val">$${fmt(val.gross_exposure_base)}</div><div class="sub">Net: $${fmt(val.net_exposure_base)}</div></div>
+        <div class="kpi"><label>Immutable Events</label><div class="val">${health.event_count}</div><div class="sub">Open Recon Breaks: ${health.open_reconciliation_breaks}</div></div>
+      `;
+
+      const allAccts = [...val.strategy_valuations, ...val.unallocated_valuations];
+      document.querySelector("#tbl-accounts tbody").innerHTML = allAccts.map((a) => `
+        <tr>
+          <td class="mono">${a.account_id}</td>
+          <td>${a.strategy_id || "UNALLOCATED"}</td>
+          <td class="num">$${fmt(a.total_cash_base)}</td>
+          <td class="num">$${fmt(a.nav_base)}</td>
+          <td class="num ${pnlClass(a.pnl.explained_total_pnl_base)}">$${fmt(a.pnl.explained_total_pnl_base)}</td>
+          <td><span class="pill ${a.valuation_complete ? "ok" : "warn"}">${a.valuation_complete ? "COMPLETE" : "UNPRICED"}</span></td>
+        </tr>
+      `).join("");
+
+      const pnlRows = [
+        ["Realized Trading P&L", val.pnl.realized_trading_pnl_base],
+        ["Unrealized Price P&L", val.pnl.unrealized_price_pnl_base],
+        ["FX Translation P&L", val.pnl.fx_translation_pnl_base],
+        ["Dividend Income", val.pnl.dividend_income_base],
+        ["Fees & Commissions (incl. Late Fees)", -Number(val.pnl.fees_and_commissions_base)],
+        ["Late Fees Subset", -Number(val.pnl.late_fees_base)],
+        ["Audited Recon Adjustments", val.pnl.adjustments_base],
+        ["Explained Total P&L", val.pnl.explained_total_pnl_base],
+        ["Unexplained Residual", val.pnl.unexplained_residual_base],
+      ];
+      document.querySelector("#tbl-pnl tbody").innerHTML = pnlRows.map(([k, v]) => `
+        <tr><td>${k}</td><td class="num ${pnlClass(v)}">$${fmt(v)}</td></tr>
+      `).join("");
+
+      document.querySelector("#tbl-cash tbody").innerHTML = Object.entries(val.consolidated_cash_local).map(([ccy, amt]) => `
+        <tr><td class="mono">${ccy}</td><td class="num">${fmt(amt)} ${ccy}</td></tr>
+      `).join("");
+
+      const allPositions = allAccts.flatMap((a) => a.positions);
+      document.querySelector("#tbl-positions tbody").innerHTML = allPositions.map((p) => `
+        <tr>
+          <td class="mono">${p.account_id}</td>
+          <td class="mono">${p.symbol}</td>
+          <td class="mono">${p.currency}</td>
+          <td class="num">${p.quantity}</td>
+          <td class="num">${fmt(p.average_unit_cost)}</td>
+          <td class="num">${p.mark_price !== null ? fmt(p.mark_price) : "—"}</td>
+          <td class="num">$${fmt(p.carrying_value_base)}</td>
+          <td class="num ${pnlClass(p.unrealized_pnl_base)}">$${fmt(p.unrealized_pnl_base)}</td>
+          <td><span class="pill ${p.is_priced ? "ok" : "warn"}">${p.pricing_status}</span></td>
+        </tr>
+      `).join("");
+
+      document.querySelector("#tbl-lots tbody").innerHTML = lots.lots.map((l) => `
+        <tr>
+          <td class="mono">${l.lot_id}</td>
+          <td class="mono">${l.account_id}</td>
+          <td class="mono">${l.instrument_id}</td>
+          <td class="num">${l.quantity}</td>
+          <td class="num">${fmt(l.unit_cost)} ${l.currency}</td>
+          <td class="num">${fmt(l.cost_basis_abs)} ${l.currency}</td>
+          <td class="mono">${l.source_event_id}</td>
+        </tr>
+      `).join("");
+
+      document.querySelector("#tbl-trial tbody").innerHTML = Object.entries(journals.trial_balance).map(([ccy, tb]) => `
+        <tr>
+          <td class="mono">${ccy}</td>
+          <td class="num">${fmt(tb.debits)}</td>
+          <td class="num">${fmt(tb.credits)}</td>
+          <td><span class="pill ${tb.debits === tb.credits ? "ok" : "err"}">${tb.debits === tb.credits ? "BALANCED" : "ERROR"}</span></td>
+        </tr>
+      `).join("");
+
+      document.querySelector("#tbl-events tbody").innerHTML = events.events.map((e) => `
+        <tr>
+          <td class="mono">${e.seq_no}</td>
+          <td class="mono">${e.event_id}</td>
+          <td class="mono">${e.event_type}</td>
+          <td class="mono">${e.event_time}</td>
+          <td class="mono">${e.idempotency_key}</td>
+          <td class="mono">${e.event_hash.slice(0, 16)}...</td>
+        </tr>
+      `).join("");
+
+      const latestRun = recon.runs.length ? recon.runs[recon.runs.length - 1] : null;
+      const breaks = latestRun ? latestRun.breaks : [];
+      document.querySelector("#tbl-breaks tbody").innerHTML = breaks.length
+        ? breaks.map((b) => `
+          <tr>
+            <td class="mono">${b.break_id}</td>
+            <td class="mono">${b.break_type}</td>
+            <td class="mono">${b.account_id}</td>
+            <td class="mono">${b.instrument_id || b.currency}</td>
+            <td class="num">${b.internal_value}</td>
+            <td class="num">${b.broker_value}</td>
+            <td class="num ${pnlClass(b.difference)}">${b.difference}</td>
+            <td><span class="pill ${b.status === "OPEN" ? "warn" : "ok"}">${b.status}</span></td>
+            <td>${b.status === "OPEN"
+              ? `<button class="secondary" onclick="resolveBreak('${b.break_id}')">Post Approved Adjustment</button>`
+              : `<span class="mono">${b.resolution_event_id || "—"}</span>`}</td>
+          </tr>
+        `).join("")
+        : `<tr><td colspan="9" class="mono">Zero breaks detected in latest reconciliation run.</td></tr>`;
+
+      document.getElementById("cod-markdown").textContent = codMd;
+    }
+
+    async function resolveBreak(breakId) {
+      const actor = document.getElementById("inp-actor").value || "approver";
+      const role = document.getElementById("sel-role").value;
+      const reason = document.getElementById("inp-reason").value || "Approved adjustment";
+      const toast = document.getElementById("recon-toast");
+      const res = await fetch(`/api/v1/reconciliation/breaks/${encodeURIComponent(breakId)}/resolve`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Actor": actor, "X-Role": role },
+        body: JSON.stringify({ reason, unit_cost: "200.00" }),
+      });
+      const body = await res.json();
+      toast.classList.remove("hidden");
+      if (!res.ok) {
+        toast.textContent = `Blocked (${res.status}): ${body.error_code} — ${body.message}`;
+      } else {
+        toast.textContent = `Appended audited event ${body.adjustment_event.event_id} (seq ${body.adjustment_event.seq_no}). Historical events untouched.`;
+        await loadAll();
+      }
+    }
+
+    document.getElementById("btn-run-recon").addEventListener("click", async () => {
+      const role = document.getElementById("sel-role").value;
+      const toast = document.getElementById("recon-toast");
+      const res = await fetch("/api/v1/reconciliation/run", {
+        method: "POST",
+        headers: { "X-Role": role },
+      });
+      const body = await res.json();
+      toast.classList.remove("hidden");
+      if (!res.ok) {
+        toast.textContent = `Blocked (${res.status}): ${body.error_code} — ${body.message}`;
+      } else {
+        toast.textContent = `Completed ${body.run_id}: ${body.breaks.length} break(s), mutated_history=${body.mutated_history}`;
+        await loadAll();
+      }
+    });
+
+    document.getElementById("btn-verify-recovery").addEventListener("click", async () => {
+      const res = await fetch("/api/v1/recovery/verify", { method: "POST" });
+      const body = await res.json();
+      const toast = document.getElementById("recovery-toast");
+      toast.classList.remove("hidden");
+      toast.textContent = `Recovery check: recovered_identically=${body.recovered_identically} | hash_chain_valid=${body.hash_chain_valid} | state_hash=${body.after_replay_1_state_hash}`;
+    });
+
+    loadAll();
+  </script>
+</body>
+</html>

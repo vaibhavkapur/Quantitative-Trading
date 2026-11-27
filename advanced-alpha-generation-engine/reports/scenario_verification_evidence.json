@@ -1,0 +1,171 @@
+{
+  "all_verified": true,
+  "generated_at_utc": "2026-11-27T09:51:57.112077+00:00",
+  "scenarios": [
+    {
+      "outcome": {
+        "details": {
+          "missing_delisted_symbols": [
+            "SYN027",
+            "SYN028",
+            "SYN029",
+            "SYN030"
+          ]
+        },
+        "error_code": "SURVIVORSHIP_VIOLATION",
+        "error_type": "SurvivorshipViolationError",
+        "message": "Survivorship bias detected: 4 delisted universe members are absent from bars."
+      },
+      "scenario": "Survivorship bias",
+      "verified": true
+    },
+    {
+      "outcome": {
+        "details": {
+          "bad_splits": [
+            {
+              "action_id": "CA-0001",
+              "adj_abs_return": 0.5009484528872336,
+              "bar_date": "2023-08-15",
+              "expected_unadjusted_jump": 0.5,
+              "ratio": 2.0,
+              "symbol": "SYN001"
+            },
+            {
+              "action_id": "CA-0014",
+              "adj_abs_return": 0.6551336595055783,
+              "bar_date": "2024-01-02",
+              "expected_unadjusted_jump": 0.6666666666666667,
+              "ratio": 3.0,
+              "symbol": "SYN006"
+            },
+            {
+              "action_id": "CA-0021",
+              "adj_abs_return": 0.9754738788332651,
+              "bar_date": "2024-03-12",
+              "expected_unadjusted_jump": 1.0,
+              "ratio": 0.5,
+              "symbol": "SYN011"
+            }
+          ]
+        },
+        "error_code": "CORPORATE_ACTION_INTEGRITY_ERROR",
+        "error_type": "CorporateActionIntegrityError",
+        "message": "Detected 3 unadjusted split price discontinuities in adjusted_close."
+      },
+      "scenario": "Corporate actions",
+      "verified": true
+    },
+    {
+      "outcome": {
+        "details": {
+          "dataset": "signal_df",
+          "sample": [
+            {
+              "available_at_utc": "2023-01-31 20:50:00+00:00",
+              "event_ts_utc": "2023-01-31 21:00:00+00:00",
+              "raw_value": 0.05705612802922477,
+              "signal_id": "mom_20_5",
+              "signal_version": "1.0.0",
+              "symbol": "SYN001"
+            },
+            {
+              "available_at_utc": "2023-01-31 20:50:00+00:00",
+              "event_ts_utc": "2023-01-31 21:00:00+00:00",
+              "raw_value": -0.00019751178242766176,
+              "signal_id": "mom_20_5",
+              "signal_version": "1.0.0",
+              "symbol": "SYN002"
+            },
+            {
+              "available_at_utc": "2023-01-31 20:50:00+00:00",
+              "event_ts_utc": "2023-01-31 21:00:00+00:00",
+              "raw_value": -0.023393358783613927,
+              "signal_id": "mom_20_5",
+              "signal_version": "1.0.0",
+              "symbol": "SYN003"
+            }
+          ],
+          "violations": 11934
+        },
+        "error_code": "LOOK_AHEAD_VIOLATION",
+        "error_type": "LookAheadViolationError",
+        "message": "signal_df contains 11934 rows with available_at_utc < event_ts_utc."
+      },
+      "scenario": "Look-ahead",
+      "verified": true
+    },
+    {
+      "outcome": {
+        "details": {
+          "days_below_min_count": 0,
+          "days_below_ratio": 440,
+          "min_active_symbols_observed": 16,
+          "min_coverage_ratio_observed": 0.6154,
+          "policy_min_active_symbols": 15,
+          "policy_min_coverage_ratio": 0.9
+        },
+        "error_code": "MISSING_SYMBOL_ERROR",
+        "error_type": "MissingSymbolError",
+        "message": "Active universe symbol coverage fell below policy threshold."
+      },
+      "scenario": "Missing symbols",
+      "verified": true
+    },
+    {
+      "outcome": {
+        "details": {
+          "gate_failures": [
+            "max_peer_correlation=1.0000 with 'mom_20_5' > max 0.8500"
+          ],
+          "signal_key": "mom_20_5_dup@1.0.0",
+          "trial_id": "trial-mom-dup-val5"
+        },
+        "error_code": "PROMOTION_GATE_ERROR",
+        "error_type": "PromotionGateError",
+        "message": "Signal mom_20_5_dup@1.0.0 failed validation gates and CANNOT be promoted."
+      },
+      "scenario": "Factor duplication",
+      "verified": true
+    },
+    {
+      "observed_turnover": 0.697394,
+      "outcome": {
+        "details": {
+          "gate_failures": [
+            "oos_mean_ic=0.0139 < min 0.0150",
+            "oos_icir=0.0767 < min 0.2000",
+            "avg_daily_turnover=0.6974 > max 0.4500",
+            "net_sharpe_at_base_cost=-2.8113 < min 0.2500",
+            "stability:coefficient_sign_flip_rate=1.000 exceeds max 0.350",
+            "stability:coefficient_cv=1.906 exceeds max 1.500",
+            "bh_adjusted_pvalue=0.1180 > max 0.1000"
+          ],
+          "signal_key": "scenario_churn_noise@1.0.0",
+          "trial_id": "trial-scenario_churn_noise-0ce40426"
+        },
+        "error_code": "PROMOTION_GATE_ERROR",
+        "error_type": "PromotionGateError",
+        "message": "Signal scenario_churn_noise@1.0.0 failed validation gates and CANNOT be promoted."
+      },
+      "scenario": "High turnover",
+      "verified": true
+    },
+    {
+      "outcome": {
+        "coefficient_cv": 100.0,
+        "coefficient_sign_flip_rate": 1.0,
+        "ic_sign_consistency": 0.5,
+        "is_stable": false,
+        "max_fold_ic_drop": 0.06,
+        "reasons": [
+          "coefficient_sign_flip_rate=1.000 exceeds max 0.350",
+          "coefficient_cv=100.000 exceeds max 1.500"
+        ]
+      },
+      "scenario": "Unstable coefficients",
+      "verified": true
+    }
+  ],
+  "total_scenarios_verified": 7
+}

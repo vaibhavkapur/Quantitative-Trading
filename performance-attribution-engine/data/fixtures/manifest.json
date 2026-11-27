@@ -1,0 +1,35 @@
+{
+  "entitlement_policy": "All fixtures are 100% synthetic and explicitly permitted for local testing and CI.",
+  "fixtures": [
+    {
+      "batch_id": "BATCH-SAAT-MULTI-2026Q1-V1_BASELINE",
+      "data_source": "SYNTHETIC_FIXTURE_SEED_42",
+      "description": "10-day synthetic multi-strategy, multi-currency (USD/EUR/GBP) portfolio with trades, cash flows, Brinson benchmark, and 4 risk factors.",
+      "entitlement_tag": "PERMITTED_SYNTHETIC",
+      "file": "multi_strategy_multi_ccy_baseline.json",
+      "portfolio_id": "PORT_SAAT_MULTI",
+      "sha256": "11fb50182f172a4b25cda84b64dc7eca16a373f4d05a34b7dfa34eecdc086c51"
+    },
+    {
+      "batch_id": "BATCH-SAAT-MULTI-2026Q1-V2_FEE_CORRECTION",
+      "data_source": "SYNTHETIC_FIXTURE_SEED_42",
+      "description": "Revised 10-day dataset incorporating a retroactive prime-broker fee rebate on 2026-01-09 to demonstrate immutable v2 revision superseding v1.",
+      "entitlement_tag": "PERMITTED_SYNTHETIC",
+      "file": "multi_strategy_fee_correction_v2.json",
+      "portfolio_id": "PORT_SAAT_MULTI",
+      "sha256": "e7c51c70976d369c94e2128da0b41d6e6d387616dbf94a4ae051a1531d60d9ba"
+    },
+    {
+      "batch_id": "BATCH-HAND-WORKED-01",
+      "data_source": "HAND_WORKED_VERIFICATION_CASE",
+      "description": "2-day exact rational hand-worked portfolio (USD + EUR, SOD cash flow, intraday BUY rebalance, commission, management fee, Brinson benchmark).",
+      "entitlement_tag": "PERMITTED_SYNTHETIC",
+      "file": "hand_worked_portfolio.json",
+      "portfolio_id": "PORT_HAND_WORKED",
+      "sha256": "7d610df68db584cd4dc2ce54387c1b20167b236a973b3c1979aa8caf25acad80"
+    }
+  ],
+  "generator": "data/fixtures/generate_fixtures.py",
+  "manifest_version": "1.0.0",
+  "seed": 42
+}

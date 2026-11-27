@@ -1,0 +1,40 @@
+test_http_rest_api_and_dashboard_end_to_end (integration.test_pipeline_storage_and_api.TestPipelineStorageRBACAndAPI) ... ok
+test_versioned_lifecycle_rbac_dual_control_and_tamper_detection (integration.test_pipeline_storage_and_api.TestPipelineStorageRBACAndAPI) ... ok
+test_scenario_1_external_cash_flow (scenarios.test_required_scenarios.TestRequiredScenarios)
+External cash flow: huge SOD subscription & EOD redemption must not distort TWR. ... ok
+test_scenario_2_zero_nav (scenarios.test_required_scenarios.TestRequiredScenarios)
+Zero nav: full SOD redemption causing capital_base == 0 emits CRITICAL ZERO_NAV without NaN/Inf. ... ok
+test_scenario_3_fee_corrections (scenarios.test_required_scenarios.TestRequiredScenarios)
+Fee corrections: retroactive fee adjustment creates immutable revised v2 superseding v1. ... ok
+test_scenario_4_currency_conversion (scenarios.test_required_scenarios.TestRequiredScenarios)
+Currency conversion: multi-ccy FX translation/interaction + stale/missing FX fault detection. ... ok
+test_scenario_5_missing_benchmark (scenarios.test_required_scenarios.TestRequiredScenarios)
+Missing benchmark: missing date withholds cumulative active return and emits structured warning. ... ok
+test_scenario_6_rebalance (scenarios.test_required_scenarios.TestRequiredScenarios)
+Rebalance: intraday full exit + new entry + partial trim reconcile cleanly with trade provenance. ... ok
+test_scenario_7_rounding_residual (scenarios.test_required_scenarios.TestRequiredScenarios)
+Rounding residual: sub-tolerance residual reconciles & displays explicitly; breach triggers ERROR. ... ok
+test_factor_regression_recovers_exact_betas_and_includes_non_causation_disclaimer (unit.test_brinson_factors_tca.TestFactorAndAdapters) ... ok
+test_upstream_adapters_convert_cleanly (unit.test_brinson_factors_tca.TestFactorAndAdapters) ... ok
+test_exact_fx_decomposition_local_plus_translation_plus_interaction (unit.test_contribution_and_fx.TestContributionAndFx) ... ok
+test_quantity_mismatch_and_orphan_trade_flagged (unit.test_contribution_and_fx.TestContributionAndFx) ... ok
+test_config_hash_deterministic (unit.test_domain_and_returns.TestConfigAndValidation) ... ok
+test_gross_net_separation_cannot_be_disabled (unit.test_domain_and_returns.TestConfigAndValidation) ... ok
+test_live_environment_mode_rejected_at_mvp (unit.test_domain_and_returns.TestConfigAndValidation) ... ok
+test_lookahead_availability_emits_warning (unit.test_domain_and_returns.TestConfigAndValidation) ... ok
+test_order_execution_strictly_prohibited (unit.test_domain_and_returns.TestConfigAndValidation) ... ok
+test_validation_rejects_duplicate_nav_dates_and_non_utc (unit.test_domain_and_returns.TestConfigAndValidation) ... ok
+test_benchmark_currency_alignment_with_fx_conversion (unit.test_domain_and_returns.TestReturnAndCarinoMath) ... ok
+test_carino_weights_link_exact_cumulative_return (unit.test_domain_and_returns.TestReturnAndCarinoMath) ... ok
+test_carino_weights_zero_return_limit (unit.test_domain_and_returns.TestReturnAndCarinoMath) ... ok
+test_hand_worked_2day_multiccy_rebalance_cashflow_portfolio (unit.test_hand_worked_portfolios.TestHandWorkedPortfolios)
+Verify 2-day USD+EUR portfolio with SOD cash flow, trade, commission, and fee to 1e-10. ... ok
+test_hand_worked_3_sector_brinson_fachler_and_bhb (unit.test_hand_worked_portfolios.TestHandWorkedPortfolios)
+Exact paper calculation for 3-sector Brinson-Fachler and Brinson-Hood-Beebower. ... ok
+test_hand_worked_sell_side_tca_price_improvement (unit.test_hand_worked_portfolios.TestHandWorkedPortfolios)
+Verify SELL trade where execution beats arrival price yields negative impact (price improvement). ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.087s
+
+OK

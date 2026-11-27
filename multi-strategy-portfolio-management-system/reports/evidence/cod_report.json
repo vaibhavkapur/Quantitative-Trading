@@ -1,0 +1,388 @@
+{
+  "base_currency": "USD",
+  "fund_id": "FUND-SAAT-MAIN",
+  "generated_at": "2026-11-27T10:14:03.359908Z",
+  "hash_chain_valid": true,
+  "ledger_event_count": 18,
+  "ledger_last_seq_no": 18,
+  "ledger_state_hash": "05bd03d1d8cd623b8486477537e8cc02a771b7a902259306c1deac9350c30d7e",
+  "reconciliation": {
+    "breaks": [
+      {
+        "account_id": "ACCT-STRAT-STATARB",
+        "break_id": "RECON-0001-PB-STMT-20260115-EOD-BRK-001",
+        "break_type": "POSITION_QUANTITY_BREAK",
+        "broker_value": "395",
+        "currency": "EUR",
+        "description": "Position quantity mismatch for EQ-SAP-DE in ACCT-STRAT-STATARB: internal=400, broker=395, diff=-5.",
+        "difference": "-5",
+        "instrument_id": "EQ-SAP-DE",
+        "internal_value": "400",
+        "resolution_event_id": null,
+        "resolution_note": null,
+        "resolved_by": null,
+        "run_id": "RECON-0001-PB-STMT-20260115-EOD",
+        "severity": "HIGH",
+        "status": "OPEN"
+      },
+      {
+        "account_id": "ACCT-STRAT-STATARB",
+        "break_id": "RECON-0001-PB-STMT-20260115-EOD-BRK-002",
+        "break_type": "CASH_BALANCE_BREAK",
+        "broker_value": "19960.00",
+        "currency": "EUR",
+        "description": "Cash balance mismatch in ACCT-STRAT-STATARB (EUR): internal=19985.00, broker=19960.00, diff=-25.00.",
+        "difference": "-25.00",
+        "instrument_id": null,
+        "internal_value": "19985.00",
+        "resolution_event_id": null,
+        "resolution_note": null,
+        "resolved_by": null,
+        "run_id": "RECON-0001-PB-STMT-20260115-EOD",
+        "severity": "MEDIUM",
+        "status": "OPEN"
+      }
+    ],
+    "broker_name": "SYNTHETIC_PRIME_BROKER_ALPHA",
+    "cash_balances_checked": 6,
+    "executed_at": "2026-11-27T10:14:03.358077Z",
+    "ledger_last_seq_no": 17,
+    "ledger_state_hash": "4a8622ef3ffa2b31cbbfef3fa9ea1e08e28edf95f8c4c230270057989228829e",
+    "mutated_history": false,
+    "positions_checked": 5,
+    "run_id": "RECON-0001-PB-STMT-20260115-EOD",
+    "statement_id": "PB-STMT-20260115-EOD"
+  },
+  "replay_verified": true,
+  "report_id": "COD-SNAP-COD-20260115-SEQ18",
+  "valuation": {
+    "as_of_time": "2026-01-15T21:00:00Z",
+    "base_currency": "USD",
+    "consolidated_cash_local": {
+      "EUR": "19985.00",
+      "GBP": "19988.00",
+      "USD": "673828.0000"
+    },
+    "consolidated_positions": {
+      "EQ-AAPL-US": "2010",
+      "EQ-AZN-UK": "250",
+      "EQ-MSFT-US": "-100",
+      "EQ-SAP-DE": "400",
+      "EQ-UNPRICED-US": "100"
+    },
+    "consolidation_check": {
+      "cash_difference_base": "0.000000",
+      "fund_cash_base": "721595.960000",
+      "fund_nav_base": "1014733.960000",
+      "fund_pnl_base": "14733.960000",
+      "nav_difference_base": "0.000000",
+      "passed": true,
+      "pnl_difference_base": "0.000000",
+      "strategies_plus_unallocated_cash_base": "721595.960000",
+      "strategies_plus_unallocated_nav_base": "1014733.960000",
+      "strategies_plus_unallocated_pnl_base": "14733.960000"
+    },
+    "exceptions": [
+      {
+        "account_id": "ACCT-STRAT-MACRO",
+        "code": "MISSING_MARK",
+        "currency": "USD",
+        "instrument_id": "EQ-UNPRICED-US",
+        "message": "No market price for ILLIQ (EQ-UNPRICED-US) in snapshot SNAP-COD-20260115; carrying at cost basis and flagging unpriced."
+      }
+    ],
+    "fund_id": "FUND-SAAT-MAIN",
+    "fund_name": "SAAT Multi-Strategy Master Fund",
+    "fund_nav_base": "1014733.960000",
+    "gross_exposure_base": "374138.000000",
+    "ledger_last_seq_no": 18,
+    "ledger_state_hash": "05bd03d1d8cd623b8486477537e8cc02a771b7a902259306c1deac9350c30d7e",
+    "net_capital_flows_base": "1000000.00",
+    "net_exposure_base": "293138.000000",
+    "pnl": {
+      "adjustments_base": "0",
+      "dividend_income_base": "500.00",
+      "explained_total_pnl_base": "14733.960000",
+      "fees_and_commissions_base": "224.040000",
+      "fx_translation_pnl_base": "3000.000000",
+      "late_fees_base": "45.50",
+      "nav_minus_net_capital_base": "14733.960000",
+      "realized_trading_pnl_base": "2000.00",
+      "unexplained_residual_base": "0.000000",
+      "unrealized_price_pnl_base": "9458.000000"
+    },
+    "priced_market_value_base": "288138.000000",
+    "snapshot_id": "SNAP-COD-20260115",
+    "strategy_cash_base": "621715.960000",
+    "strategy_valuations": [
+      {
+        "account_id": "ACCT-STRAT-MACRO",
+        "account_name": "Multi-Currency Macro & Rates Strategy",
+        "account_type": "STRATEGY",
+        "base_currency": "USD",
+        "cash_balances_base": {
+          "GBP": "25384.760000",
+          "USD": "132494.00"
+        },
+        "cash_balances_local": {
+          "GBP": "19988.00",
+          "USD": "132494.00"
+        },
+        "gross_exposure_base": "44370.000000",
+        "nav_base": "202248.760000",
+        "net_capital_flows_base": "200000.00",
+        "net_exposure_base": "44370.000000",
+        "pnl": {
+          "adjustments_base": "0",
+          "dividend_income_base": "0",
+          "explained_total_pnl_base": "2248.760000",
+          "fees_and_commissions_base": "21.240000",
+          "fx_translation_pnl_base": "1000.000000",
+          "late_fees_base": "0",
+          "nav_minus_net_capital_base": "2248.760000",
+          "realized_trading_pnl_base": "0",
+          "unexplained_residual_base": "0.000000",
+          "unrealized_price_pnl_base": "1270.000000"
+        },
+        "positions": [
+          {
+            "account_id": "ACCT-STRAT-MACRO",
+            "average_unit_cost": "120.00",
+            "carrying_value_base": "39370.000000",
+            "carrying_value_local": "31000.00",
+            "currency": "GBP",
+            "fx_rate_to_base": "1.2700",
+            "gross_exposure_base": "39370.000000",
+            "instrument_id": "EQ-AZN-UK",
+            "is_priced": true,
+            "mark_price": "124.00",
+            "mark_timestamp": "2026-01-15T16:35:00Z",
+            "multiplier": "1",
+            "net_exposure_base": "39370.000000",
+            "pricing_status": "PRICED",
+            "quantity": "250",
+            "signed_cost_basis_local": "30000.00",
+            "strategy_id": "STRAT-MACRO",
+            "symbol": "AZN",
+            "unrealized_pnl_base": "1270.000000",
+            "unrealized_pnl_local": "1000.00"
+          },
+          {
+            "account_id": "ACCT-STRAT-MACRO",
+            "average_unit_cost": "50.00",
+            "carrying_value_base": "5000.00",
+            "carrying_value_local": "5000.00",
+            "currency": "USD",
+            "fx_rate_to_base": "1",
+            "gross_exposure_base": "5000.00",
+            "instrument_id": "EQ-UNPRICED-US",
+            "is_priced": false,
+            "mark_price": null,
+            "mark_timestamp": null,
+            "multiplier": "1",
+            "net_exposure_base": "5000.00",
+            "pricing_status": "MISSING_MARK",
+            "quantity": "100",
+            "signed_cost_basis_local": "5000.00",
+            "strategy_id": "STRAT-MACRO",
+            "symbol": "ILLIQ",
+            "unrealized_pnl_base": "0",
+            "unrealized_pnl_local": "0"
+          }
+        ],
+        "priced_market_value_base": "39370.000000",
+        "strategy_id": "STRAT-MACRO",
+        "total_cash_base": "157878.760000",
+        "unpriced_cost_basis_base": "5000.00",
+        "unpriced_instruments": [
+          "EQ-UNPRICED-US"
+        ],
+        "valuation_complete": false
+      },
+      {
+        "account_id": "ACCT-STRAT-MOM",
+        "account_name": "US Equity Momentum Strategy",
+        "account_type": "STRATEGY",
+        "base_currency": "USD",
+        "cash_balances_base": {
+          "USD": "251464.0000"
+        },
+        "cash_balances_local": {
+          "USD": "251464.0000"
+        },
+        "gross_exposure_base": "237480.00",
+        "nav_base": "407944.0000",
+        "net_capital_flows_base": "400000.00",
+        "net_exposure_base": "156480.00",
+        "pnl": {
+          "adjustments_base": "0",
+          "dividend_income_base": "500.00",
+          "explained_total_pnl_base": "7944.00",
+          "fees_and_commissions_base": "56.00",
+          "fx_translation_pnl_base": "0",
+          "late_fees_base": "45.50",
+          "nav_minus_net_capital_base": "7944.0000",
+          "realized_trading_pnl_base": "2000.00",
+          "unexplained_residual_base": "0.0000",
+          "unrealized_price_pnl_base": "5500.00"
+        },
+        "positions": [
+          {
+            "account_id": "ACCT-STRAT-MOM",
+            "average_unit_cost": "95.51243781094527363184079602",
+            "carrying_value_base": "196980.00",
+            "carrying_value_local": "196980.00",
+            "currency": "USD",
+            "fx_rate_to_base": "1",
+            "gross_exposure_base": "196980.00",
+            "instrument_id": "EQ-AAPL-US",
+            "is_priced": true,
+            "mark_price": "98.00",
+            "mark_timestamp": "2026-01-15T21:00:00Z",
+            "multiplier": "1",
+            "net_exposure_base": "196980.00",
+            "pricing_status": "PRICED",
+            "quantity": "2010",
+            "signed_cost_basis_local": "191980.00",
+            "strategy_id": "STRAT-MOMENTUM",
+            "symbol": "AAPL",
+            "unrealized_pnl_base": "5000.00",
+            "unrealized_pnl_local": "5000.00"
+          },
+          {
+            "account_id": "ACCT-STRAT-MOM",
+            "average_unit_cost": "410.00",
+            "carrying_value_base": "-40500.00",
+            "carrying_value_local": "-40500.00",
+            "currency": "USD",
+            "fx_rate_to_base": "1",
+            "gross_exposure_base": "40500.00",
+            "instrument_id": "EQ-MSFT-US",
+            "is_priced": true,
+            "mark_price": "405.00",
+            "mark_timestamp": "2026-01-15T21:00:00Z",
+            "multiplier": "1",
+            "net_exposure_base": "-40500.00",
+            "pricing_status": "PRICED",
+            "quantity": "-100",
+            "signed_cost_basis_local": "-41000.00",
+            "strategy_id": "STRAT-MOMENTUM",
+            "symbol": "MSFT",
+            "unrealized_pnl_base": "500.00",
+            "unrealized_pnl_local": "500.00"
+          }
+        ],
+        "priced_market_value_base": "156480.00",
+        "strategy_id": "STRAT-MOMENTUM",
+        "total_cash_base": "251464.0000",
+        "unpriced_cost_basis_base": "0",
+        "unpriced_instruments": [],
+        "valuation_complete": true
+      },
+      {
+        "account_id": "ACCT-STRAT-STATARB",
+        "account_name": "Global Equity StatArb Strategy",
+        "account_type": "STRATEGY",
+        "base_currency": "USD",
+        "cash_balances_base": {
+          "EUR": "22383.200000",
+          "USD": "189990.00"
+        },
+        "cash_balances_local": {
+          "EUR": "19985.00",
+          "USD": "189990.00"
+        },
+        "gross_exposure_base": "92288.000000",
+        "nav_base": "304661.200000",
+        "net_capital_flows_base": "300000.00",
+        "net_exposure_base": "92288.000000",
+        "pnl": {
+          "adjustments_base": "0",
+          "dividend_income_base": "0",
+          "explained_total_pnl_base": "4661.200000",
+          "fees_and_commissions_base": "26.800000",
+          "fx_translation_pnl_base": "2000.000000",
+          "late_fees_base": "0",
+          "nav_minus_net_capital_base": "4661.200000",
+          "realized_trading_pnl_base": "0",
+          "unexplained_residual_base": "0.000000",
+          "unrealized_price_pnl_base": "2688.000000"
+        },
+        "positions": [
+          {
+            "account_id": "ACCT-STRAT-STATARB",
+            "average_unit_cost": "200.00",
+            "carrying_value_base": "92288.000000",
+            "carrying_value_local": "82400.00",
+            "currency": "EUR",
+            "fx_rate_to_base": "1.1200",
+            "gross_exposure_base": "92288.000000",
+            "instrument_id": "EQ-SAP-DE",
+            "is_priced": true,
+            "mark_price": "206.00",
+            "mark_timestamp": "2026-01-15T16:35:00Z",
+            "multiplier": "1",
+            "net_exposure_base": "92288.000000",
+            "pricing_status": "PRICED",
+            "quantity": "400",
+            "signed_cost_basis_local": "80000.00",
+            "strategy_id": "STRAT-STATARB",
+            "symbol": "SAP",
+            "unrealized_pnl_base": "2688.000000",
+            "unrealized_pnl_local": "2400.00"
+          }
+        ],
+        "priced_market_value_base": "92288.000000",
+        "strategy_id": "STRAT-STATARB",
+        "total_cash_base": "212373.200000",
+        "unpriced_cost_basis_base": "0",
+        "unpriced_instruments": [],
+        "valuation_complete": true
+      }
+    ],
+    "total_cash_base": "721595.960000",
+    "unallocated_cash_base": "99880.00",
+    "unallocated_valuations": [
+      {
+        "account_id": "ACCT-FUND-UNALLOC",
+        "account_name": "Master Fund Unallocated Cash Treasury",
+        "account_type": "FUND_UNALLOCATED",
+        "base_currency": "USD",
+        "cash_balances_base": {
+          "USD": "99880.00"
+        },
+        "cash_balances_local": {
+          "USD": "99880.00"
+        },
+        "gross_exposure_base": "0",
+        "nav_base": "99880.00",
+        "net_capital_flows_base": "100000.00",
+        "net_exposure_base": "0",
+        "pnl": {
+          "adjustments_base": "0",
+          "dividend_income_base": "0",
+          "explained_total_pnl_base": "-120.00",
+          "fees_and_commissions_base": "120.00",
+          "fx_translation_pnl_base": "0",
+          "late_fees_base": "0",
+          "nav_minus_net_capital_base": "-120.00",
+          "realized_trading_pnl_base": "0",
+          "unexplained_residual_base": "0.00",
+          "unrealized_price_pnl_base": "0"
+        },
+        "positions": [],
+        "priced_market_value_base": "0",
+        "strategy_id": null,
+        "total_cash_base": "99880.00",
+        "unpriced_cost_basis_base": "0",
+        "unpriced_instruments": [],
+        "valuation_complete": true
+      }
+    ],
+    "unpriced_cost_basis_base": "5000.00",
+    "unpriced_instruments": [
+      "EQ-UNPRICED-US"
+    ],
+    "valuation_complete": false
+  }
+}

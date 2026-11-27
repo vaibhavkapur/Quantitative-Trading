@@ -1,0 +1,521 @@
+{
+  "adapter_ob_imbalance_5d@1.0.0": {
+    "evaluation_summary": {
+      "avg_daily_turnover": 0.230141,
+      "bh_adjusted_pvalue": 0.181227,
+      "bootstrap_ic_ci": [
+        -0.012241,
+        0.039942
+      ],
+      "gate_failures": [
+        "oos_mean_ic=0.0148 < min 0.0150",
+        "oos_icir=0.0775 < min 0.2000",
+        "net_sharpe_at_base_cost=-0.4526 < min 0.2500",
+        "stability:coefficient_sign_flip_rate=0.667 exceeds max 0.350",
+        "stability:coefficient_cv=20.304 exceeds max 1.500",
+        "bh_adjusted_pvalue=0.1812 > max 0.1000"
+      ],
+      "max_abs_sector_exposure": 0.015364,
+      "max_peer_correlation": 0.036272,
+      "most_correlated_peer": "adapter_pairs_spread_30d",
+      "net_sharpe_at_base_cost": -0.4526,
+      "oos_icir": 0.0775,
+      "oos_mean_ic": 0.014782,
+      "passed_gates": false
+    },
+    "latest_trial_id": "trial-adapter_ob_imbalance_5d-4d867906",
+    "promoted_at_utc": null,
+    "promoted_by": null,
+    "signal_definition": {
+      "causal_guarantee": "strict_point_in_time_available_at_utc",
+      "description": "Clean-room contract adapter for 07-quantum-order-book-predictor: volume-weighted close-location-value proxy when L2 order book feeds are absent.",
+      "family": "adapter_legacy",
+      "horizon_bars": 5,
+      "inputs_required": [
+        "market_bars"
+      ],
+      "lookback_bars": 5,
+      "name": "Order-Book Imbalance Proxy (5d)",
+      "parameters": {
+        "feed_mode": "ohlcv_proxy",
+        "smoothing_days": 5
+      },
+      "signal_id": "adapter_ob_imbalance_5d",
+      "version": "1.0.0"
+    },
+    "status": "rejected"
+  },
+  "adapter_pairs_spread_30d@1.0.0": {
+    "evaluation_summary": {
+      "avg_daily_turnover": 0.134762,
+      "bh_adjusted_pvalue": 0.999995,
+      "bootstrap_ic_ci": [
+        -0.068703,
+        -0.025472
+      ],
+      "gate_failures": [
+        "oos_mean_ic=-0.0478 < min 0.0150",
+        "oos_icir=-0.2902 < min 0.2000",
+        "net_sharpe_at_base_cost=-1.6147 < min 0.2500",
+        "stability:ic_sign_consistency=0.000 below min 0.500",
+        "bh_adjusted_pvalue=1.0000 > max 0.1000"
+      ],
+      "max_abs_sector_exposure": 0.040543,
+      "max_peer_correlation": 0.56842,
+      "most_correlated_peer": "mom_20_5",
+      "net_sharpe_at_base_cost": -1.6147,
+      "oos_icir": -0.2902,
+      "oos_mean_ic": -0.04781,
+      "passed_gates": false
+    },
+    "latest_trial_id": "trial-adapter_pairs_spread_30d-f464c15b",
+    "promoted_at_utc": null,
+    "promoted_by": null,
+    "signal_definition": {
+      "causal_guarantee": "strict_point_in_time_available_at_utc",
+      "description": "Clean-room contract adapter for 10-quantum-pairs-trading: log-price spread vs sector median normalized by rolling spread volatility.",
+      "family": "adapter_legacy",
+      "horizon_bars": 5,
+      "inputs_required": [
+        "market_bars"
+      ],
+      "lookback_bars": 30,
+      "name": "Intra-Sector Pairs Spread Z-Score (30d)",
+      "parameters": {
+        "window_days": 30
+      },
+      "signal_id": "adapter_pairs_spread_30d",
+      "version": "1.0.0"
+    },
+    "status": "rejected"
+  },
+  "adapter_stat_arb_z_20d@1.0.0": {
+    "evaluation_summary": {
+      "avg_daily_turnover": 0.172636,
+      "bh_adjusted_pvalue": 0.439414,
+      "bootstrap_ic_ci": [
+        -0.01877,
+        0.026023
+      ],
+      "gate_failures": [
+        "oos_mean_ic=0.0039 < min 0.0150",
+        "oos_icir=0.0221 < min 0.2000",
+        "stability:coefficient_cv=8.220 exceeds max 1.500",
+        "bh_adjusted_pvalue=0.4394 > max 0.1000"
+      ],
+      "max_abs_sector_exposure": 0.019947,
+      "max_peer_correlation": 0.472235,
+      "most_correlated_peer": "adapter_pairs_spread_30d",
+      "net_sharpe_at_base_cost": 0.3342,
+      "oos_icir": 0.0221,
+      "oos_mean_ic": 0.003942,
+      "passed_gates": false
+    },
+    "latest_trial_id": "trial-adapter_stat_arb_z_20d-8e15ae22",
+    "promoted_at_utc": null,
+    "promoted_by": null,
+    "signal_definition": {
+      "causal_guarantee": "strict_point_in_time_available_at_utc",
+      "description": "Clean-room contract adapter for 01-quantum-statistical-arbitrage: rolling negative z-score of cumulative return relative to sector mean.",
+      "family": "adapter_legacy",
+      "horizon_bars": 5,
+      "inputs_required": [
+        "market_bars"
+      ],
+      "lookback_bars": 21,
+      "name": "Stat-Arb Sector Residual Z-Score (20d)",
+      "parameters": {
+        "window_days": 20
+      },
+      "signal_id": "adapter_stat_arb_z_20d",
+      "version": "1.0.0"
+    },
+    "status": "rejected"
+  },
+  "inv_vol_20d@1.0.0": {
+    "evaluation_summary": {
+      "avg_daily_turnover": 0.19401,
+      "bh_adjusted_pvalue": 0.000585,
+      "bootstrap_ic_ci": [
+        0.020721,
+        0.072063
+      ],
+      "gate_failures": [
+        "max_abs_sector_exposure=0.1242 > max 0.1000"
+      ],
+      "max_abs_sector_exposure": 0.124246,
+      "max_peer_correlation": 0.104327,
+      "most_correlated_peer": "val_earnings_yield",
+      "net_sharpe_at_base_cost": 0.8792,
+      "oos_icir": 0.2322,
+      "oos_mean_ic": 0.045769,
+      "passed_gates": false
+    },
+    "latest_trial_id": "trial-inv_vol_20d-59a72424",
+    "promoted_at_utc": null,
+    "promoted_by": null,
+    "signal_definition": {
+      "causal_guarantee": "strict_point_in_time_available_at_utc",
+      "description": "Negative 20-day rolling standard deviation of daily adjusted returns.",
+      "family": "volatility",
+      "horizon_bars": 5,
+      "inputs_required": [
+        "market_bars"
+      ],
+      "lookback_bars": 21,
+      "name": "Inverse Realized Volatility (20d)",
+      "parameters": {
+        "window_days": 20
+      },
+      "signal_id": "inv_vol_20d",
+      "version": "1.0.0"
+    },
+    "status": "rejected"
+  },
+  "ml_gbdt_baseline@1.0.0": {
+    "evaluation_summary": {
+      "avg_daily_turnover": 0.120522,
+      "bh_adjusted_pvalue": 6e-05,
+      "bootstrap_ic_ci": [
+        0.03271,
+        0.086464
+      ],
+      "gate_failures": [],
+      "max_abs_sector_exposure": 0.022123,
+      "max_peer_correlation": 0.621892,
+      "most_correlated_peer": "ml_ridge_baseline",
+      "net_sharpe_at_base_cost": 2.1973,
+      "oos_icir": 0.2901,
+      "oos_mean_ic": 0.059088,
+      "passed_gates": true
+    },
+    "latest_trial_id": "trial-ml_gbdt_baseline-12b2da3c",
+    "promoted_at_utc": "2026-11-27T09:51:56.548234Z",
+    "promoted_by": "saat-research-committee (PAPER-APPROVAL-2026-001)",
+    "signal_definition": {
+      "causal_guarantee": "strict_point_in_time_available_at_utc",
+      "description": "Shallow L2-regularized histogram gradient-boosted tree baseline using scikit-learn.",
+      "family": "statistical_ml",
+      "horizon_bars": 5,
+      "inputs_required": [
+        "feature_matrix"
+      ],
+      "lookback_bars": 60,
+      "name": "Regularized GBDT Baseline (sklearn)",
+      "parameters": {
+        "l2_regularization": 15.0,
+        "learning_rate": 0.05,
+        "max_depth": 2,
+        "max_iter": 40,
+        "seed": 42
+      },
+      "signal_id": "ml_gbdt_baseline",
+      "version": "1.0.0"
+    },
+    "status": "promoted"
+  },
+  "ml_ridge_baseline@1.0.0": {
+    "evaluation_summary": {
+      "avg_daily_turnover": 0.13564,
+      "bh_adjusted_pvalue": 0.181227,
+      "bootstrap_ic_ci": [
+        -0.010651,
+        0.038361
+      ],
+      "gate_failures": [
+        "oos_mean_ic=0.0140 < min 0.0150",
+        "oos_icir=0.0758 < min 0.2000",
+        "stability:ic_sign_consistency=0.250 below min 0.500",
+        "bh_adjusted_pvalue=0.1812 > max 0.1000"
+      ],
+      "max_abs_sector_exposure": 0.022906,
+      "max_peer_correlation": 0.658883,
+      "most_correlated_peer": "val_earnings_yield",
+      "net_sharpe_at_base_cost": 1.3192,
+      "oos_icir": 0.0758,
+      "oos_mean_ic": 0.013969,
+      "passed_gates": false
+    },
+    "latest_trial_id": "trial-ml_ridge_baseline-6b754f4b",
+    "promoted_at_utc": null,
+    "promoted_by": null,
+    "signal_definition": {
+      "causal_guarantee": "strict_point_in_time_available_at_utc",
+      "description": "L2-regularized cross-sectional Ridge regression trained strictly on walk-forward history.",
+      "family": "statistical_ml",
+      "horizon_bars": 5,
+      "inputs_required": [
+        "feature_matrix"
+      ],
+      "lookback_bars": 60,
+      "name": "Ridge Linear Baseline (alpha=75.0)",
+      "parameters": {
+        "alpha": 75.0,
+        "model": "sklearn.linear_model.Ridge"
+      },
+      "signal_id": "ml_ridge_baseline",
+      "version": "1.0.0"
+    },
+    "status": "rejected"
+  },
+  "mom_20_5@1.0.0": {
+    "evaluation_summary": {
+      "avg_daily_turnover": 0.130533,
+      "bh_adjusted_pvalue": 6e-05,
+      "bootstrap_ic_ci": [
+        0.029502,
+        0.072533
+      ],
+      "gate_failures": [],
+      "max_abs_sector_exposure": 0.026764,
+      "max_peer_correlation": 0.599732,
+      "most_correlated_peer": "stat_equal_composite",
+      "net_sharpe_at_base_cost": 1.3112,
+      "oos_icir": 0.2815,
+      "oos_mean_ic": 0.050128,
+      "passed_gates": true
+    },
+    "latest_trial_id": "trial-mom_20_5-b760946b",
+    "promoted_at_utc": "2026-11-27T09:51:56.579946Z",
+    "promoted_by": "saat-research-committee (PAPER-APPROVAL-2026-001)",
+    "signal_definition": {
+      "causal_guarantee": "strict_point_in_time_available_at_utc",
+      "description": "Cumulative adjusted return from t-20 to t-5, using corporate-action adjusted_close.",
+      "family": "momentum",
+      "horizon_bars": 5,
+      "inputs_required": [
+        "market_bars"
+      ],
+      "lookback_bars": 20,
+      "name": "Price Momentum (20d skip 5d)",
+      "parameters": {
+        "lookback_days": 20,
+        "skip_days": 5
+      },
+      "signal_id": "mom_20_5",
+      "version": "1.0.0"
+    },
+    "status": "promoted"
+  },
+  "mom_60_5@1.0.0": {
+    "evaluation_summary": {
+      "avg_daily_turnover": 0.0683,
+      "bh_adjusted_pvalue": 0.004546,
+      "bootstrap_ic_ci": [
+        0.011314,
+        0.060179
+      ],
+      "gate_failures": [
+        "oos_icir=0.1887 < min 0.2000",
+        "stability:coefficient_sign_flip_rate=0.667 exceeds max 0.350",
+        "stability:coefficient_cv=2.302 exceeds max 1.500"
+      ],
+      "max_abs_sector_exposure": 0.042593,
+      "max_peer_correlation": 0.628065,
+      "most_correlated_peer": "stat_equal_composite",
+      "net_sharpe_at_base_cost": 0.9717,
+      "oos_icir": 0.1887,
+      "oos_mean_ic": 0.035205,
+      "passed_gates": false
+    },
+    "latest_trial_id": "trial-mom_60_5-1f1dc4d0",
+    "promoted_at_utc": null,
+    "promoted_by": null,
+    "signal_definition": {
+      "causal_guarantee": "strict_point_in_time_available_at_utc",
+      "description": "Cumulative adjusted return from t-60 to t-5, using corporate-action adjusted_close.",
+      "family": "momentum",
+      "horizon_bars": 5,
+      "inputs_required": [
+        "market_bars"
+      ],
+      "lookback_bars": 60,
+      "name": "Price Momentum (60d skip 5d)",
+      "parameters": {
+        "lookback_days": 60,
+        "skip_days": 5
+      },
+      "signal_id": "mom_60_5",
+      "version": "1.0.0"
+    },
+    "status": "rejected"
+  },
+  "qual_roe@1.0.0": {
+    "evaluation_summary": {
+      "avg_daily_turnover": 0.027997,
+      "bh_adjusted_pvalue": 0.214948,
+      "bootstrap_ic_ci": [
+        -0.009747,
+        0.034582
+      ],
+      "gate_failures": [
+        "oos_mean_ic=0.0118 < min 0.0150",
+        "oos_icir=0.0640 < min 0.2000",
+        "stability:coefficient_cv=1.768 exceeds max 1.500",
+        "bh_adjusted_pvalue=0.2149 > max 0.1000"
+      ],
+      "max_abs_sector_exposure": 0.02446,
+      "max_peer_correlation": 0.575265,
+      "most_correlated_peer": "stat_equal_composite",
+      "net_sharpe_at_base_cost": 0.5687,
+      "oos_icir": 0.064,
+      "oos_mean_ic": 0.011766,
+      "passed_gates": false
+    },
+    "latest_trial_id": "trial-qual_roe-06a7e7c6",
+    "promoted_at_utc": null,
+    "promoted_by": null,
+    "signal_definition": {
+      "causal_guarantee": "strict_point_in_time_available_at_utc",
+      "description": "Return on equity from point-in-time filings joined strictly backward on available_at_utc.",
+      "family": "fundamental",
+      "horizon_bars": 5,
+      "inputs_required": [
+        "market_bars",
+        "fundamentals"
+      ],
+      "lookback_bars": 1,
+      "name": "PIT Return on Equity",
+      "parameters": {
+        "join_strategy": "backward_available_at_utc"
+      },
+      "signal_id": "qual_roe",
+      "version": "1.0.0"
+    },
+    "status": "rejected"
+  },
+  "rev_3d@1.0.0": {
+    "evaluation_summary": {
+      "avg_daily_turnover": 0.317385,
+      "bh_adjusted_pvalue": 0.819584,
+      "bootstrap_ic_ci": [
+        -0.029849,
+        0.01372
+      ],
+      "gate_failures": [
+        "oos_mean_ic=-0.0075 < min 0.0150",
+        "oos_icir=-0.0439 < min 0.2000",
+        "net_sharpe_at_base_cost=-0.2408 < min 0.2500",
+        "stability:coefficient_sign_flip_rate=0.667 exceeds max 0.350",
+        "stability:coefficient_cv=4.324 exceeds max 1.500",
+        "stability:ic_sign_consistency=0.250 below min 0.500",
+        "bh_adjusted_pvalue=0.8196 > max 0.1000"
+      ],
+      "max_abs_sector_exposure": 0.040218,
+      "max_peer_correlation": 0.524114,
+      "most_correlated_peer": "adapter_pairs_spread_30d",
+      "net_sharpe_at_base_cost": -0.2408,
+      "oos_icir": -0.0439,
+      "oos_mean_ic": -0.00754,
+      "passed_gates": false
+    },
+    "latest_trial_id": "trial-rev_3d-d349f5f3",
+    "promoted_at_utc": null,
+    "promoted_by": null,
+    "signal_definition": {
+      "causal_guarantee": "strict_point_in_time_available_at_utc",
+      "description": "Negative 3-day adjusted return capturing short-horizon mean reversion.",
+      "family": "reversal",
+      "horizon_bars": 5,
+      "inputs_required": [
+        "market_bars"
+      ],
+      "lookback_bars": 3,
+      "name": "Short-Term Reversal (3d)",
+      "parameters": {
+        "lookback_days": 3
+      },
+      "signal_id": "rev_3d",
+      "version": "1.0.0"
+    },
+    "status": "rejected"
+  },
+  "stat_equal_composite@1.0.0": {
+    "evaluation_summary": {
+      "avg_daily_turnover": 0.070634,
+      "bh_adjusted_pvalue": 0.000585,
+      "bootstrap_ic_ci": [
+        0.015985,
+        0.066849
+      ],
+      "gate_failures": [],
+      "max_abs_sector_exposure": 0.040961,
+      "max_peer_correlation": 0.654127,
+      "most_correlated_peer": "ml_ridge_baseline",
+      "net_sharpe_at_base_cost": 1.6739,
+      "oos_icir": 0.2361,
+      "oos_mean_ic": 0.042693,
+      "passed_gates": true
+    },
+    "latest_trial_id": "trial-stat_equal_composite-32644b06",
+    "promoted_at_utc": "2026-11-27T09:51:56.608798Z",
+    "promoted_by": "saat-research-committee (PAPER-APPROVAL-2026-001)",
+    "signal_definition": {
+      "causal_guarantee": "strict_point_in_time_available_at_utc",
+      "description": "Deterministic z-scored equal-weight composite baseline across causal factors.",
+      "family": "statistical_ml",
+      "horizon_bars": 5,
+      "inputs_required": [
+        "feature_matrix"
+      ],
+      "lookback_bars": 60,
+      "name": "Equal-Weight Statistical Composite",
+      "parameters": {
+        "feature_signs": {
+          "inv_vol_20d": 1.0,
+          "mom_20_5": 1.0,
+          "mom_60_5": 1.0,
+          "qual_roe": 1.0,
+          "rev_3d": 0.0,
+          "val_earnings_yield": 1.0
+        }
+      },
+      "signal_id": "stat_equal_composite",
+      "version": "1.0.0"
+    },
+    "status": "promoted"
+  },
+  "val_earnings_yield@1.0.0": {
+    "evaluation_summary": {
+      "avg_daily_turnover": 0.020568,
+      "bh_adjusted_pvalue": 0.020888,
+      "bootstrap_ic_ci": [
+        0.004326,
+        0.048478
+      ],
+      "gate_failures": [
+        "oos_icir=0.1501 < min 0.2000",
+        "stability:coefficient_sign_flip_rate=0.667 exceeds max 0.350",
+        "stability:coefficient_cv=1.516 exceeds max 1.500"
+      ],
+      "max_abs_sector_exposure": 0.019207,
+      "max_peer_correlation": 0.658883,
+      "most_correlated_peer": "ml_ridge_baseline",
+      "net_sharpe_at_base_cost": 1.3149,
+      "oos_icir": 0.1501,
+      "oos_mean_ic": 0.026874,
+      "passed_gates": false
+    },
+    "latest_trial_id": "trial-val_earnings_yield-d2ecf895",
+    "promoted_at_utc": null,
+    "promoted_by": null,
+    "signal_definition": {
+      "causal_guarantee": "strict_point_in_time_available_at_utc",
+      "description": "Trailing 12-month earnings divided by market cap, joined strictly backward on fundamental filing available_at_utc.",
+      "family": "fundamental",
+      "horizon_bars": 5,
+      "inputs_required": [
+        "market_bars",
+        "fundamentals"
+      ],
+      "lookback_bars": 1,
+      "name": "PIT Earnings Yield",
+      "parameters": {
+        "join_strategy": "backward_available_at_utc"
+      },
+      "signal_id": "val_earnings_yield",
+      "version": "1.0.0"
+    },
+    "status": "rejected"
+  }
+}

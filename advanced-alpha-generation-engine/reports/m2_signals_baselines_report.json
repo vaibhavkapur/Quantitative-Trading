@@ -1,0 +1,90 @@
+{
+  "candidates_evaluated": [
+    {
+      "definition_hash": "aa1b7b7eec6afeec",
+      "sample_days": 240,
+      "signal_id": "mom_20_5",
+      "signal_version": "1.0.0",
+      "universe_size": 30
+    },
+    {
+      "definition_hash": "938d5dae4586fe45",
+      "sample_days": 240,
+      "signal_id": "mom_60_5",
+      "signal_version": "1.0.0",
+      "universe_size": 30
+    },
+    {
+      "definition_hash": "d29c8bd767bb0ef3",
+      "sample_days": 240,
+      "signal_id": "rev_3d",
+      "signal_version": "1.0.0",
+      "universe_size": 30
+    },
+    {
+      "definition_hash": "e3f5649ce240f1f5",
+      "sample_days": 240,
+      "signal_id": "inv_vol_20d",
+      "signal_version": "1.0.0",
+      "universe_size": 30
+    },
+    {
+      "definition_hash": "a25518c57727e4d4",
+      "sample_days": 240,
+      "signal_id": "val_earnings_yield",
+      "signal_version": "1.0.0",
+      "universe_size": 30
+    },
+    {
+      "definition_hash": "b302f20772ba0c35",
+      "sample_days": 240,
+      "signal_id": "qual_roe",
+      "signal_version": "1.0.0",
+      "universe_size": 30
+    },
+    {
+      "definition_hash": "b29c04e3926e3b05",
+      "sample_days": 240,
+      "signal_id": "adapter_stat_arb_z_20d",
+      "signal_version": "1.0.0",
+      "universe_size": 30
+    },
+    {
+      "definition_hash": "edeb63c5760a2f80",
+      "sample_days": 240,
+      "signal_id": "adapter_pairs_spread_30d",
+      "signal_version": "1.0.0",
+      "universe_size": 30
+    },
+    {
+      "definition_hash": "7752ba292fcf609e",
+      "sample_days": 240,
+      "signal_id": "adapter_ob_imbalance_5d",
+      "signal_version": "1.0.0",
+      "universe_size": 30
+    },
+    {
+      "definition_hash": "bbe803b9abb59f25",
+      "sample_days": 240,
+      "signal_id": "stat_equal_composite",
+      "signal_version": "1.0.0",
+      "universe_size": 30
+    },
+    {
+      "definition_hash": "58cb3db4c64b3bd9",
+      "sample_days": 240,
+      "signal_id": "ml_ridge_baseline",
+      "signal_version": "1.0.0",
+      "universe_size": 30
+    },
+    {
+      "definition_hash": "88e049d3429b6add",
+      "sample_days": 240,
+      "signal_id": "ml_gbdt_baseline",
+      "signal_version": "1.0.0",
+      "universe_size": 30
+    }
+  ],
+  "generated_at_utc": "2026-11-27T09:51:56.638896+00:00",
+  "milestone": "M2 \u2014 Core implementation"
+}

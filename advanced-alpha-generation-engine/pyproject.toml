@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "advanced-alpha-generation-engine"
+version = "0.1.0"
+description = "Reusable causal cross-sectional and time-series alpha research, evaluation, neutralization, cost modeling, and versioned catalog framework."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26.0,<3.0.0",
+    "polars>=1.0.0,<2.0.0",
+    "pydantic>=2.7.0,<3.0.0",
+    "scikit-learn>=1.4.0,<2.0.0",
+]
+
+[project.optional-dependencies]
+boosting = [
+    "xgboost>=2.0.0,<4.0.0",
+]
+dev = [
+    "pytest>=8.0.0,<9.0.0",
+    "ruff>=0.6.0,<1.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+ignore = ["E501"]

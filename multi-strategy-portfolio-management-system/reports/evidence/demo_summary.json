@@ -1,0 +1,52 @@
+{
+  "benchmark": {
+    "bootstrap_ms": 9.595,
+    "events_per_replay": 18,
+    "note": "Local single-process SQLite prototype measurement; not a production throughput claim.",
+    "replay_max_ms": 1.196,
+    "replay_median_ms": 0.583,
+    "replay_p95_ms": 1.069,
+    "sample_size": 50
+  },
+  "consolidation_passed": true,
+  "demo_executed_at": "2026-11-27T10:14:03.397107+00:00",
+  "event_count": 18,
+  "explained_total_pnl_base": "14733.960000",
+  "fund_id": "FUND-SAAT-MAIN",
+  "fund_nav_base": "1014733.960000",
+  "hash_chain_valid": true,
+  "ledger_state_hash": "05bd03d1d8cd623b8486477537e8cc02a771b7a902259306c1deac9350c30d7e",
+  "paper_oms_duplicate": {
+    "event_id": "EVT-OMS-EXEC-DEMO-4001-1",
+    "execution_id": "EXEC-DEMO-4001-1",
+    "idempotency_key": "OMS-EXEC-EXEC-DEMO-4001-1",
+    "message": "Duplicate fill safely ignored: Duplicate idempotency_key: OMS-EXEC-EXEC-DEMO-4001-1",
+    "seq_no": 18,
+    "status": "DUPLICATE_IGNORED"
+  },
+  "paper_oms_first": {
+    "event_id": "EVT-OMS-EXEC-DEMO-4001-1",
+    "execution_id": "EXEC-DEMO-4001-1",
+    "idempotency_key": "OMS-EXEC-EXEC-DEMO-4001-1",
+    "message": "Paper fill booked at seq_no=18",
+    "seq_no": 18,
+    "status": "BOOKED"
+  },
+  "reconciliation_breaks_detected": 2,
+  "reconciliation_mutated_history": false,
+  "recovery_check": {
+    "after_replay_1_state_hash": "05bd03d1d8cd623b8486477537e8cc02a771b7a902259306c1deac9350c30d7e",
+    "after_replay_2_state_hash": "05bd03d1d8cd623b8486477537e8cc02a771b7a902259306c1deac9350c30d7e",
+    "before_state_hash": "05bd03d1d8cd623b8486477537e8cc02a771b7a902259306c1deac9350c30d7e",
+    "cache_cleared": true,
+    "event_count": 18,
+    "hash_chain_valid": true,
+    "last_seq_no": 18,
+    "recovered_identically": true,
+    "tip_event_hash": "ad0af31cc81b997f6f207ae47bfec6789aad3c9242a93555d6fdcc2347226c83"
+  },
+  "unexplained_residual_base": "0.000000",
+  "unpriced_instruments": [
+    "EQ-UNPRICED-US"
+  ]
+}

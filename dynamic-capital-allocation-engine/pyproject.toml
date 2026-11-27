@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=58.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dynamic-capital-allocation-engine"
+version = "0.1.0"
+description = "Dynamic Capital Allocation Engine: point-in-time constrained multi-strategy capital allocator with independent verification, approval workflow, audit trail, and walk-forward evaluation."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+scientific = ["numpy>=1.24", "scipy>=1.10", "cvxpy>=1.4"]
+api = ["fastapi>=0.110", "uvicorn>=0.27", "pydantic>=2.0"]
+postgres = ["psycopg[binary]>=3.1"]
+dev = ["pytest>=7.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

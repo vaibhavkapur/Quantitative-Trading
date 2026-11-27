@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.15, pytest-8.4.2, pluggy-1.7.0
+rootdir: /Users/vaibhavkapur/Desktop/existing/multi-strategy-portfolio-management-system
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0
+collected 27 items
+
+tests/integration/test_api_and_ui.py ..                                  [  7%]
+tests/integration/test_paper_oms_and_reconciliation.py ...               [ 18%]
+tests/integration/test_sqlite_store_and_recovery.py ..                   [ 25%]
+tests/scenarios/test_eight_required_scenarios.py ........                [ 55%]
+tests/unit/test_double_entry_journal.py ..                               [ 62%]
+tests/unit/test_lot_accounting.py ...                                    [ 74%]
+tests/unit/test_master_and_contracts.py ....                             [ 88%]
+tests/unit/test_valuation_and_consolidation.py ...                       [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /Users/vaibhavkapur/Desktop/existing/multi-strategy-portfolio-management-system/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /Users/vaibhavkapur/Desktop/existing/multi-strategy-portfolio-management-system/reports/evidence/pytest_junit.xml -
+======================== 27 passed, 1 warning in 0.17s =========================

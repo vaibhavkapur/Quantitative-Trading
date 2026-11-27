@@ -1,0 +1,169 @@
+{
+  "execution_enabled": false,
+  "execution_mode": "paper_only",
+  "generated_at_utc": "2026-11-27T09:51:56.640542+00:00",
+  "milestone": "M4 \u2014 Hardening and delivery",
+  "paper_exports": [
+    {
+      "as_of_utc": "2024-09-09T21:05:00+00:00",
+      "execution_enabled": false,
+      "export_id": "paper-ml_gbdt_baseline-afb4fc5f",
+      "gross_exposure": 1.0,
+      "mode": "paper_only",
+      "net_exposure": -2e-06,
+      "records_count": 26,
+      "sha256_digest": "6dedc34d2e21261b7cbe18ed90421f2ea9017dbf27c9ae19494489ef05866690",
+      "signal_id": "ml_gbdt_baseline",
+      "signal_version": "1.0.0"
+    },
+    {
+      "as_of_utc": "2024-09-09T21:05:00+00:00",
+      "execution_enabled": false,
+      "export_id": "paper-mom_20_5-44617497",
+      "gross_exposure": 0.999999,
+      "mode": "paper_only",
+      "net_exposure": -1e-06,
+      "records_count": 26,
+      "sha256_digest": "a45603c48cea224ba76812462b3fa0a7e547ae4f5f775688004c8e910dda3b13",
+      "signal_id": "mom_20_5",
+      "signal_version": "1.0.0"
+    },
+    {
+      "as_of_utc": "2024-09-09T21:05:00+00:00",
+      "execution_enabled": false,
+      "export_id": "paper-stat_equal_composite-217cf8f1",
+      "gross_exposure": 1.0,
+      "mode": "paper_only",
+      "net_exposure": -0.0,
+      "records_count": 26,
+      "sha256_digest": "28df9f55e3b8c6cee28fcb9e0d9712e54fc8df998894cea1ab17c3709853c365",
+      "signal_id": "stat_equal_composite",
+      "signal_version": "1.0.0"
+    }
+  ],
+  "promoted_signals": [
+    "ml_gbdt_baseline@1.0.0",
+    "mom_20_5@1.0.0",
+    "stat_equal_composite@1.0.0"
+  ],
+  "rejected_negative_results": [
+    {
+      "bh_adjusted_pvalue": 0.004546,
+      "gate_failures": [
+        "oos_icir=0.1887 < min 0.2000",
+        "stability:coefficient_sign_flip_rate=0.667 exceeds max 0.350",
+        "stability:coefficient_cv=2.302 exceeds max 1.500"
+      ],
+      "net_sharpe_at_base_cost": 0.9717,
+      "oos_icir": 0.1887,
+      "oos_mean_ic": 0.035205,
+      "signal_key": "mom_60_5@1.0.0"
+    },
+    {
+      "bh_adjusted_pvalue": 0.819584,
+      "gate_failures": [
+        "oos_mean_ic=-0.0075 < min 0.0150",
+        "oos_icir=-0.0439 < min 0.2000",
+        "net_sharpe_at_base_cost=-0.2408 < min 0.2500",
+        "stability:coefficient_sign_flip_rate=0.667 exceeds max 0.350",
+        "stability:coefficient_cv=4.324 exceeds max 1.500",
+        "stability:ic_sign_consistency=0.250 below min 0.500",
+        "bh_adjusted_pvalue=0.8196 > max 0.1000"
+      ],
+      "net_sharpe_at_base_cost": -0.2408,
+      "oos_icir": -0.0439,
+      "oos_mean_ic": -0.00754,
+      "signal_key": "rev_3d@1.0.0"
+    },
+    {
+      "bh_adjusted_pvalue": 0.000585,
+      "gate_failures": [
+        "max_abs_sector_exposure=0.1242 > max 0.1000"
+      ],
+      "net_sharpe_at_base_cost": 0.8792,
+      "oos_icir": 0.2322,
+      "oos_mean_ic": 0.045769,
+      "signal_key": "inv_vol_20d@1.0.0"
+    },
+    {
+      "bh_adjusted_pvalue": 0.020888,
+      "gate_failures": [
+        "oos_icir=0.1501 < min 0.2000",
+        "stability:coefficient_sign_flip_rate=0.667 exceeds max 0.350",
+        "stability:coefficient_cv=1.516 exceeds max 1.500"
+      ],
+      "net_sharpe_at_base_cost": 1.3149,
+      "oos_icir": 0.1501,
+      "oos_mean_ic": 0.026874,
+      "signal_key": "val_earnings_yield@1.0.0"
+    },
+    {
+      "bh_adjusted_pvalue": 0.214948,
+      "gate_failures": [
+        "oos_mean_ic=0.0118 < min 0.0150",
+        "oos_icir=0.0640 < min 0.2000",
+        "stability:coefficient_cv=1.768 exceeds max 1.500",
+        "bh_adjusted_pvalue=0.2149 > max 0.1000"
+      ],
+      "net_sharpe_at_base_cost": 0.5687,
+      "oos_icir": 0.064,
+      "oos_mean_ic": 0.011766,
+      "signal_key": "qual_roe@1.0.0"
+    },
+    {
+      "bh_adjusted_pvalue": 0.439414,
+      "gate_failures": [
+        "oos_mean_ic=0.0039 < min 0.0150",
+        "oos_icir=0.0221 < min 0.2000",
+        "stability:coefficient_cv=8.220 exceeds max 1.500",
+        "bh_adjusted_pvalue=0.4394 > max 0.1000"
+      ],
+      "net_sharpe_at_base_cost": 0.3342,
+      "oos_icir": 0.0221,
+      "oos_mean_ic": 0.003942,
+      "signal_key": "adapter_stat_arb_z_20d@1.0.0"
+    },
+    {
+      "bh_adjusted_pvalue": 0.999995,
+      "gate_failures": [
+        "oos_mean_ic=-0.0478 < min 0.0150",
+        "oos_icir=-0.2902 < min 0.2000",
+        "net_sharpe_at_base_cost=-1.6147 < min 0.2500",
+        "stability:ic_sign_consistency=0.000 below min 0.500",
+        "bh_adjusted_pvalue=1.0000 > max 0.1000"
+      ],
+      "net_sharpe_at_base_cost": -1.6147,
+      "oos_icir": -0.2902,
+      "oos_mean_ic": -0.04781,
+      "signal_key": "adapter_pairs_spread_30d@1.0.0"
+    },
+    {
+      "bh_adjusted_pvalue": 0.181227,
+      "gate_failures": [
+        "oos_mean_ic=0.0148 < min 0.0150",
+        "oos_icir=0.0775 < min 0.2000",
+        "net_sharpe_at_base_cost=-0.4526 < min 0.2500",
+        "stability:coefficient_sign_flip_rate=0.667 exceeds max 0.350",
+        "stability:coefficient_cv=20.304 exceeds max 1.500",
+        "bh_adjusted_pvalue=0.1812 > max 0.1000"
+      ],
+      "net_sharpe_at_base_cost": -0.4526,
+      "oos_icir": 0.0775,
+      "oos_mean_ic": 0.014782,
+      "signal_key": "adapter_ob_imbalance_5d@1.0.0"
+    },
+    {
+      "bh_adjusted_pvalue": 0.181227,
+      "gate_failures": [
+        "oos_mean_ic=0.0140 < min 0.0150",
+        "oos_icir=0.0758 < min 0.2000",
+        "stability:ic_sign_consistency=0.250 below min 0.500",
+        "bh_adjusted_pvalue=0.1812 > max 0.1000"
+      ],
+      "net_sharpe_at_base_cost": 1.3192,
+      "oos_icir": 0.0758,
+      "oos_mean_ic": 0.013969,
+      "signal_key": "ml_ridge_baseline@1.0.0"
+    }
+  ]
+}

@@ -1,8 +1,11 @@
-name: Validate prototype
+name: Market Regime Detection Engine
 on: [push, pull_request]
 jobs:
   validate:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: market-regime-detection-engine
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -12,5 +15,5 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: evaluation
-          path: .local/evaluation.json
+          path: market-regime-detection-engine/.local/evaluation.json
           include-hidden-files: true

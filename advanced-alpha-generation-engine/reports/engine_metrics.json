@@ -1,0 +1,194 @@
+{
+  "captured_at_utc": "2026-11-27T09:51:56.638506+00:00",
+  "counters": {
+    "candidates_promoted": 3,
+    "candidates_rejected": 9,
+    "datasets_validated": 1,
+    "errors_total": 1,
+    "factors_configured": 9,
+    "models_evaluated": 3,
+    "paper_exports_written": 3,
+    "signals_evaluated": 9,
+    "trials_recorded": 12
+  },
+  "decisions": [
+    {
+      "decision_type": "catalog_promotion",
+      "details": {
+        "oos_icir": 0.2901,
+        "oos_mean_ic": 0.059088
+      },
+      "outcome": "promoted",
+      "subject": "ml_gbdt_baseline@1.0.0",
+      "timestamp_utc": "2026-11-27T09:51:56.548765+00:00"
+    },
+    {
+      "decision_type": "catalog_promotion",
+      "details": {
+        "oos_icir": 0.2815,
+        "oos_mean_ic": 0.050128
+      },
+      "outcome": "promoted",
+      "subject": "mom_20_5@1.0.0",
+      "timestamp_utc": "2026-11-27T09:51:56.580640+00:00"
+    },
+    {
+      "decision_type": "catalog_promotion",
+      "details": {
+        "oos_icir": 0.2361,
+        "oos_mean_ic": 0.042693
+      },
+      "outcome": "promoted",
+      "subject": "stat_equal_composite@1.0.0",
+      "timestamp_utc": "2026-11-27T09:51:56.609330+00:00"
+    },
+    {
+      "decision_type": "catalog_promotion",
+      "details": {
+        "gate_failures": [
+          "max_abs_sector_exposure=0.1242 > max 0.1000"
+        ]
+      },
+      "outcome": "rejected",
+      "subject": "inv_vol_20d@1.0.0",
+      "timestamp_utc": "2026-11-27T09:51:56.638477+00:00"
+    },
+    {
+      "decision_type": "catalog_promotion",
+      "details": {
+        "gate_failures": [
+          "oos_icir=0.1887 < min 0.2000",
+          "stability:coefficient_sign_flip_rate=0.667 exceeds max 0.350",
+          "stability:coefficient_cv=2.302 exceeds max 1.500"
+        ]
+      },
+      "outcome": "rejected",
+      "subject": "mom_60_5@1.0.0",
+      "timestamp_utc": "2026-11-27T09:51:56.638481+00:00"
+    },
+    {
+      "decision_type": "catalog_promotion",
+      "details": {
+        "gate_failures": [
+          "oos_icir=0.1501 < min 0.2000",
+          "stability:coefficient_sign_flip_rate=0.667 exceeds max 0.350",
+          "stability:coefficient_cv=1.516 exceeds max 1.500"
+        ]
+      },
+      "outcome": "rejected",
+      "subject": "val_earnings_yield@1.0.0",
+      "timestamp_utc": "2026-11-27T09:51:56.638483+00:00"
+    },
+    {
+      "decision_type": "catalog_promotion",
+      "details": {
+        "gate_failures": [
+          "oos_mean_ic=0.0148 < min 0.0150",
+          "oos_icir=0.0775 < min 0.2000",
+          "net_sharpe_at_base_cost=-0.4526 < min 0.2500",
+          "stability:coefficient_sign_flip_rate=0.667 exceeds max 0.350",
+          "stability:coefficient_cv=20.304 exceeds max 1.500",
+          "bh_adjusted_pvalue=0.1812 > max 0.1000"
+        ]
+      },
+      "outcome": "rejected",
+      "subject": "adapter_ob_imbalance_5d@1.0.0",
+      "timestamp_utc": "2026-11-27T09:51:56.638484+00:00"
+    },
+    {
+      "decision_type": "catalog_promotion",
+      "details": {
+        "gate_failures": [
+          "oos_mean_ic=0.0140 < min 0.0150",
+          "oos_icir=0.0758 < min 0.2000",
+          "stability:ic_sign_consistency=0.250 below min 0.500",
+          "bh_adjusted_pvalue=0.1812 > max 0.1000"
+        ]
+      },
+      "outcome": "rejected",
+      "subject": "ml_ridge_baseline@1.0.0",
+      "timestamp_utc": "2026-11-27T09:51:56.638486+00:00"
+    },
+    {
+      "decision_type": "catalog_promotion",
+      "details": {
+        "gate_failures": [
+          "oos_mean_ic=0.0118 < min 0.0150",
+          "oos_icir=0.0640 < min 0.2000",
+          "stability:coefficient_cv=1.768 exceeds max 1.500",
+          "bh_adjusted_pvalue=0.2149 > max 0.1000"
+        ]
+      },
+      "outcome": "rejected",
+      "subject": "qual_roe@1.0.0",
+      "timestamp_utc": "2026-11-27T09:51:56.638487+00:00"
+    },
+    {
+      "decision_type": "catalog_promotion",
+      "details": {
+        "gate_failures": [
+          "oos_mean_ic=0.0039 < min 0.0150",
+          "oos_icir=0.0221 < min 0.2000",
+          "stability:coefficient_cv=8.220 exceeds max 1.500",
+          "bh_adjusted_pvalue=0.4394 > max 0.1000"
+        ]
+      },
+      "outcome": "rejected",
+      "subject": "adapter_stat_arb_z_20d@1.0.0",
+      "timestamp_utc": "2026-11-27T09:51:56.638488+00:00"
+    },
+    {
+      "decision_type": "catalog_promotion",
+      "details": {
+        "gate_failures": [
+          "oos_mean_ic=-0.0075 < min 0.0150",
+          "oos_icir=-0.0439 < min 0.2000",
+          "net_sharpe_at_base_cost=-0.2408 < min 0.2500",
+          "stability:coefficient_sign_flip_rate=0.667 exceeds max 0.350",
+          "stability:coefficient_cv=4.324 exceeds max 1.500",
+          "stability:ic_sign_consistency=0.250 below min 0.500",
+          "bh_adjusted_pvalue=0.8196 > max 0.1000"
+        ]
+      },
+      "outcome": "rejected",
+      "subject": "rev_3d@1.0.0",
+      "timestamp_utc": "2026-11-27T09:51:56.638490+00:00"
+    },
+    {
+      "decision_type": "catalog_promotion",
+      "details": {
+        "gate_failures": [
+          "oos_mean_ic=-0.0478 < min 0.0150",
+          "oos_icir=-0.2902 < min 0.2000",
+          "net_sharpe_at_base_cost=-1.6147 < min 0.2500",
+          "stability:ic_sign_consistency=0.000 below min 0.500",
+          "bh_adjusted_pvalue=1.0000 > max 0.1000"
+        ]
+      },
+      "outcome": "rejected",
+      "subject": "adapter_pairs_spread_30d@1.0.0",
+      "timestamp_utc": "2026-11-27T09:51:56.638491+00:00"
+    }
+  ],
+  "failures": [
+    {
+      "details": {
+        "cause": "\nXGBoost Library (libxgboost.dylib) could not be loaded.\nLikely causes:\n  * OpenMP runtime is not installed\n    - vcomp140.dll or libgomp-1.dll for Windows\n    - libomp.dylib for Mac OSX\n    - libgomp.so for Linux and other UNIX-like OSes\n ",
+        "optional_extra": "boosting",
+        "package": "xgboost"
+      },
+      "error_code": "OPTIONAL_DEPENDENCY_ERROR",
+      "message": "Optional xgboost runtime unavailable (missing package or native libomp runtime). Install with `uv sync --extra boosting` (and `brew install libomp` on macOS).",
+      "stage": "m3_walk_forward_evaluation",
+      "timestamp_utc": "2026-11-27T09:51:53.654986+00:00"
+    }
+  ],
+  "stage_durations_ms": {
+    "m1_pit_data_load_and_validate": 55.18,
+    "m2_feature_and_signal_generation": 24.93,
+    "m3_walk_forward_evaluation": 1845.3,
+    "m4_catalog_and_paper_export": 2983.41
+  },
+  "started_at_utc": "2026-11-27T09:51:51.729626+00:00",
+  "status": "healthy"
+}

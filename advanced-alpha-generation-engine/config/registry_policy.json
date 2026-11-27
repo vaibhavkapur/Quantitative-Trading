@@ -1,0 +1,15 @@
+{
+  "policy_version": "1.0.0",
+  "min_oos_mean_ic": 0.015,
+  "min_oos_icir": 0.20,
+  "max_bh_adjusted_pvalue": 0.10,
+  "max_avg_daily_turnover": 0.45,
+  "max_abs_sector_exposure": 0.10,
+  "max_peer_factor_correlation": 0.85,
+  "min_net_sharpe_at_base_cost": 0.25,
+  "max_coefficient_sign_flip_rate": 0.35,
+  "max_coefficient_cv": 1.50,
+  "min_ic_sign_consistency": 0.50,
+  "allow_promotion_on_gate_failure": false,
+  "export_mode": "paper_only"
+}

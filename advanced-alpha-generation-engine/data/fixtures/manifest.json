@@ -1,0 +1,21 @@
+{
+  "dataset_id": "synth_us_equities_pit_seed42",
+  "end_date_utc": "2024-09-09T21:00:00Z",
+  "entitlements": "internal_synthetic_research_only",
+  "file_checksums": {
+    "corporate_actions.parquet": "ad843cb8d4ee41bfab73ab01241fa90c3381ca644bf5e38a6bbf3c5502cabe24",
+    "fundamentals.parquet": "9e80fa6751ea95ffa9ade6113cf10621aaeb8736b3b156beba3db3ef77f871b5",
+    "market_bars.parquet": "48235d75c7367c12b51278eb693f0d6c8a1eb610da88bc61404e9702ef22301f",
+    "universe_membership.parquet": "7ae0ba97817de43568fcc7bab286e880e6bedf9056e8c31ccb9e9ac970dd9307"
+  },
+  "generated_at_utc": "2026-01-01T00:00:00Z",
+  "license": "proprietary_synthetic_fixture",
+  "manifest_digest": "377efd2d7ac0ba90b29a613f55453e35583ce987d3b61e8b2ac6ed5f6cb1f225",
+  "manifest_version": "1.0.0",
+  "n_delisted_symbols": 4,
+  "n_symbols": 30,
+  "n_trading_days": 440,
+  "seed": 42,
+  "source_type": "synthetic",
+  "start_date_utc": "2023-01-03T21:00:00Z"
+}

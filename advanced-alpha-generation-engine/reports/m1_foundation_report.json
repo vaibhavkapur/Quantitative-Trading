@@ -1,0 +1,95 @@
+{
+  "dataset_manifest": {
+    "dataset_id": "synth_us_equities_pit_seed42",
+    "end_date_utc": "2024-09-09T21:00:00Z",
+    "entitlements": "internal_synthetic_research_only",
+    "file_checksums": {
+      "corporate_actions.parquet": "ad843cb8d4ee41bfab73ab01241fa90c3381ca644bf5e38a6bbf3c5502cabe24",
+      "fundamentals.parquet": "9e80fa6751ea95ffa9ade6113cf10621aaeb8736b3b156beba3db3ef77f871b5",
+      "market_bars.parquet": "48235d75c7367c12b51278eb693f0d6c8a1eb610da88bc61404e9702ef22301f",
+      "universe_membership.parquet": "7ae0ba97817de43568fcc7bab286e880e6bedf9056e8c31ccb9e9ac970dd9307"
+    },
+    "generated_at_utc": "2026-01-01T00:00:00Z",
+    "license": "proprietary_synthetic_fixture",
+    "manifest_digest": "377efd2d7ac0ba90b29a613f55453e35583ce987d3b61e8b2ac6ed5f6cb1f225",
+    "manifest_version": "1.0.0",
+    "n_delisted_symbols": 4,
+    "n_symbols": 30,
+    "n_trading_days": 440,
+    "seed": 42,
+    "source_type": "synthetic",
+    "start_date_utc": "2023-01-03T21:00:00Z"
+  },
+  "generated_at_utc": "2026-11-27T09:51:56.638654+00:00",
+  "legacy_adapter_provenance": [
+    {
+      "adapter_name": "QuantumStatArbAdapter",
+      "integration_mode": "clean_room_contract_adapter",
+      "ip_clearance_status": "unresolved_clean_room_contract_only",
+      "known_limitations": [
+        "Uses deterministic sector-demeaned residual z-score contract pending upstream IP/commit audit.",
+        "Does not claim quantum advantage; intended strictly as baseline stat-arb signal contract."
+      ],
+      "pinned_commit": null,
+      "upstream_reference": "Quantum-Trading/projects/01-quantum-statistical-arbitrage"
+    },
+    {
+      "adapter_name": "QuantumPairsSpreadAdapter",
+      "integration_mode": "clean_room_contract_adapter",
+      "ip_clearance_status": "unresolved_clean_room_contract_only",
+      "known_limitations": [
+        "Approximates pair spread against intra-sector median log-price pending cointegration pair registry.",
+        "Subject to regime breakdown during structural corporate divergence."
+      ],
+      "pinned_commit": null,
+      "upstream_reference": "Quantum-Trading/projects/10-quantum-pairs-trading"
+    },
+    {
+      "adapter_name": "QuantumOrderBookAdapter",
+      "integration_mode": "clean_room_contract_adapter",
+      "ip_clearance_status": "unresolved_clean_room_contract_only",
+      "known_limitations": [
+        "Daily OHLCV proxy only; true L2 order-book imbalance requires tick/depth provider integration.",
+        "Microstructure signals degrade rapidly at daily horizons and under realistic spread costs."
+      ],
+      "pinned_commit": null,
+      "upstream_reference": "Quantum-Trading/projects/07-quantum-order-book-predictor"
+    },
+    {
+      "adapter_name": "AIQuantResearchAgentAdapter",
+      "integration_mode": "clean_room_contract_adapter",
+      "ip_clearance_status": "unresolved_clean_room_contract_only",
+      "known_limitations": [
+        "Restricts agent-generated hypotheses to whitelisted causal templates (no arbitrary code execution).",
+        "All compiled candidates must pass full walk-forward evaluation and catalog promotion gates."
+      ],
+      "pinned_commit": null,
+      "upstream_reference": "Trading-Software/projects/14-ai-quant-research-agent"
+    }
+  ],
+  "milestone": "M1 \u2014 Foundation and design",
+  "pit_validation": {
+    "checks_run": [
+      "timestamps_market_bars",
+      "timestamps_fundamentals",
+      "corporate_actions_adjustment",
+      "survivorship_integrity",
+      "symbol_coverage"
+    ],
+    "metrics": {
+      "corporate_actions": {
+        "max_adjusted_jump": 0.034599,
+        "splits_checked": 3
+      },
+      "coverage": {
+        "avg_coverage_ratio": 1.0,
+        "days_checked": 440
+      },
+      "survivorship": {
+        "delisted_members_verified": 4,
+        "present_symbols": 30
+      }
+    },
+    "passed": true
+  }
+}

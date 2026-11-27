@@ -1,0 +1,13 @@
+{
+  "policy_version": "1.0.0",
+  "universe_id": "SYNTH_US_EQUITIES_PIT_V1",
+  "asset_class": "equities_synthetic",
+  "currency": "USD",
+  "point_in_time_enforced": true,
+  "include_delisted_until_exit": true,
+  "min_active_symbols_per_day": 15,
+  "min_symbol_coverage_ratio": 0.90,
+  "corporate_action_adjustment_required": true,
+  "max_unadjusted_split_jump_tolerance": 0.15,
+  "default_filing_lag_days": 45
+}
