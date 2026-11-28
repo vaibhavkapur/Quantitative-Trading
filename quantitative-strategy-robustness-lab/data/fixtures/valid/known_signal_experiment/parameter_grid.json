@@ -1,0 +1,18 @@
+{
+  "grid_id": "grid-known-signal-v1",
+  "version": "1.0.0",
+  "parameters": {
+    "lookback": [
+      15,
+      20,
+      25
+    ],
+    "vol_target": [
+      0.08,
+      0.1,
+      0.12
+    ]
+  },
+  "expected_trial_count": 9,
+  "grid_hash": "c48341db7d0e6f1a650df52ccb87b149ea811fa61f195da597805e630f4309f3"
+}

@@ -1,0 +1,36 @@
+name: Quantitative Strategy Robustness Lab CI
+
+on:
+  push:
+    paths:
+      - "quantitative-strategy-robustness-lab/**"
+      - ".github/workflows/quantitative-strategy-robustness-lab.yml"
+  pull_request:
+    paths:
+      - "quantitative-strategy-robustness-lab/**"
+      - ".github/workflows/quantitative-strategy-robustness-lab.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: quantitative-strategy-robustness-lab
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.lock
+          pip install --no-deps --no-build-isolation -e .
+
+      - name: Run full CI validation
+        run: bash scripts/ci_check.sh

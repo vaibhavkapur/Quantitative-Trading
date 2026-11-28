@@ -1,0 +1,864 @@
+{
+  "comparison": {
+    "baseline_model_name": "CAPM",
+    "rows": [
+      {
+        "delta_fm_cs_r2_vs_baseline": 0.0,
+        "delta_fm_pricing_rmse_vs_baseline": 0.0,
+        "delta_oos_cs_rmse_vs_baseline": null,
+        "delta_oos_ts_r2_vs_baseline": null,
+        "delta_ts_mean_abs_alpha_vs_baseline": 0.0,
+        "delta_ts_mean_r2_vs_baseline": 0.0,
+        "factors": [
+          "MKT_RF"
+        ],
+        "fm_adj_cs_r2": 0.5384615384615388,
+        "fm_avg_period_cs_r2": 0.4382662440982273,
+        "fm_cs_r2": 0.6923076923076925,
+        "fm_pricing_mae": 0.0019999999999999983,
+        "fm_pricing_rmse": 0.0022360679774997886,
+        "is_baseline": true,
+        "model_name": "CAPM",
+        "n_factors": 1,
+        "oos_cs_mae": null,
+        "oos_cs_r2": null,
+        "oos_cs_r2_vs_train_mean": null,
+        "oos_cs_rmse": null,
+        "oos_ts_r2_zero_alpha": null,
+        "oos_ts_rmse_zero_alpha": null,
+        "ts_grs_f_stat": null,
+        "ts_grs_pvalue": null,
+        "ts_mean_abs_alpha": 0.0025000000000000014,
+        "ts_mean_adj_r2": 0.8165628001951502,
+        "ts_mean_r2": 0.8532502401561202,
+        "ts_rmse_alpha": 0.002500000000000002
+      },
+      {
+        "delta_fm_cs_r2_vs_baseline": 0.3076923076923075,
+        "delta_fm_pricing_rmse_vs_baseline": -0.0022360679774997847,
+        "delta_oos_cs_rmse_vs_baseline": null,
+        "delta_oos_ts_r2_vs_baseline": null,
+        "delta_ts_mean_abs_alpha_vs_baseline": -0.002499999999999998,
+        "delta_ts_mean_r2_vs_baseline": 0.14674975984387983,
+        "factors": [
+          "MKT_RF",
+          "VAL"
+        ],
+        "fm_adj_cs_r2": 1.0,
+        "fm_avg_period_cs_r2": 1.0,
+        "fm_cs_r2": 1.0,
+        "fm_pricing_mae": 3.0357660829594124e-18,
+        "fm_pricing_rmse": 3.780742163385255e-18,
+        "is_baseline": false,
+        "model_name": "TWO_FACTOR",
+        "n_factors": 2,
+        "oos_cs_mae": null,
+        "oos_cs_r2": null,
+        "oos_cs_r2_vs_train_mean": null,
+        "oos_cs_rmse": null,
+        "oos_ts_r2_zero_alpha": null,
+        "oos_ts_rmse_zero_alpha": null,
+        "ts_grs_f_stat": null,
+        "ts_grs_pvalue": null,
+        "ts_mean_abs_alpha": 3.686287386450715e-18,
+        "ts_mean_adj_r2": 1.0,
+        "ts_mean_r2": 1.0,
+        "ts_rmse_alpha": 4.0451058531818725e-18
+      }
+    ]
+  },
+  "config": {
+    "annualization_factor": 12.0,
+    "asset_returns_path": "data/fixtures/reference_hand_calculated/asset_returns.csv",
+    "baseline_model_name": "CAPM",
+    "config_version": "1.0.0",
+    "cov_type": "OLS",
+    "factor_returns_path": "data/fixtures/reference_hand_calculated/factor_returns.csv",
+    "fm_hac_maxlags": 0,
+    "frequency": "M",
+    "hac_maxlags": 0,
+    "max_condition_number": 100000000.0,
+    "memberships_path": "data/fixtures/reference_hand_calculated/portfolio_memberships.csv",
+    "min_cs_assets": 4,
+    "min_ts_observations": 6,
+    "models": [
+      {
+        "description": "Reference CAPM model for exact hand-calculated verification.",
+        "factors": [
+          "MKT_RF"
+        ],
+        "include_cs_intercept": true,
+        "include_ts_intercept": true,
+        "name": "CAPM"
+      },
+      {
+        "description": "Reference two-factor model with exact closed-form betas and premia.",
+        "factors": [
+          "MKT_RF",
+          "VAL"
+        ],
+        "include_cs_intercept": true,
+        "include_ts_intercept": true,
+        "name": "TWO_FACTOR"
+      }
+    ],
+    "output_dir": "reports/reference_run",
+    "period_alignment_policy": "strict",
+    "rank_tol": 1e-10,
+    "rf_missing_policy": "error",
+    "risk_free_path": "data/fixtures/reference_hand_calculated/risk_free.csv",
+    "run_label": "reference_hand_calculated",
+    "seed": 42,
+    "split": {
+      "test_end": null,
+      "test_start": null,
+      "train_end": "2020-06-30",
+      "train_start": "2020-01-31"
+    },
+    "universe_policy": "strict_balanced"
+  },
+  "diagnostics": {
+    "aligned_assets": 4,
+    "aligned_periods": 6,
+    "aligned_rows": 24,
+    "assets_excluded_min_obs": 0,
+    "dropped_inactive_membership_rows": 0,
+    "dropped_missing_rf_periods": 0,
+    "dropped_unaligned_periods": 0,
+    "events": [
+      {
+        "factors": [
+          "MKT_RF",
+          "VAL"
+        ],
+        "level": "INFO",
+        "message": "Initialized engine run 'reference_hand_calculated'.",
+        "models": [
+          "CAPM",
+          "TWO_FACTOR"
+        ],
+        "stage": "engine_start"
+      },
+      {
+        "full_panel_end": "2020-06-30",
+        "full_panel_periods": 6,
+        "full_panel_start": "2020-01-31",
+        "level": "INFO",
+        "message": "Verified chronological train/test boundaries.",
+        "stage": "split_panel",
+        "test_end": null,
+        "test_periods": 0,
+        "test_start": null,
+        "train_end": "2020-06-30",
+        "train_periods": 6,
+        "train_start": "2020-01-31",
+        "zero_leakage_verified": true
+      },
+      {
+        "fm_cs_r2": 0.6923076923076925,
+        "level": "INFO",
+        "message": "Completed model 'CAPM'.",
+        "model": "CAPM",
+        "oos_cs_r2": null,
+        "stage": "model_fit",
+        "ts_mean_r2": 0.8532502401561202
+      },
+      {
+        "fm_cs_r2": 1.0,
+        "level": "INFO",
+        "message": "Completed model 'TWO_FACTOR'.",
+        "model": "TWO_FACTOR",
+        "oos_cs_r2": null,
+        "stage": "model_fit",
+        "ts_mean_r2": 1.0
+      }
+    ],
+    "raw_asset_rows": 24,
+    "raw_factor_rows": 6,
+    "raw_membership_rows": 24,
+    "raw_rf_rows": 6,
+    "universe_change_periods": 0,
+    "universe_entries": 0,
+    "universe_exits": 0
+  },
+  "engine_version": "0.1.0",
+  "input_fingerprints": {
+    "asset_returns": "703531ee168c63038f13345a1fd5fb22c39d8ba193c2b7db0c6ad605f19375ba",
+    "factor_returns": "1cbe7bea83543da9e62cba207ec65820356b55a2143b61c63a9c2e716b847884",
+    "portfolio_memberships": "3d3b430f36aae0ceb17fdd99a51ac97d8a9262724d25ec5eda232257281a6797",
+    "risk_free": "72dfd807cff78ead3f10a154d5e897a57c38c30c6d26fffbc54dec54c90990c8"
+  },
+  "models": [
+    {
+      "fama_macbeth_train": {
+        "avg_period_cs_r2": 0.4382662440982273,
+        "beta_condition_number": 10.007098189848978,
+        "date_end": "2020-06-30",
+        "date_start": "2020-01-31",
+        "factors": [
+          "MKT_RF"
+        ],
+        "hac_maxlags": 0,
+        "include_intercept": true,
+        "lambda_series": {
+          "MKT_RF": [
+            0.04499999999999999,
+            0.005000000000000003,
+            0.025,
+            -0.015,
+            0.035000000000000024,
+            -0.005000000000000003
+          ],
+          "gamma_0": [
+            -0.0165,
+            -0.0165,
+            0.005499999999999986,
+            0.005500000000000002,
+            -0.027500000000000024,
+            0.016499999999999997
+          ]
+        },
+        "lambda_series_dates": [
+          "2020-01-31",
+          "2020-02-29",
+          "2020-03-31",
+          "2020-04-30",
+          "2020-05-31",
+          "2020-06-30"
+        ],
+        "mean_actual_excess_by_asset": {
+          "P1": 0.005500000000000001,
+          "P2": 0.012499999999999997,
+          "P3": 0.009499999999999998,
+          "P4": 0.0165
+        },
+        "mean_predicted_excess_by_asset": {
+          "P1": 0.0065,
+          "P2": 0.009500000000000001,
+          "P3": 0.0125,
+          "P4": 0.015500000000000003
+        },
+        "model_name": "CAPM",
+        "n_assets": 4,
+        "n_periods": 6,
+        "premia": [
+          {
+            "annualized_estimate": -0.06600000000000009,
+            "estimate": -0.0055000000000000075,
+            "fm_pvalue": 0.4650226382607565,
+            "fm_se": 0.006957010852370436,
+            "fm_tstat": -0.7905694150420958,
+            "hac_pvalue": 0.4260710061172517,
+            "hac_se": 0.0063508529610858885,
+            "hac_tstat": -0.8660254037844392,
+            "name": "gamma_0",
+            "shanken_pvalue": 0.6111995979577172,
+            "shanken_se": 0.010150815853910474,
+            "shanken_tstat": -0.5418283691828772
+          },
+          {
+            "annualized_estimate": 0.18000000000000005,
+            "estimate": 0.015000000000000005,
+            "fm_pvalue": 0.1812136462900411,
+            "fm_se": 0.00966091783079296,
+            "fm_tstat": 1.5526475085202973,
+            "hac_pvalue": 0.14971454878124568,
+            "hac_se": 0.008819171036881976,
+            "hac_tstat": 1.7008401285415218,
+            "name": "MKT_RF",
+            "shanken_pvalue": 0.25846282640892815,
+            "shanken_se": 0.01176815972585916,
+            "shanken_tstat": 1.2746257995665415
+          }
+        ],
+        "pricing_errors_by_asset": {
+          "P1": -0.0009999999999999983,
+          "P2": 0.0029999999999999957,
+          "P3": -0.0030000000000000027,
+          "P4": 0.0009999999999999974
+        },
+        "pricing_metrics": {
+          "adj_cross_sectional_r2": 0.5384615384615388,
+          "cross_sectional_r2": 0.6923076923076925,
+          "mae": 0.0019999999999999983,
+          "max_abs_error": 0.0030000000000000027,
+          "mean_error": -1.951563910473908e-18,
+          "rmse": 0.0022360679774997886
+        },
+        "shanken_correction_factor": 0.7031250000000006
+      },
+      "oos_evaluation": null,
+      "spec": {
+        "description": "Reference CAPM model for exact hand-calculated verification.",
+        "factors": [
+          "MKT_RF"
+        ],
+        "include_cs_intercept": true,
+        "include_ts_intercept": true,
+        "name": "CAPM"
+      },
+      "time_series_train": {
+        "asset_results": [
+          {
+            "adj_r_squared": 0.7167673716012084,
+            "alpha": -0.002499999999999997,
+            "alpha_pvalue": 0.5790154287158985,
+            "alpha_se": 0.0041457809879442515,
+            "alpha_tstat": -0.6030226891555263,
+            "asset_id": "P1",
+            "beta_pvalues": {
+              "MKT_RF": 0.020926075606275536
+            },
+            "beta_ses": {
+              "MKT_RF": 0.2165063509461097
+            },
+            "beta_tstats": {
+              "MKT_RF": 3.695041722813605
+            },
+            "betas": {
+              "MKT_RF": 0.8000000000000003
+            },
+            "dates": [
+              "2020-01-31",
+              "2020-02-29",
+              "2020-03-31",
+              "2020-04-30",
+              "2020-05-31",
+              "2020-06-30"
+            ],
+            "mean_excess_return": 0.005500000000000001,
+            "n_obs": 6,
+            "predicted_mean_excess_return": 0.008000000000000004,
+            "pricing_error": -0.0025000000000000022,
+            "r_squared": 0.7734138972809668,
+            "residual_std": 0.008660254037844387,
+            "residuals": [
+              -0.005000000000000011,
+              -0.004999999999999999,
+              0.0049999999999999906,
+              0.005000000000000001,
+              -0.010000000000000007,
+              0.009999999999999995
+            ]
+          },
+          {
+            "adj_r_squared": 0.8026315789473684,
+            "alpha": 0.002500000000000004,
+            "alpha_pvalue": 0.5790154287158975,
+            "alpha_se": 0.0041457809879442515,
+            "alpha_tstat": 0.6030226891555279,
+            "asset_id": "P2",
+            "beta_pvalues": {
+              "MKT_RF": 0.009889990663891327
+            },
+            "beta_ses": {
+              "MKT_RF": 0.2165063509461097
+            },
+            "beta_tstats": {
+              "MKT_RF": 4.618802153517006
+            },
+            "betas": {
+              "MKT_RF": 1.0000000000000002
+            },
+            "dates": [
+              "2020-01-31",
+              "2020-02-29",
+              "2020-03-31",
+              "2020-04-30",
+              "2020-05-31",
+              "2020-06-30"
+            ],
+            "mean_excess_return": 0.012499999999999997,
+            "n_obs": 6,
+            "predicted_mean_excess_return": 0.010000000000000002,
+            "pricing_error": 0.0024999999999999953,
+            "r_squared": 0.8421052631578947,
+            "residual_std": 0.008660254037844387,
+            "residuals": [
+              0.0049999999999999906,
+              0.0049999999999999975,
+              -0.005000000000000011,
+              -0.005000000000000003,
+              0.009999999999999993,
+              -0.010000000000000005
+            ]
+          },
+          {
+            "adj_r_squared": 0.8559907834101381,
+            "alpha": -0.0024999999999999974,
+            "alpha_pvalue": 0.5790154287158983,
+            "alpha_se": 0.004145780987944251,
+            "alpha_tstat": -0.6030226891555265,
+            "asset_id": "P3",
+            "beta_pvalues": {
+              "MKT_RF": 0.005181842489338771
+            },
+            "beta_ses": {
+              "MKT_RF": 0.2165063509461097
+            },
+            "beta_tstats": {
+              "MKT_RF": 5.542562584220407
+            },
+            "betas": {
+              "MKT_RF": 1.2000000000000002
+            },
+            "dates": [
+              "2020-01-31",
+              "2020-02-29",
+              "2020-03-31",
+              "2020-04-30",
+              "2020-05-31",
+              "2020-06-30"
+            ],
+            "mean_excess_return": 0.009499999999999998,
+            "n_obs": 6,
+            "predicted_mean_excess_return": 0.012000000000000002,
+            "pricing_error": -0.002500000000000004,
+            "r_squared": 0.8847926267281105,
+            "residual_std": 0.008660254037844387,
+            "residuals": [
+              -0.005000000000000011,
+              -0.0050000000000000044,
+              0.0049999999999999906,
+              0.004999999999999999,
+              -0.010000000000000005,
+              0.009999999999999992
+            ]
+          },
+          {
+            "adj_r_squared": 0.8908614668218858,
+            "alpha": 0.0025000000000000074,
+            "alpha_pvalue": 0.579015428715897,
+            "alpha_se": 0.0041457809879442515,
+            "alpha_tstat": 0.6030226891555288,
+            "asset_id": "P4",
+            "beta_pvalues": {
+              "MKT_RF": 0.002946231073639473
+            },
+            "beta_ses": {
+              "MKT_RF": 0.2165063509461097
+            },
+            "beta_tstats": {
+              "MKT_RF": 6.466323014923809
+            },
+            "betas": {
+              "MKT_RF": 1.4000000000000004
+            },
+            "dates": [
+              "2020-01-31",
+              "2020-02-29",
+              "2020-03-31",
+              "2020-04-30",
+              "2020-05-31",
+              "2020-06-30"
+            ],
+            "mean_excess_return": 0.0165,
+            "n_obs": 6,
+            "predicted_mean_excess_return": 0.014000000000000004,
+            "pricing_error": 0.002499999999999997,
+            "r_squared": 0.9126891734575087,
+            "residual_std": 0.008660254037844387,
+            "residuals": [
+              0.004999999999999977,
+              0.004999999999999997,
+              -0.005000000000000018,
+              -0.0050000000000000044,
+              0.009999999999999992,
+              -0.01000000000000001
+            ]
+          }
+        ],
+        "cov_type": "OLS",
+        "date_end": "2020-06-30",
+        "date_start": "2020-01-31",
+        "factor_condition_number": 61.24336892720172,
+        "factors": [
+          "MKT_RF"
+        ],
+        "grs_df1": 4,
+        "grs_df2": 1,
+        "grs_f_stat": null,
+        "grs_note": "GRS test unavailable: singular or near-zero residual covariance matrix (possible zero-noise fixture).",
+        "grs_pvalue": null,
+        "hac_maxlags": 0,
+        "include_intercept": true,
+        "mean_abs_alpha": 0.0025000000000000014,
+        "mean_adj_r_squared": 0.8165628001951502,
+        "mean_r_squared": 0.8532502401561202,
+        "model_name": "CAPM",
+        "n_assets": 4,
+        "n_periods": 6,
+        "rmse_alpha": 0.002500000000000002
+      }
+    },
+    {
+      "fama_macbeth_train": {
+        "avg_period_cs_r2": 1.0,
+        "beta_condition_number": 11.282241450445325,
+        "date_end": "2020-06-30",
+        "date_start": "2020-01-31",
+        "factors": [
+          "MKT_RF",
+          "VAL"
+        ],
+        "hac_maxlags": 0,
+        "include_intercept": true,
+        "lambda_series": {
+          "MKT_RF": [
+            0.029999999999999978,
+            -0.009999999999999997,
+            0.029999999999999985,
+            -0.009999999999999992,
+            0.009999999999999993,
+            0.009999999999999985
+          ],
+          "VAL": [
+            0.014999999999999993,
+            0.015000000000000001,
+            -0.005000000000000007,
+            -0.005000000000000002,
+            0.024999999999999998,
+            -0.015
+          ],
+          "gamma_0": [
+            1.892425610156517e-17,
+            2.3655320126956462e-18,
+            6.30808536718839e-18,
+            -7.885106708985487e-18,
+            6.30808536718839e-18,
+            9.462128050782585e-18
+          ]
+        },
+        "lambda_series_dates": [
+          "2020-01-31",
+          "2020-02-29",
+          "2020-03-31",
+          "2020-04-30",
+          "2020-05-31",
+          "2020-06-30"
+        ],
+        "mean_actual_excess_by_asset": {
+          "P1": 0.005500000000000001,
+          "P2": 0.012499999999999997,
+          "P3": 0.009499999999999998,
+          "P4": 0.0165
+        },
+        "mean_predicted_excess_by_asset": {
+          "P1": 0.005500000000000003,
+          "P2": 0.012499999999999999,
+          "P3": 0.0095,
+          "P4": 0.016499999999999994
+        },
+        "model_name": "TWO_FACTOR",
+        "n_assets": 4,
+        "n_periods": 6,
+        "premia": [
+          {
+            "annualized_estimate": 7.096596038086938e-17,
+            "estimate": 5.9138300317391145e-18,
+            "fm_pvalue": 1.0,
+            "fm_se": 3.583171564856498e-18,
+            "fm_tstat": 0.0,
+            "hac_pvalue": 1.0,
+            "hac_se": 0.0,
+            "hac_tstat": 0.0,
+            "name": "gamma_0",
+            "shanken_pvalue": 1.0,
+            "shanken_se": 6.784460409088773e-18,
+            "shanken_tstat": 0.0
+          },
+          {
+            "annualized_estimate": 0.11999999999999991,
+            "estimate": 0.009999999999999993,
+            "fm_pvalue": 0.22920497355421765,
+            "fm_se": 0.0073029674334022104,
+            "fm_tstat": 1.3693063937629153,
+            "hac_pvalue": 0.1939036802424734,
+            "hac_se": 0.006666666666666667,
+            "hac_tstat": 1.499999999999999,
+            "name": "MKT_RF",
+            "shanken_pvalue": 0.22920497355421765,
+            "shanken_se": 0.007302967433402215,
+            "shanken_tstat": 1.3693063937629144
+          },
+          {
+            "annualized_estimate": 0.05999999999999997,
+            "estimate": 0.0049999999999999975,
+            "fm_pvalue": 0.4650226382607574,
+            "fm_se": 0.006324555320336759,
+            "fm_tstat": 0.7905694150420944,
+            "hac_pvalue": 0.4260710061172521,
+            "hac_se": 0.00577350269189626,
+            "hac_tstat": 0.8660254037844379,
+            "name": "VAL",
+            "shanken_pvalue": 0.4650226382607574,
+            "shanken_se": 0.006324555320336759,
+            "shanken_tstat": 0.7905694150420944
+          }
+        ],
+        "pricing_errors_by_asset": {
+          "P1": -1.734723475976807e-18,
+          "P2": -1.734723475976807e-18,
+          "P3": -1.734723475976807e-18,
+          "P4": 6.938893903907228e-18
+        },
+        "pricing_metrics": {
+          "adj_cross_sectional_r2": 1.0,
+          "cross_sectional_r2": 1.0,
+          "mae": 3.0357660829594124e-18,
+          "max_abs_error": 6.938893903907228e-18,
+          "mean_error": 4.336808689942018e-19,
+          "rmse": 3.780742163385255e-18
+        },
+        "shanken_correction_factor": 0.4166666666666662
+      },
+      "oos_evaluation": null,
+      "spec": {
+        "description": "Reference two-factor model with exact closed-form betas and premia.",
+        "factors": [
+          "MKT_RF",
+          "VAL"
+        ],
+        "include_cs_intercept": true,
+        "include_ts_intercept": true,
+        "name": "TWO_FACTOR"
+      },
+      "time_series_train": {
+        "asset_results": [
+          {
+            "adj_r_squared": 1.0,
+            "alpha": -8.673617379884035e-19,
+            "alpha_pvalue": 0.6964281801051349,
+            "alpha_se": 2.018674585675115e-18,
+            "alpha_tstat": -0.4296689244236597,
+            "asset_id": "P1",
+            "beta_pvalues": {
+              "MKT_RF": 4.429041446669762e-48,
+              "VAL": 2.793044128002694e-47
+            },
+            "beta_ses": {
+              "MKT_RF": 1.0093372928375576e-16,
+              "VAL": 1.1654823154457838e-16
+            },
+            "beta_tstats": {
+              "MKT_RF": 7925992685269302.0,
+              "VAL": -4290069384783034.0
+            },
+            "betas": {
+              "MKT_RF": 0.8000000000000002,
+              "VAL": -0.49999999999999994
+            },
+            "dates": [
+              "2020-01-31",
+              "2020-02-29",
+              "2020-03-31",
+              "2020-04-30",
+              "2020-05-31",
+              "2020-06-30"
+            ],
+            "mean_excess_return": 0.005500000000000001,
+            "n_obs": 6,
+            "predicted_mean_excess_return": 0.005500000000000002,
+            "pricing_error": -8.673617379884035e-19,
+            "r_squared": 1.0,
+            "residual_std": 4.03734917135023e-18,
+            "residuals": [
+              -3.469446951953614e-18,
+              3.469446951953614e-18,
+              0.0,
+              4.336808689942018e-18,
+              -1.734723475976807e-18,
+              1.734723475976807e-18
+            ]
+          },
+          {
+            "adj_r_squared": 1.0,
+            "alpha": -4.336808689942018e-18,
+            "alpha_pvalue": 0.23449441660051065,
+            "alpha_se": 2.9226572867812074e-18,
+            "alpha_tstat": -1.4838581004884939,
+            "asset_id": "P2",
+            "beta_pvalues": {
+              "MKT_RF": 6.88199633238186e-48,
+              "VAL": 8.476421194800517e-47
+            },
+            "beta_ses": {
+              "MKT_RF": 1.461328643390604e-16,
+              "VAL": 1.687396971272151e-16
+            },
+            "beta_tstats": {
+              "MKT_RF": 6843087655353009.0,
+              "VAL": 2963143874929699.0
+            },
+            "betas": {
+              "MKT_RF": 1.0000000000000002,
+              "VAL": 0.49999999999999994
+            },
+            "dates": [
+              "2020-01-31",
+              "2020-02-29",
+              "2020-03-31",
+              "2020-04-30",
+              "2020-05-31",
+              "2020-06-30"
+            ],
+            "mean_excess_return": 0.012499999999999997,
+            "n_obs": 6,
+            "predicted_mean_excess_return": 0.0125,
+            "pricing_error": -3.469446951953614e-18,
+            "r_squared": 1.0,
+            "residual_std": 5.845314573562415e-18,
+            "residuals": [
+              0.0,
+              6.5052130349130266e-18,
+              -6.938893903907228e-18,
+              3.469446951953614e-18,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "adj_r_squared": 1.0,
+            "alpha": -4.336808689942018e-18,
+            "alpha_pvalue": 0.1820877525980536,
+            "alpha_se": 2.5069855329451937e-18,
+            "alpha_tstat": -1.7298897951146759,
+            "asset_id": "P3",
+            "beta_pvalues": {
+              "MKT_RF": 2.5135787966416828e-48,
+              "VAL": 5.349760431650158e-47
+            },
+            "beta_ses": {
+              "MKT_RF": 1.2534927664725971e-16,
+              "VAL": 1.4474087723004048e-16
+            },
+            "beta_tstats": {
+              "MKT_RF": 9573250297860682.0,
+              "VAL": -3454449147805956.5
+            },
+            "betas": {
+              "MKT_RF": 1.2000000000000002,
+              "VAL": -0.4999999999999999
+            },
+            "dates": [
+              "2020-01-31",
+              "2020-02-29",
+              "2020-03-31",
+              "2020-04-30",
+              "2020-05-31",
+              "2020-06-30"
+            ],
+            "mean_excess_return": 0.009499999999999998,
+            "n_obs": 6,
+            "predicted_mean_excess_return": 0.009500000000000001,
+            "pricing_error": -3.469446951953614e-18,
+            "r_squared": 1.0,
+            "residual_std": 5.0139710658903875e-18,
+            "residuals": [
+              0.0,
+              0.0,
+              0.0,
+              8.673617379884035e-18,
+              4.336808689942018e-19,
+              0.0
+            ]
+          },
+          {
+            "adj_r_squared": 1.0,
+            "alpha": -5.204170427930421e-18,
+            "alpha_pvalue": 0.31693237007252417,
+            "alpha_se": 4.344030691097895e-18,
+            "alpha_tstat": -1.1980049861514992,
+            "asset_id": "P4",
+            "beta_pvalues": {
+              "MKT_RF": 8.235221917802668e-48,
+              "VAL": 2.783283889050136e-46
+            },
+            "beta_ses": {
+              "MKT_RF": 2.1720153455489478e-16,
+              "VAL": 2.5080272888733655e-16
+            },
+            "beta_tstats": {
+              "MKT_RF": 6445626652081359.0,
+              "VAL": 1993598722861606.8
+            },
+            "betas": {
+              "MKT_RF": 1.4000000000000001,
+              "VAL": 0.49999999999999994
+            },
+            "dates": [
+              "2020-01-31",
+              "2020-02-29",
+              "2020-03-31",
+              "2020-04-30",
+              "2020-05-31",
+              "2020-06-30"
+            ],
+            "mean_excess_return": 0.0165,
+            "n_obs": 6,
+            "predicted_mean_excess_return": 0.0165,
+            "pricing_error": 0.0,
+            "r_squared": 1.0,
+            "residual_std": 8.68806138219579e-18,
+            "residuals": [
+              0.0,
+              8.673617379884035e-18,
+              6.938893903907228e-18,
+              6.938893903907228e-18,
+              6.938893903907228e-18,
+              2.6020852139652106e-18
+            ]
+          }
+        ],
+        "cov_type": "OLS",
+        "date_end": "2020-06-30",
+        "date_start": "2020-01-31",
+        "factor_condition_number": 70.7159828929624,
+        "factors": [
+          "MKT_RF",
+          "VAL"
+        ],
+        "grs_df1": 4,
+        "grs_df2": 0,
+        "grs_f_stat": null,
+        "grs_note": "GRS test undefined: requires T - N - K > 0 (got T=6, N=4, K=2).",
+        "grs_pvalue": null,
+        "hac_maxlags": 0,
+        "include_intercept": true,
+        "mean_abs_alpha": 3.686287386450715e-18,
+        "mean_adj_r_squared": 1.0,
+        "mean_r_squared": 1.0,
+        "model_name": "TWO_FACTOR",
+        "n_assets": 4,
+        "n_periods": 6,
+        "rmse_alpha": 4.0451058531818725e-18
+      }
+    }
+  ],
+  "run_id": "mfape-321cf5ec1174d659",
+  "run_label": "reference_hand_calculated",
+  "runtime_environment": {
+    "machine": "arm64",
+    "packages": {
+      "numpy": "2.0.2",
+      "polars": "1.36.1",
+      "scipy": "1.13.1",
+      "statsmodels": "0.14.6"
+    },
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6"
+  },
+  "schema_version": "1.0.0",
+  "split_boundaries": {
+    "full_panel_end": "2020-06-30",
+    "full_panel_periods": 6,
+    "full_panel_start": "2020-01-31",
+    "test_end": null,
+    "test_periods": 0,
+    "test_start": null,
+    "train_end": "2020-06-30",
+    "train_periods": 6,
+    "train_start": "2020-01-31",
+    "zero_leakage_verified": true
+  }
+}

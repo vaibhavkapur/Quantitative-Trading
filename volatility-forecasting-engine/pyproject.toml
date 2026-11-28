@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "volatility-forecasting-engine"
+version = "0.1.0"
+description = "Causal realized-volatility forecasting engine comparing rolling historical, EWMA, GARCH(1,1), and ML baselines with chronological evaluation, QLIKE/MAE/calibration metrics, forecast intervals, and regime diagnostics."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Trading-Quantitative Research" },
+]
+dependencies = [
+  "numpy>=2.0.0,<3.0.0",
+  "polars>=1.12.0,<2.0.0",
+  "pyyaml>=6.0.2,<7.0.0",
+  "scikit-learn>=1.5.0,<2.0.0",
+  "scipy>=1.14.0,<2.0.0",
+]
+
+[project.optional-dependencies]
+arch = [
+  "arch>=7.0.0,<8.0.0",
+]
+dev = [
+  "pytest>=8.3.0,<9.0.0",
+]
+
+[project.scripts]
+vol-forecast = "volatility_forecasting.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/volatility_forecasting"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra -q"

@@ -1,0 +1,43 @@
+name: Cross-Asset Factor Investing Engine CI
+
+on:
+  push:
+    paths:
+      - "cross-asset-factor-investing-engine/**"
+      - ".github/workflows/cross-asset-factor-investing-engine.yml"
+  pull_request:
+    paths:
+      - "cross-asset-factor-investing-engine/**"
+      - ".github/workflows/cross-asset-factor-investing-engine.yml"
+  workflow_dispatch:
+
+jobs:
+  validate-and-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: cross-asset-factor-investing-engine
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync locked environment
+        run: uv sync --frozen --python 3.12
+
+      - name: Validate canonical fixtures
+        run: |
+          uv run cafe validate --dataset data/fixtures/valid_small
+          uv run cafe validate --dataset data/fixtures/synthetic_multi_year
+
+      - name: Run automated test suite
+        run: uv run pytest tests -v
+
+      - name: Run reproducible demo & verify replay equivalence
+        run: |
+          uv run python scripts/run_demo.py
+          uv run cafe verify-replay --config config/default.yaml

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cross-asset-factor-investing-engine"
+version = "0.1.0"
+description = "Cross-asset factor investing research engine across equities, FX, and commodities with point-in-time timestamp gates, roll/FX normalization, and constrained volatility-scaled walk-forward evaluation."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Trading-Quantitative Research" },
+]
+dependencies = [
+  "polars>=1.12.0,<2.0.0",
+  "numpy>=2.0.0,<3.0.0",
+  "scipy>=1.14.0,<2.0.0",
+  "pyyaml>=6.0.2,<7.0.0",
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3.0,<9.0.0",
+]
+
+[project.scripts]
+cafe = "cross_asset_factor_engine.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cross_asset_factor_engine"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q"

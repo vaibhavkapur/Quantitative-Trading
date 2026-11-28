@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "fixture_name": "synthetic_multi_year",
+  "provenance": "synthetic_seeded_dgp",
+  "seed": 42,
+  "n_days": 1008,
+  "date_start": "2021-01-04",
+  "date_end": "2024-11-13",
+  "n_assets": 9,
+  "asset_classes": [
+    "equity",
+    "fx",
+    "commodity"
+  ],
+  "notes": "Synthetic multi-asset dataset generated deterministically for offline research evaluation. Contains no live market, customer, or proprietary data."
+}

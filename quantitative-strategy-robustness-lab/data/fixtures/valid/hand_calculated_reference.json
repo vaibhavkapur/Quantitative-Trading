@@ -1,0 +1,51 @@
+{
+  "provenance": "synthetic_fixture",
+  "description": "Hand-calculated analytical oracle for returns, transaction cost drag, and Sharpe ratio.",
+  "annualization_factor": 252,
+  "gross_returns": [
+    -0.01,
+    0.0,
+    0.01,
+    0.02,
+    0.03,
+    0.0,
+    0.02,
+    -0.01,
+    0.03,
+    0.01,
+    0.0,
+    0.02
+  ],
+  "turnover": [
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "cost_model": {
+    "commission_bps": 5.0,
+    "slippage_bps": 5.0,
+    "borrow_annual_bps": 0.0,
+    "fixed_cost_per_period": 0.0,
+    "annualization_factor": 252
+  },
+  "expected": {
+    "gross_mean": 0.01,
+    "gross_sample_std": 0.01414213562373095,
+    "gross_sharpe_period": 0.7071067811865475,
+    "gross_sharpe_annual": 11.224972160321824,
+    "period_cost_drag": 0.0005,
+    "net_mean": 0.0095,
+    "net_sharpe_period": 0.6717514421272202,
+    "skewness": 0.0
+  },
+  "tolerance": 1e-10
+}

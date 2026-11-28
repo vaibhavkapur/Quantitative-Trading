@@ -1,0 +1,627 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "default_walkforward_demo_659102efff8c",
+  "run_name": "default_walkforward_demo",
+  "config_hash": "caf52c43cbd5e7db",
+  "data_provenance": "synthetic_fixture",
+  "runtime_environment": {
+    "platform_version": "0.1.0",
+    "python_version": "3.12.15",
+    "os": "Darwin 25.5.0 (arm64)",
+    "numpy_version": "2.5.5",
+    "polars_version": "1.44.2",
+    "statsmodels_version": "0.15.0",
+    "scipy_version": "1.18.1"
+  },
+  "input_validation": {
+    "contract_version": "1.0.0",
+    "prices_rows": 8021,
+    "borrow_rows": 8021,
+    "symbols": [
+      "FIN_A",
+      "FIN_B",
+      "FIN_BREAK_A",
+      "FIN_BREAK_B",
+      "FIN_C",
+      "IND_PENNY",
+      "IND_RW1",
+      "IND_RW2",
+      "IND_RW3",
+      "TECH_A",
+      "TECH_B",
+      "TECH_C",
+      "TECH_D",
+      "TECH_DELIST"
+    ],
+    "dropped_symbols": [],
+    "date_start": "2022-01-03",
+    "date_end": "2024-04-19",
+    "corporate_action_events": 2,
+    "prices_hash": "4da7f63daaf4b269",
+    "borrow_hash": "6f033c71104669ec"
+  },
+  "config": {
+    "schema_version": "1.0.0",
+    "run_name": "default_walkforward_demo",
+    "seed": 42,
+    "data": {
+      "prices_path": "data/fixtures/synthetic_universe_prices.parquet",
+      "borrow_path": "data/fixtures/synthetic_universe_borrow.parquet",
+      "use_log_prices": true,
+      "max_missing_fraction": 0.02,
+      "missing_price_policy": "raise"
+    },
+    "universe": {
+      "min_price": 5.0,
+      "min_adv_usd": 1000000.0,
+      "min_history_days": 120,
+      "require_active": true,
+      "same_sector_only": true
+    },
+    "selection": {
+      "method": "engle_granger",
+      "hedge_ratio_estimator": "ols",
+      "max_adf_pvalue": 0.05,
+      "fdr_alpha": 0.1,
+      "multiple_testing_method": "bh",
+      "min_half_life_days": 2.0,
+      "max_half_life_days": 40.0,
+      "min_correlation": 0.5,
+      "max_pairs_per_fold": 4,
+      "include_baskets": true,
+      "basket_size": 3,
+      "max_baskets_per_fold": 1
+    },
+    "signals": {
+      "z_entry": 1.75,
+      "z_exit": 0.25,
+      "z_stop": 3.5,
+      "max_holding_days": 30,
+      "zscore_mode": "training_frozen",
+      "zscore_lookback_days": 60
+    },
+    "execution": {
+      "initial_capital": 1000000.0,
+      "gross_leverage_target": 1.0,
+      "max_pair_weight": 0.35,
+      "commission_bps": 1.5,
+      "slippage_bps": 3.0,
+      "default_borrow_fee_bps_annual": 50.0,
+      "enforce_borrow_availability": true,
+      "strict_borrow_errors": false,
+      "recall_on_borrow_loss": true,
+      "execution_delay_days": 1
+    },
+    "walk_forward": {
+      "train_window_days": 180,
+      "test_window_days": 60,
+      "step_days": 60,
+      "embargo_days": 1,
+      "window_type": "rolling"
+    },
+    "evaluation": {
+      "annualization_days": 252,
+      "bootstrap_samples": 500,
+      "bootstrap_block_size": 10,
+      "confidence_level": 0.95,
+      "risk_free_rate_annual": 0.0,
+      "sweep_z_entries": [
+        1.5,
+        1.75,
+        2.0,
+        2.25
+      ]
+    }
+  },
+  "performance": {
+    "n_oos_days": 360,
+    "total_return_net": -0.001882,
+    "total_return_gross": 0.001156,
+    "cagr_net": -0.001318,
+    "cagr_gross": 0.000809,
+    "annualized_vol_net": 0.017782,
+    "sharpe_net": -0.0653,
+    "sharpe_gross": 0.0545,
+    "sortino_net": -0.052,
+    "max_drawdown_net": -0.024186,
+    "calmar_net": -0.0545,
+    "annualized_turnover": 4.1893,
+    "total_commission": 901.794,
+    "total_slippage": 1803.588,
+    "total_borrow_cost": 345.9926,
+    "total_cost_drag_bps": 30.39,
+    "n_trades": 261,
+    "positive_day_rate": 0.1306
+  },
+  "uncertainty": {
+    "confidence_level": 0.95,
+    "bootstrap_samples": 500,
+    "bootstrap_block_size": 10,
+    "sharpe_point": -0.0653,
+    "sharpe_se_analytical": 0.8379,
+    "sharpe_ci_low": -1.6875,
+    "sharpe_ci_high": 1.5005,
+    "ann_return_point": -0.001161,
+    "ann_return_ci_low": -0.030475,
+    "ann_return_ci_high": 0.027651,
+    "return_skewness": 0.0322,
+    "return_kurtosis": 14.5182
+  },
+  "multiple_testing": {
+    "method": "bh",
+    "fdr_alpha": 0.1,
+    "total_pair_hypotheses_tested": 118,
+    "total_basket_hypotheses_tested": 87,
+    "total_passed_raw_pvalue": 78,
+    "total_passed_adjusted_pvalue": 62,
+    "deflated_sharpe": {
+      "n_trials": 4,
+      "observed_sharpe_annual": -0.0653,
+      "expected_max_null_sharpe_annual": 0.4267,
+      "deflated_sharpe_z": -0.5871,
+      "deflated_sharpe_prob": 0.2786
+    },
+    "attempted_configurations": [
+      {
+        "config_hash": "fdeee5fabb49e152",
+        "z_entry": 1.5,
+        "is_primary": false,
+        "sharpe_net": -0.4714,
+        "total_return_net": -0.012737,
+        "max_drawdown_net": -0.030789,
+        "annualized_turnover": 4.7036,
+        "n_trades": 286
+      },
+      {
+        "config_hash": "caf52c43cbd5e7db",
+        "z_entry": 1.75,
+        "is_primary": true,
+        "sharpe_net": -0.0653,
+        "total_return_net": -0.001882,
+        "max_drawdown_net": -0.024186,
+        "annualized_turnover": 4.1893,
+        "n_trades": 261
+      },
+      {
+        "config_hash": "a1b78169141db9d1",
+        "z_entry": 2.0,
+        "is_primary": false,
+        "sharpe_net": 0.1438,
+        "total_return_net": 0.003323,
+        "max_drawdown_net": -0.021214,
+        "annualized_turnover": 3.6717,
+        "n_trades": 233
+      },
+      {
+        "config_hash": "0d2ef6c58f604933",
+        "z_entry": 2.25,
+        "is_primary": false,
+        "sharpe_net": 0.499,
+        "total_return_net": 0.011739,
+        "max_drawdown_net": -0.015217,
+        "annualized_turnover": 3.1601,
+        "n_trades": 204
+      }
+    ]
+  },
+  "stability": {
+    "n_folds": 6,
+    "positive_oos_folds": 3,
+    "positive_oos_fold_rate": 0.5,
+    "fold_net_return_mean": -0.000301,
+    "fold_net_return_std": 0.005642,
+    "mean_fold_pair_jaccard_stability": 0.0,
+    "oos_stationarity_tests": 4,
+    "oos_stationarity_retained_p10_rate": 0.25,
+    "hedge_ratio_drift": {}
+  },
+  "benchmarks": {
+    "equal_weight_universe": {
+      "name": "equal_weight_universe",
+      "n_oos_days": 360,
+      "total_return": 0.209977,
+      "cagr": 0.142731,
+      "annualized_vol": 0.098917,
+      "sharpe": 1.3984,
+      "max_drawdown": -0.130164
+    },
+    "zero_cost_strategy": {
+      "name": "zero_cost_frictionless_strategy",
+      "total_return_net": 0.001157,
+      "cagr_net": 0.00081,
+      "sharpe_net": 0.0545,
+      "max_drawdown_net": -0.023483,
+      "n_trades": 261
+    },
+    "primary_vs_zero_cost_delta": {
+      "total_return_cost_impact": -0.003039,
+      "sharpe_cost_impact": -0.1198
+    },
+    "primary_vs_equal_weight_delta": {
+      "excess_total_return": -0.211859,
+      "sharpe_delta": -1.4637
+    }
+  },
+  "reconciliation": {
+    "passed": true,
+    "total_trades": 261,
+    "total_position_checks": 2144,
+    "total_equity_checks": 360,
+    "max_position_diff": 0.0,
+    "max_equity_diff": 0.0
+  },
+  "diagnostics": {
+    "folds_executed": 6,
+    "folds_with_selected_spreads": 4,
+    "spread_entries": 8,
+    "spread_exits_mean_revert": 3,
+    "spread_exits_stop_loss": 2,
+    "spread_exits_time_stop": 1,
+    "borrow_blocked_entries": 0,
+    "borrow_forced_recalls": 0,
+    "borrow_capped_trades": 0,
+    "missing_price_skips": 1,
+    "delist_liquidations": 1,
+    "fold_end_flattens": 1
+  },
+  "folds": [
+    {
+      "fold": {
+        "fold_id": 1,
+        "train_start": "2022-01-03",
+        "train_end": "2022-09-09",
+        "test_start": "2022-09-13",
+        "test_end": "2022-12-05",
+        "embargo_days": 1,
+        "n_train_days": 180,
+        "n_test_days": 60
+      },
+      "eligible_symbols": [
+        "FIN_A",
+        "FIN_B",
+        "FIN_BREAK_A",
+        "FIN_BREAK_B",
+        "FIN_C",
+        "IND_RW1",
+        "IND_RW2",
+        "IND_RW3",
+        "TECH_A",
+        "TECH_B",
+        "TECH_C",
+        "TECH_D",
+        "TECH_DELIST"
+      ],
+      "excluded_symbols": {
+        "IND_PENNY": [
+          "below_min_price(2.44<5.00)",
+          "below_min_adv(38371<1000000)"
+        ]
+      },
+      "n_pairs_tested": 23,
+      "n_baskets_tested": 18,
+      "n_passed_raw_pvalue": 21,
+      "n_passed_adjusted_pvalue": 16,
+      "selected_spreads": [
+        {
+          "spread_id": "BASKET:TECH_A|TECH_D|TECH_DELIST",
+          "kind": "basket",
+          "symbols": [
+            "TECH_A",
+            "TECH_D",
+            "TECH_DELIST"
+          ],
+          "weights": [
+            1.0,
+            2.5865,
+            -1.1418
+          ],
+          "intercept": 12.105784,
+          "spread_mean": 0.0,
+          "spread_std": 0.083413,
+          "use_log_prices": true,
+          "estimator": "johansen",
+          "adf_statistic": -4.629551,
+          "adf_pvalue": 0.000114,
+          "adjusted_pvalue": 0.001025,
+          "half_life_days": 5.4027,
+          "correlation": 0.872269,
+          "train_start": "2022-01-03",
+          "train_end": "2022-09-09"
+        }
+      ],
+      "oos_net_return": 0.00752,
+      "oos_gross_return": 0.008381,
+      "n_trades": 105
+    },
+    {
+      "fold": {
+        "fold_id": 2,
+        "train_start": "2022-03-28",
+        "train_end": "2022-12-02",
+        "test_start": "2022-12-06",
+        "test_end": "2023-02-27",
+        "embargo_days": 1,
+        "n_train_days": 180,
+        "n_test_days": 60
+      },
+      "eligible_symbols": [
+        "FIN_A",
+        "FIN_B",
+        "FIN_BREAK_A",
+        "FIN_BREAK_B",
+        "FIN_C",
+        "IND_RW1",
+        "IND_RW2",
+        "IND_RW3",
+        "TECH_A",
+        "TECH_B",
+        "TECH_C",
+        "TECH_D"
+      ],
+      "excluded_symbols": {
+        "IND_PENNY": [
+          "below_min_price(2.18<5.00)",
+          "below_min_adv(37747<1000000)"
+        ],
+        "TECH_DELIST": [
+          "inactive_or_delisted_at_formation_end"
+        ]
+      },
+      "n_pairs_tested": 19,
+      "n_baskets_tested": 12,
+      "n_passed_raw_pvalue": 14,
+      "n_passed_adjusted_pvalue": 10,
+      "selected_spreads": [
+        {
+          "spread_id": "BASKET:FIN_A|FIN_B|FIN_C",
+          "kind": "basket",
+          "symbols": [
+            "FIN_A",
+            "FIN_B",
+            "FIN_C"
+          ],
+          "weights": [
+            1.0,
+            -0.50883,
+            -0.339754
+          ],
+          "intercept": 1.184807,
+          "spread_mean": 0.0,
+          "spread_std": 0.017726,
+          "use_log_prices": true,
+          "estimator": "johansen",
+          "adf_statistic": -4.768886,
+          "adf_pvalue": 6.2e-05,
+          "adjusted_pvalue": 0.000661,
+          "half_life_days": 2.0258,
+          "correlation": 0.915963,
+          "train_start": "2022-03-28",
+          "train_end": "2022-12-02"
+        }
+      ],
+      "oos_net_return": 0.000149,
+      "oos_gross_return": 0.000879,
+      "n_trades": 66
+    },
+    {
+      "fold": {
+        "fold_id": 3,
+        "train_start": "2022-06-20",
+        "train_end": "2023-02-24",
+        "test_start": "2023-02-28",
+        "test_end": "2023-05-22",
+        "embargo_days": 1,
+        "n_train_days": 180,
+        "n_test_days": 60
+      },
+      "eligible_symbols": [
+        "FIN_A",
+        "FIN_B",
+        "FIN_BREAK_A",
+        "FIN_BREAK_B",
+        "FIN_C",
+        "IND_RW1",
+        "IND_RW2",
+        "IND_RW3",
+        "TECH_A",
+        "TECH_B",
+        "TECH_C",
+        "TECH_D"
+      ],
+      "excluded_symbols": {
+        "IND_PENNY": [
+          "below_min_price(2.21<5.00)",
+          "below_min_adv(34968<1000000)"
+        ],
+        "TECH_DELIST": [
+          "inactive_or_delisted_at_formation_end",
+          "insufficient_history(101<120)"
+        ]
+      },
+      "n_pairs_tested": 19,
+      "n_baskets_tested": 12,
+      "n_passed_raw_pvalue": 9,
+      "n_passed_adjusted_pvalue": 6,
+      "selected_spreads": [
+        {
+          "spread_id": "BASKET:TECH_A|TECH_B|TECH_D",
+          "kind": "basket",
+          "symbols": [
+            "TECH_A",
+            "TECH_B",
+            "TECH_D"
+          ],
+          "weights": [
+            1.0,
+            -1.684408,
+            -2.092786
+          ],
+          "intercept": -10.664634,
+          "spread_mean": 0.0,
+          "spread_std": 0.062618,
+          "use_log_prices": true,
+          "estimator": "johansen",
+          "adf_statistic": -4.449295,
+          "adf_pvalue": 0.000243,
+          "adjusted_pvalue": 0.001455,
+          "half_life_days": 3.7979,
+          "correlation": 0.877619,
+          "train_start": "2022-06-20",
+          "train_end": "2023-02-24"
+        }
+      ],
+      "oos_net_return": -0.010133,
+      "oos_gross_return": -0.009797,
+      "n_trades": 12
+    },
+    {
+      "fold": {
+        "fold_id": 4,
+        "train_start": "2022-09-12",
+        "train_end": "2023-05-19",
+        "test_start": "2023-05-23",
+        "test_end": "2023-08-14",
+        "embargo_days": 1,
+        "n_train_days": 180,
+        "n_test_days": 60
+      },
+      "eligible_symbols": [
+        "FIN_A",
+        "FIN_B",
+        "FIN_BREAK_A",
+        "FIN_BREAK_B",
+        "FIN_C",
+        "IND_RW1",
+        "IND_RW2",
+        "IND_RW3",
+        "TECH_A",
+        "TECH_B",
+        "TECH_C",
+        "TECH_D"
+      ],
+      "excluded_symbols": {
+        "IND_PENNY": [
+          "below_min_price(2.23<5.00)",
+          "below_min_adv(33282<1000000)"
+        ],
+        "TECH_DELIST": [
+          "inactive_or_delisted_at_formation_end",
+          "insufficient_history(41<120)"
+        ]
+      },
+      "n_pairs_tested": 19,
+      "n_baskets_tested": 15,
+      "n_passed_raw_pvalue": 13,
+      "n_passed_adjusted_pvalue": 10,
+      "selected_spreads": [],
+      "oos_net_return": 0.0,
+      "oos_gross_return": 0.0,
+      "n_trades": 0
+    },
+    {
+      "fold": {
+        "fold_id": 5,
+        "train_start": "2022-12-05",
+        "train_end": "2023-08-11",
+        "test_start": "2023-08-15",
+        "test_end": "2023-11-06",
+        "embargo_days": 1,
+        "n_train_days": 180,
+        "n_test_days": 60
+      },
+      "eligible_symbols": [
+        "FIN_A",
+        "FIN_B",
+        "FIN_BREAK_A",
+        "FIN_BREAK_B",
+        "FIN_C",
+        "IND_RW1",
+        "IND_RW2",
+        "IND_RW3",
+        "TECH_A",
+        "TECH_B",
+        "TECH_C",
+        "TECH_D"
+      ],
+      "excluded_symbols": {
+        "IND_PENNY": [
+          "below_min_price(2.19<5.00)",
+          "below_min_adv(32826<1000000)"
+        ]
+      },
+      "n_pairs_tested": 19,
+      "n_baskets_tested": 15,
+      "n_passed_raw_pvalue": 11,
+      "n_passed_adjusted_pvalue": 11,
+      "selected_spreads": [
+        {
+          "spread_id": "PAIR:TECH_A|TECH_B",
+          "kind": "pair",
+          "symbols": [
+            "TECH_A",
+            "TECH_B"
+          ],
+          "weights": [
+            1.0,
+            -1.256598
+          ],
+          "intercept": -0.145046,
+          "spread_mean": -0.0,
+          "spread_std": 0.0236,
+          "use_log_prices": true,
+          "estimator": "ols",
+          "adf_statistic": -4.277175,
+          "adf_pvalue": 0.002778,
+          "adjusted_pvalue": 0.052788,
+          "half_life_days": 3.4527,
+          "correlation": 0.972879,
+          "train_start": "2022-12-05",
+          "train_end": "2023-08-11"
+        }
+      ],
+      "oos_net_return": 0.00066,
+      "oos_gross_return": 0.001778,
+      "n_trades": 78
+    },
+    {
+      "fold": {
+        "fold_id": 6,
+        "train_start": "2023-02-27",
+        "train_end": "2023-11-03",
+        "test_start": "2023-11-07",
+        "test_end": "2024-01-29",
+        "embargo_days": 1,
+        "n_train_days": 180,
+        "n_test_days": 60
+      },
+      "eligible_symbols": [
+        "FIN_A",
+        "FIN_B",
+        "FIN_BREAK_A",
+        "FIN_BREAK_B",
+        "FIN_C",
+        "IND_RW1",
+        "IND_RW2",
+        "IND_RW3",
+        "TECH_A",
+        "TECH_B",
+        "TECH_C",
+        "TECH_D"
+      ],
+      "excluded_symbols": {
+        "IND_PENNY": [
+          "below_min_price(2.03<5.00)",
+          "below_min_adv(32536<1000000)"
+        ]
+      },
+      "n_pairs_tested": 19,
+      "n_baskets_tested": 15,
+      "n_passed_raw_pvalue": 10,
+      "n_passed_adjusted_pvalue": 9,
+      "selected_spreads": [],
+      "oos_net_return": 0.0,
+      "oos_gross_return": 0.0,
+      "n_trades": 0
+    }
+  ]
+}

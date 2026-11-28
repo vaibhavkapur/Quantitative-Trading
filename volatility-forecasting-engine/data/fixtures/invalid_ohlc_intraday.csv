@@ -1,0 +1,2 @@
+asset_id,timestamp,session_date,open,high,low,close,volume
+BAD_01,2024-01-02T10:00:00,2024-01-02,100.0,95.0,98.0,99.0,100.0

@@ -1,0 +1,52 @@
+{
+  "config_version": "1.0.0",
+  "run_label": "synthetic_ff3_demo",
+  "asset_returns_path": "data/fixtures/synthetic_ff3/asset_returns.csv",
+  "factor_returns_path": "data/fixtures/synthetic_ff3/factor_returns.csv",
+  "risk_free_path": "data/fixtures/synthetic_ff3/risk_free.csv",
+  "memberships_path": "data/fixtures/synthetic_ff3/portfolio_memberships.csv",
+  "baseline_model_name": "CAPM",
+  "frequency": "M",
+  "annualization_factor": 12.0,
+  "cov_type": "HAC",
+  "hac_maxlags": 3,
+  "fm_hac_maxlags": 3,
+  "universe_policy": "pit_active",
+  "rf_missing_policy": "error",
+  "period_alignment_policy": "strict",
+  "min_ts_observations": 24,
+  "min_cs_assets": 5,
+  "rank_tol": 1e-10,
+  "max_condition_number": 100000000.0,
+  "split": {
+    "train_start": "2010-01-31",
+    "train_end": "2019-12-31",
+    "test_start": "2020-01-31",
+    "test_end": "2024-12-31"
+  },
+  "seed": 42,
+  "output_dir": "reports/demo_run",
+  "models": [
+    {
+      "name": "CAPM",
+      "factors": ["MKT_RF"],
+      "include_ts_intercept": true,
+      "include_cs_intercept": true,
+      "description": "Single-factor CAPM baseline (market excess return)."
+    },
+    {
+      "name": "FF3",
+      "factors": ["MKT_RF", "SMB", "HML"],
+      "include_ts_intercept": true,
+      "include_cs_intercept": true,
+      "description": "Fama-French 3-factor model (Market, Size, Value)."
+    },
+    {
+      "name": "FF4_MOM",
+      "factors": ["MKT_RF", "SMB", "HML", "MOM"],
+      "include_ts_intercept": true,
+      "include_cs_intercept": true,
+      "description": "Carhart 4-factor model adding Momentum (MOM)."
+    }
+  ]
+}

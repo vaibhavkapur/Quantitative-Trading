@@ -1,0 +1,86 @@
+{
+  "config": {
+    "annualization_factor": 12.0,
+    "asset_returns_path": "data/fixtures/synthetic_ff3/asset_returns.csv",
+    "baseline_model_name": "CAPM",
+    "config_version": "1.0.0",
+    "cov_type": "HAC",
+    "factor_returns_path": "data/fixtures/synthetic_ff3/factor_returns.csv",
+    "fm_hac_maxlags": 3,
+    "frequency": "M",
+    "hac_maxlags": 3,
+    "max_condition_number": 100000000.0,
+    "memberships_path": "data/fixtures/synthetic_ff3/portfolio_memberships.csv",
+    "min_cs_assets": 5,
+    "min_ts_observations": 24,
+    "models": [
+      {
+        "description": "Single-factor CAPM baseline (market excess return).",
+        "factors": [
+          "MKT_RF"
+        ],
+        "include_cs_intercept": true,
+        "include_ts_intercept": true,
+        "name": "CAPM"
+      },
+      {
+        "description": "Fama-French 3-factor model (Market, Size, Value).",
+        "factors": [
+          "MKT_RF",
+          "SMB",
+          "HML"
+        ],
+        "include_cs_intercept": true,
+        "include_ts_intercept": true,
+        "name": "FF3"
+      },
+      {
+        "description": "Carhart 4-factor model adding Momentum (MOM).",
+        "factors": [
+          "MKT_RF",
+          "SMB",
+          "HML",
+          "MOM"
+        ],
+        "include_cs_intercept": true,
+        "include_ts_intercept": true,
+        "name": "FF4_MOM"
+      }
+    ],
+    "output_dir": "reports/demo_run",
+    "period_alignment_policy": "strict",
+    "rank_tol": 1e-10,
+    "rf_missing_policy": "error",
+    "risk_free_path": "data/fixtures/synthetic_ff3/risk_free.csv",
+    "run_label": "synthetic_ff3_demo",
+    "seed": 42,
+    "split": {
+      "test_end": "2024-12-31",
+      "test_start": "2020-01-31",
+      "train_end": "2019-12-31",
+      "train_start": "2010-01-31"
+    },
+    "universe_policy": "pit_active"
+  },
+  "engine_version": "0.1.0",
+  "input_fingerprints": {
+    "asset_returns": "6ea9d20360691cc7dc549490e22bfc69ae11ba68d43841dc6a8ff2f7c24f809b",
+    "factor_returns": "bd122ca2068c097202435b62ad6486eebde605a34570c5f9a3456e8f0d37b0c7",
+    "portfolio_memberships": "07c4eaa04bc881de6f6646f548e07d68c7dc64295d1757037b4dcef928110526",
+    "risk_free": "c3390dd9f2be14123311956cf32cc495a6b287b3db1ae77c04d60540cd6a6020"
+  },
+  "run_id": "mfape-f7a36239df1960a9",
+  "run_label": "synthetic_ff3_demo",
+  "runtime_environment": {
+    "machine": "arm64",
+    "packages": {
+      "numpy": "2.0.2",
+      "polars": "1.36.1",
+      "scipy": "1.13.1",
+      "statsmodels": "0.14.6"
+    },
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6"
+  },
+  "schema_version": "1.0.0"
+}

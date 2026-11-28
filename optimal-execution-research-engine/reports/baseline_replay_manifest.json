@@ -1,0 +1,82 @@
+{
+  "config_sha256": "19f653520aa09e997bcb85a8392da2eb715cf6128716a6297c3260dda6180d3e",
+  "run_id": "run-19f653520aa0",
+  "scenario": {
+    "capacity_policy": "spillover",
+    "description": "Synthetic full-day (13 x 30-min slices) U-shaped volume curve execution benchmark for a 100,000-share buy parent order.",
+    "impact": {
+      "permanent_impact_gamma": 2.5e-07,
+      "temporary_impact_alpha": 1.0,
+      "temporary_impact_eta": 4e-07
+    },
+    "market": {
+      "bid_ask_spread_bps": 4.0,
+      "daily_volatility": 0.018,
+      "max_participation_rate": 0.25,
+      "max_slice_quantity": null,
+      "price_shocks": [],
+      "volume_curve": [
+        180000.0,
+        115000.0,
+        90000.0,
+        78000.0,
+        70000.0,
+        62000.0,
+        58000.0,
+        64000.0,
+        72000.0,
+        82000.0,
+        95000.0,
+        125000.0,
+        210000.0
+      ]
+    },
+    "num_monte_carlo_paths": 2000,
+    "order": {
+      "arrival_price": 150.0,
+      "horizon_slices": 13,
+      "order_id": "ORD-BASE-001",
+      "quantity": 100000.0,
+      "side": "buy",
+      "slice_duration_minutes": 30.0,
+      "start_timestamp_utc": "2026-01-05T14:30:00Z",
+      "symbol": "SYN_LGCAP"
+    },
+    "scenario_id": "baseline_us_large_cap_intraday",
+    "schema_version": "1.0.0",
+    "seed": 20260105
+  },
+  "schedule_requests": [
+    {
+      "enforce_capacity_in_optimizer": false,
+      "risk_aversion_lambda": 1e-06,
+      "strategy": "twap",
+      "target_participation_rate": 0.1
+    },
+    {
+      "enforce_capacity_in_optimizer": false,
+      "risk_aversion_lambda": 1e-06,
+      "strategy": "vwap",
+      "target_participation_rate": 0.1
+    },
+    {
+      "enforce_capacity_in_optimizer": false,
+      "risk_aversion_lambda": 1e-06,
+      "strategy": "participation",
+      "target_participation_rate": 0.12
+    },
+    {
+      "enforce_capacity_in_optimizer": false,
+      "risk_aversion_lambda": 1e-06,
+      "strategy": "almgren_chriss_analytic",
+      "target_participation_rate": 0.1
+    },
+    {
+      "enforce_capacity_in_optimizer": false,
+      "risk_aversion_lambda": 1e-06,
+      "strategy": "almgren_chriss_numeric",
+      "target_participation_rate": 0.1
+    }
+  ],
+  "schema_version": "1.0.0"
+}

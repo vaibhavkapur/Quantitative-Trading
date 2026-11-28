@@ -1,0 +1,18 @@
+{
+  "grid_id": "grid-cherry-v1",
+  "version": "1.0.0",
+  "parameters": {
+    "lookback": [
+      15,
+      20,
+      25
+    ],
+    "vol_target": [
+      0.08,
+      0.1,
+      0.12
+    ]
+  },
+  "expected_trial_count": 9,
+  "grid_hash": "125e582f7fa2478b45efadc57a8d3a54f26eeab26b794e4539eeefde48727a73"
+}

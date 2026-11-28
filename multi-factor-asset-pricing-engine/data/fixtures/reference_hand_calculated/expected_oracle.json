@@ -1,0 +1,60 @@
+{
+  "dates": [
+    "2020-01-31",
+    "2020-02-29",
+    "2020-03-31",
+    "2020-04-30",
+    "2020-05-31",
+    "2020-06-30"
+  ],
+  "expected_capm": {
+    "alphas": {
+      "P1": -0.0025,
+      "P2": 0.0025,
+      "P3": -0.0025,
+      "P4": 0.0025
+    },
+    "betas_MKT_RF": {
+      "P1": 0.8,
+      "P2": 1.0,
+      "P3": 1.2,
+      "P4": 1.4
+    }
+  },
+  "expected_two_factor": {
+    "alpha_all": 0.0,
+    "fm_cs_r2": 1.0,
+    "fm_gamma_0": 0.0,
+    "fm_lambda_MKT_RF": 0.01,
+    "fm_lambda_VAL": 0.005,
+    "fm_pricing_rmse": 0.0,
+    "fm_se_MKT_RF": 0.007302967433402215,
+    "fm_se_VAL": 0.006324555320336759,
+    "r_squared_all": 1.0
+  },
+  "factor_centered_dot_product": -1.951563910473908e-20,
+  "factor_means": {
+    "MKT_RF": 0.01,
+    "VAL": 0.005
+  },
+  "provenance": "Synthetic hand-calculated analytical fixture (zero idiosyncratic noise, orthogonal factors).",
+  "rf": 0.002,
+  "true_betas": {
+    "P1": {
+      "MKT_RF": 0.8,
+      "VAL": -0.5
+    },
+    "P2": {
+      "MKT_RF": 1.0,
+      "VAL": 0.5
+    },
+    "P3": {
+      "MKT_RF": 1.2,
+      "VAL": -0.5
+    },
+    "P4": {
+      "MKT_RF": 1.4,
+      "VAL": 0.5
+    }
+  }
+}

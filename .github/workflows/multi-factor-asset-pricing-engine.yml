@@ -1,0 +1,46 @@
+name: Multi-Factor Asset Pricing Engine CI
+
+on:
+  push:
+    paths:
+      - "multi-factor-asset-pricing-engine/**"
+      - ".github/workflows/multi-factor-asset-pricing-engine.yml"
+  pull_request:
+    paths:
+      - "multi-factor-asset-pricing-engine/**"
+      - ".github/workflows/multi-factor-asset-pricing-engine.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: multi-factor-asset-pricing-engine
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies and package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Verify deterministic fixture generation
+        run: python scripts/generate_fixtures.py
+
+      - name: Validate configurations via CLI
+        run: |
+          mfape validate --config config/reference_config.json
+          mfape validate --config config/default_config.json
+
+      - name: Run full test suite
+        run: pytest -v
+
+      - name: Run end-to-end demo and verify replay
+        run: python scripts/run_demo.py

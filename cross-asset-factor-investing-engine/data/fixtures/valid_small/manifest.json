@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0.0",
+  "fixture_name": "valid_small",
+  "provenance": "synthetic_hand_calculated_reference",
+  "n_days": 12,
+  "n_assets": 4
+}

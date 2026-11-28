@@ -1,0 +1,189 @@
+{
+  "candidate_trial_id": "short_t1",
+  "cost_summary": {
+    "annualized_cost_drag": 0.0,
+    "cost_model": {
+      "annualization_factor": 252,
+      "borrow_annual_bps": 50.0,
+      "commission_bps": 2.0,
+      "fixed_cost_per_period": 0.0,
+      "slippage_bps": 3.0
+    },
+    "mean_period_cost_bps": 0.0,
+    "total_gross_compounded": 0.05992837953424801,
+    "total_net_compounded": 0.05992837953424801
+  },
+  "counters": {
+    "n_bootstrap_resamples": 0,
+    "n_diagnostics_completed": 3,
+    "n_diagnostics_missing": 4,
+    "n_observations": 24,
+    "n_pbo_splits": 0,
+    "n_trials_completed": 4,
+    "n_trials_failed_or_rejected": 0,
+    "n_trials_logged": 4,
+    "n_walk_forward_folds": 0,
+    "n_warnings": 1
+  },
+  "diagnostics": {
+    "bootstrap": null,
+    "dsr": null,
+    "integrity": {
+      "cherry_picking_flags": [],
+      "completed_trials": 4,
+      "covered_grid_trials": null,
+      "duplicate_fraction": 0.0,
+      "exact_duplicate_pairs": [],
+      "expected_grid_trials": null,
+      "failed_or_rejected_trials": 0,
+      "grid_coverage_fraction": null,
+      "near_duplicate_pairs": [],
+      "passed": true,
+      "registry_errors": [],
+      "registry_valid": true,
+      "sequence_gaps": [],
+      "total_logged_trials": 4
+    },
+    "outliers": {
+      "excess_kurtosis": 2.0663960824988443,
+      "max_abs_return": 0.0174114773443894,
+      "max_abs_zscore": 3.6675109522030627,
+      "n_extreme_observations": 0,
+      "outlier_impact_pct": -0.024800899838930017,
+      "raw_sharpe_annual": 6.560400582037842,
+      "skewness": -0.34309138968118136,
+      "warnings": [],
+      "winsorized_sharpe_annual": 6.723104419776221
+    },
+    "pbo": null,
+    "perturbation": {
+      "center_net_sharpe": 6.560400582037842,
+      "center_parameters": {
+        "k": 1
+      },
+      "center_trial_id": "short_t1",
+      "median_neighbor_sharpe": 0.0,
+      "min_neighbor_sharpe": 0.0,
+      "n_neighbors_evaluated": 0,
+      "neighbors": [],
+      "positive_neighbor_fraction": 0.0,
+      "relative_step": 0.2,
+      "sharpe_cliff_ratio": 1.0,
+      "stability_score": 0.0,
+      "warnings": [
+        "No neighboring parameter configurations found within relative_step=0.20 or adjacent grid steps; local robustness cannot be confirmed."
+      ]
+    },
+    "walk_forward": null
+  },
+  "experiment_id": "exp-insufficient-sample",
+  "limitations_notice": "Statistical diagnostics (DSR, CSCV PBO, block bootstrap, walk-forward, perturbation) evaluate historical consistency under stated stationarity and dependence assumptions. They do NOT prove future returns. Offline research prototype only.",
+  "registry_head_hash": "8ad05e6864665e00e1d42a314f40e5235f7ddf1fab384a6e140fb285588285ac",
+  "run_id": "run-47f222cfa9b45dec",
+  "runtime": {
+    "data_provenance": "synthetic_fixture",
+    "dependencies": {
+      "numpy": "2.5.5",
+      "pandas": "2.3.3",
+      "scipy": "1.18.1"
+    },
+    "generated_at_utc": "2026-11-28T04:59:07Z",
+    "lab_version": "0.1.0",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "policy_sha256": "43727f3390f894e0a59231cfed79907f5c0c63f3f2d2e4ced816c5cb510eca75",
+    "policy_version": "1.0.0",
+    "python_version": "3.12.15",
+    "seed": 42
+  },
+  "schema_version": "1.0.0",
+  "verdict": {
+    "candidate_trial_id": "short_t1",
+    "decision": "REJECT",
+    "evidence_complete": false,
+    "gates": [
+      {
+        "category": "governance",
+        "gate_name": "evidence_completeness",
+        "observed_value": "missing: dsr_diagnostics, pbo_diagnostics, block_bootstrap, walk_forward_oos",
+        "passed": false,
+        "rationale": "Promotion is strictly rejected whenever any required robustness diagnostic is missing.",
+        "required": true,
+        "threshold": "all 7 diagnostics present"
+      },
+      {
+        "category": "governance",
+        "gate_name": "registry_and_trial_integrity",
+        "observed_value": {
+          "duplicate_fraction": 0.0,
+          "flags": 0,
+          "grid_coverage": null,
+          "registry_valid": true
+        },
+        "passed": true,
+        "rationale": "All attempted trials (including failures) must be logged without tampering or cherry-picking.",
+        "required": true,
+        "threshold": "valid hash chain, no sequence gaps, duplicates & grid coverage within policy"
+      },
+      {
+        "category": "perturbation",
+        "gate_name": "perturbation_neighbor_coverage",
+        "observed_value": 0,
+        "passed": false,
+        "rationale": "Isolated parameter combinations with no tested neighborhood cannot be promoted.",
+        "required": true,
+        "threshold": ">= 1 local neighbor"
+      },
+      {
+        "category": "perturbation",
+        "gate_name": "perturbation_positive_neighbors",
+        "observed_value": 0.0,
+        "passed": false,
+        "rationale": "Majority of nearby parameter configurations must retain positive net Sharpe.",
+        "required": true,
+        "threshold": ">= 0.65"
+      },
+      {
+        "category": "perturbation",
+        "gate_name": "perturbation_sharpe_cliff",
+        "observed_value": 1.0,
+        "passed": false,
+        "rationale": "Sharp drop-off from center to median neighbor indicates fragile parameter tuning.",
+        "required": true,
+        "threshold": "<= 0.5"
+      },
+      {
+        "category": "perturbation",
+        "gate_name": "perturbation_stability_score",
+        "observed_value": 0.0,
+        "passed": false,
+        "rationale": "Composite local plateau stability score must meet policy minimum.",
+        "required": true,
+        "threshold": ">= 0.6"
+      },
+      {
+        "category": "tail_risk",
+        "gate_name": "outlier_dominance_check",
+        "observed_value": {
+          "excess_kurtosis": 2.07,
+          "impact_pct": -0.025,
+          "n_extreme": 0,
+          "winsorized_sharpe": 6.723
+        },
+        "passed": true,
+        "rationale": "Performance driven by extreme outliers or severe fat tails undermines asymptotic Sharpe diagnostics.",
+        "required": true,
+        "threshold": "no extreme outliers with excess kurtosis > 20.0 or >50% winsorized Sharpe drop"
+      }
+    ],
+    "missing_evidence": [
+      "dsr_diagnostics",
+      "pbo_diagnostics",
+      "block_bootstrap",
+      "walk_forward_oos"
+    ],
+    "review_notes": [
+      "[Perturbation] No neighboring parameter configurations found within relative_step=0.20 or adjacent grid steps; local robustness cannot be confirmed."
+    ],
+    "summary": "REJECTED: Incomplete evidence (dsr_diagnostics, pbo_diagnostics, block_bootstrap, walk_forward_oos). Promotion requires full diagnostic suite."
+  }
+}

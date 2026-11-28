@@ -1,0 +1,68 @@
+# Compact deterministic reference fixture configuration (M1/M2 analytical oracle)
+schema_version: "1.0.0"
+config_name: "reference_fixture_small"
+seed: 7
+base_currency: "USD"
+decision_cutoff_utc_time: "21:00:00Z"
+
+data:
+  dataset_dir: "data/fixtures/valid_small"
+  strict_missing_factors: false
+  defensive_fallback_to_low_vol: true
+
+factors:
+  momentum:
+    lookback_days: 5
+    skip_days: 1
+    vol_lookback_days: 4
+    min_history_days: 5
+  carry:
+    annualization_days: 365.0
+    max_staleness_days: 60
+  defensive:
+    vol_lookback_days: 4
+    min_history_days: 3
+    equity_quality_weight: 0.5
+    max_staleness_days: 60
+  scaling:
+    winsorize_z: 3.0
+    min_std: 1.0e-6
+  blend_weights:
+    momentum: 0.3333333333333333
+    carry: 0.3333333333333333
+    defensive: 0.3333333333333333
+
+portfolio:
+  target_volatility: 0.10
+  volatility_cap: 0.15
+  cov_lookback_days: 5
+  cov_shrinkage: 0.25
+  min_asset_vol: 0.02
+  rebalance_frequency_days: 2
+  execution_lag_days: 1
+  turnover_penalty: 0.002
+  constraints:
+    max_asset_weight: 0.50
+    max_gross_exposure: 1.50
+    min_net_exposure: -0.60
+    max_net_exposure: 0.60
+    max_turnover_per_rebalance: 0.50
+    max_class_gross_exposure:
+      equity: 0.80
+      fx: 0.80
+      commodity: 0.80
+  enforce_strict_constraints: true
+  constraint_tolerance: 1.0e-5
+
+walk_forward:
+  train_window_days: 6
+  test_window_days: 4
+  step_days: 4
+  embargo_days: 1
+  anchored: false
+  annualization_days: 252
+
+reporting:
+  output_dir: "reports/runs"
+  write_detailed_weights: true
+  write_signal_audit: true

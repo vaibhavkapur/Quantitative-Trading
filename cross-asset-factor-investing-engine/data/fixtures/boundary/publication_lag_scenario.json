@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "scenario": "no_look_ahead_from_publication_lag",
+  "description": "Verifies that mutating or injecting future-published factor_inputs or prices with publication_ts > as_of_ts produces bitwise-identical signals and weights prior to publication.",
+  "target_asset": "EQ_SPX",
+  "reference_date": "2024-01-08",
+  "publication_date": "2024-01-12",
+  "expected_pre_pub_dividend_yield": 0.018,
+  "expected_post_pub_dividend_yield": 0.025
+}

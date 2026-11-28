@@ -1,0 +1,6 @@
+{
+  "experiment_id": "exp-insufficient-sample",
+  "dataset_version": "synth-2026.04",
+  "frequency": "daily",
+  "provenance": "synthetic_fixture"
+}

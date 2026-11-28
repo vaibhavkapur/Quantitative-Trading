@@ -1,0 +1,73 @@
+{
+  "config": {
+    "annualization_factor": 12.0,
+    "asset_returns_path": "data/fixtures/reference_hand_calculated/asset_returns.csv",
+    "baseline_model_name": "CAPM",
+    "config_version": "1.0.0",
+    "cov_type": "OLS",
+    "factor_returns_path": "data/fixtures/reference_hand_calculated/factor_returns.csv",
+    "fm_hac_maxlags": 0,
+    "frequency": "M",
+    "hac_maxlags": 0,
+    "max_condition_number": 100000000.0,
+    "memberships_path": "data/fixtures/reference_hand_calculated/portfolio_memberships.csv",
+    "min_cs_assets": 4,
+    "min_ts_observations": 6,
+    "models": [
+      {
+        "description": "Reference CAPM model for exact hand-calculated verification.",
+        "factors": [
+          "MKT_RF"
+        ],
+        "include_cs_intercept": true,
+        "include_ts_intercept": true,
+        "name": "CAPM"
+      },
+      {
+        "description": "Reference two-factor model with exact closed-form betas and premia.",
+        "factors": [
+          "MKT_RF",
+          "VAL"
+        ],
+        "include_cs_intercept": true,
+        "include_ts_intercept": true,
+        "name": "TWO_FACTOR"
+      }
+    ],
+    "output_dir": "reports/reference_run",
+    "period_alignment_policy": "strict",
+    "rank_tol": 1e-10,
+    "rf_missing_policy": "error",
+    "risk_free_path": "data/fixtures/reference_hand_calculated/risk_free.csv",
+    "run_label": "reference_hand_calculated",
+    "seed": 42,
+    "split": {
+      "test_end": null,
+      "test_start": null,
+      "train_end": "2020-06-30",
+      "train_start": "2020-01-31"
+    },
+    "universe_policy": "strict_balanced"
+  },
+  "engine_version": "0.1.0",
+  "input_fingerprints": {
+    "asset_returns": "703531ee168c63038f13345a1fd5fb22c39d8ba193c2b7db0c6ad605f19375ba",
+    "factor_returns": "1cbe7bea83543da9e62cba207ec65820356b55a2143b61c63a9c2e716b847884",
+    "portfolio_memberships": "3d3b430f36aae0ceb17fdd99a51ac97d8a9262724d25ec5eda232257281a6797",
+    "risk_free": "72dfd807cff78ead3f10a154d5e897a57c38c30c6d26fffbc54dec54c90990c8"
+  },
+  "run_id": "mfape-321cf5ec1174d659",
+  "run_label": "reference_hand_calculated",
+  "runtime_environment": {
+    "machine": "arm64",
+    "packages": {
+      "numpy": "2.0.2",
+      "polars": "1.36.1",
+      "scipy": "1.13.1",
+      "statsmodels": "0.14.6"
+    },
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6"
+  },
+  "schema_version": "1.0.0"
+}

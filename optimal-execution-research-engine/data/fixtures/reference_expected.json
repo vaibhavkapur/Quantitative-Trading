@@ -1,0 +1,37 @@
+{
+  "scenario_id": "reference_deterministic_4slice",
+  "tolerance_usd": 1e-6,
+  "tolerance_bps": 1e-8,
+  "twap": {
+    "planned_quantities": [2500.0, 2500.0, 2500.0, 2500.0],
+    "filled_quantity": 10000.0,
+    "residual_quantity": 0.0,
+    "spread_cost_usd": 500.0,
+    "temporary_impact_cost_usd": 500.0,
+    "permanent_impact_cost_usd": 75.0,
+    "total_is_usd": 1075.0,
+    "total_is_bps": 10.75,
+    "vwap_execution_price": 100.1075,
+    "terminal_mid_price": 100.02,
+    "analytic_timing_risk_usd": 9354.143466934853,
+    "analytic_timing_risk_bps": 93.54143466934853
+  },
+  "vwap": {
+    "planned_quantities": [
+      3333.3333333333335,
+      1666.6666666666667,
+      1666.6666666666667,
+      3333.3333333333335
+    ],
+    "filled_quantity": 10000.0,
+    "residual_quantity": 0.0,
+    "spread_cost_usd": 500.0,
+    "temporary_impact_cost_usd": 555.5555555555555,
+    "permanent_impact_cost_usd": 72.22222222222223,
+    "total_is_usd": 1127.7777777777778,
+    "total_is_bps": 11.277777777777778,
+    "terminal_mid_price": 100.02,
+    "analytic_timing_risk_usd": 8975.274678557507,
+    "analytic_timing_risk_bps": 89.75274678557507
+  }
+}

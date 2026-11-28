@@ -1,0 +1,7 @@
+{
+  "experiment_id": "exp-null-noise-v1",
+  "dataset_version": "synth-2026.02",
+  "frequency": "daily",
+  "provenance": "synthetic_fixture",
+  "description": "16 independent zero-drift Gaussian null strategies for multiple-testing rejection test."
+}

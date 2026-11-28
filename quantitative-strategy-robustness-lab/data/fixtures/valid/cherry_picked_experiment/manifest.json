@@ -1,0 +1,7 @@
+{
+  "experiment_id": "exp-cherry-picked-v1",
+  "dataset_version": "synth-2026.03",
+  "frequency": "daily",
+  "provenance": "synthetic_fixture",
+  "description": "Selective reporting scenario: missing sequence numbers, low grid coverage, and duplicate returns."
+}

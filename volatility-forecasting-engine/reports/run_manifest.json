@@ -1,0 +1,260 @@
+{
+  "annualization_factor": 252,
+  "attempted_configurations": [
+    {
+      "name": "naive_persistence",
+      "params": {
+        "lookback": 1
+      },
+      "type": "naive"
+    },
+    {
+      "name": "rolling_historical_22d",
+      "params": {
+        "window": 22
+      },
+      "type": "rolling_historical"
+    },
+    {
+      "name": "ewma_094",
+      "params": {
+        "decay": 0.94
+      },
+      "type": "ewma"
+    },
+    {
+      "name": "garch_11",
+      "params": {
+        "backend": "scipy",
+        "variance_floor": 1e-10
+      },
+      "type": "garch11"
+    },
+    {
+      "name": "ml_ridge_har",
+      "params": {
+        "alpha": 1.0,
+        "use_log_target": true
+      },
+      "type": "ridge_har"
+    },
+    {
+      "name": "ml_hgbr",
+      "params": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.05,
+        "max_depth": 4,
+        "max_iter": 120,
+        "min_samples_leaf": 10,
+        "use_log_target": true
+      },
+      "type": "hgbr"
+    }
+  ],
+  "config": {
+    "annualization_factor": 252,
+    "data": {
+      "intraday_bars_path": "data/fixtures/synthetic_multi_regime_intraday.csv",
+      "labels_path": null,
+      "returns_path": "data/fixtures/synthetic_multi_regime_returns.csv"
+    },
+    "evaluation": {
+      "interval_levels": [
+        0.5,
+        0.8,
+        0.9
+      ],
+      "regime_quantiles": {
+        "high_upper": 0.95,
+        "low_upper": 0.33,
+        "normal_upper": 0.67
+      },
+      "strict_nonnegative": true,
+      "variance_floor": 1e-10
+    },
+    "expected_bars_per_session": 13,
+    "features": {
+      "horizons": [
+        1,
+        5,
+        22
+      ],
+      "include_overnight_gap": true,
+      "min_bar_coverage_warn": 0.8,
+      "primary_horizon": 5,
+      "rolling_windows": [
+        5,
+        22
+      ],
+      "variance_floor": 1e-10
+    },
+    "models": [
+      {
+        "name": "naive_persistence",
+        "params": {
+          "lookback": 1
+        },
+        "type": "naive"
+      },
+      {
+        "name": "rolling_historical_22d",
+        "params": {
+          "window": 22
+        },
+        "type": "rolling_historical"
+      },
+      {
+        "name": "ewma_094",
+        "params": {
+          "decay": 0.94
+        },
+        "type": "ewma"
+      },
+      {
+        "name": "garch_11",
+        "params": {
+          "backend": "scipy",
+          "variance_floor": 1e-10
+        },
+        "type": "garch11"
+      },
+      {
+        "name": "ml_ridge_har",
+        "params": {
+          "alpha": 1.0,
+          "use_log_target": true
+        },
+        "type": "ridge_har"
+      },
+      {
+        "name": "ml_hgbr",
+        "params": {
+          "l2_regularization": 1.0,
+          "learning_rate": 0.05,
+          "max_depth": 4,
+          "max_iter": 120,
+          "min_samples_leaf": 10,
+          "use_log_target": true
+        },
+        "type": "hgbr"
+      }
+    ],
+    "output": {
+      "reports_dir": "reports",
+      "save_predictions": true
+    },
+    "run_name": "default_benchmark",
+    "seed": 42,
+    "splits": {
+      "calibration_fraction": 0.25,
+      "embargo_steps": null,
+      "min_train_size": 160,
+      "n_splits": 4,
+      "scheme": "expanding",
+      "test_size": 60
+    },
+    "version": "1.0"
+  },
+  "config_fingerprint": "5f4cbbec95da8350",
+  "config_version": "1.0",
+  "counters": {
+    "n_fit_calls": 48,
+    "n_leakage_checks_passed": 4,
+    "n_models": 6,
+    "n_nonnegativity_checks_passed": 24,
+    "n_oos_predictions": 1440,
+    "n_splits": 4
+  },
+  "feature_diagnostics": {
+    "min_bar_coverage": 0.0,
+    "n_assets": 1,
+    "n_rows": 420,
+    "n_sessions_fallback_daily": 1,
+    "n_sessions_low_coverage": 5,
+    "n_sessions_with_intraday": 419,
+    "n_sessions_with_overnight_gap": 420
+  },
+  "horizon_days": 5,
+  "input_fingerprints": {
+    "intraday_bars": "76a4928118d7a00f405e6d307247ea50252b419da96e98da15bb71fc5a43e62c",
+    "returns": "2fd9a71c37df24b4cf6361f151d578adcc397165b7fec8b8c2caccffa07fadd5"
+  },
+  "run_id": "default_benchmark-6adebe115efb",
+  "run_name": "default_benchmark",
+  "runtime_environment": {
+    "contract_version": "1.0.0",
+    "numpy_version": "2.5.5",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "polars_version": "1.44.2",
+    "python_version": "3.12.15",
+    "scipy_version": "1.18.1",
+    "sklearn_version": "1.9.1"
+  },
+  "seed": 42,
+  "splits": [
+    {
+      "cal_end_ts": "2023-08-14 16:00:00",
+      "cal_start_ts": "2023-06-20 16:00:00",
+      "embargo_steps": 5,
+      "horizon_days": 5,
+      "inner_train_end_ts": "2023-06-12 16:00:00",
+      "n_cal": 40,
+      "n_inner_train": 115,
+      "n_test": 60,
+      "n_train": 160,
+      "split_id": 1,
+      "test_end_ts": "2023-11-13 16:00:00",
+      "test_start_ts": "2023-08-22 16:00:00",
+      "train_end_ts": "2023-08-14 16:00:00",
+      "train_start_ts": "2023-01-03 16:00:00"
+    },
+    {
+      "cal_end_ts": "2023-11-09 16:00:00",
+      "cal_start_ts": "2023-08-24 16:00:00",
+      "embargo_steps": 5,
+      "horizon_days": 5,
+      "inner_train_end_ts": "2023-08-16 16:00:00",
+      "n_cal": 56,
+      "n_inner_train": 162,
+      "n_test": 60,
+      "n_train": 223,
+      "split_id": 2,
+      "test_end_ts": "2024-02-08 16:00:00",
+      "test_start_ts": "2023-11-17 16:00:00",
+      "train_end_ts": "2023-11-09 16:00:00",
+      "train_start_ts": "2023-01-03 16:00:00"
+    },
+    {
+      "cal_end_ts": "2024-02-07 16:00:00",
+      "cal_start_ts": "2023-10-31 16:00:00",
+      "embargo_steps": 5,
+      "horizon_days": 5,
+      "inner_train_end_ts": "2023-10-23 16:00:00",
+      "n_cal": 72,
+      "n_inner_train": 210,
+      "n_test": 60,
+      "n_train": 287,
+      "split_id": 3,
+      "test_end_ts": "2024-05-08 16:00:00",
+      "test_start_ts": "2024-02-15 16:00:00",
+      "train_end_ts": "2024-02-07 16:00:00",
+      "train_start_ts": "2023-01-03 16:00:00"
+    },
+    {
+      "cal_end_ts": "2024-05-06 16:00:00",
+      "cal_start_ts": "2024-01-04 16:00:00",
+      "embargo_steps": 5,
+      "horizon_days": 5,
+      "inner_train_end_ts": "2023-12-27 16:00:00",
+      "n_cal": 88,
+      "n_inner_train": 257,
+      "n_test": 60,
+      "n_train": 350,
+      "split_id": 4,
+      "test_end_ts": "2024-08-05 16:00:00",
+      "test_start_ts": "2024-05-14 16:00:00",
+      "train_end_ts": "2024-05-06 16:00:00",
+      "train_start_ts": "2023-01-03 16:00:00"
+    }
+  ]
+}

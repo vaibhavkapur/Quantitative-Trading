@@ -1,0 +1,68 @@
+# Default configuration for the Cross-Asset Factor Investing Engine
+schema_version: "1.0.0"
+config_name: "default_cross_asset_walkforward"
+seed: 42
+base_currency: "USD"
+decision_cutoff_utc_time: "21:00:00Z"
+
+data:
+  dataset_dir: "data/fixtures/synthetic_multi_year"
+  strict_missing_factors: false
+  defensive_fallback_to_low_vol: true
+
+factors:
+  momentum:
+    lookback_days: 126
+    skip_days: 21
+    vol_lookback_days: 63
+    min_history_days: 126
+  carry:
+    annualization_days: 365.0
+    max_staleness_days: 120
+  defensive:
+    vol_lookback_days: 63
+    min_history_days: 42
+    equity_quality_weight: 0.5
+    max_staleness_days: 120
+  scaling:
+    winsorize_z: 3.0
+    min_std: 1.0e-6
+  blend_weights:
+    momentum: 0.3333333333333333
+    carry: 0.3333333333333333
+    defensive: 0.3333333333333333
+
+portfolio:
+  target_volatility: 0.10
+  volatility_cap: 0.12
+  cov_lookback_days: 63
+  cov_shrinkage: 0.20
+  min_asset_vol: 0.02
+  rebalance_frequency_days: 5
+  execution_lag_days: 1
+  turnover_penalty: 0.005
+  constraints:
+    max_asset_weight: 0.30
+    max_gross_exposure: 1.60
+    min_net_exposure: -0.50
+    max_net_exposure: 0.50
+    max_turnover_per_rebalance: 0.35
+    max_class_gross_exposure:
+      equity: 0.80
+      fx: 0.80
+      commodity: 0.80
+  enforce_strict_constraints: true
+  constraint_tolerance: 1.0e-5
+
+walk_forward:
+  train_window_days: 252
+  test_window_days: 126
+  step_days: 126
+  embargo_days: 1
+  anchored: false
+  annualization_days: 252
+
+reporting:
+  output_dir: "reports/runs"
+  write_detailed_weights: true
+  write_signal_audit: true

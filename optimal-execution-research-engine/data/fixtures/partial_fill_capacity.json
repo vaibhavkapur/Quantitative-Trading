@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "scenario_id": "boundary_partial_fill_capacity",
+  "description": "Boundary fixture where total market capacity (6,000 shares) is strictly smaller than parent order (15,000 shares).",
+  "capacity_policy": "spillover",
+  "seed": 202,
+  "num_monte_carlo_paths": 500,
+  "order": {
+    "order_id": "BND-CAP-001",
+    "symbol": "SYN_CAP",
+    "side": "sell",
+    "quantity": 15000.0,
+    "arrival_price": 80.0,
+    "horizon_slices": 4,
+    "slice_duration_minutes": 97.5,
+    "start_timestamp_utc": "2026-01-05T14:30:00Z"
+  },
+  "market": {
+    "volume_curve": [10000.0, 5000.0, 5000.0, 10000.0],
+    "daily_volatility": 0.025,
+    "bid_ask_spread_bps": 12.0,
+    "max_participation_rate": 0.20,
+    "max_slice_quantity": null,
+    "price_shocks": []
+  },
+  "impact": {
+    "permanent_impact_gamma": 2.0e-6,
+    "temporary_impact_eta": 6.0e-6,
+    "temporary_impact_alpha": 1.0
+  }
+}

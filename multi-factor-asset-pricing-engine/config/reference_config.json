@@ -1,0 +1,43 @@
+{
+  "config_version": "1.0.0",
+  "run_label": "reference_hand_calculated",
+  "asset_returns_path": "data/fixtures/reference_hand_calculated/asset_returns.csv",
+  "factor_returns_path": "data/fixtures/reference_hand_calculated/factor_returns.csv",
+  "risk_free_path": "data/fixtures/reference_hand_calculated/risk_free.csv",
+  "memberships_path": "data/fixtures/reference_hand_calculated/portfolio_memberships.csv",
+  "baseline_model_name": "CAPM",
+  "frequency": "M",
+  "annualization_factor": 12.0,
+  "cov_type": "OLS",
+  "hac_maxlags": 0,
+  "fm_hac_maxlags": 0,
+  "universe_policy": "strict_balanced",
+  "rf_missing_policy": "error",
+  "period_alignment_policy": "strict",
+  "min_ts_observations": 6,
+  "min_cs_assets": 4,
+  "rank_tol": 1e-10,
+  "max_condition_number": 100000000.0,
+  "split": {
+    "train_start": "2020-01-31",
+    "train_end": "2020-06-30"
+  },
+  "seed": 42,
+  "output_dir": "reports/reference_run",
+  "models": [
+    {
+      "name": "CAPM",
+      "factors": ["MKT_RF"],
+      "include_ts_intercept": true,
+      "include_cs_intercept": true,
+      "description": "Reference CAPM model for exact hand-calculated verification."
+    },
+    {
+      "name": "TWO_FACTOR",
+      "factors": ["MKT_RF", "VAL"],
+      "include_ts_intercept": true,
+      "include_cs_intercept": true,
+      "description": "Reference two-factor model with exact closed-form betas and premia."
+    }
+  ]
+}

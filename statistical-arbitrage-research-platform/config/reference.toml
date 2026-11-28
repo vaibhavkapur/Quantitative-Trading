@@ -1,0 +1,66 @@
+schema_version = "1.0.0"
+run_name = "reference_deterministic_fixture"
+seed = 7
+
+[data]
+prices_path = "data/fixtures/reference_pair_prices.csv"
+borrow_path = "data/fixtures/reference_pair_borrow.csv"
+use_log_prices = false
+max_missing_fraction = 0.0
+missing_price_policy = "raise"
+
+[universe]
+min_price = 1.0
+min_adv_usd = 100000.0
+min_history_days = 60
+require_active = true
+same_sector_only = false
+
+[selection]
+method = "engle_granger"
+hedge_ratio_estimator = "ols"
+max_adf_pvalue = 0.05
+fdr_alpha = 0.10
+multiple_testing_method = "none"
+min_half_life_days = 1.0
+max_half_life_days = 50.0
+min_correlation = 0.30
+max_pairs_per_fold = 2
+include_baskets = false
+basket_size = 3
+max_baskets_per_fold = 0
+
+[signals]
+z_entry = 1.50
+z_exit = 0.25
+z_stop = 4.00
+max_holding_days = 25
+zscore_mode = "training_frozen"
+zscore_lookback_days = 40
+
+[execution]
+initial_capital = 100000.0
+gross_leverage_target = 1.0
+max_pair_weight = 0.50
+commission_bps = 1.0
+slippage_bps = 2.0
+default_borrow_fee_bps_annual = 40.0
+enforce_borrow_availability = true
+strict_borrow_errors = false
+recall_on_borrow_loss = true
+execution_delay_days = 1
+
+[walk_forward]
+train_window_days = 120
+test_window_days = 40
+step_days = 40
+embargo_days = 1
+window_type = "rolling"
+
+[evaluation]
+annualization_days = 252
+bootstrap_samples = 200
+bootstrap_block_size = 5
+confidence_level = 0.95
+risk_free_rate_annual = 0.0
+sweep_z_entries = [1.5, 2.0]

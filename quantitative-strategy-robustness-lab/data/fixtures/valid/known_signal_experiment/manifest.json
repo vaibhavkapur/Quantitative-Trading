@@ -1,0 +1,7 @@
+{
+  "experiment_id": "exp-known-signal-v1",
+  "dataset_version": "synth-2026.01",
+  "frequency": "daily",
+  "provenance": "synthetic_fixture",
+  "description": "Synthetic 3x3 parameter plateau with true positive net drift and 1 logged failure."
+}

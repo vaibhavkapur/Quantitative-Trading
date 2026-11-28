@@ -1,0 +1,2 @@
+date,asset_id,contract_code,front_price,front_expiry_days,is_roll_date,as_of_ts
+2024-01-02,EQ_SPX,ESH24,100.0,60,false,2024-01-02T20:00:00Z

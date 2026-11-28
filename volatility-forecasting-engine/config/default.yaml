@@ -1,0 +1,73 @@
+# Default reproducible configuration for Volatility Forecasting Engine
+version: "1.0"
+run_name: "default_benchmark"
+seed: 42
+annualization_factor: 252
+expected_bars_per_session: 13  # 30-minute bars across a 6.5-hour session
+
+data:
+  returns_path: "data/fixtures/synthetic_multi_regime_returns.csv"
+  intraday_bars_path: "data/fixtures/synthetic_multi_regime_intraday.csv"
+  labels_path: null  # Optional precomputed labels; computed causally when null
+
+features:
+  horizons: [1, 5, 22]
+  primary_horizon: 5
+  rolling_windows: [5, 22]
+  include_overnight_gap: true
+  min_bar_coverage_warn: 0.80
+  variance_floor: 1.0e-10
+
+splits:
+  scheme: "expanding"  # "expanding" or "rolling"
+  n_splits: 4
+  min_train_size: 160
+  test_size: 60
+  embargo_steps: null  # Defaults to max(horizon, 1) when null
+  calibration_fraction: 0.25  # Tail portion of each training window for conformal interval calibration
+
+models:
+  - name: "naive_persistence"
+    type: "naive"
+    params:
+      lookback: 1
+  - name: "rolling_historical_22d"
+    type: "rolling_historical"
+    params:
+      window: 22
+  - name: "ewma_094"
+    type: "ewma"
+    params:
+      decay: 0.94
+  - name: "garch_11"
+    type: "garch11"
+    params:
+      backend: "scipy"
+      variance_floor: 1.0e-10
+  - name: "ml_ridge_har"
+    type: "ridge_har"
+    params:
+      alpha: 1.0
+      use_log_target: true
+  - name: "ml_hgbr"
+    type: "hgbr"
+    params:
+      max_iter: 120
+      max_depth: 4
+      learning_rate: 0.05
+      min_samples_leaf: 10
+      l2_regularization: 1.0
+      use_log_target: true
+
+evaluation:
+  variance_floor: 1.0e-10
+  interval_levels: [0.50, 0.80, 0.90]
+  regime_quantiles:
+    low_upper: 0.33
+    normal_upper: 0.67
+    high_upper: 0.95
+  strict_nonnegative: true
+
+output:
+  reports_dir: "reports"
+  save_predictions: true

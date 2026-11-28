@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "scenario_id": "integration_price_shock",
+  "description": "Integration fixture testing mid-horizon adverse (+150 bps) and partial reversion (-40 bps) exogenous price shocks.",
+  "capacity_policy": "none",
+  "seed": 303,
+  "num_monte_carlo_paths": 500,
+  "order": {
+    "order_id": "INT-SHK-001",
+    "symbol": "SYN_SHOCK",
+    "side": "buy",
+    "quantity": 20000.0,
+    "arrival_price": 100.0,
+    "horizon_slices": 5,
+    "slice_duration_minutes": 78.0,
+    "start_timestamp_utc": "2026-01-05T14:30:00Z"
+  },
+  "market": {
+    "volume_curve": [50000.0, 50000.0, 50000.0, 50000.0, 50000.0],
+    "daily_volatility": 0.02,
+    "bid_ask_spread_bps": 6.0,
+    "max_participation_rate": 0.25,
+    "max_slice_quantity": null,
+    "price_shocks": [
+      {
+        "slice_index": 2,
+        "shock_bps": 150.0,
+        "label": "adverse_news_jump"
+      },
+      {
+        "slice_index": 4,
+        "shock_bps": -40.0,
+        "label": "partial_reversion"
+      }
+    ]
+  },
+  "impact": {
+    "permanent_impact_gamma": 1.0e-6,
+    "temporary_impact_eta": 3.0e-6,
+    "temporary_impact_alpha": 1.0
+  }
+}

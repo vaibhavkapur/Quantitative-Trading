@@ -1,0 +1,5 @@
+{"details": {"config_hash": "c989fd607600e738", "config_name": "reference_fixture_small", "dataset_hash": "b941662ade467e28"}, "event": "walk_forward_start", "level": "INFO", "timestamp_utc": "seq:000001"}
+{"details": {"base_currency": "USD", "n_assets": 4, "n_price_rows": 48}, "event": "normalize_start", "level": "INFO", "timestamp_utc": "seq:000002"}
+{"details": {"n_non_base_fx_rows": 12, "n_roll_events": 1, "n_rows": 48}, "event": "normalize_complete", "level": "INFO", "timestamp_utc": "seq:000003"}
+{"details": {"insufficient_history": 32, "missing_input": 0, "ok": 112, "rows_blocked_by_timestamp_gate": 8, "total_signals": 144}, "event": "raw_factors_computed", "level": "INFO", "timestamp_utc": "seq:000004"}
+{"details": {"blended_net_sharpe": 0.3564, "n_folds": 2, "n_oos_days": 5}, "event": "walk_forward_complete", "level": "INFO", "timestamp_utc": "seq:000005"}

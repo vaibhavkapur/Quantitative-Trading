@@ -1,0 +1,57 @@
+[
+  {
+    "scenario": "known_signal",
+    "run_id": "run-f525e1d44783dfe9",
+    "candidate": "trial_lb20_vt10",
+    "decision": "PROMOTE",
+    "evidence_complete": true,
+    "dsr": 1.0,
+    "pbo": 0.0857,
+    "oos_net_sharpe": 5.1778,
+    "replay_matched": true
+  },
+  {
+    "scenario": "null_overfit",
+    "run_id": "run-ff104762a0ccc501",
+    "candidate": "null_f5_s80",
+    "decision": "REJECT",
+    "evidence_complete": true,
+    "dsr": 0.3633,
+    "pbo": 0.5143,
+    "oos_net_sharpe": 0.1411,
+    "replay_matched": true
+  },
+  {
+    "scenario": "cherry_picked",
+    "run_id": "run-fc2ee4de32c3f2e8",
+    "candidate": "cherry_seq4",
+    "decision": "REJECT",
+    "evidence_complete": true,
+    "dsr": 0.9988,
+    "pbo": 0.3571,
+    "oos_net_sharpe": 3.2638,
+    "replay_matched": true
+  },
+  {
+    "scenario": "insufficient_sample",
+    "run_id": "run-47f222cfa9b45dec",
+    "candidate": "short_t1",
+    "decision": "REJECT",
+    "evidence_complete": false,
+    "dsr": null,
+    "pbo": null,
+    "oos_net_sharpe": null,
+    "replay_matched": true
+  },
+  {
+    "scenario": "extreme_outlier",
+    "run_id": "run-a3ea7501c2ee6945",
+    "candidate": "outlier_t3",
+    "decision": "REJECT",
+    "evidence_complete": true,
+    "dsr": 0.7281,
+    "pbo": 0.3286,
+    "oos_net_sharpe": 1.344,
+    "replay_matched": true
+  }
+]

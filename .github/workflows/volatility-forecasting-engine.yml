@@ -1,0 +1,43 @@
+name: Volatility Forecasting Engine CI
+
+on:
+  push:
+    paths:
+      - "volatility-forecasting-engine/**"
+      - ".github/workflows/volatility-forecasting-engine.yml"
+  pull_request:
+    paths:
+      - "volatility-forecasting-engine/**"
+      - ".github/workflows/volatility-forecasting-engine.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: volatility-forecasting-engine
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install package and dev dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Run unit, integration, leakage, shock, and operational tests
+        run: pytest -v
+
+      - name: Generate fixtures and run reproducible demo
+        run: |
+          vol-forecast generate-fixtures --out-dir data/fixtures
+          vol-forecast validate-data \
+            --returns data/fixtures/synthetic_multi_regime_returns.csv \
+            --intraday data/fixtures/synthetic_multi_regime_intraday.csv
+          vol-forecast run --config config/default.yaml

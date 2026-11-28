@@ -1,0 +1,58 @@
+{
+  "policy_version": "1.0.0",
+  "seed": 42,
+  "annualization_factor": 252,
+  "min_observations": 60,
+  "min_oos_observations": 40,
+  "min_trials_for_multiple_testing": 4,
+  "dsr": {
+    "min_dsr": 0.95,
+    "min_psr_vs_benchmark": 0.90,
+    "benchmark_sharpe": 0.0,
+    "use_autocorrelation_adjustment": true,
+    "max_autocorr_lags": 5
+  },
+  "pbo": {
+    "n_partitions": 8,
+    "max_pbo": 0.25,
+    "max_oos_loss_prob": 0.30,
+    "max_combinations": 12870
+  },
+  "bootstrap": {
+    "n_resamples": 1000,
+    "block_length": 10,
+    "method": "stationary",
+    "confidence_level": 0.95,
+    "min_sharpe_ci_lower": 0.0
+  },
+  "walk_forward": {
+    "mode": "expanding",
+    "train_window": 120,
+    "test_window": 40,
+    "step_size": 40,
+    "purge_gap": 5,
+    "min_oos_net_sharpe": 0.35,
+    "max_is_to_oos_degradation": 0.65,
+    "min_oos_excess_over_benchmark_sharpe": 0.0
+  },
+  "perturbation": {
+    "relative_step": 0.20,
+    "min_positive_neighbor_fraction": 0.65,
+    "max_sharpe_cliff_ratio": 0.50,
+    "min_stability_score": 0.60
+  },
+  "integrity": {
+    "duplicate_correlation_threshold": 0.995,
+    "max_allowed_duplicate_fraction": 0.15,
+    "min_grid_coverage_fraction": 0.85,
+    "require_failed_trial_accounting": true,
+    "max_outlier_zscore_warning": 8.0,
+    "max_excess_kurtosis_warning": 20.0
+  },
+  "promotion": {
+    "require_all_diagnostics": true,
+    "require_registry_integrity": true,
+    "hold_margin_dsr": 0.85,
+    "hold_margin_pbo": 0.40
+  }
+}

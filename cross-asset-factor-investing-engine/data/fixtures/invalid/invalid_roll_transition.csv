@@ -1,0 +1,3 @@
+date,asset_id,contract_code,front_price,next_price,front_expiry_days,next_expiry_days,is_roll_date,prev_front_price_new_contract,as_of_ts,publication_ts
+2024-01-02,CMD_CL,CLG24,80.0,78.0,10,40,true,,2024-01-02T20:00:00Z,2024-01-02T20:05:00Z
+2024-01-03,CMD_CL,CLH24,78.5,76.5,39,69,false,,2024-01-03T20:00:00Z,2024-01-03T20:05:00Z

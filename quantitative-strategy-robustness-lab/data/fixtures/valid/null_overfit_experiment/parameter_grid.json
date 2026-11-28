@@ -1,0 +1,20 @@
+{
+  "grid_id": "grid-null-noise-v1",
+  "version": "1.0.0",
+  "parameters": {
+    "fast": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "slow": [
+      40,
+      60,
+      80,
+      100
+    ]
+  },
+  "expected_trial_count": 16,
+  "grid_hash": "f5cd197eb5eb79db160841143eef4ceb45611cf44735742ae4c031d8fdb50997"
+}

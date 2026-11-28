@@ -1,0 +1,44 @@
+name: Statistical Arbitrage Research Platform CI
+
+on:
+  push:
+    paths:
+      - "statistical-arbitrage-research-platform/**"
+      - ".github/workflows/statistical-arbitrage-research-platform.yml"
+  pull_request:
+    paths:
+      - "statistical-arbitrage-research-platform/**"
+      - ".github/workflows/statistical-arbitrage-research-platform.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: statistical-arbitrage-research-platform
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python 3.12 and sync locked dependencies
+        run: uv sync --python 3.12 --extra dev --frozen
+
+      - name: Lint with ruff
+        run: uv run ruff check src tests scripts
+
+      - name: Run full test suite (unit, integration, leakage, reconciliation, boundary)
+        run: uv run pytest
+
+      - name: Verify reproducible fixture generation and demo rerun
+        run: |
+          uv run python scripts/generate_fixtures.py
+          uv run statarb validate --config config/default.toml --project-root .
+          uv run statarb run --config config/default.toml --project-root . --output-dir /tmp/statarb_ci_run1 --quiet
+          uv run statarb run --config config/default.toml --project-root . --output-dir /tmp/statarb_ci_run2 --quiet
+          diff -u /tmp/statarb_ci_run1/default_walkforward_demo_latest.json /tmp/statarb_ci_run2/default_walkforward_demo_latest.json

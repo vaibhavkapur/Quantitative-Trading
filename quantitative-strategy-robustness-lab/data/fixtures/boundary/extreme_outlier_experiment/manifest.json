@@ -1,0 +1,6 @@
+{
+  "experiment_id": "exp-extreme-outliers",
+  "dataset_version": "synth-2026.05",
+  "frequency": "daily",
+  "provenance": "synthetic_fixture"
+}

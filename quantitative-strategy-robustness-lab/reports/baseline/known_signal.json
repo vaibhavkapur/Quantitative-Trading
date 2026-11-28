@@ -1,0 +1,496 @@
+{
+  "candidate_trial_id": "trial_lb20_vt10",
+  "cost_summary": {
+    "annualized_cost_drag": 0.00604,
+    "cost_model": {
+      "annualization_factor": 252,
+      "borrow_annual_bps": 40.0,
+      "commission_bps": 2.0,
+      "fixed_cost_per_period": 0.0,
+      "slippage_bps": 2.0
+    },
+    "mean_period_cost_bps": 0.23968253968253972,
+    "total_gross_compounded": 1.2539433127460664,
+    "total_net_compounded": 1.2346215525524529
+  },
+  "counters": {
+    "n_bootstrap_resamples": 1000,
+    "n_diagnostics_completed": 7,
+    "n_diagnostics_missing": 0,
+    "n_observations": 360,
+    "n_pbo_splits": 70,
+    "n_trials_completed": 8,
+    "n_trials_failed_or_rejected": 1,
+    "n_trials_logged": 9,
+    "n_walk_forward_folds": 5,
+    "n_warnings": 0
+  },
+  "diagnostics": {
+    "bootstrap": {
+      "assumptions": [
+        "Uses stationary block bootstrap (mean/fixed block_length=10) to preserve local serial dependence.",
+        "Assumes weak stationarity of the return-generating process across the sample.",
+        "Bootstrap percentile intervals reflect historical sampling variability, not structural regime shifts."
+      ],
+      "block_length": 10,
+      "confidence_level": 0.95,
+      "max_drawdown_ci_upper": 0.0527724703912314,
+      "max_drawdown_observed": 0.032914896965168916,
+      "mean_return_ci_lower": 0.41723590818174394,
+      "mean_return_ci_upper": 0.7227194151956697,
+      "method": "stationary",
+      "n_resamples": 1000,
+      "observed_sharpe_annual": 5.819959723875643,
+      "p_value_vs_zero": 0.0,
+      "seed": 42,
+      "sharpe_ci_lower": 4.138014905147279,
+      "sharpe_ci_upper": 7.7682183445531505,
+      "sharpe_std_error": 0.9126370060005315
+    },
+    "dsr": {
+      "annualization_factor": 252,
+      "assumptions": [
+        "Stationary return distribution over the evaluation window.",
+        "Sharpe ratio estimator standard error adjusts for sample skewness and Pearson kurtosis (Mertens 2002).",
+        "Autocorrelation adjusted via Bartlett-weighted VIF up to 5 lags (Lo 2002).",
+        "Effective independent trial count estimated via correlation matrix eigenvalue participation ratio.",
+        "Expected maximum Sharpe under null uses Bailey & Lopez de Prado (2014) extreme-value approximation; does not prove future alpha."
+      ],
+      "autocorr_variance_inflation": 1.017291034517971,
+      "benchmark_sharpe_annual": 0.0,
+      "candidate_trial_id": "trial_lb20_vt10",
+      "deflated_sharpe_ratio": 0.99999995743916,
+      "effective_trial_count": 2.7162895218176044,
+      "excess_kurtosis": 0.5150802296762289,
+      "expected_max_sharpe_annual": 0.9846434147418238,
+      "expected_max_sharpe_period": 0.06202670489248323,
+      "n_observations": 360,
+      "observed_sharpe_annual": 5.819959723875643,
+      "observed_sharpe_period": 0.3666230016615975,
+      "psr_vs_benchmark": 0.9999999999427982,
+      "raw_trial_count": 9,
+      "skewness": -0.15510531578723896,
+      "trial_sharpe_variance_period": 0.006357395314917568,
+      "warnings": []
+    },
+    "integrity": {
+      "cherry_picking_flags": [],
+      "completed_trials": 8,
+      "covered_grid_trials": 9,
+      "duplicate_fraction": 0.0,
+      "exact_duplicate_pairs": [],
+      "expected_grid_trials": 9,
+      "failed_or_rejected_trials": 1,
+      "grid_coverage_fraction": 1.0,
+      "near_duplicate_pairs": [],
+      "passed": true,
+      "registry_errors": [],
+      "registry_valid": true,
+      "sequence_gaps": [],
+      "total_logged_trials": 9
+    },
+    "outliers": {
+      "excess_kurtosis": 0.5150802296762289,
+      "max_abs_return": 0.018082493978221044,
+      "max_abs_zscore": 3.4545666051982113,
+      "n_extreme_observations": 0,
+      "outlier_impact_pct": -0.01811166552533089,
+      "raw_sharpe_annual": 5.819959723875643,
+      "skewness": -0.15510531578723896,
+      "warnings": [],
+      "winsorized_sharpe_annual": 5.925368887765376
+    },
+    "pbo": {
+      "assumptions": [
+        "CSCV assumes return blocks are approximately stationary and exchangeable across time partitions.",
+        "Strong serial dependence or regime breaks spanning partition boundaries can distort PBO.",
+        "OOS relative rank uses (rank / (N + 1)) with average tie-breaking so logits remain finite.",
+        "Low PBO indicates consistency across historical partitions, not a guarantee of future out-of-sample returns."
+      ],
+      "exact_enumeration": true,
+      "is_to_oos_regression_intercept": 9.636340038797098,
+      "is_to_oos_regression_slope": -0.7282826271064543,
+      "mean_is_sharpe_selected": 5.980740915005055,
+      "mean_oos_rank": 0.7015873015873015,
+      "mean_oos_sharpe_selected": 5.280670333174158,
+      "median_logit": 0.6931471805599452,
+      "n_combinations_evaluated": 70,
+      "n_observations_used": 360,
+      "n_partitions": 8,
+      "n_trials": 8,
+      "pbo": 0.08571428571428572,
+      "prob_oos_loss": 0.0,
+      "total_possible_combinations": 70,
+      "warnings": []
+    },
+    "perturbation": {
+      "center_net_sharpe": 5.819959723875643,
+      "center_parameters": {
+        "lookback": 20,
+        "vol_target": 0.1
+      },
+      "center_trial_id": "trial_lb20_vt10",
+      "median_neighbor_sharpe": 4.2017644006269785,
+      "min_neighbor_sharpe": 2.4301823220635264,
+      "n_neighbors_evaluated": 7,
+      "neighbors": [
+        {
+          "net_sharpe_annual": 3.7966891700582304,
+          "normalized_distance": 0.14142135623730942,
+          "parameters": {
+            "lookback": 20,
+            "vol_target": 0.12
+          },
+          "relative_sharpe_retention": 0.6523566055762889,
+          "trial_id": "trial_lb20_vt12"
+        },
+        {
+          "net_sharpe_annual": 5.606504552796296,
+          "normalized_distance": 0.14142135623730953,
+          "parameters": {
+            "lookback": 20,
+            "vol_target": 0.08
+          },
+          "relative_sharpe_retention": 0.9633235999548804,
+          "trial_id": "trial_lb20_vt08"
+        },
+        {
+          "net_sharpe_annual": 5.402070810457302,
+          "normalized_distance": 0.1767766952966369,
+          "parameters": {
+            "lookback": 15,
+            "vol_target": 0.1
+          },
+          "relative_sharpe_retention": 0.9281972843035314,
+          "trial_id": "trial_lb15_vt10"
+        },
+        {
+          "net_sharpe_annual": 5.023000318065158,
+          "normalized_distance": 0.1767766952966369,
+          "parameters": {
+            "lookback": 25,
+            "vol_target": 0.1
+          },
+          "relative_sharpe_retention": 0.8630644465560371,
+          "trial_id": "trial_lb25_vt10"
+        },
+        {
+          "net_sharpe_annual": 2.4301823220635264,
+          "normalized_distance": 0.22638462845343535,
+          "parameters": {
+            "lookback": 25,
+            "vol_target": 0.12
+          },
+          "relative_sharpe_retention": 0.41755998964975877,
+          "trial_id": "trial_lb25_vt12"
+        },
+        {
+          "net_sharpe_annual": 4.2017644006269785,
+          "normalized_distance": 0.22638462845343543,
+          "parameters": {
+            "lookback": 15,
+            "vol_target": 0.08
+          },
+          "relative_sharpe_retention": 0.7219576423166256,
+          "trial_id": "trial_lb15_vt08"
+        },
+        {
+          "net_sharpe_annual": 2.9622957143818858,
+          "normalized_distance": 0.22638462845343543,
+          "parameters": {
+            "lookback": 25,
+            "vol_target": 0.08
+          },
+          "relative_sharpe_retention": 0.5089890402899947,
+          "trial_id": "trial_lb25_vt08"
+        }
+      ],
+      "positive_neighbor_fraction": 1.0,
+      "relative_step": 0.2,
+      "sharpe_cliff_ratio": 0.2780423576833744,
+      "stability_score": 0.8609788211583128,
+      "warnings": []
+    },
+    "walk_forward": {
+      "aggregate_oos_benchmark_sharpe": 0.4510488120644748,
+      "aggregate_oos_gross_sharpe": 5.256996876573179,
+      "aggregate_oos_net_sharpe": 5.177848394311837,
+      "assumptions": [
+        "Walk-forward uses expanding training windows with a 5-period purge gap before each OOS test fold.",
+        "Candidate selection is performed strictly using training-window net Sharpe ratios.",
+        "Stitched OOS metrics assume non-overlapping test folds when step_size >= test_window."
+      ],
+      "folds": [
+        {
+          "fold_index": 0,
+          "n_test": 40,
+          "n_train": 120,
+          "purge_end": "2024-06-24",
+          "selected_trial_id": "trial_lb20_vt08",
+          "test_benchmark_sharpe": -3.50869461309464,
+          "test_end": "2024-08-19",
+          "test_mean_return": 0.0020331065220336527,
+          "test_net_sharpe": 8.161586921580126,
+          "test_start": "2024-06-25",
+          "train_end": "2024-06-17",
+          "train_net_sharpe": 5.111653648042868,
+          "train_start": "2024-01-02"
+        },
+        {
+          "fold_index": 1,
+          "n_test": 40,
+          "n_train": 160,
+          "purge_end": "2024-08-19",
+          "selected_trial_id": "trial_lb25_vt10",
+          "test_benchmark_sharpe": 1.25387456515458,
+          "test_end": "2024-10-14",
+          "test_mean_return": 0.001625286143727116,
+          "test_net_sharpe": 4.9237639188482465,
+          "test_start": "2024-08-20",
+          "train_end": "2024-08-12",
+          "train_net_sharpe": 5.923801307326806,
+          "train_start": "2024-01-02"
+        },
+        {
+          "fold_index": 2,
+          "n_test": 40,
+          "n_train": 200,
+          "purge_end": "2024-10-14",
+          "selected_trial_id": "trial_lb20_vt08",
+          "test_benchmark_sharpe": 0.8818006246916501,
+          "test_end": "2024-12-09",
+          "test_mean_return": 0.0014302336881037482,
+          "test_net_sharpe": 6.523776442637,
+          "test_start": "2024-10-15",
+          "train_end": "2024-10-07",
+          "train_net_sharpe": 6.347022784554235,
+          "train_start": "2024-01-02"
+        },
+        {
+          "fold_index": 3,
+          "n_test": 40,
+          "n_train": 240,
+          "purge_end": "2024-12-09",
+          "selected_trial_id": "trial_lb20_vt08",
+          "test_benchmark_sharpe": 4.381723386955652,
+          "test_end": "2025-02-03",
+          "test_mean_return": 0.001008701659501721,
+          "test_net_sharpe": 4.5829802761121705,
+          "test_start": "2024-12-10",
+          "train_end": "2024-12-02",
+          "train_net_sharpe": 5.956178535290298,
+          "train_start": "2024-01-02"
+        },
+        {
+          "fold_index": 4,
+          "n_test": 40,
+          "n_train": 280,
+          "purge_end": "2025-02-03",
+          "selected_trial_id": "trial_lb20_vt10",
+          "test_benchmark_sharpe": 1.1939895761004293,
+          "test_end": "2025-03-31",
+          "test_mean_return": 0.001742619246405766,
+          "test_net_sharpe": 3.9158853336659205,
+          "test_start": "2025-02-04",
+          "train_end": "2025-01-27",
+          "train_net_sharpe": 6.089808181772842,
+          "train_start": "2024-01-02"
+        }
+      ],
+      "is_to_oos_degradation_ratio": 0.12026527889692738,
+      "mean_is_net_sharpe": 5.88569289139741,
+      "mode": "expanding",
+      "n_folds": 5,
+      "oos_hit_rate": 1.0,
+      "purge_gap": 5,
+      "step_size": 40,
+      "test_window": 40,
+      "total_oos_observations": 200,
+      "train_window": 120
+    }
+  },
+  "experiment_id": "exp-known-signal-v1",
+  "limitations_notice": "Statistical diagnostics (DSR, CSCV PBO, block bootstrap, walk-forward, perturbation) evaluate historical consistency under stated stationarity and dependence assumptions. They do NOT prove future returns. Offline research prototype only.",
+  "registry_head_hash": "ed76659d7f001bfcf732e99b64b5f3363603484a3ba99867e48fbc8234026a52",
+  "run_id": "run-f525e1d44783dfe9",
+  "runtime": {
+    "data_provenance": "synthetic_fixture",
+    "dependencies": {
+      "numpy": "2.5.5",
+      "pandas": "2.3.3",
+      "scipy": "1.18.1"
+    },
+    "generated_at_utc": "2026-11-28T04:59:07Z",
+    "lab_version": "0.1.0",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "policy_sha256": "43727f3390f894e0a59231cfed79907f5c0c63f3f2d2e4ced816c5cb510eca75",
+    "policy_version": "1.0.0",
+    "python_version": "3.12.15",
+    "seed": 42
+  },
+  "schema_version": "1.0.0",
+  "verdict": {
+    "candidate_trial_id": "trial_lb20_vt10",
+    "decision": "PROMOTE",
+    "evidence_complete": true,
+    "gates": [
+      {
+        "category": "governance",
+        "gate_name": "evidence_completeness",
+        "observed_value": "complete",
+        "passed": true,
+        "rationale": "Promotion is strictly rejected whenever any required robustness diagnostic is missing.",
+        "required": true,
+        "threshold": "all 7 diagnostics present"
+      },
+      {
+        "category": "governance",
+        "gate_name": "registry_and_trial_integrity",
+        "observed_value": {
+          "duplicate_fraction": 0.0,
+          "flags": 0,
+          "grid_coverage": 1.0,
+          "registry_valid": true
+        },
+        "passed": true,
+        "rationale": "All attempted trials (including failures) must be logged without tampering or cherry-picking.",
+        "required": true,
+        "threshold": "valid hash chain, no sequence gaps, duplicates & grid coverage within policy"
+      },
+      {
+        "category": "multiple_testing",
+        "gate_name": "deflated_sharpe_ratio",
+        "observed_value": 1.0,
+        "passed": true,
+        "rationale": "Deflated Sharpe adjusts for effective trial count, skewness, kurtosis, and autocorrelation.",
+        "required": true,
+        "threshold": ">= 0.95"
+      },
+      {
+        "category": "multiple_testing",
+        "gate_name": "psr_vs_benchmark",
+        "observed_value": 1.0,
+        "passed": true,
+        "rationale": "Probabilistic Sharpe Ratio must exceed threshold against configured benchmark SR.",
+        "required": true,
+        "threshold": ">= 0.9"
+      },
+      {
+        "category": "multiple_testing",
+        "gate_name": "probability_of_backtest_overfitting",
+        "observed_value": 0.0857,
+        "passed": true,
+        "rationale": "CSCV PBO measures how often the in-sample optimal strategy underperforms OOS median.",
+        "required": true,
+        "threshold": "<= 0.25"
+      },
+      {
+        "category": "multiple_testing",
+        "gate_name": "pbo_oos_loss_probability",
+        "observed_value": 0.0,
+        "passed": true,
+        "rationale": "Probability of negative OOS Sharpe for the IS-selected strategy must remain bounded.",
+        "required": true,
+        "threshold": "<= 0.3"
+      },
+      {
+        "category": "uncertainty",
+        "gate_name": "bootstrap_sharpe_ci_lower",
+        "observed_value": 4.138,
+        "passed": true,
+        "rationale": "Lower confidence bound of block-bootstrapped Sharpe ratio must stay above floor.",
+        "required": true,
+        "threshold": ">= 0.0"
+      },
+      {
+        "category": "out_of_sample",
+        "gate_name": "walk_forward_oos_sample_size",
+        "observed_value": 200,
+        "passed": true,
+        "rationale": "Sufficient stitched OOS observations are required before promotion.",
+        "required": true,
+        "threshold": ">= 40"
+      },
+      {
+        "category": "out_of_sample",
+        "gate_name": "walk_forward_oos_net_sharpe",
+        "observed_value": 5.1778,
+        "passed": true,
+        "rationale": "Out-of-sample net-of-cost Sharpe ratio must survive transaction and borrow drag.",
+        "required": true,
+        "threshold": ">= 0.35"
+      },
+      {
+        "category": "out_of_sample",
+        "gate_name": "walk_forward_is_to_oos_degradation",
+        "observed_value": 0.1203,
+        "passed": true,
+        "rationale": "Severe decay from training Sharpe to OOS Sharpe signals overfitting.",
+        "required": true,
+        "threshold": "<= 0.65"
+      },
+      {
+        "category": "out_of_sample",
+        "gate_name": "walk_forward_oos_vs_benchmark",
+        "observed_value": 4.7268,
+        "passed": true,
+        "rationale": "OOS net Sharpe should exceed simple benchmark Sharpe over the identical OOS periods.",
+        "required": true,
+        "threshold": ">= 0.0"
+      },
+      {
+        "category": "perturbation",
+        "gate_name": "perturbation_neighbor_coverage",
+        "observed_value": 7,
+        "passed": true,
+        "rationale": "Isolated parameter combinations with no tested neighborhood cannot be promoted.",
+        "required": true,
+        "threshold": ">= 1 local neighbor"
+      },
+      {
+        "category": "perturbation",
+        "gate_name": "perturbation_positive_neighbors",
+        "observed_value": 1.0,
+        "passed": true,
+        "rationale": "Majority of nearby parameter configurations must retain positive net Sharpe.",
+        "required": true,
+        "threshold": ">= 0.65"
+      },
+      {
+        "category": "perturbation",
+        "gate_name": "perturbation_sharpe_cliff",
+        "observed_value": 0.278,
+        "passed": true,
+        "rationale": "Sharp drop-off from center to median neighbor indicates fragile parameter tuning.",
+        "required": true,
+        "threshold": "<= 0.5"
+      },
+      {
+        "category": "perturbation",
+        "gate_name": "perturbation_stability_score",
+        "observed_value": 0.861,
+        "passed": true,
+        "rationale": "Composite local plateau stability score must meet policy minimum.",
+        "required": true,
+        "threshold": ">= 0.6"
+      },
+      {
+        "category": "tail_risk",
+        "gate_name": "outlier_dominance_check",
+        "observed_value": {
+          "excess_kurtosis": 0.52,
+          "impact_pct": -0.018,
+          "n_extreme": 0,
+          "winsorized_sharpe": 5.925
+        },
+        "passed": true,
+        "rationale": "Performance driven by extreme outliers or severe fat tails undermines asymptotic Sharpe diagnostics.",
+        "required": true,
+        "threshold": "no extreme outliers with excess kurtosis > 20.0 or >50% winsorized Sharpe drop"
+      }
+    ],
+    "missing_evidence": [],
+    "review_notes": [],
+    "summary": "PROMOTED (research/paper stage): Candidate 'trial_lb20_vt10' passed all 16 robustness gates under policy v1.0.0."
+  }
+}

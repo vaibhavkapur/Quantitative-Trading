@@ -1,0 +1,18 @@
+{
+  "fixture_name": "reference_pair_fixture",
+  "seed": 7,
+  "n_days": 260,
+  "cointegrated_pair": {
+    "y_symbol": "REF_Y",
+    "x_symbol": "REF_X",
+    "true_alpha": 5.0,
+    "true_beta": 1.5,
+    "true_phi": 0.85,
+    "true_half_life_days": 4.265024,
+    "spread_innovation_std": 0.35
+  },
+  "independent_pair": {
+    "y_symbol": "REF_IND_A",
+    "x_symbol": "REF_IND_B"
+  }
+}

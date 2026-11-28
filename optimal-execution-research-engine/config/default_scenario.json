@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "scenario_id": "baseline_us_large_cap_intraday",
+  "description": "Synthetic full-day (13 x 30-min slices) U-shaped volume curve execution benchmark for a 100,000-share buy parent order.",
+  "capacity_policy": "spillover",
+  "seed": 20260105,
+  "num_monte_carlo_paths": 2000,
+  "order": {
+    "order_id": "ORD-BASE-001",
+    "symbol": "SYN_LGCAP",
+    "side": "buy",
+    "quantity": 100000.0,
+    "arrival_price": 150.0,
+    "horizon_slices": 13,
+    "slice_duration_minutes": 30.0,
+    "start_timestamp_utc": "2026-01-05T14:30:00Z"
+  },
+  "market": {
+    "volume_curve": [
+      180000.0,
+      115000.0,
+      90000.0,
+      78000.0,
+      70000.0,
+      62000.0,
+      58000.0,
+      64000.0,
+      72000.0,
+      82000.0,
+      95000.0,
+      125000.0,
+      210000.0
+    ],
+    "daily_volatility": 0.018,
+    "bid_ask_spread_bps": 4.0,
+    "max_participation_rate": 0.25,
+    "max_slice_quantity": null,
+    "price_shocks": []
+  },
+  "impact": {
+    "permanent_impact_gamma": 2.5e-7,
+    "temporary_impact_eta": 4.0e-7,
+    "temporary_impact_alpha": 1.0
+  }
+}

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "statistical-arbitrage-research-platform"
+version = "0.1.0"
+description = "Point-in-time statistical arbitrage research platform for pairs and basket mean reversion with realistic costs, borrow modeling, and multiple-testing controls."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.26.0,<3.0.0",
+    "polars>=1.0.0,<2.0.0",
+    "statsmodels>=0.14.0,<1.0.0",
+    "scipy>=1.12.0,<2.0.0",
+    "pydantic>=2.0.0,<3.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0,<9.0.0",
+    "ruff>=0.4.0",
+]
+
+[project.scripts]
+statarb = "statarb.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/statarb"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]

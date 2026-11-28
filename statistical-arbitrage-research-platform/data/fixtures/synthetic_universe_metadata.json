@@ -1,0 +1,65 @@
+{
+  "fixture_name": "synthetic_universe_fixture",
+  "seed": 42,
+  "n_days": 600,
+  "date_start": "2022-01-03",
+  "date_end": "2024-04-19",
+  "symbols": [
+    "FIN_A",
+    "FIN_B",
+    "FIN_BREAK_A",
+    "FIN_BREAK_B",
+    "FIN_C",
+    "IND_PENNY",
+    "IND_RW1",
+    "IND_RW2",
+    "IND_RW3",
+    "TECH_A",
+    "TECH_B",
+    "TECH_C",
+    "TECH_D",
+    "TECH_DELIST"
+  ],
+  "planted_structures": {
+    "cointegrated_pairs": [
+      [
+        "TECH_A",
+        "TECH_B"
+      ],
+      [
+        "TECH_C",
+        "TECH_D"
+      ]
+    ],
+    "cointegrated_basket": [
+      "FIN_A",
+      "FIN_B",
+      "FIN_C"
+    ],
+    "regime_break_pair": {
+      "symbols": [
+        "FIN_BREAK_A",
+        "FIN_BREAK_B"
+      ],
+      "break_date": "2023-02-27"
+    },
+    "independent_controls": [
+      "IND_RW1",
+      "IND_RW2",
+      "IND_RW3"
+    ],
+    "filtered_out_symbols": {
+      "IND_PENNY": "below_min_price_and_adv",
+      "TECH_DELIST": "delisted_after_2022-11-07"
+    },
+    "corporate_actions": {
+      "TECH_A_split_2_for_1": "2023-03-27",
+      "TECH_A_cash_dividend_0.50": "2023-08-14"
+    },
+    "borrow_outage": {
+      "symbol": "TECH_D",
+      "start_date": "2023-06-19",
+      "end_date": "2023-07-10"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "scenario_id": "boundary_zero_liquidity",
+  "description": "Boundary fixture with zero-liquidity trading halt slices in the middle of the horizon.",
+  "capacity_policy": "spillover",
+  "seed": 101,
+  "num_monte_carlo_paths": 500,
+  "order": {
+    "order_id": "BND-ZLIQ-001",
+    "symbol": "SYN_THIN",
+    "side": "buy",
+    "quantity": 10000.0,
+    "arrival_price": 50.0,
+    "horizon_slices": 6,
+    "slice_duration_minutes": 65.0,
+    "start_timestamp_utc": "2026-01-05T14:30:00Z"
+  },
+  "market": {
+    "volume_curve": [20000.0, 0.0, 0.0, 15000.0, 0.0, 25000.0],
+    "daily_volatility": 0.03,
+    "bid_ask_spread_bps": 15.0,
+    "max_participation_rate": 0.20,
+    "max_slice_quantity": null,
+    "price_shocks": []
+  },
+  "impact": {
+    "permanent_impact_gamma": 3.0e-6,
+    "temporary_impact_eta": 8.0e-6,
+    "temporary_impact_alpha": 1.0
+  }
+}

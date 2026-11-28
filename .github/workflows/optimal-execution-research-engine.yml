@@ -1,0 +1,54 @@
+name: Optimal Execution Research Engine CI
+
+on:
+  push:
+    paths:
+      - "optimal-execution-research-engine/**"
+      - ".github/workflows/optimal-execution-research-engine.yml"
+  pull_request:
+    paths:
+      - "optimal-execution-research-engine/**"
+      - ".github/workflows/optimal-execution-research-engine.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: optimal-execution-research-engine
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy scipy polars pytest
+          pip install --no-build-isolation --no-deps -e .
+
+      - name: Run unit, integration, and boundary tests
+        run: pytest -v
+
+      - name: Validate baseline scenario contract
+        run: python -m optimal_execution.cli validate --scenario config/default_scenario.json
+
+      - name: Verify analytic vs numeric Almgren-Chriss agreement
+        run: |
+          python -m optimal_execution.cli compare \
+            --scenario config/default_scenario.json \
+            --lambdas 0.0,1e-7,1e-6,1e-5,1e-4 \
+            --tolerance 1e-4
+
+      - name: Smoke test reproducible demo and replay
+        run: |
+          python -m optimal_execution.cli demo \
+            --scenario config/default_scenario.json \
+            --output-dir /tmp/oe_ci_reports
+          python -m optimal_execution.cli replay \
+            --manifest /tmp/oe_ci_reports/baseline_replay_manifest.json

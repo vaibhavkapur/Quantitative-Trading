@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Independent analytical hand-calculated oracle for valid_small fixture.",
+  "tolerance": 1e-10,
+  "checks": {
+    "eq_stoxx_day1_fx_conversion": {
+      "date": "2024-01-03",
+      "asset_id": "EQ_STOXX",
+      "local_return": 0.010000000000000009,
+      "fx_return_factor": 1.005,
+      "gross_excess_return_base": 0.010050000000000009,
+      "financing_cost_drag": 1.1904761904761905e-05,
+      "net_return_before_tc": 0.010038095238095247
+    },
+    "cmd_cl_day5_roll_and_carry": {
+      "date": "2024-01-09",
+      "asset_id": "CMD_CL",
+      "local_return": 0.00500049024414162,
+      "roll_cost_drag": 0.0005,
+      "financing_cost_drag": 7.936507936507936e-06,
+      "net_return_before_tc": 0.0044925537362051115,
+      "implied_roll_yield": 0.6084601169917139,
+      "carry_raw": 0.6023767836583805
+    },
+    "cmd_cl_day6_post_roll_continuity": {
+      "date": "2024-01-10",
+      "asset_id": "CMD_CL",
+      "local_return": 0.010000000000000009,
+      "roll_cost_drag": 0.0,
+      "net_return_before_tc": 0.009992063492063502
+    },
+    "fx_eurusd_day1_excess_return_and_carry": {
+      "date": "2024-01-03",
+      "asset_id": "FX_EURUSD",
+      "local_return": 0.004999999999999893,
+      "carry_return_component": -5.9523809523809524e-05,
+      "gross_excess_return_base": 0.004940476190476084,
+      "net_return_before_tc": 0.00493650793650783,
+      "carry_raw": -0.016
+    },
+    "eq_spx_publication_lag_gating": {
+      "pre_publication_date": "2024-01-10",
+      "pre_publication_carry_raw": -0.0345,
+      "post_publication_date": "2024-01-12",
+      "post_publication_carry_raw": -0.0275
+    }
+  }
+}
